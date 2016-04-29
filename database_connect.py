@@ -60,6 +60,9 @@ print colnames
 
 
 
+<<<<<<< HEAD
+>>>>>>> parent of a85286b... update with simple SQL query
+=======
 >>>>>>> parent of a85286b... update with simple SQL query
 
 
