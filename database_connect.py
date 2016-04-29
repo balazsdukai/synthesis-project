@@ -1,6 +1,3 @@
-# Reference: http://www.tutorialspoint.com/postgresql/postgresql_python.htm
-# Reference 2: https://wiki.postgresql.org/wiki/Psycopg2_Tutorial
-
 import psycopg2
 
 # Create a connection object
@@ -13,6 +10,7 @@ except:
 # This routine creates a cursor which will be used throughout of your database programming with Python.
 cur = conn.cursor()
 
+<<<<<<< HEAD
 ## Get all table names in DB
 #cur.execute("SELECT table_name FROM information_schema.tables\
 #       WHERE table_schema = 'public'")
@@ -47,5 +45,21 @@ conn.close()
 #This method commits the current transaction. 
 #If you don't call this method, anything you did since the last call to commit() 
 #is not visible from other database connections.
+=======
+# Get all table names in DB
+cur.execute("SELECT table_name FROM information_schema.tables\
+       WHERE table_schema = 'public'")
+for table in cur.fetchall():
+    print(table)
+
+# Get all column names in 'wifilog' table
+cur.execute("SELECT * FROM wifilog LIMIT 0")
+colnames = [desc[0] for desc in cur.description]
+print colnames
+
+
+
+
+>>>>>>> parent of a85286b... update with simple SQL query
 
 
