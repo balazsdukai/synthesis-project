@@ -10,43 +10,33 @@ except:
 # This routine creates a cursor which will be used throughout of your database programming with Python.
 cur = conn.cursor()
 
-# Globals
-ITERATOR = 0 # iterator used later in script
-MAPLOC = 4 # location of the 'maploc' field
 
 def getTime(item):
     return item[2] # location of the timestamp in a record
-
 
 def getBuilding(string):
     s = string.find(">") + 2
     e = string.find(">", s) - 1
     return string[s:e]
 
-# Get records by mac address
-cur.execute("SELECT distinct mac from wifilog")
-macs = cur.fetchall()
-print "macs fetched"
+# Get records by unique username
+def getUsers():
+    cur.execute("SELECT distinct username from wifilog")
+    users = cur.fetchall()
+    print "Users fetched"
+    return users
 
-cur.execute("select * from wifilog where mac='"+macs[ITERATOR][0]+"';")
-mac0 = cur.fetchall()
 
-# Get records by username
-cur.execute("SELECT distinct username from wifilog")
-users = cur.fetchall()
-print "users fetched"
-
-cur.execute("select * from wifilog where username='"+users[ITERATOR][0]+"';")
-user0 = cur.fetchall()
-
-user0_sorted = sorted(user0, key=getTime) # sort records by datetime
-user0_seq = []
-for i in user0_sorted:
-    seq = getBuilding(i[MAPLOC])
-    user0_seq.append(seq)
+users = getUsers()
 
 def sequenceUsers(users, limit=50):
-    MAPLOC = 4 # location of the 'maploc' field
+    """
+    Create sequences of unique usernames from WiFi record.
+    :param users: unique usernames returned by getUsers()
+    :param limit: limit the nr. of users to  sequence
+    :return: [(username,[sequence of buildings]), ...]
+    """
+    maploc = 4 # location of the 'maploc' field
     sequences = []
     for i in users[ :limit]:
         username = i[0]
@@ -54,22 +44,15 @@ def sequenceUsers(users, limit=50):
         user = cur.fetchall()
         user_sorted = sorted(user, key=getTime)  # sort records by datetime
         seq = []
-        for i in user0_sorted:
-            s = getBuilding(i[MAPLOC])
+        for i in user:
+            s = getBuilding(i[maploc])
             seq.append(s)
         u_seq = (username, seq)
         sequences.append(u_seq)
 
     return sequences
 
-seqs = sequenceUsers(users, 20)
-
-
-
-
-
-
-
+seqs = sequenceUsers(20)
 
 # Close the database connection
 conn.close()
