@@ -52,7 +52,7 @@ def sequenceUsers(users, limit=50):
 
     return sequences
 
-seqs = sequenceUsers(20)
+seqs = sequenceUsers(users, 20)
 
 # Close the database connection
 conn.close()
