@@ -1,3 +1,6 @@
+# Reference: http://www.tutorialspoint.com/postgresql/postgresql_python.htm
+# Reference 2: https://wiki.postgresql.org/wiki/Psycopg2_Tutorial
+
 import psycopg2
 
 # Create a connection object
@@ -21,8 +24,20 @@ cur.execute("SELECT * FROM wifilog LIMIT 0")
 colnames = [desc[0] for desc in cur.description]
 print colnames
 
+# Nr. of rows in the table
+cur.execute("SELECT count(*) FROM wifilog")
+rows = cur.fetchall()
+print rows
+print rows[0]
+print rows[0][0] # to access the value
 
+# Close the database connection
+conn.close()
 
-
+# NOTE!!!
+#connection.commit()
+#This method commits the current transaction. 
+#If you don't call this method, anything you did since the last call to commit() 
+#is not visible from other database connections.
 
 
