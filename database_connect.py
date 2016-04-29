@@ -13,23 +13,31 @@ except:
 # This routine creates a cursor which will be used throughout of your database programming with Python.
 cur = conn.cursor()
 
-# Get all table names in DB
-cur.execute("SELECT table_name FROM information_schema.tables\
-       WHERE table_schema = 'public'")
-for table in cur.fetchall():
-    print(table)
+## Get all table names in DB
+#cur.execute("SELECT table_name FROM information_schema.tables\
+#       WHERE table_schema = 'public'")
+#for table in cur.fetchall():
+#    print(table)
 
-# Get all column names in 'wifilog' table
-cur.execute("SELECT * FROM wifilog LIMIT 0")
-colnames = [desc[0] for desc in cur.description]
-print colnames
+## Get all column names in 'wifilog' table
+#cur.execute("SELECT * FROM wifilog LIMIT 0")
+#colnames = [desc[0] for desc in cur.description]
+#print colnames
 
-# Nr. of rows in the table
-cur.execute("SELECT count(*) FROM wifilog")
-rows = cur.fetchall()
-print rows
-print rows[0]
-print rows[0][0] # to access the value
+## Nr. of rows in the table
+#cur.execute("SELECT count(*) FROM wifilog")
+#rows = cur.fetchall()
+#print rows
+#print rows[0]
+#print rows[0][0] # to access the value
+
+cur.execute("SELECT distinct mac from wifilog")
+macs = cur.fetchall()
+print "macs fetched"
+
+for mac in range(len(macs)):
+    
+    print mac
 
 # Close the database connection
 conn.close()
