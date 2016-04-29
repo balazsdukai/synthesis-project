@@ -28,12 +28,6 @@ print rows
 print rows[0]
 print rows[0][0] # to access the value
 
-cur.execute("SELECT distinct mac from wifilog")
-macs = cur.fetchall()
-print "macs fetched"
-
-
-
 # Close the database connection
 conn.close()
 
