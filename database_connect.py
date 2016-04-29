@@ -32,9 +32,7 @@ cur.execute("SELECT distinct mac from wifilog")
 macs = cur.fetchall()
 print "macs fetched"
 
-for mac in range(len(macs)):
-    
-    print mac
+
 
 # Close the database connection
 conn.close()
