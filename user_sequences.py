@@ -2,7 +2,7 @@ import psycopg2
 
 # Create a connection object
 try:
-    conn = psycopg2.connect(database="wifi", user="guest", password="welcome", host="wifitracking.bk.tudelft.nl", port="5432")
+    conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
     print "Opened database successfully"
 except:
     print "I'm unable to connect to the database"
@@ -19,15 +19,15 @@ def getBuilding(string):
     e = string.find(">", s) - 1
     return string[s:e]
 
-# Get records by unique username
-def getUsers():
-    cur.execute("SELECT distinct username from wifilog")
-    users = cur.fetchall()
-    print "Users fetched"
-    return users
+# # Get records by unique username
+# def getUsers():
+#     cur.execute("SELECT distinct username from wifilog")
+#     users = cur.fetchall()
+#     print "Users fetched"
+#     return users
 
-
-users = getUsers()
+cur.execute("select * from usernames;")
+users = cur.fetchall()
 
 def sequenceUsers(users, limit=50):
     """
