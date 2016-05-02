@@ -15,9 +15,21 @@ def getTime(item):
     return item[2] # location of the timestamp in a record
 
 def getBuilding(string):
+    """
+    Selects the id_seq of the building, or gives 0 if the building is not in the 'buildings' table
+    :param string: the value of the 'maploc' field of a single record in the database
+    :return: int - the seq_id of the respective building
+    """
     s = string.find(">") + 2
     e = string.find(">", s) - 1
-    return string[s:e]
+    building = string[s:e]
+    cur.execute("SELECT id_seq FROM buildings WHERE buildingid LIKE '%"+building+"';")
+    id_seq = cur.fetchall()
+    if id_seq:
+        id_seq = id_seq[0][0]
+    else:
+        id_seq = 0
+    return id_seq
 
 # # Get records by unique username
 # def getUsers():
