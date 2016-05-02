@@ -120,7 +120,7 @@ def createBuildingset(users, limit=50):
             if b in count:
                 user_sequence.append(int(count[b]))
             else:
-                user_sequence.append(0)
+                user_sequence.append('?')
         buildingset_df.append(user_sequence)
 
     return buildingset_df
