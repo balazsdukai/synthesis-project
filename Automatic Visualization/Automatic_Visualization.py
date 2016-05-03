@@ -10,20 +10,17 @@ def main ():
     # Time interval
     
 
-
-    
-    # Get distinct mac addresses
-    cur.execute("SELECT distinct mac \
-                FROM wifilog \
-                WHERE extract(day from(asstime))=19")
-
     # Create individual trajectorie view
     cur.execute(open("individual_trajectories.sql", "r").read())
-    records = cur.fetchall()
+    #records = cur.fetchall()
     conn.commit()
     
     # Close the database connection
     conn.close()
+
+    # Drop individual trajectorie view
+    cur.execute("drop view individual_trajectories")
+    conn.commit()
 
 
 if __name__ == '__main__':
