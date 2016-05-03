@@ -4,23 +4,35 @@ import datetime
 def main ():
     ## INPUT ##
     # From Building
-    
+    bld_from = "21-BTUD"
     # To Building
-
+    bld_to = "08-BK-City"
     # Time interval
+
     
 
     # Create individual trajectorie view
-    cur.execute(open("individual_trajectories.sql", "r").read())
-    #records = cur.fetchall()
+    cur.execute(open("individual_trajectories.txt", "r").read())
     conn.commit()
-    
-    # Close the database connection
-    conn.close()
+
+    # Select records from specified input
+    SQL =  "select * \
+            from individual_trajectories \
+            where bld_nr = %s \
+            and next_bld_nr = %s \
+            limit 10"
+    data =(bld_from,bld_to,)
+    cur.execute(SQL,data)
+    print cur.query
+    records = cur.fetchall()
+    print records
 
     # Drop individual trajectorie view
     cur.execute("drop view individual_trajectories")
     conn.commit()
+
+    # Close the database connection
+    conn.close()
 
 
 if __name__ == '__main__':
