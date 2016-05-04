@@ -4,49 +4,13 @@ import csv
 import pandas as pd
 import utility_functions as uf
 
-def connectDB():
-    # Create a connection object
-    try:
-        conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!",
-                                host="wifitracking.bk.tudelft.nl", port="5432")
-        print "Opened database successfully"
-    except:
-        print "I'm unable to connect to the database"
 
-    # This routine creates a cursor which will be used throughout of your database programming with Python.
-    cur = conn.cursor()
 
-    return conn, cur
+conn, cur = uf.connectDB()
 
-conn, cur = connectDB()
 
-def reconnectDB(conn):
-    """
-    Re-connects to the database
-    :param conn: connection object
-    :return: connection object, cursor object
-    """
-    # First close the database connection if it was open
-    try:
-        conn.close()
-        print 'Closed existing connection successfully'
-    except:
-        print 'The connection object does not exist, create one first (HINT: use \'connectDB()\')'
 
-    # Create a connection object
-    try:
-        conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!",
-                                host="wifitracking.bk.tudelft.nl", port="5432")
-        print "Opened database successfully"
-    except:
-        print "I'm unable to connect to the database"
-
-    # This routine creates a cursor which will be used throughout of your database programming with Python.
-    cur = conn.cursor()
-
-    return conn, cur
-
-conn,cur = reconnectDB(conn)
+conn,cur = uf.reconnectDB(conn)
 
 
 def parseBuildingId(cur, buildingTable, field):
