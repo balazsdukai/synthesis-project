@@ -62,6 +62,9 @@ class Calendar(ttk.Frame):
         # insert dates in the currently empty calendar
         self._build_calendar()
 
+        ## create list with dates
+        self._dates = []
+
     def __setitem__(self, item, value):
         if item in ('year', 'month'):
             raise AttributeError("attribute '%s' is not writeable" % item)
@@ -126,8 +129,8 @@ class Calendar(ttk.Frame):
             background=sel_bg, borderwidth=0, highlightthickness=0)
         canvas.text = canvas.create_text(0, 0, fill=sel_fg, anchor='w')
 
-        canvas.bind('<ButtonPress-1>', lambda evt: canvas.place_forget())
-        self._calendar.bind('<Configure>', lambda evt: canvas.place_forget())
+        #canvas.bind('<ButtonPress-1>', lambda evt: canvas.place_forget())
+        #self._calendar.bind('<Configure>', lambda evt: canvas.place_forget())
         self._calendar.bind('<ButtonPress-1>', self._pressed)
 
     def __minsize(self, evt):
@@ -154,17 +157,19 @@ class Calendar(ttk.Frame):
         x, y, width, height = bbox
 
         textw = self._font.measure(text)
-
+        
         canvas = self._canvas
         canvas.configure(width=width, height=height)
         canvas.coords(canvas.text, width - textw, height / 2 - 1)
         canvas.itemconfigure(canvas.text, text=text)
         canvas.place(in_=self._calendar, x=x, y=y)
+        
 
     # Callbacks
 
     def _pressed(self, evt):
         """Clicked somewhere in the calendar."""
+        print 'Pressed'
         x, y, widget = evt.x, evt.y, evt.widget
         item = widget.identify_row(y)
         column = widget.identify_column(x)
@@ -188,6 +193,16 @@ class Calendar(ttk.Frame):
         # update and then show selection
         text = '%02d' % text
         self._selection = (text, item, column)
+        
+        year, month = self._date.year, self._date.month
+        datum = self.datetime(year, month, int(self._selection[0]))
+        if datum in self._dates:
+            index = self._dates.index(datum)
+            self._dates.pop(index)
+        else:
+            self._dates.append(datum)
+        print self._dates
+        
         self._show_selection(text, bbox)
 
     def _prev_month(self):

@@ -11,8 +11,8 @@ class CalendarDialog(tkSimpleDialog.Dialog):
 
     def apply(self):
         self.result = self.calendar.selection
-        print self.result.date()
-        #var= {module}.function(self.result.date)
+        print self.result
+        #var= {module}.function(self.result)
 
 # Demo code:
 
