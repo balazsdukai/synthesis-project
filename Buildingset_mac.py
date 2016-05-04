@@ -41,20 +41,26 @@ def parseBuildingId(cur, buildingTable, field):
     return buildings
 
 
-def createBuildingsetTable(conn, cur, buildingTable="buildings", field="buildingid", name="buildingset"):
+def createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset", mac=True):
     """
     Creates and empty table if not exists for the buildingsets in the database
     :param conn: database connection object from psycopg2
     :param cur: database cursor object from psycopg2
-    :param buildingTable: str - name of the table that contains the building names
+    :param buildingsTable: str - name of the table that contains the building names
     :param field: str - name of the field in the table that contains the building names
     :param name: str - name of the new BuildingsetTable, defaults to "buildingset
+    :param mac: boolean - if True, the name of the field that contains the mac/user identifiers will be 'mac', if False it will be 'username'
     :return: list - of building names, which are also the table field names in the same order
     """
-    buildings = parseBuildingId(cur, buildingTable, field)
+    buildings = parseBuildingId(cur, buildingsTable, field)
 
-    #create a table with the mac + buildingnames as fields
-    query = "create table if not exists "+name+" (mac text,"
+    #create a table with the identifier + buildingnames as fields
+    if mac:
+        id_field = "mac"
+    else:
+        id_field = "username"
+
+    query = "create table if not exists "+name+" ("+id_field+" text,"
     for b in buildings:
         query +=  b + " smallint, "
     query = query[:-2] # remove the trailing comma from the last field name
@@ -64,16 +70,12 @@ def createBuildingsetTable(conn, cur, buildingTable="buildings", field="building
 
     return  buildings
 
-buildings = createBuildingsetTable(conn, cur, buildingTable="buildings", field="buildingid", name="buildingset")
+buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset", mac=True)
 
+def createBuildinset(conn, cur, sequenceTable, )
 
-def createBuildingset(macs, limit=50):
-    """
-    Create sequences of unique usernames from WiFi record.
-    :param users: unique usernames returned by getUsers()
-    :param limit: limit the nr. of users to  sequence
-    :return: [(username,[sequence of buildings]), ...]
-    """
+def createBuildingset(, conn, cur, sequenceTable, buildingsetTable="buildingset",limit=50):
+
     cur.execute("select buildingid from buildings;")
     header = cur.fetchall()
     header = [i[0] for i in header] # list of buildingid
