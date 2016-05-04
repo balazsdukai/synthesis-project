@@ -13,79 +13,64 @@ except:
 # This routine creates a cursor which will be used throughout of your database programming with Python.
 cur = conn.cursor()
 
-
-def getTime(item):
-    return item[2] # location of the timestamp in a record
-
-def getBuildingInt(string):
+def parseBuildingId(cur, buildingTable, field):
     """
-    Selects the id_seq of the building, or gives 0 if the building is not in the 'buildings' table
-    :param string: the value of the 'maploc' field of a single record in the database
-    :return: int - the seq_id of the respective building
+    Parses buildingnames to PostgreSQL compliant field names
+    :param cur: database cursor object from psycopg2
+    :param buildingTable: str - name of the table that contains the building names
+    :param field: str - name of the field in the table that contains the building names
+    :return: list - PostgreSQL compliant field names
     """
-    s = string.find(">") + 2
-    e = string.find(">", s) - 1
-    building = string[s:e]
-    cur.execute("SELECT id_seq FROM buildings WHERE buildingid LIKE '%"+building+"%';")
-    id_seq = cur.fetchall()
-    if id_seq:
-        id_seq = id_seq[0][0]
-    else:
-        id_seq = 0
-    return id_seq
+    # get the buildingnames without the building numbers on the front (e.g. "50-TNW-RID" -> "TNW_RID")
+    cur.execute("select " + field + " from " + buildingTable + ";")
+    x = cur.fetchall()
+    # buildings = [i[0] for i in buildings]
+    buildings = []
+    for b in x:
+        res = ''.join([i for i in b[0] if not i.isdigit()])
+        for ch in ["-", " ", "(", ")", "&"]:
+            if ch in res:
+                res = res.replace(ch, "_")
+                if "___" in res:
+                    res = res.replace("___", "_")
+        if res[0] == "_":
+            buildings.append(res[1:].lower())
+        else:
+            buildings.append(res.lower())
 
-def getBuilding(string):
+    return buildings
+
+
+def createBuildingsetTable(conn, cur, buildingTable, field):
     """
-    Selects the buildingid of the building
-    :param string: the value of the 'maploc' field of a single record in the database
-    :return: str - the buildingid of the respective building
+    Creates and empty table if not exists for the buildingsets in the database
+    :param conn: database connection object from psycopg2
+    :param cur: database cursor object from psycopg2
+    :param buildingTable: str - name of the table that contains the building names
+    :param field: str - name of the field in the table that contains the building names
+    :return: list - of building names, which are also the table field names in the same order
     """
-    s = string.find(">") + 2
-    e = string.find(">", s) - 1
-    building = string[s:e]
-    return building
+    buildings = parseBuildingId(cur, buildingTable, field)
 
-# # Get records by unique username
-# def getUsers():
-#     cur.execute("SELECT distinct username from wifilog")
-#     users = cur.fetchall()
-#     print "Users fetched"
-#     return users
+    #create a table with the mac + buildingnames as fields
+    query = "create table if not exists buildingset (mac text,"
+    for b in buildings:
+        query +=  b + " smallint, "
+    query = query[:-2]
+    query += ");"
+    cur.execute(query)
+    conn.commit()
 
-cur.execute("select * from usernames;")
-users = cur.fetchall()
+    # create index on mac addresses
+    cur.execute("create index i_buildingset_mac on buildingset (mac);")
+    conn.commit()
 
+    return  buildings
 
-def sequenceUsers(users, limit=50):
-    """
-    Create sequences of unique usernames from WiFi record.
-    :param users: unique usernames returned by getUsers()
-    :param limit: limit the nr. of users to  sequence
-    :return: [(username,[sequence of buildings]), ...]
-    """
-    maploc = 4 # location of the 'maploc' field
-    sequences = []
-    for i in users[ :limit]:
-        username = i[0]
-        cur.execute("select * from wifilog where username='" + username + "';")
-        user = cur.fetchall()
-        user_sorted = sorted(user, key=getTime)  # sort records by datetime
-        u_seq = []
-        #u_seq.append(username)
-        #seq = ""
-        for i in user_sorted:
-            s = getBuilding(i[maploc])
-            #seq += str(s)+','
-            u_seq.append(s)
-        sequences.append((username,u_seq))
-
-    return sequences
+buildings = createBuildingsetTable(conn, cur, "buildings", "buildingid")
 
 
-seqs = sequenceUsers(users, 20)
-
-
-def createBuildingset(users, limit=50):
+def createBuildingset(macs, limit=50):
     """
     Create sequences of unique usernames from WiFi record.
     :param users: unique usernames returned by getUsers()
@@ -155,9 +140,3 @@ with open("seqs.csv", "wb") as f:
 
 # Close the database connection
 conn.close()
-
-# NOTE!!!
-#connection.commit()
-#This method commits the current transaction.
-#If you don't call this method, anything you did since the last call to commit()
-#is not visible from other database connections.
