@@ -41,33 +41,30 @@ def parseBuildingId(cur, buildingTable, field):
     return buildings
 
 
-def createBuildingsetTable(conn, cur, buildingTable, field):
+def createBuildingsetTable(conn, cur, buildingTable="buildings", field="buildingid", name="buildingset"):
     """
     Creates and empty table if not exists for the buildingsets in the database
     :param conn: database connection object from psycopg2
     :param cur: database cursor object from psycopg2
     :param buildingTable: str - name of the table that contains the building names
     :param field: str - name of the field in the table that contains the building names
+    :param name: str - name of the new BuildingsetTable, defaults to "buildingset
     :return: list - of building names, which are also the table field names in the same order
     """
     buildings = parseBuildingId(cur, buildingTable, field)
 
     #create a table with the mac + buildingnames as fields
-    query = "create table if not exists buildingset (mac text,"
+    query = "create table if not exists "+name+" (mac text,"
     for b in buildings:
         query +=  b + " smallint, "
-    query = query[:-2]
+    query = query[:-2] # remove the trailing comma from the last field name
     query += ");"
     cur.execute(query)
     conn.commit()
 
-    # create index on mac addresses
-    cur.execute("create index i_buildingset_mac on buildingset (mac);")
-    conn.commit()
-
     return  buildings
 
-buildings = createBuildingsetTable(conn, cur, "buildings", "buildingid")
+buildings = createBuildingsetTable(conn, cur, buildingTable="buildings", field="buildingid", name="buildingset")
 
 
 def createBuildingset(macs, limit=50):
@@ -110,6 +107,11 @@ def createBuildingset(macs, limit=50):
         buildingset_df.append(user_sequence)
 
     return buildingset_df
+
+
+# create index on mac addresses
+cur.execute("create index i_" + name + "_mac on " + name + " (mac);")
+conn.commit()
 
 
 buildingset = createBuildingset(users, 100)
