@@ -1,8 +1,19 @@
 import utility_functions as uf
 
-# connect and reconnect database
-conn, cur = uf.connectDB()
-conn,cur = uf.reconnectDB(conn)
+#conn, cur = uf.reconnectDB(conn)
+
+def main():
+    # connect and reconnect database
+    conn, cur = uf.connectDB()
+
+    buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset",\
+                                       mac=True)
+
+    createBuildingset(conn, cur, sequenceTable='group_rec_test', id_field='mac', building_field='building', \
+                      buildingsetTable='buildingset', building_list=buildings, mac=True, limit=None)
+
+    # Close the database connection
+    conn.close()
 
 
 def parseBuildingId(cur, buildingTable, field):
@@ -63,11 +74,9 @@ def createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildin
 
     return  buildings
 
-buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset", mac=True)
 
 
-
-def createBuildingset(conn, cur, sequenceTable, id_field, building_field, buildingsetTable, building_list=buildings, mac=True, limit=None):
+def createBuildingset(conn, cur, sequenceTable, id_field, building_field, buildingsetTable, building_list, mac=True, limit=None):
     """
     Loads the sequences into the database, so they can be directly used by Orange algorithms.
     :param conn: database connection object from psycopg2
@@ -121,7 +130,7 @@ def createBuildingset(conn, cur, sequenceTable, id_field, building_field, buildi
 
         # Parse insert query
         fieldnames = identifier
-        for i in buildings:
+        for i in building_list:
             fieldnames += ',' + i
 
         values = '%('+identifier+')s'
@@ -134,17 +143,14 @@ def createBuildingset(conn, cur, sequenceTable, id_field, building_field, buildi
             if i in b:
                 value_dict[i] = 1
             else:
-                value_dict[i] = 0
+                value_dict[i] = None
 
         query = 'insert into '+buildingsetTable+' (' + fieldnames + ') values ('+values+')'
         cur.execute(query, value_dict)
         conn.commit()
 
-    print 'Values inserted successfully'
+    print 'Values inserted into table \''+buildingsetTable+'\' successfully'
 
 
-createBuildingset(conn, cur, sequenceTable='group_rec_test', id_field='mac', building_field='building',\
-                  buildingsetTable='buildingset', building_list=buildings, mac=True, limit=50)
-
-# Close the database connection
-conn.close()
+if __name__ == '__main__':
+    main()
