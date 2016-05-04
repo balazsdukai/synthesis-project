@@ -3,15 +3,51 @@ from collections import Counter
 import csv
 import pandas as pd
 
-# Create a connection object
-try:
-    conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
-    print "Opened database successfully"
-except:
-    print "I'm unable to connect to the database"
 
-# This routine creates a cursor which will be used throughout of your database programming with Python.
-cur = conn.cursor()
+def connectDB():
+    # Create a connection object
+    try:
+        conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!",
+                                host="wifitracking.bk.tudelft.nl", port="5432")
+        print "Opened database successfully"
+    except:
+        print "I'm unable to connect to the database"
+
+    # This routine creates a cursor which will be used throughout of your database programming with Python.
+    cur = conn.cursor()
+
+    return conn, cur
+
+conn, cur = connectDB()
+
+def reconnectDB(conn):
+    """
+    Re-connects to the database
+    :param conn: connection object
+    :return: connection object, cursor object
+    """
+    # First close the database connection if it was open
+    try:
+        conn.close()
+        print 'Closed existing connection successfully'
+    except:
+        print 'The connection object does not exist, create one first (HINT: use \'connectDB()\')'
+
+    # Create a connection object
+    try:
+        conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!",
+                                host="wifitracking.bk.tudelft.nl", port="5432")
+        print "Opened database successfully"
+    except:
+        print "I'm unable to connect to the database"
+
+    # This routine creates a cursor which will be used throughout of your database programming with Python.
+    cur = conn.cursor()
+
+    return conn, cur
+
+conn,cur = reconnectDB(conn)
+
 
 def parseBuildingId(cur, buildingTable, field):
     """
@@ -66,13 +102,25 @@ def createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildin
     query = query[:-2] # remove the trailing comma from the last field name
     query += ");"
     cur.execute(query)
+    cur.statusmessage
     conn.commit()
 
     return  buildings
 
 buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset", mac=True)
 
-def createBuildinset(conn, cur, sequenceTable, )
+def createBuildinset(conn, cur, sequenceTable, id_field, buildingsetTable, mac=True):
+    """
+    Loads the sequences into the database, so they can be directly used by Orange algorithms
+    :param conn: database connection object from psycopg2
+    :param cur: database cursor object from psycopg2
+    :param sequenceTable: str - name of the table containing the sequences
+    :param id_field: str - name of the field in the sequenceTable that contains the mac/user identifiers
+    :param buildingsetTable: str - name of the empty buildingsetTable
+    :param mac: boolean - if True, id_field contains mac addresses, if False the id_field contains usernames
+    :return: nothing
+    """
+    if id_field
 
 def createBuildingset(, conn, cur, sequenceTable, buildingsetTable="buildingset",limit=50):
 
