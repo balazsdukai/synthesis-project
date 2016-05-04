@@ -1,3 +1,5 @@
+import psycopg2
+
 def connectDB():
     # Create a connection object
     try:
