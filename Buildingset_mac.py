@@ -2,7 +2,7 @@ import psycopg2
 from collections import Counter
 import csv
 import pandas as pd
-
+import utility_functions as uf
 
 def connectDB():
     # Create a connection object
@@ -109,18 +109,68 @@ def createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildin
 
 buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset", mac=True)
 
-def createBuildinset(conn, cur, sequenceTable, id_field, buildingsetTable, mac=True):
+
+
+def createBuildingset(conn, cur, sequenceTable, id_field, building_field, buildingsetTable, mac=True, limit=None):
     """
-    Loads the sequences into the database, so they can be directly used by Orange algorithms
+    Loads the sequences into the database, so they can be directly used by Orange algorithms.
     :param conn: database connection object from psycopg2
     :param cur: database cursor object from psycopg2
     :param sequenceTable: str - name of the table containing the sequences
     :param id_field: str - name of the field in the sequenceTable that contains the mac/user identifiers
+    :param building_field: str - name of th field in the sequenceTable that contains the building ids
     :param buildingsetTable: str - name of the empty buildingsetTable
     :param mac: boolean - if True, id_field contains mac addresses, if False the id_field contains usernames
+    :param limit: int - limit the number of mac/users to be processed, defaults to no limit
     :return: nothing
     """
-    if id_field
+    # Testing for potential id_field name confusions
+    if mac:
+        if id_field is 'mac':
+            pass
+        else:
+            response = raw_input(
+                "The id_field does not resemble to \'mac\', are you sure that mac-addresses are stored in the id_field? (y/n): ")
+            if response == 'y':
+                pass
+            else:
+                print 'Returning from function...'
+                return
+    else:
+        if id_field is 'username':
+            pass
+        else:
+            response = raw_input(
+                "The id_field does not resemble to \'username\', are you sure that usernames are stored in the id_field? (y/n): ")
+            if response == 'y':
+                pass
+            else:
+                print 'Returning from function...'
+                return
+
+    # Get id_field list
+    cur.execute('select distinct '+id_field+' from '+sequenceTable+';')
+    ids = cur.fetchall()
+
+    # Get the visited buildings per id
+    for id in ids[:limit]:
+        id = id[0]
+        cur.execute('select distinct '+building_field+' from '+sequenceTable+' where '+id_field+'=\''+id+'\';')
+        b = cur.fetchall()
+        b = [uf.getBuildingName(i[0]) for i in b]
+        print b
+
+
+
+
+
+
+
+
+createBuildingset(conn, cur, sequenceTable='group_rec_test', id_field='mac', building_field='building',\
+                  buildingsetTable='buildingset', mac=True, limit=50)
+
+
 
 def createBuildingset(, conn, cur, sequenceTable, buildingsetTable="buildingset",limit=50):
 
