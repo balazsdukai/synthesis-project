@@ -1,35 +1,59 @@
 import psycopg2
 import datetime
+import matplotlib.pyplot as plt
+from matplotlib.dates import *
+import numpy as np
 
 def main ():
     ## INPUT ##
     # From Building
     bld_from = "21-BTUD"
     # To Building
-    bld_to = "08-BK-City"
+    bld_to = "20-Aula"
     # Time interval
+    start = datetime.datetime(2016,04,25,4,0,0)
+    end = datetime.datetime(2016,04,26,4,0,0)
+    
+    # Create individual trajectories view
+    cur.execute(open("individual_trajectories.sql", "r").read(),(start,end,bld_from,bld_to))
+    conn.commit()
+
+    
+    
+    '''start_interval = start
+    # Create time series of movement
+    times = []
+    movements = []
+    while start_interval < end:
+        end_interval = start_interval + datetime.timedelta(0,60*60)
+        # Count people moving from A to B at time
+        SQL =  "select count(*) \
+                from individual_trajectories \
+                where end_time-((end_time-start_time)/2) < %s \
+                and end_time-((end_time-start_time)/2) > %s"
+        data =(start_interval,time)
+        cur.execute(SQL,data)
+        movement = cur.fetchall()
+        times.append(time)
+        movements.append(movement[0][0])
+        start_interval = end_interval
+
+    # Bar plot
+    #plt.plot(times, movements)
+    #plt.bar(times,movements)
+
+    N = len(times)
+    ind = np.arange(N)
+    fig, ax = plt.subplots()
+    width = 0.5
+    bars = ax.bar(ind, movements, width)
+    plt.show()'''
 
     
 
-    # Create individual trajectorie view
-    cur.execute(open("individual_trajectories.txt", "r").read())
-    conn.commit()
-
-    # Select records from specified input
-    SQL =  "select * \
-            from individual_trajectories \
-            where bld_nr = %s \
-            and next_bld_nr = %s \
-            limit 10"
-    data =(bld_from,bld_to,)
-    cur.execute(SQL,data)
-    print cur.query
-    records = cur.fetchall()
-    print records
-
     # Drop individual trajectorie view
-    cur.execute("drop view individual_trajectories")
-    conn.commit()
+    #cur.execute("drop table individual_trajectories")
+    #conn.commit()
 
     # Close the database connection
     conn.close()
