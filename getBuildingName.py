@@ -28,8 +28,8 @@ def getBuildingName(string):
         return building
 
 # Example
-s0 = 'System Campus > 21-BTUD > 1e verdieping'
-s1 = 'Root Area'
-getBuildingName(s0)
-getBuildingName(s1)
+# s0 = 'System Campus > 21-BTUD > 1e verdieping'
+# s1 = 'Root Area'
+# getBuildingName(s0)
+# getBuildingName(s1)
 
