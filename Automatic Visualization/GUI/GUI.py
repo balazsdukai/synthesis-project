@@ -2,6 +2,7 @@ import Tkinter
 import ttkcalendar
 import tkSimpleDialog
 import datetime
+import ttk
 
 
 class CalendarDialog(tkSimpleDialog.Dialog):
@@ -16,13 +17,11 @@ class CalendarDialog(tkSimpleDialog.Dialog):
         ## Insert our module here to use it for the dates
         ## var= {module}.function(self.result)
 
-# Demo code:
-
-
 class CalendarFrame(Tkinter.LabelFrame):
     def __init__(self, master):
         Tkinter.LabelFrame.__init__(self, master, text="Pick a date")
         self.dates = []
+        self.combo()
         
         def getdate():
             cd = CalendarDialog(self)
@@ -37,22 +36,36 @@ class CalendarFrame(Tkinter.LabelFrame):
         
         Tkinter.Entry(self, textvariable=self.selected_date).pack(side=Tkinter.LEFT)
         Tkinter.Button(self, text="Add dates", command=getdate).pack(side=Tkinter.LEFT)
+        Tkinter.Button(self, text="All days of week", command=self.getmondays).pack(side=Tkinter.LEFT)
+        
+    def getmondays(self):
+        now = datetime.datetime.now().date()
+        begin = datetime.datetime(2016,3,31).date()
+        mondays = []
+        dayspassed = (now - begin).days
+        for i in range(dayspassed/6):
+            j = int(self.box.get()[0])
+            dayofweek = datetime.timedelta(j,0,0)
+            next_mon = begin + dayofweek + datetime.timedelta(7*i,0,0)
+            if next_mon < now:
+                mondays.append(next_mon)
+        print mondays
 
-        def getmondays():
-            now = datetime.datetime.now().date()
-            begin = datetime.datetime(2016,3,31).date()
-            mondays = []
-            dayspassed = (now - begin).days
-            for i in range(dayspassed/6):
-                dayofweek = datetime.timedelta(i,0,0).days
-                print dayofweek
-                next_mon = begin + datetime.timedelta(7*i,0,0)
-                if next_mon < now:
-                    mondays.append(next_mon)
+    def combo(self):
+        self.box_value = Tkinter.StringVar()
+        self.box_value.set('Pick a day')
+        self.box = ttk.Combobox(self, textvariable=self.box_value, state='readonly')
+        self.box['values'] = ((4,'Monday'),
+                                       (5,'Tuesday'),
+                                       (6,'Wednesday'),
+                                       (0,'Thursday'),
+                                       (1,'Friday'),
+                                       (2,'Saturday'),
+                                       (3,'Sunday'))
+        self.box.pack(side=Tkinter.RIGHT)
+        print self.box.get()
 
-            print mondays
 
-        Tkinter.Button(self, text="All mondays", command=getmondays).pack(side=Tkinter.BOTTOM)
 
 def main():
     root = Tkinter.Tk()
