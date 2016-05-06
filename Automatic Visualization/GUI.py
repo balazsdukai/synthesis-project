@@ -97,7 +97,11 @@ class CalendarFrame(Tkinter.LabelFrame):
         rec_dates = self.mondays
         dates = sep_dates + rec_dates
         from_bld, to_bld = self.getBuildings()
-        var = AV.main(dates, from_bld, to_bld)
+        from_bld = [from_bld]
+        to_bld = [to_bld]
+        print to_bld
+        print from_bld
+        var = AV.main(from_bld, to_bld, dates)
 
     def clear(self):
         self.dates = []
