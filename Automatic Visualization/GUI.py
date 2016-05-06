@@ -4,6 +4,7 @@ import tkSimpleDialog
 import datetime
 import ttk
 import test
+#import Automatic_Visualization as AV
 
 
 class CalendarDialog(tkSimpleDialog.Dialog):
@@ -67,7 +68,7 @@ class CalendarFrame(Tkinter.LabelFrame):
         sep_dates = self.dates
         rec_dates = self.mondays
         dates = sep_dates + rec_dates
-        print 'dates',dates
+        #print 'dates',dates
         var = test.myfunc(dates)
 
     def clear(self):
