@@ -1,5 +1,4 @@
-﻿CREATE VIEW individual_trajectories AS 
-(select bld_nr,next_bld_nr,start_time,end_time
+select bld_nr,next_bld_nr,start_time,end_time into individual_trajectories
 from (
 	select 
 		username, 
@@ -12,12 +11,15 @@ from (
 	from (
 		select *
 		from wifilog
-		where substring(maploc,17,1) between '0' and '9' or  substring(maploc,17,1) = 'V'
+		where asstime + sesdur > %s
+		and asstime < %s 
+		and substring(maploc,17,1) between '0' and '9' or  substring(maploc,17,1) = 'V'
 		) as filtered
-	where extract(day from (asstime - time '04:00')) = 11
 	order by mac,asstime asc
 	) as trajectories
 where bld_nr != next_bld_nr 
 and mac = mac_next
 and end_time - start_time < time '01:00'
-order by start_time)
+and bld_nr = %s
+and next_bld_nr = %s
+order by start_time
