@@ -1,6 +1,9 @@
 import psycopg2
 import matplotlib.pyplot as plt
 import numpy as np
+import math
+import numpy as np
+from Tkinter import *
 
 # Create a connection object
 try:
@@ -12,39 +15,94 @@ except:
 # This routine creates a cursor which will be used throughout of your database programming with Python.
 cur = conn.cursor()
 
-# Get all table names in DB
-cur.execute("SELECT table_name FROM information_schema.tables\
-      WHERE table_schema = 'public'")
-for table in cur.fetchall():
-   print(table)
+###DROPDOWN MENU####
+cur.execute("SELECT distinct(bld_nr) FROM exit_count")
+options = [x[0] for x in cur.fetchall()] #list of buildings)
 
-# Get all column names in 'wifilog' table
-cur.execute("SELECT * FROM wifilog LIMIT 0")
-colnames = [desc[0] for desc in cur.description]
-print colnames
+master = Tk()
+master.geometry("%dx%d+%d+%d" % (250, 80, 200, 150))
+master.title("Select a building")
 
-# Nr. of rows in the table
-cur.execute("SELECT * FROM temp where next_bld_nr = '08-BK-City'")
-test = cur.fetchall() #list of tuples (bld name, apname, nr of scans)
-values = []
-for item in test:
-    #print item[2]
-    values.append(item[2])
-print values[0]
-#print test[0][2]
+var = StringVar(master)
+var.set(options[0]) # initial value
+option = OptionMenu(master, var, *options)
+option.pack(side = 'left',padx=10, pady=10)
+#option.pack(side='left', padx=10, pady=10)
 
-plt.hist(values)
-plt.show()
-#print rows[0]
-#print rows[0][0] # to access the value
 
-# Close the database connection
-conn.close()
+
+def ok():
+    plt.close() #close plot if open
+    bld = var.get()
+    
+    width = 1
+    limit = 10
+
+    ###   ENTRANCE   ###
+    
+    cur.execute("SELECT * FROM entrance_cnt where next_bld_nr = '{}'".format(bld))
+    entr_result = cur.fetchall() #list of tuples (bld name, apname, nr of scans)
+
+    entr_values = [x[2] for x in entr_result] #list of tuples (bld name, apname, nr of scans)
+    entr_labels = [x[1] for x in entr_result] #list of tuples (bld name, apname, nr of scans)
+    N = len(entr_values)
+    x = np.arange(N)
+
+    plt.figure(figsize=(15,12))
+    ax = plt.subplot(2,1,1)
+
+    rects1 = ax.bar(x[0:limit], entr_values[0:limit], width, color='r')
+
+    # add some text for labels, title and axes ticks
+    ax.set_ylabel('Number of scans')
+    ax.set_title('Number of entrance scans')
+    ax.set_xticks(x[0:limit] + width)
+    ax.set_xticklabels(entr_labels[0:limit])
+
+
+    ###   EXIT   ###
+
+    cur.execute("SELECT * FROM exit_count where bld_nr = '{}'".format(bld))
+    exit_result = cur.fetchall() #list of tuples (bld name, apname, nr of scans)
+
+    exit_values = []
+    exit_labels = []
+    for item in exit_result:
+        exit_values.append(item[2])
+        exit_labels.append(item[1])
+
+    N = len(exit_values)
+    exit_array = np.arange(N)
+
+    ax = plt.subplot(2,1,2) #axes and figure
+
+    rects2 = ax.bar(exit_array[0:limit], exit_values[0:limit], width, color='b')
+
+    # add some text for labels, title and axes ticks
+    ax.set_ylabel('Number of scans')
+    ax.set_title('Number of exit scans')
+    ax.set_xticks(exit_array[0:limit] + width)
+    ax.set_xticklabels(exit_labels[0:limit])
+
+    plt.show()
+
+    master.quit()
+    # Close the database connection
+    conn.close()
+    
+# use button to run def ok()    
+button = Button(master, text="Go!", command=ok)
+button.pack(side='right', padx=10, pady=10)
+
+
 
 # NOTE!!!
 #connection.commit()
 #This method commits the current transaction. 
 #If you don't call this method, anything you did since the last call to commit() 
 #is not visible from other database connections.
+
+
+mainloop()
 
 
