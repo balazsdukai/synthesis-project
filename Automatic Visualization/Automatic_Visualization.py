@@ -33,6 +33,9 @@ def main (dates):
     createTable(bld_from,bld_to,dates)
     barPlot(bld_from,bld_to,dates)
     dropTable()
+    # Close the database connection
+    conn.close()
+
 
 def barPlot(bld_from,bld_to,dates):
     n_days = len(dates)
@@ -88,5 +91,3 @@ def test():
 if __name__ == '__main__':
     test()
     
-# Close the database connection
-conn.close()
