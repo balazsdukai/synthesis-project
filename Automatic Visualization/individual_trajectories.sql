@@ -11,15 +11,15 @@ from (
 	from (
 		select *
 		from wifilog
-		where asstime + sesdur > %s
-		and asstime < %s 
-		and substring(maploc,17,1) between '0' and '9' or  substring(maploc,17,1) = 'V'
+		where ((asstime-time'01:00')::date in ({}) or (asstime+sesdur+time'01:00')::date in ({}))
+		and (substring(maploc,17,1) between '0' and '9' or  substring(maploc,17,1) = 'V')
 		) as filtered
 	order by mac,asstime asc
 	) as trajectories
 where bld_nr != next_bld_nr 
 and mac = mac_next
 and end_time - start_time < time '01:00'
-and bld_nr = %s
-and next_bld_nr = %s
+and (start_time+(end_time-start_time)/2)::date in ({})
+and bld_nr = '{}'
+and next_bld_nr = '{}'
 order by start_time
