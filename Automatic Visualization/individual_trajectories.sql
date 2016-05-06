@@ -20,6 +20,6 @@ where bld_nr != next_bld_nr
 and mac = mac_next
 and end_time - start_time < time '01:00'
 and (start_time+(end_time-start_time)/2)::date in ({})
-and bld_nr = '{}'
-and next_bld_nr = '{}'
+and bld_nr in ({})
+and next_bld_nr in ({})
 order by start_time

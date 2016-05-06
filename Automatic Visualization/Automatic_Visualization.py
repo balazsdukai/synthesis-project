@@ -18,26 +18,16 @@ except:
 cur = conn.cursor()
 
 
-def main (dates):
-    ## INPUT ##
-    # From Building
-    bld_from = "21-BTUD"
-    # To Building
-    bld_to = "20-Aula"
-    # Time interval
-    start = datetime.datetime(2016,04,25,0,0,0)
-    end = datetime.datetime(2016,04,26,0,0,0)
+def main (blds_from,blds_to,dates):
     
-    
-    
-    createTable(bld_from,bld_to,dates)
-    barPlot(bld_from,bld_to,dates)
+    createTable(blds_from,blds_to,dates)
+    barPlot(blds_from,blds_to,dates)
     dropTable()
     # Close the database connection
     conn.close()
 
 
-def barPlot(bld_from,bld_to,dates):
+def barPlot(blds_from,blds_to,dates):
     n_days = len(dates)
     movements = []
     n_hours = 24
@@ -55,27 +45,28 @@ def barPlot(bld_from,bld_to,dates):
     width = 0.9
     bars = ax.bar(hours, movements, width,color = '#00a6d6',edgecolor = 'none')
     ax.set_ylabel('People')
-    ax.set_ylabel('Hour of the day')
-    ax.set_title('Movement from %s to %s on %s' % (bld_from,bld_to,datenum2string(dates)))
+    ax.set_xlabel('Hour of the day')
+    ax.set_title('Movement from %s to %s on %s' % (list2string(blds_from),list2string(blds_to),list2string(dates)))
     ax.set_xticks(hours + (width/2))
     ax.set_xticklabels(hours, rotation=45, ha='center')
     plt.show()
 
    
-
-def createTable(bld_from,bld_to,dates):
-    str_dates = datenum2string(dates)
+def createTable(blds_from,blds_to,dates):
+    str_dates = list2string(dates)
+    str_blds_from = list2string(blds_from)
+    str_blds_to = list2string(blds_to)
     
     # Create individual trajectories table
-    cur.execute(open("individual_trajectories.sql", "r").read().format(str_dates,str_dates,str_dates,bld_from,bld_to))
+    cur.execute(open("individual_trajectories.sql", "r").read().format(str_dates,str_dates,str_dates,str_blds_from,str_blds_to))
     conn.commit()
     
-def datenum2string(dates):
+def list2string(lst):
     # Convert dates list to single string
-    str_dates = "'{}'".format(dates[0])
-    for date in dates[1:]:
-        str_dates = str_dates + ",'" +str(date) +"'" 
-    return str_dates
+    string = "'{}'".format(lst[0])
+    for value in lst[1:]:
+        string = string + ",'" +str(value) +"'" 
+    return string
 
 
 def dropTable():
@@ -84,8 +75,12 @@ def dropTable():
     conn.commit()
 
 def test():
-    dates = [datetime.date(2016,04,25),datetime.date(2016,04,26),datetime.date(2016,04,27),datetime.date(2016,04,28)]
-    main(dates)
+    dates = [datetime.date(2016,04,25),datetime.date(2016,04,26),datetime.date(2016,04,27),datetime.date(2016,04,28),datetime.date(2016,04,29)]
+    # all buildings: ['50-TNW-RID','64-HSL','66-OGZ','60-LMS','38-Cultureel Centrum','37-Sportcentrum','26-Bouwcampus','23-CITG','22-TNW-TN','VLL-LAB(TNO)','21-BTUD','20-Aula','46-P&E lab','35-Drebbelweg','45-LSL','43-EGM','34-OCP-3ME','32-OCP-IO','30-O&S','30-IKC ISD-FMVG','31-TBM','08-BK-City','03-Science Center','05-TNW-BIO','36-EWI-LB','36-EWI-HB','19-Studuitzendbureau','12-TNW-DCT','12-Kramerslab & Proeffabriek','62-LR','62-Simona']
+    
+    blds_from = ['50-TNW-RID','64-HSL','60-LMS','38-Cultureel Centrum','37-Sportcentrum','26-Bouwcampus','23-CITG','22-TNW-TN','VLL-LAB(TNO)','21-BTUD','20-Aula','46-P&E lab','35-Drebbelweg','45-LSL','43-EGM','34-OCP-3ME','32-OCP-IO','30-O&S','30-IKC ISD-FMVG','31-TBM','08-BK-City','03-Science Center','05-TNW-BIO','36-EWI-LB','36-EWI-HB','19-Studuitzendbureau','12-TNW-DCT','12-Kramerslab & Proeffabriek','62-LR','62-Simona']
+    blds_to = ['66-OGZ']
+    main(blds_from,blds_to,dates)
 
 
 if __name__ == '__main__':
