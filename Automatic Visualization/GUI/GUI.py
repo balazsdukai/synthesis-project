@@ -3,6 +3,7 @@ import ttkcalendar
 import tkSimpleDialog
 import datetime
 import ttk
+import test
 
 
 class CalendarDialog(tkSimpleDialog.Dialog):
@@ -13,14 +14,12 @@ class CalendarDialog(tkSimpleDialog.Dialog):
 
     def apply(self):
         self.result = self.calendar.selection
-        
-        ## Insert our module here to use it for the dates
-        ## var= {module}.function(self.result)
 
 class CalendarFrame(Tkinter.LabelFrame):
     def __init__(self, master):
         Tkinter.LabelFrame.__init__(self, master, text="Pick a date")
         self.dates = []
+        self.mondays = []
         self.combo()
         
         def getdate():
@@ -35,22 +34,22 @@ class CalendarFrame(Tkinter.LabelFrame):
         self.selected_date = Tkinter.StringVar()
         
         Tkinter.Entry(self, textvariable=self.selected_date).pack(side=Tkinter.LEFT)
-        Tkinter.Button(self, text="Add dates", command=getdate).pack(side=Tkinter.LEFT)
-        Tkinter.Button(self, text="All days of week", command=self.getmondays).pack(side=Tkinter.LEFT)
+        Tkinter.Button(self, text="1.Add dates", command=getdate).pack(side=Tkinter.LEFT)
+        Tkinter.Button(self, text="2.All days of week", command=self.getmondays).pack(side=Tkinter.RIGHT)
+        Tkinter.Button(self, text="3.Run visualization", command=self.run).pack(side=Tkinter.LEFT)
+        Tkinter.Button(self, text="4.Clear dates", command=self.clear).pack(side=Tkinter.LEFT)
         
     def getmondays(self):
         now = datetime.datetime.now().date()
         begin = datetime.datetime(2016,3,31).date()
-        mondays = []
         dayspassed = (now - begin).days
         for i in range(dayspassed/6):
             j = int(self.box.get()[0])
             dayofweek = datetime.timedelta(j,0,0)
             next_mon = begin + dayofweek + datetime.timedelta(7*i,0,0)
             if next_mon < now:
-                mondays.append(next_mon)
-        print mondays
-
+                self.mondays.append(next_mon)
+        
     def combo(self):
         self.box_value = Tkinter.StringVar()
         self.box_value.set('Pick a day')
@@ -63,9 +62,16 @@ class CalendarFrame(Tkinter.LabelFrame):
                                        (2,'Saturday'),
                                        (3,'Sunday'))
         self.box.pack(side=Tkinter.RIGHT)
-        print self.box.get()
 
+    def run(self):
+        sep_dates = self.dates
+        rec_dates = self.mondays
+        dates = sep_dates + rec_dates
+        print 'dates',dates
+        var = test.myfunc(dates)
 
+    def clear(self):
+        self.dates = []
 
 def main():
     root = Tkinter.Tk()

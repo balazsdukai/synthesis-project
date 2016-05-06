@@ -200,7 +200,6 @@ class Calendar(ttk.Frame):
             self._dates.pop(index)
         else:
             self._dates.append(datum.date())
-        #print self._dates
         
         self._show_selection(text, bbox)
 
