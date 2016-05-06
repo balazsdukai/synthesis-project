@@ -21,6 +21,8 @@ class CalendarFrame(Tkinter.LabelFrame):
         self.dates = []
         self.mondays = []
         self.combo()
+        self.combo_bld_from()
+        self.combo_bld_to()
         
         def getdate():
             cd = CalendarDialog(self)
@@ -33,11 +35,11 @@ class CalendarFrame(Tkinter.LabelFrame):
             self.selected_date.set(string)
         self.selected_date = Tkinter.StringVar()
         
-        Tkinter.Entry(self, textvariable=self.selected_date).pack(side=Tkinter.LEFT)
-        Tkinter.Button(self, text="1.Add dates", command=getdate).pack(side=Tkinter.LEFT)
-        Tkinter.Button(self, text="2.All days of week", command=self.getmondays).pack(side=Tkinter.RIGHT)
-        Tkinter.Button(self, text="3.Run visualization", command=self.run).pack(side=Tkinter.LEFT)
-        Tkinter.Button(self, text="4.Clear dates", command=self.clear).pack(side=Tkinter.LEFT)
+        Tkinter.Entry(self, textvariable=self.selected_date).pack(side=Tkinter.TOP, expand='yes')
+        Tkinter.Button(self, text="1.Add dates", command=getdate).pack(side=Tkinter.TOP)
+        Tkinter.Button(self, text="2.All days of week", command=self.getmondays).pack(side=Tkinter.TOP)
+        Tkinter.Button(self, text="3.Run visualization", command=self.run).pack(side=Tkinter.TOP)
+        Tkinter.Button(self, text="4.Clear dates", command=self.clear).pack(side=Tkinter.TOP)
         
     def getmondays(self):
         now = datetime.datetime.now().date()
@@ -61,21 +63,50 @@ class CalendarFrame(Tkinter.LabelFrame):
                                        (1,'Friday'),
                                        (2,'Saturday'),
                                        (3,'Sunday'))
-        self.box.pack(side=Tkinter.RIGHT)
+        self.box.pack(side=Tkinter.TOP)
 
+    def combo_bld_from(self):
+        AV.cur.execute("SELECT buildingid FROM buildings")
+        buildings = AV.cur.fetchall()
+        self.bld_from_value = Tkinter.StringVar()
+        self.bld_from_value.set('From which building?')
+        self.bld_from_box = ttk.Combobox(self, textvariable=self.bld_from_value, state='readonly')
+        temp = []
+        for i in range(len(buildings)):
+            temp.append(buildings[i][0])
+        self.bld_from_box['values'] = temp
+        self.bld_from_box.pack(side=Tkinter.BOTTOM)
+
+    def combo_bld_to(self):
+        AV.cur.execute("SELECT buildingid FROM buildings")
+        buildings = AV.cur.fetchall()
+        self.bld_to_value = Tkinter.StringVar()
+        self.bld_to_value.set('To which building?')
+        self.bld_to_box = ttk.Combobox(self, textvariable=self.bld_to_value, state='readonly')
+        temp = []
+        for i in range(len(buildings)):
+            temp.append(buildings[i][0])
+        self.bld_to_box['values'] = temp
+        self.bld_to_box.pack(side=Tkinter.BOTTOM)
+
+    def getBuildings(self):
+        return self.bld_from_box.get(), self.bld_to_box.get()
+        
     def run(self):
         sep_dates = self.dates
         rec_dates = self.mondays
         dates = sep_dates + rec_dates
-        
-        print 'dates',dates
-        var = AV.main(dates)
+        from_bld, to_bld = self.getBuildings()
+        var = AV.main(dates, from_bld, to_bld)
 
     def clear(self):
         self.dates = []
+        self.mondays = []
+        self.selected_date.set('')
 
 def main():
     root = Tkinter.Tk()
+    root.geometry("600x350+300+300")
     root.wm_title("Date Picker Dialog")
     CalendarFrame(root).pack()
     root.mainloop()
