@@ -5,7 +5,20 @@ from matplotlib.dates import *
 import numpy as np
 from Tkinter import *
 
-def main ():
+
+
+# Create a connection object
+try:
+    conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
+    print "Opened database successfully"
+except:
+    print "I'm unable to connect to the database"
+
+# Create cursor used for database actions
+cur = conn.cursor()
+
+
+def main (dates):
     ## INPUT ##
     # From Building
     bld_from = "21-BTUD"
@@ -14,8 +27,7 @@ def main ():
     # Time interval
     start = datetime.datetime(2016,04,25,0,0,0)
     end = datetime.datetime(2016,04,26,0,0,0)
-    # Day List
-    dates = [datetime.date(2016,04,25),datetime.date(2016,04,26),datetime.date(2016,04,27),datetime.date(2016,04,28)]
+    
     
     
     createTable(bld_from,bld_to,dates)
@@ -40,6 +52,7 @@ def barPlot(bld_from,bld_to,dates):
     width = 0.9
     bars = ax.bar(hours, movements, width,color = '#00a6d6',edgecolor = 'none')
     ax.set_ylabel('People')
+    ax.set_ylabel('Hour of the day')
     ax.set_title('Movement from %s to %s on %s' % (bld_from,bld_to,datenum2string(dates)))
     ax.set_xticks(hours + (width/2))
     ax.set_xticklabels(hours, rotation=45, ha='center')
@@ -67,17 +80,13 @@ def dropTable():
     cur.execute("drop table individual_trajectories")
     conn.commit()
 
+def test():
+    dates = [datetime.date(2016,04,25),datetime.date(2016,04,26),datetime.date(2016,04,27),datetime.date(2016,04,28)]
+    main(dates)
+
 
 if __name__ == '__main__':
-    # Create a connection object
-    try:
-        conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
-        print "Opened database successfully"
-    except:
-        print "I'm unable to connect to the database"
-
-    # Create cursor used for database actions
-    cur = conn.cursor()
-    main()
-    # Close the database connection
-    conn.close()
+    test()
+    
+# Close the database connection
+conn.close()
