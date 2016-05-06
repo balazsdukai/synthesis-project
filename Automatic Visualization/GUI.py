@@ -15,6 +15,22 @@ class CalendarDialog(tkSimpleDialog.Dialog):
     def apply(self):
         self.result = self.calendar.selection
 
+class checkBoxDialog(tkSimpleDialog.Dialog):
+    """Dialog box that displays a checkboxes and returns the selected checkboxes"""
+    def body(self, master):
+        pass
+        AV.cur.execute("SELECT buildingid FROM buildings")
+        buildings = AV.cur.fetchall()
+        temp = []
+        for i,building in enumerate(buildings[:10]):
+            buildings[i] = Tkinter.Variable()
+            l = ttk.Checkbutton(self, text=building[0], variable=buildings[i])
+            l.pack()
+    def apply(self):
+        pass
+##        self.result = 'konijn'
+
+
 class CalendarFrame(Tkinter.LabelFrame):
     def __init__(self, master):
         Tkinter.LabelFrame.__init__(self, master, text="Pick a date")
@@ -35,11 +51,12 @@ class CalendarFrame(Tkinter.LabelFrame):
             self.selected_date.set(string)
         self.selected_date = Tkinter.StringVar()
         
-        Tkinter.Entry(self, textvariable=self.selected_date).pack(side=Tkinter.TOP, expand='yes')
-        Tkinter.Button(self, text="1.Add dates", command=getdate).pack(side=Tkinter.TOP)
-        Tkinter.Button(self, text="2.All days of week", command=self.getmondays).pack(side=Tkinter.TOP)
-        Tkinter.Button(self, text="3.Run visualization", command=self.run).pack(side=Tkinter.TOP)
-        Tkinter.Button(self, text="4.Clear dates", command=self.clear).pack(side=Tkinter.TOP)
+        Tkinter.Entry(self, textvariable=self.selected_date).pack(side=Tkinter.TOP, expand='YES')
+        Tkinter.Button(self, text="1.Add dates", command=getdate).pack(side=Tkinter.TOP, expand='YES')
+        Tkinter.Button(self, text="2.All days of week", command=self.getmondays).pack(side=Tkinter.TOP, expand='YES')
+        Tkinter.Button(self, text="3.Run visualization", command=self.run).pack(side=Tkinter.TOP, expand='YES')
+        Tkinter.Button(self, text="4.Clear dates", command=self.clear).pack(side=Tkinter.TOP, expand='YES')
+        Tkinter.Button(self, text="5.Checkboxes", command=self.checkBoxes).pack(side=Tkinter.TOP, expand='YES')
         
     def getmondays(self):
         now = datetime.datetime.now().date()
@@ -89,6 +106,20 @@ class CalendarFrame(Tkinter.LabelFrame):
         self.bld_to_box['values'] = temp
         self.bld_to_box.pack(side=Tkinter.BOTTOM)
 
+    def checkBoxes(self):
+        cd = checkBoxDialog(self)
+##        AV.cur.execute("SELECT buildingid FROM buildings")
+##        buildings = AV.cur.fetchall()
+##        print buildings
+##        temp = []
+##        for i,building in enumerate(buildings):
+##            print buildings[i]
+##            buildings[i] = Tkinter.Variable()
+##            l = ttk.Checkbutton(self, text=building[0], variable=buildings[i])
+##            l.pack()
+            
+        
+
     def getBuildings(self):
         return self.bld_from_box.get(), self.bld_to_box.get()
         
@@ -99,8 +130,6 @@ class CalendarFrame(Tkinter.LabelFrame):
         from_bld, to_bld = self.getBuildings()
         from_bld = [from_bld]
         to_bld = [to_bld]
-        print to_bld
-        print from_bld
         var = AV.main(from_bld, to_bld, dates)
 
     def clear(self):
