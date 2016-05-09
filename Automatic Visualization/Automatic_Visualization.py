@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import *
 import numpy as np
 from Tkinter import *
+import createmaps as CM
 
 
 
@@ -21,6 +22,7 @@ cur = conn.cursor()
 def main (blds_from,blds_to,dates):
     
     createTable(blds_from,blds_to,dates)
+    CM.main(dates, blds_from, blds_to)
     barPlot(blds_from,blds_to,dates)
     dropTable()
     # Close the database connection

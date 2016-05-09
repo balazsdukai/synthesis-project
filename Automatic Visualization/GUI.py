@@ -46,6 +46,7 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
             self.varb[j] = Tkinter.IntVar()
             chkb = Tkinter.Checkbutton(self, text=building[0], variable=self.varb[j])
             chkb.pack(in_=bottom, side = Tkinter.TOP, anchor='w')
+            
         
     def apply(self):        
         self.selected_buildings = []
@@ -82,14 +83,14 @@ class CalendarFrame(Tkinter.LabelFrame):
         ## Buttons and stuff
         Tkinter.Entry(self, textvariable=self.selected_date).pack(side=Tkinter.TOP, expand=True)
         Tkinter.Button(self, text="1.Add dates", command=getdate).pack(side=Tkinter.TOP, anchor='w')
-        Tkinter.Button(self, text="2.All days of week", command=self.getmondays).pack(side=Tkinter.TOP, anchor='w')
-        Tkinter.Button(self, text="3.Run visualization", command=self.run).pack(side=Tkinter.TOP, anchor='w')
-        Tkinter.Button(self, text="4.Clear dates", command=self.clear).pack(side=Tkinter.TOP, anchor='w')
-        Tkinter.Button(self, text="5.From which buildings?", command=self.fromBld).pack(side=Tkinter.TOP, anchor='w')
-        Tkinter.Button(self, text="6.To which buildings?", command=self.toBld).pack(side=Tkinter.TOP, anchor='w')
+        Tkinter.Button(self, text="2.All days of week", command=self.getdays).pack(side=Tkinter.TOP, anchor='w')
+        Tkinter.Button(self, text="3.From which buildings?", command=self.fromBld).pack(side=Tkinter.TOP, anchor='w')
+        Tkinter.Button(self, text="4.To which buildings?", command=self.toBld).pack(side=Tkinter.TOP, anchor='w')
+        Tkinter.Button(self, text="5.Clear dates", command=self.clear).pack(side=Tkinter.TOP, anchor='w')
+        Tkinter.Button(self, text="6.Run visualization", command=self.run).pack(side=Tkinter.TOP, anchor='w')
 
         
-    def getmondays(self):
+    def getdays(self):
         now = datetime.datetime.now().date()
         begin = datetime.datetime(2016,3,31).date()
         dayspassed = (now - begin).days
@@ -127,7 +128,7 @@ class CalendarFrame(Tkinter.LabelFrame):
         sep_dates = self.dates
         rec_dates = self.mondays
         dates = sep_dates + rec_dates
-        var = AV.main(self.bld_from, self.bld_to, dates)
+        barplot = AV.main(self.bld_from, self.bld_to, dates)
 
     def clear(self):
         self.dates = []
