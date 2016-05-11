@@ -20,7 +20,6 @@ cur = conn.cursor()
 
 
 def main (blds_from,blds_to,dates):
-    
     createTable(blds_from,blds_to,dates)
     CM.main(dates, blds_from, blds_to)
     barPlot(blds_from,blds_to,dates)

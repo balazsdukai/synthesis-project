@@ -135,7 +135,7 @@ def createMap(dates,blds_from,blds_to):
     map_osm.save('map.html')
     os.system('map.html')
 
-def main():
+def test():
     bld_from = ["23-CITG","21-BTUD","30-O&S","20-Aula"]
     bld_to = ["23-CITG","21-BTUD","30-O&S","20-Aula"]
     start = datetime.date(2016,04,20)
@@ -144,5 +144,10 @@ def main():
     date.append(start)
     date.append(end)
     createMap(date,bld_from,bld_to)
+
+def main(dates, bld_from, bld_to):
+    createMap(dates, bld_from, bld_to)
+    
+    
 if __name__=='__main__':
-    main()
+    test()
