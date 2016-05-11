@@ -67,9 +67,9 @@ def getPopup(bld_nr,next_bld_nr,count1,count2,path):
     vis.legend(title=bld_nr+' To '+next_bld_nr+': '+str(count1)+' , '+next_bld_nr+' To '+bld_nr+': '+str(count2))
     vis.to_json(path)
 
-def drawBuildings(buildings,blds_from,blds_to,Map):
+def drawBuildings(newBuildingList,buildings,Map):
     for building_name in buildings:
-        if building_name in blds_from or building_name in blds_to:
+        if building_name in newBuildingList:
             marker=folium.Marker(buildings[building_name],
                   popup=building_name
                  )
@@ -82,7 +82,7 @@ def checkFolder(path):
     else:
         os.makedirs(path)
 
-def drawLines(dates,rows,buildings,Map):
+def drawLines(dates,rows,buildings,newBuildingList,Map):
     # Line style :
     thick=50.0
     thin=2.0
@@ -104,6 +104,10 @@ def drawLines(dates,rows,buildings,Map):
             total=rows[i][2]+count
             if total<minCount:
                 continue
+            if bld_nr not in newBuildingList:
+                newBuildingList.append(bld_nr)
+            if next_bld_nr not in newBuildingList:
+                newBuildingList.append(next_bld_nr)
             thickness=total*times+thin
             sym= fabs(rows[i][2]-count)/(rows[i][2]+count)
             r= int(255/1.0*sym)
@@ -124,6 +128,10 @@ def drawLines(dates,rows,buildings,Map):
         else:
             if rows[i][2]<minCount:
                 continue
+            if bld_nr not in newBuildingList:
+                newBuildingList.append(bld_nr)
+            if next_bld_nr not in newBuildingList:
+                newBuildingList.append(next_bld_nr)
             thickness=rows[i][2]*times+thin
             r =0
             g =126
@@ -137,7 +145,6 @@ def drawLines(dates,rows,buildings,Map):
             ,opacity=1)
             polyline.add_to(Map)
             finished.append(i)
-
 def createMap(dates,blds_from,blds_to):
     
     # Connect to database
@@ -154,18 +161,19 @@ def createMap(dates,blds_from,blds_to):
     cur.execute("SELECT * FROM buildings;")
     rows = cur.fetchall()
     buildings=getBuildings(rows)
-    drawBuildings(buildings,blds_from,blds_to,map_osm)
         
     # Format SQL statement
     SQL="""select bld_nr,next_bld_nr,count(*)
-        from individual_trajectories
+        from individual_trajactories
         group by bld_nr,next_bld_nr
         order by count desc
         """
     cur.execute(SQL)
     rows = cur.fetchall()
-    # Draw lines
-    drawLines(dates,rows,buildings,map_osm)
+    # Draw lines and buildings
+    newBuildingList=[]
+    drawLines(dates,rows,buildings,newBuildingList,map_osm)
+    drawBuildings(newBuildingList,buildings,map_osm)
     # Close connection
     cur.close()
     conn.close()
