@@ -86,7 +86,7 @@ def drawLines(dates,rows,buildings,Map):
     # Line style :
     thick=50.0
     thin=2.0
-    maxCount=max(rows[0][2]*2,len(dates)*1000.0)
+    maxCount=max(rows[0][2]*2,len(dates)*500.0)
     minCount=maxCount*0.01
     print minCount
     times= (thick-thin)/(maxCount-minCount)
