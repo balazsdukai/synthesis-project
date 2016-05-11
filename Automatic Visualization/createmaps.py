@@ -84,11 +84,12 @@ def checkFolder(path):
 
 def drawLines(rows,buildings,Map):
     # Line style :
-    thick=80.0
-    thin=3.0
-    diff=10000.0
-    times= (thick-thin)/diff
-    coe=400000.0
+    thick=50.0
+    thin=2.0
+    maxCount=max(rows[0][2]*2,len(dates)*1000.0)
+    minCount=maxCount*0.03
+    print minCount
+    times= (thick-thin)/(maxCount-minCount)
     finished=[]
     # Draw lines :
     path=os.path.join(os.path.dirname(__file__), 'charts', '')
@@ -100,7 +101,10 @@ def drawLines(rows,buildings,Map):
         next_bld_nr=rows[i][1]
         if(getCount(next_bld_nr,bld_nr,rows)!=None):
             (index,count)=getCount(next_bld_nr,bld_nr,rows)
-            thickness=(count+rows[i][2])*times+thin
+            total=rows[i][2]+count
+            if total<minCount:
+                continue
+            thickness=total*times+thin
             sym= fabs(rows[i][2]-count)/(rows[i][2]+count)
             r= int(255/1.0*sym)
             g= int(-200/1.0*sym)+200
@@ -118,6 +122,8 @@ def drawLines(rows,buildings,Map):
             polyline.add_to(Map)
             finished.append(index)
         else:
+            if rows[i][2]<minCount:
+                continue
             thickness=rows[i][2]*times+thin
             r =0
             g =126
