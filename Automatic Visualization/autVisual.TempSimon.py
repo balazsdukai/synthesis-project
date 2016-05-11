@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import *
 import numpy as np
 from Tkinter import *
-import createmaps as CM
+#import createmaps as CM
 import csv
+import folium
 
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
@@ -15,7 +16,7 @@ import utility_functions as uf
 
 # Create a connection object
 try:
-    conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
+    conn = psycopg2.connect(database="wifi", user="postgres", password="geomatics", host="localhost", port="5432")
     print "Opened database successfully"
 except:
     print "I'm unable to connect to the database"
@@ -25,25 +26,20 @@ cur = conn.cursor()
 
 
 def main (blds_from,blds_to,dates):
-
+    #createFiltered(dates)
+    #fillAndGroup()
 
 
     str_dates = list2string(dates)
     # Create filtered table
-    cur.execute(open("filtered2.sql", "r").read().format(str_dates,str_dates))
+    cur.execute("select mac,maploc,asstime as start_time,asstime + sesdur as end_time,apname from wifilogwhere ((asstime+sesdur-time'03:00')::date in ({}) or (asstime-time'05:00')::date in ({}))and (substring(maploc,17,1) between '0' and '9' or  substring(maploc,17,1) = 'V');".format(str_dates,str_dates))
     records = cur.fetchall()
     print 'filtered records selected'
 
-
-
-    
-    #createFiltered(dates)
-    #fillAndGroup()
-    
     # createTable(blds_from,blds_to,dates)
     # CM.main(dates, blds_from, blds_to)
     # barPlot(blds_from,blds_to,dates)
-    # dropTable('filtered')
+    #dropTable('filtered')
     # Close the database connection
     conn.close()
 
@@ -73,8 +69,8 @@ def insertRecord(mac,record):
     #    writer = csv.writer(f)
     #    writer.writerow([mac, bld, t_s, t_e, ap_s, ap_e])
 
-    #cur.execute("insert into grouped values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
-    #conn.commit()
+    cur.execute("insert into grouped values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
+    conn.commit()
     
 
 def fillAndGroup():
@@ -143,7 +139,6 @@ def barPlot(blds_from,blds_to,dates):
 def createFiltered(dates):
     str_dates = list2string(dates)
     # Create filtered table
-    print str_dates
     cur.execute(open("filtered.sql", "r").read().format(str_dates,str_dates))
     conn.commit()
     print 'table filtered created'

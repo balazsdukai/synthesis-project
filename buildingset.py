@@ -1,4 +1,7 @@
 import utility_functions as uf
+import time
+
+start_time = time.time() # for measuring approx. execution time
 
 #conn, cur = uf.reconnectDB(conn)
 
@@ -6,11 +9,11 @@ def main():
     # connect and reconnect database
     conn, cur = uf.connectDB()
 
-    buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset",\
+    buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset_v0504_test",\
                                        mac=True)
 
-    createBuildingset(conn, cur, sequenceTable='group_rec_test', id_field='mac', building_field='building', \
-                      buildingsetTable='buildingset', building_list=buildings, mac=True, limit=None)
+    createBuildingset(conn, cur, sequenceTable='group_rec', id_field='mac', building_field='building', \
+                      buildingsetTable='buildingset_v0504_test', building_list=buildings, mac=True, limit=5000)
 
     # Close the database connection
     conn.close()
@@ -154,3 +157,5 @@ def createBuildingset(conn, cur, sequenceTable, id_field, building_field, buildi
 
 if __name__ == '__main__':
     main()
+
+print("%f seconds" % (time.time() - start_time))
