@@ -64,7 +64,7 @@ def drawLines(rows,buildings,Map):
     thick=35.0
     thin=5.0
     diff=rows[0][2]-rows[-1][2]
-    times= (thick-thin)/diff
+    times= (thick-thin)/(float(diff))
     coe=400000.0
     finished=[]
     # Draw lines :
