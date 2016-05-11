@@ -82,7 +82,7 @@ def checkFolder(path):
     else:
         os.makedirs(path)
 
-def drawLines(rows,buildings,Map):
+def drawLines(dates,rows,buildings,Map):
     # Line style :
     thick=50.0
     thin=2.0
@@ -165,7 +165,7 @@ def createMap(dates,blds_from,blds_to):
     cur.execute(SQL)
     rows = cur.fetchall()
     # Draw lines
-    drawLines(rows,buildings,map_osm)
+    drawLines(dates,rows,buildings,map_osm)
     # Close connection
     cur.close()
     conn.close()
