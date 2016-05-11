@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "08-BK-City To 20-Aula",
-          "val": 209
+          "idx": "20-Aula To 32-OCP-IO",
+          "val": 304
         },
         {
           "col": "data",
-          "idx": "20-Aula To 08-BK-City",
-          "val": 1032
+          "idx": "32-OCP-IO To 20-Aula",
+          "val": 61
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "20-Aula To 08-BK-City: 1032 , 08-BK-City To 20-Aula: 209"
+      "title": "20-Aula To 32-OCP-IO: 304 , 32-OCP-IO To 20-Aula: 61"
     }
   ],
   "marks": [

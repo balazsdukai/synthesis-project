@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "20-Aula To 30-O&S",
-          "val": 25
+          "idx": "36-EWI-HB To 36-EWI-LB",
+          "val": 639
         },
         {
           "col": "data",
-          "idx": "30-O&S To 20-Aula",
-          "val": 29
+          "idx": "36-EWI-LB To 36-EWI-HB",
+          "val": 637
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "30-O&S To 20-Aula: 29 , 20-Aula To 30-O&S: 25"
+      "title": "36-EWI-HB To 36-EWI-LB: 639 , 36-EWI-LB To 36-EWI-HB: 637"
     }
   ],
   "marks": [
