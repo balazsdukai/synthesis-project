@@ -28,6 +28,11 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
         bottom = Tkinter.Frame(self)
         top.pack(side=Tkinter.LEFT, anchor='w')
         bottom.pack(side=Tkinter.LEFT, anchor='e', fill=Tkinter.BOTH, expand=True)
+
+        ## Select All checkbox
+        self.var = Tkinter.IntVar()
+        sel_all = Tkinter.Checkbutton(self, text='Select All', variable=self.var)
+        sel_all.pack(side=Tkinter.LEFT, anchor='e')
         
         ## Create checkboxes 1st column
         self.vara = []
@@ -48,6 +53,7 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
             chkb.pack(in_=bottom, side = Tkinter.TOP, anchor='w')
             
         
+        
     def apply(self):        
         self.selected_buildings = []
         for i in range(len(self.buildings[:16])):
@@ -57,14 +63,20 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
             if self.varb[j].get() == 1:
                 self.selected_buildings.append(self.buildings[16+j][0])
         self.result = self.selected_buildings
-        return self.result
+        if self.var.get() == 1:
+            self.result = []
+            for item in self.buildings:
+                self.result.append(item[0])
+            return self.result
+        else:
+            return self.result
 
 
 class CalendarFrame(Tkinter.LabelFrame):
     def __init__(self, master):
         Tkinter.LabelFrame.__init__(self, master, text="What do you want to know?")
         self.dates = []
-        self.mondays = []
+        self.days = []
         self.combo()
         self.bld_from = []
         self.bld_to = []
@@ -86,8 +98,8 @@ class CalendarFrame(Tkinter.LabelFrame):
         Tkinter.Button(self, text="2.All days of week", command=self.getdays).pack(side=Tkinter.TOP, anchor='w')
         Tkinter.Button(self, text="3.From which buildings?", command=self.fromBld).pack(side=Tkinter.TOP, anchor='w')
         Tkinter.Button(self, text="4.To which buildings?", command=self.toBld).pack(side=Tkinter.TOP, anchor='w')
-        Tkinter.Button(self, text="5.Clear dates", command=self.clear).pack(side=Tkinter.TOP, anchor='w')
-        Tkinter.Button(self, text="6.Run visualization", command=self.run).pack(side=Tkinter.TOP, anchor='w')
+        Tkinter.Button(self, text="5.Run visualization", command=self.run).pack(side=Tkinter.TOP, anchor='w')
+        Tkinter.Button(self, text="6.Clear dates", command=self.clear).pack(side=Tkinter.TOP, anchor='w')
 
         
     def getdays(self):
@@ -99,7 +111,7 @@ class CalendarFrame(Tkinter.LabelFrame):
             dayofweek = datetime.timedelta(j,0,0)
             next_mon = begin + dayofweek + datetime.timedelta(7*i,0,0)
             if next_mon < now:
-                self.mondays.append(next_mon)
+                self.days.append(next_mon)
         
     def combo(self):
         self.box_value = Tkinter.StringVar()
@@ -126,7 +138,7 @@ class CalendarFrame(Tkinter.LabelFrame):
         
     def run(self):
         sep_dates = self.dates
-        rec_dates = self.mondays
+        rec_dates = self.days
         dates = sep_dates + rec_dates
         barplot = AV.main(self.bld_from, self.bld_to, dates)
 
