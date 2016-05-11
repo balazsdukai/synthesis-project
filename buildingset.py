@@ -98,26 +98,26 @@ def createBuildingset(conn, cur, sequenceTable, id_field, building_field, buildi
             identifier = 'mac'
             pass
         else:
-            response = raw_input(
+            response = input(
                 "The id_field does not resemble to \'mac\', are you sure that mac-addresses are stored in the id_field? (y/n): ")
             if response == 'y':
                 identifier = 'mac'
                 pass
             else:
-                print 'Returning from function...'
+                print('Returning from function...')
                 return
     else:
         if id_field == 'username':
             identifier = 'username'
             pass
         else:
-            response = raw_input(
+            response = input(
                 "The id_field does not resemble to \'username\', are you sure that usernames are stored in the id_field? (y/n): ")
             if response == 'y':
                 identifier = 'username'
                 pass
             else:
-                print 'Returning from function...'
+                print('Returning from function...')
                 return
 
     # Get id_field list
@@ -152,10 +152,10 @@ def createBuildingset(conn, cur, sequenceTable, id_field, building_field, buildi
         cur.execute(query, value_dict)
         conn.commit()
 
-    print 'Values inserted into table \''+buildingsetTable+'\' successfully'
+    print('Values inserted into table \''+buildingsetTable+'\' successfully')
 
 
 if __name__ == '__main__':
     main()
 
-print("%f seconds" % (time.time() - start_time))
+print(("%f seconds" % (time.time() - start_time)))
