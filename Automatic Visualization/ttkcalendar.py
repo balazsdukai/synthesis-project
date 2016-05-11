@@ -169,7 +169,6 @@ class Calendar(ttk.Frame):
 
     def _pressed(self, evt):
         """Clicked somewhere in the calendar."""
-        print 'Pressed'
         x, y, widget = evt.x, evt.y, evt.widget
         item = widget.identify_row(y)
         column = widget.identify_column(x)
@@ -200,8 +199,7 @@ class Calendar(ttk.Frame):
             index = self._dates.index(datum)
             self._dates.pop(index)
         else:
-            self._dates.append(datum)
-        print self._dates
+            self._dates.append(datum.date())
         
         self._show_selection(text, bbox)
 
@@ -232,6 +230,7 @@ class Calendar(ttk.Frame):
             return None
 
         year, month = self._date.year, self._date.month
+        #return self._dates
         return self.datetime(year, month, int(self._selection[0]))
 
 def test():
