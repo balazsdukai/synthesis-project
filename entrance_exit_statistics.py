@@ -35,7 +35,7 @@ def ok():
     plt.close() #close plot if open
     bld = var.get()
     
-    width = 1
+    width = 0.9
     limit = 10
 
     ###   ENTRANCE   ###
@@ -48,16 +48,19 @@ def ok():
     N = len(entr_values)
     x = np.arange(N)
 
-    plt.figure(figsize=(15,12))
+    plt.figure(figsize=(15,12),facecolor='white')
+    
     ax = plt.subplot(2,1,1)
 
-    rects1 = ax.bar(x[0:limit], entr_values[0:limit], width, color='r')
+    rects1 = ax.bar(x[0:limit], entr_values[0:limit], width, color='r', edgecolor='none')
 
     # add some text for labels, title and axes ticks
     ax.set_ylabel('Number of scans')
+    ax.set_xlabel('Name of access point')
     ax.set_title('Number of entrance scans')
-    ax.set_xticks(x[0:limit] + width)
-    ax.set_xticklabels(entr_labels[0:limit])
+    
+    ax.set_xticks(x[0:limit] + (0.5*width))
+    ax.set_xticklabels(entr_labels[0:limit], rotation=30, ha='right')
 
 
     ###   EXIT   ###
@@ -80,10 +83,13 @@ def ok():
 
     # add some text for labels, title and axes ticks
     ax.set_ylabel('Number of scans')
+    ax.set_xlabel('Name of access point')
     ax.set_title('Number of exit scans')
-    ax.set_xticks(exit_array[0:limit] + width)
+    
+    ax.set_xticks(x[0:limit] + (0.5*width))
     ax.set_xticklabels(exit_labels[0:limit])
 
+    plt.tight_layout()
     plt.show()
 
     master.quit()
