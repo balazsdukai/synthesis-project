@@ -1,6 +1,9 @@
 import folium
+import vincent
 import psycopg2
 import datetime
+import json
+import shutil
 #from IPython.display import HTML
 import random
 from math import *
@@ -20,6 +23,12 @@ def perpendicular(k,x0,y0):
     b=y0+x0/k
     return (km,b)
 
+def list2string(lst):
+    # Convert dates list to single string
+    string = "'{}'".format(lst[0])
+    for value in lst[1:]:
+        string = string + ",'" +str(value) +"'" 
+    return string
 def list2string(lst):
     # Convert dates list to single string
     string = "'{}'".format(lst[0])
@@ -51,6 +60,13 @@ def getBuildings(rows):
         building_name=rows[i][2]
         buildings[building_name]=(lat,lon)
     return buildings
+
+def getPopup(bld_nr,next_bld_nr,count1,count2,path):
+    data={bld_nr+' To '+next_bld_nr:count1,next_bld_nr+' To '+bld_nr:count2}
+    vis = vincent.Pie(data,outer_radius=70,width=50,height=50)
+    vis.legend(title=bld_nr+' To '+next_bld_nr+': '+str(count1)+' , '+next_bld_nr+' To '+bld_nr+': '+str(count2))
+    vis.to_json(path)
+
 def drawBuildings(buildings,blds_from,blds_to,Map):
     for building_name in buildings:
         if building_name in blds_from or building_name in blds_to:
@@ -59,46 +75,62 @@ def drawBuildings(buildings,blds_from,blds_to,Map):
                  )
             marker.add_to(Map)
 
+def checkFolder(path):
+    if os.path.isdir(path)==True:
+        shutil.rmtree(path)
+        os.makedirs(path)
+    else:
+        os.makedirs(path)
+
 def drawLines(rows,buildings,Map):
     # Line style :
-    thick=35.0
-    thin=5.0
-    diff=rows[0][2]-rows[-1][2]
-    times= (thick-thin)/(float(diff))
+    thick=80.0
+    thin=3.0
+    diff=10000.0
+    times= (thick-thin)/diff
     coe=400000.0
     finished=[]
     # Draw lines :
+    path=os.path.join(os.path.dirname(__file__), 'charts', '')
+    checkFolder(path)
     for i in range(len(rows)):
         if i in finished:
             continue
-        r =random.randint(0,255)
-        g = random.randint(0,255)
-        b =random.randint(0,255)
         bld_nr=rows[i][0]
         next_bld_nr=rows[i][1]
-        thickness=(rows[i][2]-rows[-1][2])*times+thin
-        polyline=folium.PolyLine([
-            [buildings[bld_nr][0],buildings[bld_nr][1]],
-            [buildings[next_bld_nr][0],buildings[next_bld_nr][1]]],
-        popup=bld_nr+' To '+next_bld_nr+": "+str(rows[i][2]),
-        weight=thickness,
-        color='rgb('+str(r)+','+str(g)+','+str(b)+')'
-        ,opacity=1)
-        polyline.add_to(Map)
-        finished.append(i)
         if(getCount(next_bld_nr,bld_nr,rows)!=None):
             (index,count)=getCount(next_bld_nr,bld_nr,rows)
-            thickness=(count-rows[-1][2])*times+thin
-            newCoords=getCoordinate(buildings[next_bld_nr],buildings[bld_nr],0.00005+thickness/coe)
+            thickness=(count+rows[i][2])*times+thin
+            sym= fabs(rows[i][2]-count)/(rows[i][2]+count)
+            r= int(255/1.0*sym)
+            g= int(-200/1.0*sym)+200
+            b=0
+            chartPath=path+'vis'+str(i)+'.json'
+            pop= getPopup(bld_nr,next_bld_nr,rows[i][2],count,chartPath)
             polyline=folium.PolyLine([
-                [newCoords[0][0],newCoords[0][1]],
-                [newCoords[1][0],newCoords[1][1]]],
-            popup=next_bld_nr+' To '+bld_nr+": "+str(count),
+                [buildings[bld_nr][0],buildings[bld_nr][1]],
+            [buildings[next_bld_nr][0],buildings[next_bld_nr][1]]],
+            popup=folium.Popup(max_width=450).add_child(
+            folium.Vega(json.load(open(chartPath)), width=450, height=150)),
             weight=thickness,
             color='rgb('+str(r)+','+str(g)+','+str(b)+')'
             ,opacity=1)
             polyline.add_to(Map)
             finished.append(index)
+        else:
+            thickness=rows[i][2]*times+thin
+            r =0
+            g =126
+            b =229
+            polyline=folium.PolyLine([
+            [buildings[bld_nr][0],buildings[bld_nr][1]],
+            [buildings[next_bld_nr][0],buildings[next_bld_nr][1]]],
+            popup=bld_nr+' To '+next_bld_nr+": "+str(rows[i][2]),
+            weight=thickness,
+            color='rgb('+str(r)+','+str(g)+','+str(b)+')'
+            ,opacity=1)
+            polyline.add_to(Map)
+            finished.append(i)
 
 def createMap(dates,blds_from,blds_to):
     
@@ -144,10 +176,8 @@ def test():
     date.append(start)
     date.append(end)
     createMap(date,bld_from,bld_to)
-
-def main(dates, bld_from, bld_to):
-    createMap(dates, bld_from, bld_to)
-    
+def main(dates,blds_from,blds_to):
+    createMap(dates,blds_from,blds_to)
     
 if __name__=='__main__':
     test()
