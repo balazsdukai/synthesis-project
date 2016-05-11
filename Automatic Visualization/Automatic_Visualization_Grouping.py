@@ -25,13 +25,25 @@ cur = conn.cursor()
 
 
 def main (blds_from,blds_to,dates):
-    createFiltered(dates)
-    fillAndGroup()
+
+
+
+    str_dates = list2string(dates)
+    # Create filtered table
+    cur.execute(open("filtered2.sql", "r").read().format(str_dates,str_dates))
+    records = cur.fetchall()
+    print 'filtered records selected'
+
+
+
+    
+    #createFiltered(dates)
+    #fillAndGroup()
     
     # createTable(blds_from,blds_to,dates)
     # CM.main(dates, blds_from, blds_to)
     # barPlot(blds_from,blds_to,dates)
-    dropTable('filtered')
+    # dropTable('filtered')
     # Close the database connection
     conn.close()
 
@@ -57,7 +69,6 @@ def insertRecord(mac,record):
     bld = "'{}'".format(record[i_bld])
     ap_s = "'{}'".format(record[i_aps])
     ap_e = "'{}'".format(record[i_apt])
-    print 'hallo'
     #with open('insertGrouped.csv', 'ab') as f:
     #    writer = csv.writer(f)
     #    writer.writerow([mac, bld, t_s, t_e, ap_s, ap_e])
@@ -91,20 +102,17 @@ def fillAndGroup():
             gap = next_rec[i_start] - cur_rec[i_end]
             if gap > datetime.timedelta(0,60*60):
                 gap_rec = ('world',cur_rec[i_end],next_rec[i_start],None,None)
-                print 'world'
                 insertRecord(mac,gap_rec)
             
             if gap < datetime.timedelta(0,17*60) and cur_bld == next_bld:
                 cur_rec = (cur_rec[i_bld],cur_rec[i_start],next_rec[i_end],cur_rec[i_ap],next_rec[i_ap])
             else:
                 if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
-                    print 'not world'
                     insertRecord(mac,cur_rec)
                 cur_rec = next_rec
                 cur_bld = cur_rec[i_bld]
 
         if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
-            print 'not world 2'
             insertRecord(mac,cur_rec)
         count += 1
 
@@ -135,6 +143,7 @@ def barPlot(blds_from,blds_to,dates):
 def createFiltered(dates):
     str_dates = list2string(dates)
     # Create filtered table
+    print str_dates
     cur.execute(open("filtered.sql", "r").read().format(str_dates,str_dates))
     conn.commit()
     print 'table filtered created'
