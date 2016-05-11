@@ -76,7 +76,7 @@ class CalendarFrame(Tkinter.LabelFrame):
     def __init__(self, master):
         Tkinter.LabelFrame.__init__(self, master, text="What do you want to know?")
         self.dates = []
-        self.mondays = []
+        self.days = []
         self.combo()
         self.bld_from = []
         self.bld_to = []
@@ -111,7 +111,7 @@ class CalendarFrame(Tkinter.LabelFrame):
             dayofweek = datetime.timedelta(j,0,0)
             next_mon = begin + dayofweek + datetime.timedelta(7*i,0,0)
             if next_mon < now:
-                self.mondays.append(next_mon)
+                self.days.append(next_mon)
         
     def combo(self):
         self.box_value = Tkinter.StringVar()
@@ -138,7 +138,7 @@ class CalendarFrame(Tkinter.LabelFrame):
         
     def run(self):
         sep_dates = self.dates
-        rec_dates = self.mondays
+        rec_dates = self.days
         dates = sep_dates + rec_dates
         barplot = AV.main(self.bld_from, self.bld_to, dates)
 
