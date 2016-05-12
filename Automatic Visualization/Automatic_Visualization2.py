@@ -7,30 +7,28 @@ from Tkinter import *
 #import createmaps as CM
 import csv
 import folium
-
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utility_functions as uf
 import time
 
 
-
-
 # Create a connection object
-
+'''
 try:
     conn = psycopg2.connect(database="wifi", user="postgres", password="geomatics", host="localhost", port="5432")
     print "Opened database successfully"
 except:
     print "I'm unable to connect to the database"
 
-"""
+'''
+
 try:
     conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
     print "Opened database successfully"
 except:
     print "I'm unable to connect to the database"
-"""
+
 # Create cursor used for database actions
 cur = conn.cursor()
 
@@ -40,17 +38,16 @@ cur.execute('select min(asstime) from wifilog')
 min_time = cur.fetchall()
 min_time = min_time[0][0] - datetime.timedelta(1)
 max_time = datetime.datetime.now()
+useGroupedAll = True
 
 
 def main (blds_from,blds_to,dates):
-
-    createFiltered(dates)
-    fillAndGroup(dates)
-
-
-    # createTable(blds_from,blds_to,dates)
+    if not useGroupedAll:
+        createFiltered(dates)
+        createGrouped(dates)
+    createTrajectories(blds_from,blds_to,dates)
     # CM.main(dates, blds_from, blds_to)
-    # barPlot(blds_from,blds_to,dates)
+    barPlot(blds_from,blds_to,dates)
     #dropTable('filtered')
     # Close the database connection
     conn.close()
@@ -66,7 +63,7 @@ def getMacs():
     return macs
 
 def createGrouped():
-    cur.execute(open("groupedAll.sql", "r").read())
+    cur.execute(open("grouped.sql", "r").read())
     conn.commit()
 
 def insertRecord(record):
@@ -81,13 +78,13 @@ def insertRecord(record):
         #writer = csv.writer(f)
         #writer.writerow([mac, bld, t_s, t_e, ap_s, ap_e])
 
-    cur.execute("insert into groupedAll values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
+    cur.execute("insert into grouped values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
     conn.commit()
 
 def createFiltered(dates):
     str_dates = list2string(dates)
     # Create filtered table
-    cur.execute(open("filterAll.sql", "r").read().format(str_dates,str_dates))
+    cur.execute(open("filter.sql", "r").read().format(str_dates,str_dates))
     conn.commit()
     print 'filtered table created'
     
@@ -104,12 +101,9 @@ def insertWorld(cur_rec,next_rec,gap):
         world_rec = (cur_rec[i_mac],'world',cur_rec[i_end],next_rec[i_start],'NULL','NULL')
         insertRecord(world_rec)
 
-def fillAndGroup(dates):
+def createGrouped(dates):
     macs = getMacs()
-    createGrouped()
-    
-
-    
+    createTableGrouped()
     
     count = 0
     i_mac,i_bld,i_start,i_end,i_aps,i_ape = 0,1,2,3,4,5 # location of columns
@@ -125,14 +119,11 @@ def fillAndGroup(dates):
         # insert world at start
         insertRecord((cur_rec[i_mac],'world',min_time,cur_rec[i_start],'NULL','NULL'))
 
-        
         for next_rec in records[1:-1]:
             next_rec = updateBuildingField(next_rec)
             gap = next_rec[i_start] - cur_rec[i_end]
-
             # insert world in the middle
             insertWorld(cur_rec,next_rec,gap)
-
             # grouping and inserting records
             if gap < datetime.timedelta(0,17*60) and cur_rec[i_bld] == next_rec[i_bld]:
                 # group records
@@ -143,7 +134,6 @@ def fillAndGroup(dates):
                     insertRecord(cur_rec)
                 cur_rec = next_rec
         
-
         # check if last record should be inserted
         if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
             insertRecord(cur_rec)
@@ -160,7 +150,7 @@ def barPlot(blds_from,blds_to,dates):
     hours = np.arange(n_hours)
     for hour in hours:
         SQL =  "select count(*) \
-                from individual_trajectories \
+                from trajectories \
                 where extract(hour from end_time-(end_time-start_time)/2) = {}".format(str(hour))
         cur.execute(SQL,str(hour))
         movement = cur.fetchall()
@@ -185,13 +175,18 @@ def dropTable(name):
     print 'table {} dropped'.format(name)
 
    
-def createTable(blds_from,blds_to,dates):
+def createTrajectories(blds_from,blds_to,dates):
+    if useGroupedAll:
+        tableName = 'groupedAll'
+    else:
+        tableName = 'grouped'
     str_dates = list2string(dates)
     str_blds_from = list2string(blds_from)
     str_blds_to = list2string(blds_to)
     
     # Create individual trajectories table
-    cur.execute(open("individual_trajectories.sql", "r").read().format(str_dates,str_dates,str_dates,str_blds_from,str_blds_to))
+    cur.execute(open("trajectories.sql", "r").read().format(tableName,str_dates,str_dates,str_dates,str_blds_from,str_blds_to))
+    print cur.query
     conn.commit()
     
 def list2string(lst):
@@ -204,9 +199,9 @@ def list2string(lst):
 def test():
     dates = [datetime.date(2016,04,25),datetime.date(2016,04,26)]
     # all buildings: ['50-TNW-RID','64-HSL','66-OGZ','60-LMS','38-Cultureel Centrum','37-Sportcentrum','26-Bouwcampus','23-CITG','22-TNW-TN','VLL-LAB(TNO)','21-BTUD','20-Aula','46-P&E lab','35-Drebbelweg','45-LSL','43-EGM','34-OCP-3ME','32-OCP-IO','30-O&S','30-IKC ISD-FMVG','31-TBM','08-BK-City','03-Science Center','05-TNW-BIO','36-EWI-LB','36-EWI-HB','19-Studuitzendbureau','12-TNW-DCT','12-Kramerslab & Proeffabriek','62-LR','62-Simona']
-    
-    blds_from = ['50-TNW-RID','64-HSL','66-OGZ','60-LMS','38-Cultureel Centrum','37-Sportcentrum','26-Bouwcampus','23-CITG','22-TNW-TN','VLL-LAB(TNO)','21-BTUD','20-Aula','46-P&E lab','35-Drebbelweg','45-LSL','43-EGM','34-OCP-3ME','32-OCP-IO','30-O&S','30-IKC ISD-FMVG','31-TBM','08-BK-City','03-Science Center','05-TNW-BIO','36-EWI-LB','36-EWI-HB','19-Studuitzendbureau','12-TNW-DCT','12-Kramerslab & Proeffabriek','62-LR','62-Simona']
-    blds_to = ['50-TNW-RID','64-HSL','66-OGZ','60-LMS','38-Cultureel Centrum','37-Sportcentrum','26-Bouwcampus','23-CITG','22-TNW-TN','VLL-LAB(TNO)','21-BTUD','20-Aula','46-P&E lab','35-Drebbelweg','45-LSL','43-EGM','34-OCP-3ME','32-OCP-IO','30-O&S','30-IKC ISD-FMVG','31-TBM','08-BK-City','03-Science Center','05-TNW-BIO','36-EWI-LB','36-EWI-HB','19-Studuitzendbureau','12-TNW-DCT','12-Kramerslab & Proeffabriek','62-LR','62-Simona']
+    # all buildings: ['drebbelweg','cultureel_centrum','tnw_bio','ocp_me','me','studuitzendbureau','tnw_tn','world','tnw_dct','vliegtuighal','lms','ewi_hb','aula','o_s','btud','ogz','kramerslab_proeffabriek','tbm','bk_city','egm','sportcentrum','tnw_rid','vll_lab_tno_','citg','science_center','lr','ocp_me_old','bouwcampus','ikc_isd_fmvg','ocp_io','simona','hsl','ewi_lb','lsl','p_e_lab']
+    blds_from = ['drebbelweg','cultureel_centrum','tnw_bio','ocp_me','me','studuitzendbureau','tnw_tn','world','tnw_dct','vliegtuighal','lms','ewi_hb','aula','o_s','btud','ogz','kramerslab_proeffabriek','tbm','bk_city','egm','sportcentrum','tnw_rid','vll_lab_tno_','citg','science_center','lr','ocp_me_old','bouwcampus','ikc_isd_fmvg','ocp_io','simona','hsl','ewi_lb','lsl','p_e_lab']
+    blds_to = ['drebbelweg','cultureel_centrum','tnw_bio','ocp_me','me','studuitzendbureau','tnw_tn','world','tnw_dct','vliegtuighal','lms','ewi_hb','aula','o_s','btud','ogz','kramerslab_proeffabriek','tbm','bk_city','egm','sportcentrum','tnw_rid','vll_lab_tno_','citg','science_center','lr','ocp_me_old','bouwcampus','ikc_isd_fmvg','ocp_io','simona','hsl','ewi_lb','lsl','p_e_lab']
     main(blds_from,blds_to,dates)
 
 

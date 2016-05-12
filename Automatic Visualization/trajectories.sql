@@ -1,7 +1,8 @@
-select building,next_building,start_time,end_time into individual_trajectories
+drop table if exists trajectories;
+
+select building,next_building,start_time,end_time into trajectories
 from (
 	select 
-		username, 
 		mac, 
 		LEAD(mac) OVER (ORDER BY mac,ts) mac_next,
 		building, 
@@ -10,7 +11,7 @@ from (
 		LEAD(ts) OVER (ORDER BY mac,ts) end_time
 	from (
 		select *
-		from groupedAll
+		from {}
 		where ((ts-time'01:00')::date in ({}) or (te+time'01:00')::date in ({}))
 		) as filtered
 	order by mac,start_time asc
