@@ -43,7 +43,6 @@ max_time = datetime.datetime.now()
 
 
 def main (blds_from,blds_to,dates):
-    #createFiltered(dates)
 
     createFiltered(dates)
     fillAndGroup(dates)
