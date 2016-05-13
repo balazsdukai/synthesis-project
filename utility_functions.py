@@ -42,6 +42,12 @@ def reconnectDB(conn):
     return conn, cur
 
 
+def apname2id(apname):
+    #get the building id by getting the 2 characters before the second '-' in apname
+    i = apname.find("-",2)
+    bld_id = apname[(i-2):(i)]
+    return bld_id
+
 def getBuildingName(string):
     """
     Subsets building name from the 'maploc' field.
@@ -70,34 +76,6 @@ def getBuildingName(string):
     else:
         building = res.lower()
         return building
-
-def parseBuildingId(cur, buildingTable, field):
-    """
-    Parses buildingnames to PostgreSQL compliant field names
-    :param cur: database cursor object from psycopg2
-    :param buildingTable: str - name of the table that contains the building names
-    :param field: str - name of the field in the table that contains the building names
-    :return: list - PostgreSQL compliant field names
-    """
-    # get the buildingnames without the building numbers on the front (e.g. "50-TNW-RID" -> "TNW_RID")
-    cur.execute("select " + field + " from " + buildingTable + ";")
-    x = cur.fetchall()
-    # buildings = [i[0] for i in buildings]
-    buildings = []
-    for b in x:
-        res = ''.join([i for i in b[0] if not i.isdigit()])
-        for ch in ["-", " ", "(", ")", "&"]:
-            if ch in res:
-                res = res.replace(ch, "_")
-                if "___" in res:
-                    res = res.replace("___", "_")
-        if res[0] == "_":
-            buildings.append(res[1:].lower())
-        else:
-            buildings.append(res.lower())
-    buildings = sorted(buildings)
-
-    return buildings
 
 # Example
 # s0 = 'System Campus > 21-BTUD > 1e verdieping'

@@ -4,13 +4,15 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import *
 import numpy as np
 from Tkinter import *
-#import createmaps as CM
+import createmaps as CM
 import csv
 import folium
+import time
 import os
+import sys
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utility_functions as uf
-import time
 
 
 # Create a connection object
@@ -23,14 +25,8 @@ except:
 
 '''
 
-try:
-    conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
-    print "Opened database successfully"
-except:
-    print "I'm unable to connect to the database"
-
-# Create cursor used for database actions
-cur = conn.cursor()
+# Connect to DB
+conn,cur = uf.connectDB()
 
 ## GLOBAlS ##
 START = time.time()
@@ -52,6 +48,17 @@ def main (blds_from,blds_to,dates):
     # Close the database connection
     conn.close()
 
+def createFiltered(dates):
+    str_dates = list2string(dates)
+    # Create filtered table
+    cur.execute(open("filtered.sql", "r").read().format(str_dates,str_dates))
+    conn.commit()
+    print 'filtered table created'
+
+def createTableGrouped():
+    cur.execute(open("grouped.sql", "r").read())
+    conn.commit()
+
 def getMacs():
     cur.execute('select distinct mac from filtered')
     records = cur.fetchall()
@@ -61,10 +68,6 @@ def getMacs():
     print 'retrieved distinct mac adresses'
     
     return macs
-
-def createGrouped():
-    cur.execute(open("grouped.sql", "r").read())
-    conn.commit()
 
 def insertRecord(record):
     i_mac,i_bld,i_start,i_end, i_aps, i_ape = 0,1,2,3,4,5
@@ -81,20 +84,14 @@ def insertRecord(record):
     cur.execute("insert into grouped values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
     conn.commit()
 
-def createFiltered(dates):
-    str_dates = list2string(dates)
-    # Create filtered table
-    cur.execute(open("filter.sql", "r").read().format(str_dates,str_dates))
-    conn.commit()
-    print 'filtered table created'
+
     
 def updateBuildingField(record):
     i_mac,i_bld,i_start,i_end,i_ap = 0,1,2,3,4 # location of columns
-    cur_bld = uf.getBuildingName(record[i_bld])
-    return (record[i_mac],cur_bld,record[i_start],record[i_end],record[i_ap],record[i_ap],record[i_ap])
+    cur_bld = uf.apname2id(record[i_ap])
+    return (record[i_mac],cur_bld,record[i_start],record[i_end],record[i_ap],record[i_ap])
     
 def insertWorld(cur_rec,next_rec,gap):
-    
     i_mac,i_bld,i_start,i_end,i_aps,i_ape = 0,1,2,3,4,5 # location of columns
     
     if gap > datetime.timedelta(0,60*50) :

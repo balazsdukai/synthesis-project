@@ -57,7 +57,7 @@ def ok():
     # add some text for labels, title and axes ticks
     ax.set_ylabel('Number of scans')
     ax.set_xlabel('Name of access point')
-    ax.set_title('Number of entrance scans')
+    ax.set_title('Number of entrance scans {}'.format(bld))
     
     ax.set_xticks(x[0:limit] + (0.5*width))
     ax.set_xticklabels(entr_labels[0:limit], rotation=30, ha='right')
@@ -79,15 +79,15 @@ def ok():
 
     ax = plt.subplot(2,1,2) #axes and figure
 
-    rects2 = ax.bar(exit_array[0:limit], exit_values[0:limit], width, color='b')
+    rects2 = ax.bar(exit_array[0:limit], exit_values[0:limit], width, color='b', edgecolor='none')
 
     # add some text for labels, title and axes ticks
     ax.set_ylabel('Number of scans')
     ax.set_xlabel('Name of access point')
-    ax.set_title('Number of exit scans')
+    ax.set_title('Number of exit scans {}'.format(bld))
     
     ax.set_xticks(x[0:limit] + (0.5*width))
-    ax.set_xticklabels(exit_labels[0:limit])
+    ax.set_xticklabels(exit_labels[0:limit], rotation=30, ha='right')
 
     plt.tight_layout()
     plt.show()
