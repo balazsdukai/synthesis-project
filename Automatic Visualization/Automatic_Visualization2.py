@@ -4,13 +4,15 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import *
 import numpy as np
 from Tkinter import *
-#import createmaps as CM
+import createmaps as CM
 import csv
 import folium
+import time
 import os
+import sys
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utility_functions as uf
-import time
 
 
 # Create a connection object
@@ -23,14 +25,8 @@ except:
 
 '''
 
-try:
-    conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
-    print "Opened database successfully"
-except:
-    print "I'm unable to connect to the database"
-
-# Create cursor used for database actions
-cur = conn.cursor()
+# Connect to DB
+conn,cur = uf.connectDB()
 
 ## GLOBAlS ##
 START = time.time()
@@ -38,19 +34,31 @@ cur.execute('select min(asstime) from wifilog')
 min_time = cur.fetchall()
 min_time = min_time[0][0] - datetime.timedelta(1)
 max_time = datetime.datetime.now()
-useGroupedAll = True
+useGroupedAll = False
 
 
 def main (blds_from,blds_to,dates):
+    print blds_from
     if not useGroupedAll:
         createFiltered(dates)
         createGrouped(dates)
-    createTrajectories(blds_from,blds_to,dates)
+    # createTrajectories(blds_from,blds_to,dates)
     # CM.main(dates, blds_from, blds_to)
-    barPlot(blds_from,blds_to,dates)
+    # barPlot(blds_from,blds_to,dates)
     #dropTable('filtered')
     # Close the database connection
     conn.close()
+
+def createFiltered(dates):
+    str_dates = list2string(dates)
+    # Create filtered table
+    cur.execute(open("filtered.sql", "r").read().format(str_dates,str_dates))
+    conn.commit()
+    print 'filtered table created'
+
+def createTableGrouped():
+    cur.execute(open("grouped.sql", "r").read())
+    conn.commit()
 
 def getMacs():
     cur.execute('select distinct mac from filtered')
@@ -61,10 +69,6 @@ def getMacs():
     print 'retrieved distinct mac adresses'
     
     return macs
-
-def createGrouped():
-    cur.execute(open("grouped.sql", "r").read())
-    conn.commit()
 
 def insertRecord(record):
     i_mac,i_bld,i_start,i_end, i_aps, i_ape = 0,1,2,3,4,5
@@ -81,24 +85,18 @@ def insertRecord(record):
     cur.execute("insert into grouped values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
     conn.commit()
 
-def createFiltered(dates):
-    str_dates = list2string(dates)
-    # Create filtered table
-    cur.execute(open("filter.sql", "r").read().format(str_dates,str_dates))
-    conn.commit()
-    print 'filtered table created'
+
     
 def updateBuildingField(record):
     i_mac,i_bld,i_start,i_end,i_ap = 0,1,2,3,4 # location of columns
-    cur_bld = uf.getBuildingName(record[i_bld])
-    return (record[i_mac],cur_bld,record[i_start],record[i_end],record[i_ap],record[i_ap],record[i_ap])
+    cur_bld = uf.apname2id(record[i_ap])
+    return (record[i_mac],cur_bld,record[i_start],record[i_end],record[i_ap],record[i_ap])
     
 def insertWorld(cur_rec,next_rec,gap):
-    
     i_mac,i_bld,i_start,i_end,i_aps,i_ape = 0,1,2,3,4,5 # location of columns
     
     if gap > datetime.timedelta(0,60*50) :
-        world_rec = (cur_rec[i_mac],'world',cur_rec[i_end],next_rec[i_start],'NULL','NULL')
+        world_rec = (cur_rec[i_mac],0,cur_rec[i_end],next_rec[i_start],'NULL','NULL')
         insertRecord(world_rec)
 
 def createGrouped(dates):
@@ -117,7 +115,7 @@ def createGrouped(dates):
         cur_rec = updateBuildingField(records[0])
         
         # insert world at start
-        insertRecord((cur_rec[i_mac],'world',min_time,cur_rec[i_start],'NULL','NULL'))
+        insertRecord((cur_rec[i_mac],0,min_time,cur_rec[i_start],'NULL','NULL'))
 
         for next_rec in records[1:-1]:
             next_rec = updateBuildingField(next_rec)
@@ -139,7 +137,7 @@ def createGrouped(dates):
             insertRecord(cur_rec)
 
         # insert world at end
-        insertRecord((cur_rec[i_mac],'world',cur_rec[i_end],max_time,'NULL','NULL'))
+        insertRecord((cur_rec[i_mac],0,cur_rec[i_end],max_time,'NULL','NULL'))
         
 
 
@@ -200,8 +198,9 @@ def test():
     dates = [datetime.date(2016,04,25),datetime.date(2016,04,26)]
     # all buildings: ['50-TNW-RID','64-HSL','66-OGZ','60-LMS','38-Cultureel Centrum','37-Sportcentrum','26-Bouwcampus','23-CITG','22-TNW-TN','VLL-LAB(TNO)','21-BTUD','20-Aula','46-P&E lab','35-Drebbelweg','45-LSL','43-EGM','34-OCP-3ME','32-OCP-IO','30-O&S','30-IKC ISD-FMVG','31-TBM','08-BK-City','03-Science Center','05-TNW-BIO','36-EWI-LB','36-EWI-HB','19-Studuitzendbureau','12-TNW-DCT','12-Kramerslab & Proeffabriek','62-LR','62-Simona']
     # all buildings: ['drebbelweg','cultureel_centrum','tnw_bio','ocp_me','me','studuitzendbureau','tnw_tn','world','tnw_dct','vliegtuighal','lms','ewi_hb','aula','o_s','btud','ogz','kramerslab_proeffabriek','tbm','bk_city','egm','sportcentrum','tnw_rid','vll_lab_tno_','citg','science_center','lr','ocp_me_old','bouwcampus','ikc_isd_fmvg','ocp_io','simona','hsl','ewi_lb','lsl','p_e_lab']
-    blds_from = ['drebbelweg','cultureel_centrum','tnw_bio','ocp_me','me','studuitzendbureau','tnw_tn','world','tnw_dct','vliegtuighal','lms','ewi_hb','aula','o_s','btud','ogz','kramerslab_proeffabriek','tbm','bk_city','egm','sportcentrum','tnw_rid','vll_lab_tno_','citg','science_center','lr','ocp_me_old','bouwcampus','ikc_isd_fmvg','ocp_io','simona','hsl','ewi_lb','lsl','p_e_lab']
-    blds_to = ['drebbelweg','cultureel_centrum','tnw_bio','ocp_me','me','studuitzendbureau','tnw_tn','world','tnw_dct','vliegtuighal','lms','ewi_hb','aula','o_s','btud','ogz','kramerslab_proeffabriek','tbm','bk_city','egm','sportcentrum','tnw_rid','vll_lab_tno_','citg','science_center','lr','ocp_me_old','bouwcampus','ikc_isd_fmvg','ocp_io','simona','hsl','ewi_lb','lsl','p_e_lab']
+    # all buildings: [0, 3, 5, 8, 12, 12, 19, 20, 21, 22, 23, 26, 30, 30, 31, 32, 34, 35, 36, 36, 37, 38, 43, 45, 46, 50, 60, 62, 62, 64, 66, 99]
+    blds_from = [0, 3, 5, 8, 12, 12, 19, 20, 21, 22, 23, 26, 30, 30, 31, 32, 34, 35, 36, 36, 37, 38, 43, 45, 46, 50, 60, 62, 62, 64, 66, 99]
+    blds_to = [0, 3, 5, 8, 12, 12, 19, 20, 21, 22, 23, 26, 30, 30, 31, 32, 34, 35, 36, 36, 37, 38, 43, 45, 46, 50, 60, 62, 62, 64, 66, 99]
     main(blds_from,blds_to,dates)
 
 

@@ -42,6 +42,12 @@ def reconnectDB(conn):
     return conn, cur
 
 
+def apname2id(apname):
+    #get the building id by getting the 2 characters before the second '-' in apname
+    i = apname.find("-",2)
+    bld_id = apname[(i-2):(i)]
+    return bld_id
+
 def getBuildingName(string):
     """
     Subsets building name from the 'maploc' field.
