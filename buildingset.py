@@ -9,11 +9,11 @@ def main():
     # connect and reconnect database
     conn, cur = uf.connectDB()
 
-    buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset_v0504_test",\
+    buildings = createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset_v0513",\
                                        mac=True)
 
-    createBuildingset(conn, cur, sequenceTable='group_rec', id_field='mac', building_field='building', \
-                      buildingsetTable='buildingset_v0504_test', building_list=buildings, mac=True, limit=5000)
+    createBuildingset(conn, cur, sequenceTable='groupedall', id_field='mac', building_field='building', \
+                      buildingsetTable='buildingset_v0513', building_list=buildings, mac=True, limit=None)
 
     # Close the database connection
     conn.close()

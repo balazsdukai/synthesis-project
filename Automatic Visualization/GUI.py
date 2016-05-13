@@ -3,7 +3,7 @@ import ttkcalendar
 import tkSimpleDialog
 import datetime
 import ttk
-import Automatic_Visualization as AV
+import Automatic_Visualization2 as AV
 
 
 class CalendarDialog(tkSimpleDialog.Dialog):
@@ -19,10 +19,12 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
     """Dialog box that displays a checkboxes and returns the selected checkboxes"""
     def body(self, master):
         ## Query database
-        AV.cur.execute("SELECT buildingid FROM buildings")
+        AV.cur.execute("SELECT id FROM buildings")
         self.buildings = AV.cur.fetchall()
         self.buildinglist = self.buildings[:]
-
+        AV.cur.execute("SELECT name FROM buildings")
+        self.bld_names = AV.cur.fetchall()
+        
         ## Create Frames
         top = Tkinter.Frame(self)
         bottom = Tkinter.Frame(self)
@@ -40,7 +42,7 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
             self.vara.append([])
         for i,building in enumerate(self.buildings[:16]):
             self.vara[i] = Tkinter.IntVar()
-            chka = Tkinter.Checkbutton(self, text=building[0], variable=self.vara[i])
+            chka = Tkinter.Checkbutton(self, text=self.bld_names[i][0], variable=self.vara[i])
             chka.pack(in_=top, side = Tkinter.TOP, anchor='w')
 
         ## Create checkboxes 2nd column
@@ -49,12 +51,12 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
             self.varb.append([])
         for j,building in enumerate(self.buildings[16:]):
             self.varb[j] = Tkinter.IntVar()
-            chkb = Tkinter.Checkbutton(self, text=building[0], variable=self.varb[j])
+            chkb = Tkinter.Checkbutton(self, text=self.bld_names[j+16][0], variable=self.varb[j])
             chkb.pack(in_=bottom, side = Tkinter.TOP, anchor='w')
             
         
         
-    def apply(self):        
+    def apply(self):
         self.selected_buildings = []
         for i in range(len(self.buildings[:16])):
             if self.vara[i].get() == 1:

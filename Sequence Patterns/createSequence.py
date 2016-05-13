@@ -1,10 +1,13 @@
 import psycopg2
 import datetime
 import csv
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
+import utility_functions as uf
 
 def main ():
     # Get distinct mac addresses
-    cur.execute("select distinct mac from group_rec")
+    cur.execute("select distinct mac from groupedAll")
     macs = cur.fetchall()
     print "macs fetched"
     # time threshold to define when to split a sequence; in hours
@@ -33,7 +36,7 @@ from group_rec where mac='{}'".format(mac))
         records = cur.fetchall()
         sequence = []
         for i in range(len(records)-1):
-            seq_nr = getBuilding(records[i][i_bld])
+            seq_nr = uf.getBuildingName(records[i][i_bld])
             sequence.append(seq_nr)
             te1 = records[i][i_te]
             ts2 = records[i+1][i_ts]
@@ -47,21 +50,8 @@ from group_rec where mac='{}'".format(mac))
             sequences.append(sequence)
         count+=1
 
-    
-def getBuilding(building):
-    """
-    Selects the id_seq of the building, or gives 0 if the building is not in the 'buildings' table
-    :param string: the value of the 'maploc' field of a single record in the database
-    :return: int - the seq_id of the respective building
-    """
-    cur.execute("SELECT id_seq FROM buildings WHERE buildingid LIKE '%"+building+"';")
-    id_seq = cur.fetchall()
-    if id_seq:
-        id_seq = id_seq[0][0]
-    else:
-        id_seq = 0
-    return id_seq
 
+    
 def writeSequence(seq):
     i_bld,i_start,i_end = 0,1,2
     with open('sequences.txt', 'a') as f:

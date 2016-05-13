@@ -99867,3 +99867,294 @@
 22 
 0 22 22 
 22 22 22 22 
+aula aula aula 
+ocp_io ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io 
+ocp_io ocp_io 
+ocp_io ocp_io ocp_io ocp_io ocp_io ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io 
+ocp_io 
+lr ogz 
+ogz ogz ogz 
+drebbelweg ewi_hb 
+aula 
+drebbelweg 
+drebbelweg 
+aula 
+ocp_io 
+tnw_tn 
+tnw_tn 
+tnw_tn 
+tnw_tn 
+tnw_tn 
+tnw_tn 
+tnw_tn 
+ocp_io ocp_io 
+ocp_io 
+citg 
+citg 
+lsl 
+hsl 
+hsl 
+bk_city 
+citg citg 
+citg 
+ogz 
+tbm tbm tbm 
+tbm tbm tbm 
+bk_city bk_city 
+bk_city bk_city 
+bk_city bk_city bk_city 
+bk_city bk_city 
+bk_city bk_city 
+bk_city bk_city 
+tbm 
+ocp_io ocp_io 
+tnw_tn ocp_io 
+ocp_io 
+ocp_io ocp_io 
+ocp_io oot_ar ocp_io 
+ocp_io 
+ocp_io ocp_io 
+oot_ar ocp_io 
+tnw_tn ocp_io ocp_io 
+me 
+tnw_tn 
+tud_collegezalen 
+citg citg 
+btud 
+bk_city 
+bk_city 
+bk_city 
+bk_city 
+bk_city oot_ar 
+bk_city bk_city 
+bk_city 
+bk_city 
+btud 
+btud btud 
+btud 
+btud btud btud 
+btud btud btud 
+btud btud 
+btud btud btud 
+btud btud btud btud 
+btud btud 
+science_center ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io ocp_io 
+science_center ocp_io science_center 
+science_center 
+science_center 
+ocp_io science_center 
+science_center 
+science_center science_center ocp_io science_center science_center science_center 
+science_center science_center 
+science_center ocp_io science_center science_center ocp_io science_center 
+btud 
+science_center 
+aula 
+btud 
+aula 
+ocp_io 
+ocp_me 
+ocp_me ocp_io ocp_me 
+citg 
+citg citg citg 
+oot_ar 
+citg 
+citg citg citg 
+citg 
+citg 
+citg 
+citg 
+citg 
+drebbelweg 
+bk_city bk_city bk_city 
+bk_city bk_city btud 
+bk_city bk_city btud 
+oot_ar 
+bk_city 
+bk_city 
+ocp_io 
+ocp_io ocp_io 
+ocp_io 
+ocp_io ocp_io 
+ocp_io ocp_io 
+ocp_io ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io 
+citg citg 
+tud_collegezalen ewi_hb 
+citg 
+tud_collegezalen ewi_hb 
+ewi_hb 
+ocp_io ocp_io ewi_hb 
+citg citg 
+citg citg 
+citg citg citg 
+citg 
+citg 
+citg citg citg citg 
+citg citg citg aula 
+citg 
+citg citg citg 
+citg citg 
+bk_city 
+bk_city 
+bk_city 
+oot_ar ocp_io 
+legermuseum 
+sportcentrum sportcentrum 
+sportcentrum sportcentrum 
+sportcentrum 
+aula oot_ar oot_ar 
+aula ocp_io ogz 
+oot_ar 
+ogz 
+tnw_tn 
+aula tnw_tn aula 
+aula drebbelweg 
+aula tnw_tn aula 
+tnw_tn 
+tnw_tn drebbelweg 
+sportcentrum 
+tnw_tn 
+aula 
+tnw_tn aula 
+ocp_io 
+ocp_io 
+ocp_io 
+ocp_io aula ocp_io 
+ocp_io ocp_io 
+ocp_io ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io ocp_io ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io 
+drebbelweg drebbelweg 
+aula ocp_io oot_ar 
+aula 
+ocp_io ocp_io 
+ocp_io ocp_io ocp_io 
+ocp_io ocp_io ocp_io 
+ocp_io 
+ocp_io 
+ocp_io ocp_io ocp_io 
+ocp_io 
+legermuseum 
+tud_collegezalen aula ocp_io ocp_io 
+ewi_hb 
+ewi_hb 
+ewi_lb ewi_lb 
+ocp_io ocp_me tnw_dct 
+tnw_tn 
+ewi_lb 
+ocp_io 
+ocp_io 
+ocp_io 
+ocp_io tbm ocp_io 
+bk_city 
+ocp_io ocp_io ocp_io 
+ocp_io 
+ocp_io 
+ocp_io ocp_io ocp_io 
+ocp_io 
+ocp_io ocp_io 
+ocp_io ocp_io ocp_io 
+ocp_io 
+ocp_io 
+tnw_tn aula aula tnw_dct ewi_hb 
+aula aula ewi_hb tnw_tn aula aula tnw_tn 
+ewi_hb ewi_hb ewi_hb 
+ewi_hb ewi_hb ewi_hb tnw_tn 
+ewi_hb drebbelweg 
+tnw_tn aula aula tnw_tn ewi_hb 
+citg 
+ewi_hb 
+drebbelweg drebbelweg 
+drebbelweg tnw_tn drebbelweg drebbelweg 
+tnw_tn tnw_tn 
+tnw_tn aula ewi_hb 
+aula tnw_tn aula tnw_tn aula sportcentrum 
+aula tnw_tn aula tnw_tn aula aula tnw_tn 
+aula tnw_tn tnw_tn aula aula tnw_tn 
+ewi_hb tnw_tn ewi_hb 
+tnw_tn aula tnw_tn ewi_hb 
+tnw_tn ewi_lb aula aula tnw_dct 
+citg btud btud btud 
+citg 
+btud btud 
+citg citg 
+oot_ar oot_ar 
+oot_ar 
+oot_ar 
+oot_ar 
+oot_ar ocp_io oot_ar ocp_io oot_ar 
+ocp_io 
+oot_ar 
+aula oot_ar 
+ocp_io oot_ar 
+me 
+ocp_io ocp_io 
+legermuseum legermuseum legermuseum bk_city 
+legermuseum legermuseum 
+legermuseum bk_city legermuseum bk_city 
+legermuseum 
+legermuseum bk_city 
+bk_city bk_city bk_city legermuseum bk_city 
+legermuseum bk_city legermuseum bk_city 
+legermuseum 
+bk_city legermuseum bk_city bk_city legermuseum bk_city 
+bk_city bk_city 
+bk_city bk_city 
+bk_city bk_city bk_city bk_city bk_city 
+bk_city 
+bk_city bk_city oot_ar 
+ogz bk_city bk_city 
+bk_city 
+aula 
+aula 
+aula 
+science_center science_center sportcentrum tnw_tn citg aula 
+aula 
+aula 
+aula 
+aula 
+aula 
+aula 
+aula aula bk_city 
+aula 
+aula 
+aula 
+sportcentrum ewi_hb 
+sportcentrum 
+ewi_hb ewi_hb ewi_hb 
+sportcentrum ewi_hb 
+ewi_hb 
+sportcentrum 
+sportcentrum 
+btud btud 
+ocp_io 
+oot_ar 
+me aula 
+btud 
+ocp_me tnw_tn aula 
+citg aula citg 
+citg citg 
+citg citg citg 
+citg citg 
+citg 
+citg citg citg citg 
+citg citg citg 
+citg citg citg citg citg 
+citg citg citg 
+citg citg citg 
+citg 
+citg aula ocp_me citg 
+citg citg citg 
+citg citg citg 
+citg citg citg citg citg citg citg 
+citg citg citg 
+oot_ar 
+citg citg citg 
+citg aula 
