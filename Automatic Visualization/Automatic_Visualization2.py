@@ -47,11 +47,6 @@ def main (blds_from,blds_to,dates):
     # Close the database connection
     conn.close()
 
-def apname2id(apname):
-    #get the building id by getting the 2 characters before the second '-' in apname
-    i = apname.find("-",2)
-    bld_id = apname[(i-2):(i)]
-    print bld_id
 
 def getMacs():
     cur.execute('select distinct mac from filtered')
