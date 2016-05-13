@@ -19,34 +19,6 @@ def main():
     conn.close()
 
 
-def parseBuildingId(cur, buildingTable, field):
-    """
-    Parses buildingnames to PostgreSQL compliant field names
-    :param cur: database cursor object from psycopg2
-    :param buildingTable: str - name of the table that contains the building names
-    :param field: str - name of the field in the table that contains the building names
-    :return: list - PostgreSQL compliant field names
-    """
-    # get the buildingnames without the building numbers on the front (e.g. "50-TNW-RID" -> "TNW_RID")
-    cur.execute("select " + field + " from " + buildingTable + ";")
-    x = cur.fetchall()
-    # buildings = [i[0] for i in buildings]
-    buildings = []
-    for b in x:
-        res = ''.join([i for i in b[0] if not i.isdigit()])
-        for ch in ["-", " ", "(", ")", "&"]:
-            if ch in res:
-                res = res.replace(ch, "_")
-                if "___" in res:
-                    res = res.replace("___", "_")
-        if res[0] == "_":
-            buildings.append(res[1:].lower())
-        else:
-            buildings.append(res.lower())
-
-    return buildings
-
-
 def createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid", name="buildingset", mac=True):
     """
     Creates and empty table if not exists for the buildingsets in the database
@@ -58,7 +30,7 @@ def createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildin
     :param mac: boolean - if True, the name of the field that contains the mac/user identifiers will be 'mac', if False it will be 'username'
     :return: list - of building names, which are also the table field names in the same order
     """
-    buildings = parseBuildingId(cur, buildingsTable, field)
+    buildings = uf.parseBuildingId(cur, buildingsTable, field)
 
     #create a table with the identifier + buildingnames as fields
     if mac:
