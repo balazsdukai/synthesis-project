@@ -3,7 +3,7 @@ import ttkcalendar
 import tkSimpleDialog
 import datetime
 import ttk
-import Automatic_Visualization as AV
+import Automatic_Visualization2 as AV
 
 
 class CalendarDialog(tkSimpleDialog.Dialog):
