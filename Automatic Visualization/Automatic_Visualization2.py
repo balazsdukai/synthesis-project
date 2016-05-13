@@ -4,10 +4,11 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import *
 import numpy as np
 from Tkinter import *
-#import createmaps as CM
+import createmaps as CM
 import csv
 import folium
 import os
+import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utility_functions as uf
 import time
@@ -22,15 +23,9 @@ except:
     print "I'm unable to connect to the database"
 
 '''
-
-try:
-    conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
-    print "Opened database successfully"
-except:
-    print "I'm unable to connect to the database"
-
-# Create cursor used for database actions
-cur = conn.cursor()
+apname2id
+# Connect to DB
+conn,cur = uf.connectDB()
 
 ## GLOBAlS ##
 START = time.time()
@@ -51,6 +46,12 @@ def main (blds_from,blds_to,dates):
     #dropTable('filtered')
     # Close the database connection
     conn.close()
+
+def apname2id(apname):
+    #get the building id by getting the 2 characters before the second '-' in apname
+    i = apname.find("-",2)
+    bld_id = apname[(i-2):(i)]
+    print bld_id
 
 def getMacs():
     cur.execute('select distinct mac from filtered')
