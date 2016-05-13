@@ -16,7 +16,7 @@ cur = conn.cursor()
 
 SQL =  "select extract(hour from asstime), count(*) \
         from wifilog \
-        where apname = 'A-22-0-122' \
+        where apname = 'A-20-0-045' \
         group by extract(hour from asstime) \
         order by extract(hour from asstime);"
 cur.execute(SQL)

@@ -5,6 +5,12 @@ import math
 import numpy as np
 from Tkinter import *
 
+#############################################################################################
+#   THIS PIECE OF  CODE DOES NOT TAKE IN ACCOUNT THAT PEOPLE MIGHT PASS BY AND GET SCANNED  #
+#   FOR INSTANCE, TAKE A LOOK AT BK. MOST DEVICES ARE SCANNED BY APS AT WEST (MEKELWEG)     #
+#############################################################################################
+
+
 # Create a connection object
 try:
     conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
