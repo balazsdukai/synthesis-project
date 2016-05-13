@@ -150,7 +150,7 @@ def createMap(dates,blds_from,blds_to):
     # Connect to database
     try:
         conn = psycopg2.connect("dbname='wifi' user='team2' host='wifitracking.bk.tudelft.nl' password='AlsoSprachZ!'")
-        print 'successful'
+        print "Opened database successfully"
     except:
         print "I am unable to connect to the database"
     # Initialise map view
@@ -164,7 +164,7 @@ def createMap(dates,blds_from,blds_to):
         
     # Format SQL statement
     SQL="""select bld_nr,next_bld_nr,count(*)
-        from individual_trajactories
+        from individual_trajectories
         group by bld_nr,next_bld_nr
         order by count desc
         """

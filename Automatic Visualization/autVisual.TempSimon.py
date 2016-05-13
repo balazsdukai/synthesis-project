@@ -15,26 +15,29 @@ import utility_functions as uf
 
 
 # Create a connection object
+
 try:
     conn = psycopg2.connect(database="wifi", user="postgres", password="geomatics", host="localhost", port="5432")
     print "Opened database successfully"
 except:
     print "I'm unable to connect to the database"
 
+"""
+try:
+    conn = psycopg2.connect(database="wifi", user="team2", password="AlsoSprachZ!", host="wifitracking.bk.tudelft.nl", port="5432")
+    print "Opened database successfully"
+except:
+    print "I'm unable to connect to the database"
+"""
 # Create cursor used for database actions
 cur = conn.cursor()
 
-
 def main (blds_from,blds_to,dates):
     #createFiltered(dates)
-    #fillAndGroup()
 
+    
+    fillAndGroup(dates)
 
-    str_dates = list2string(dates)
-    # Create filtered table
-    cur.execute("select mac,maploc,asstime as start_time,asstime + sesdur as end_time,apname from wifilogwhere ((asstime+sesdur-time'03:00')::date in ({}) or (asstime-time'05:00')::date in ({}))and (substring(maploc,17,1) between '0' and '9' or  substring(maploc,17,1) = 'V');".format(str_dates,str_dates))
-    records = cur.fetchall()
-    print 'filtered records selected'
 
     # createTable(blds_from,blds_to,dates)
     # CM.main(dates, blds_from, blds_to)
@@ -54,63 +57,93 @@ def getMacs():
     return macs
 
 def createGrouped():
-    cur.execute(open("grouped.sql", "r").read())
+    cur.execute(open("groupedAll.sql", "r").read())
     conn.commit()
 
-def insertRecord(mac,record):
-    i_bld,i_start,i_end, i_aps, i_apt = 0,1,2,3,4
+def insertRecord(record):
+    i_mac,i_bld,i_start,i_end, i_aps, i_ape = 0,1,2,3,4,5
+    mac = "'{}'".format(record[i_mac])
     t_s = "'{}'::timestamp".format(record[i_start])
     t_e = "'{}'::timestamp".format(record[i_end])
-    mac = "'{}'".format(mac)
     bld = "'{}'".format(record[i_bld])
     ap_s = "'{}'".format(record[i_aps])
-    ap_e = "'{}'".format(record[i_apt])
+    ap_e = "'{}'".format(record[i_ape])
     #with open('insertGrouped.csv', 'ab') as f:
-    #    writer = csv.writer(f)
-    #    writer.writerow([mac, bld, t_s, t_e, ap_s, ap_e])
+        #writer = csv.writer(f)
+        #writer.writerow([mac, bld, t_s, t_e, ap_s, ap_e])
 
-    cur.execute("insert into grouped values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
+    cur.execute("insert into groupedAll values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
     conn.commit()
+
+def getFiltered(dates):
+    str_dates = list2string(dates)
+    # Create filtered table
+    cur.execute(open("filterAll.sql", "r").read().format(str_dates,str_dates))
+    records = cur.fetchall()
+    print 'filtered records selected'
+    return records
     
+def updateBuildingField(record):
+    i_mac,i_bld,i_start,i_end,i_ap = 0,1,2,3,4 # location of columns
+    cur_bld = uf.getBuildingName(record[i_bld])
+    return (record[i_mac],cur_bld,record[i_start],record[i_end],record[i_ap],record[i_ap],record[i_ap])
+    
+def insertWorld(cur_rec,next_rec,gap,min_time,max_time,count):
+    
+    i_mac,i_bld,i_start,i_end,i_aps,i_ape = 0,1,2,3,4,5 # location of columns
+    
+    if cur_rec[i_mac] == next_rec[i_mac]:
+        if gap > datetime.timedelta(0,60*50) :
+            world_rec = (cur_rec[i_mac],'world',cur_rec[i_end],next_rec[i_start],'NULL','NULL')
+            insertRecord(world_rec)
+    else:
+        count = count + 1
+        if count%100 == 0:
+            print count
+        world_rec = (cur_rec[i_mac],'world',cur_rec[i_end],max_time,'NULL','NULL')
+        insertRecord(world_rec)
+        world_rec = (next_rec[i_mac],'world',min_time,next_rec[i_start],'NULL','NULL')
+        insertRecord(world_rec)
+    return count
 
-def fillAndGroup():
-    macs = getMacs()
+def fillAndGroup(dates):
+    records = getFiltered(dates)
+    min_time = datetime.datetime.combine(dates[0],datetime.time(4))
+    max_time = datetime.datetime.combine(dates[-1],datetime.time(4))+datetime.timedelta(1)
     createGrouped()
-
-
-
-    i_bld,i_start,i_end,i_ap = 0,1,2,3 # location of the 'maploc' field
-    sequences = []
     count = 0
-    for mac in macs:
-        print count
-        cur.execute("select maploc,start_time,end_time,apname from filtered where mac='{}'".format(mac))
-        records = cur.fetchall()
-        
-        cur_bld = uf.getBuildingName(records[0][i_bld])
-        cur_rec = (cur_bld,records[0][i_start],records[0][i_end],records[0][i_ap],records[0][i_ap])
-        
-        for i in range(len(records)-2):
-            next_bld = uf.getBuildingName(records[i+1][i_bld])
-            next_rec = (next_bld,records[i+1][i_start],records[i+1][i_end],records[i+1][i_ap],records[i+1][i_ap])
-            
-            
-            gap = next_rec[i_start] - cur_rec[i_end]
-            if gap > datetime.timedelta(0,60*60):
-                gap_rec = ('world',cur_rec[i_end],next_rec[i_start],None,None)
-                insertRecord(mac,gap_rec)
-            
-            if gap < datetime.timedelta(0,17*60) and cur_bld == next_bld:
-                cur_rec = (cur_rec[i_bld],cur_rec[i_start],next_rec[i_end],cur_rec[i_ap],next_rec[i_ap])
-            else:
-                if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
-                    insertRecord(mac,cur_rec)
-                cur_rec = next_rec
-                cur_bld = cur_rec[i_bld]
+    i_mac,i_bld,i_start,i_end,i_aps,i_ape = 0,1,2,3,4,5 # location of columns
 
-        if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
-            insertRecord(mac,cur_rec)
-        count += 1
+    cur_rec = updateBuildingField(records[0])
+
+    if cur_rec[i_start]>min_time:
+        insertRecord((cur_rec[i_mac],'world',min_time,cur_rec[i_start],'NULL','NULL'))
+
+    
+    for next_rec in records[1:-1]:
+        next_rec = updateBuildingField(next_rec)
+        gap = next_rec[i_start] - cur_rec[i_end]
+        
+        count = insertWorld(cur_rec,next_rec,gap,min_time,max_time, count)
+
+        # group if else
+        if cur_rec[i_mac] == next_rec[i_mac] and gap < datetime.timedelta(0,17*60) and cur_rec[i_bld] == next_rec[i_bld]:
+            # group
+            cur_rec = (cur_rec[i_mac],cur_rec[i_bld],cur_rec[i_start],next_rec[i_end],cur_rec[i_aps],next_rec[i_aps])
+        else:
+            if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
+                insertRecord(cur_rec)
+            cur_rec = next_rec
+        
+
+    # check if last record should be inserted
+    if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
+        insertRecord(cur_rec)
+        
+    if cur_rec[i_end]<max_time:
+        insertRecord((cur_rec[i_mac],'world',cur_rec[i_end],max_time,'NULL','NULL'))
+        
+
 
 def barPlot(blds_from,blds_to,dates):
     n_days = len(dates)
