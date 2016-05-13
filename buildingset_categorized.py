@@ -12,11 +12,11 @@ def main():
     conn, cur = uf.connectDB()
 
     buildings = bs.createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid",\
-                                          name="buildingset_v0513_test", mac=True)
+                                          name="buildingset_v0513", mac=True)
 
-    createBs_categorized(conn, cur, sequenceTable='group_rec_test', id_field='mac', starttime='ts', endtime='te',\
-                         building_field='building', buildingsetTable='buildingset_v0513_test',\
-                         building_list=buildings, mac=True, limit=5000)
+    createBs_categorized(conn, cur, sequenceTable='groupedall', id_field='mac', starttime='ts', endtime='te',\
+                         building_field='building', buildingsetTable='buildingset_v0513',\
+                         building_list=buildings, mac=True, limit=None)
 
     # Close the database connection
     conn.close()
@@ -54,26 +54,26 @@ def createBs_categorized(conn, cur, sequenceTable, id_field, starttime, endtime,
             identifier = 'mac'
             pass
         else:
-            response = raw_input(
+            response = input(
                 "The id_field does not resemble to \'mac\', are you sure that mac-addresses are stored in the id_field? (y/n): ")
             if response == 'y':
                 identifier = 'mac'
                 pass
             else:
-                print 'Returning from function...'
+                print('Returning from function...')
                 return
     else:
         if id_field == 'username':
             identifier = 'username'
             pass
         else:
-            response = raw_input(
+            response = input(
                 "The id_field does not resemble to \'username\', are you sure that usernames are stored in the id_field? (y/n): ")
             if response == 'y':
                 identifier = 'username'
                 pass
             else:
-                print 'Returning from function...'
+                print('Returning from function...')
                 return
 
     # Get id_field list
@@ -124,10 +124,10 @@ def createBs_categorized(conn, cur, sequenceTable, id_field, starttime, endtime,
         cur.execute(query, value_dict)
         conn.commit()
 
-    print 'Values inserted into table \''+buildingsetTable+'\' successfully'
+    print('Values inserted into table \''+buildingsetTable+'\' successfully')
 
 
 if __name__ == '__main__':
     main()
 
-print("%f seconds" % (time.time() - start_time))
+print(("%f seconds" % (time.time() - start_time)))
