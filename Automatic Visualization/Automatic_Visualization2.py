@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.dates import *
 import numpy as np
 from Tkinter import *
-import createmaps as CM
+#import createmaps as CM
 import csv
 import folium
 import time
@@ -16,14 +16,13 @@ import utility_functions as uf
 
 
 # Create a connection object
-'''
-try:
+
+'''try:
     conn = psycopg2.connect(database="wifi", user="postgres", password="geomatics", host="localhost", port="5432")
     print "Opened database successfully"
 except:
     print "I'm unable to connect to the database"
-
-'''
+cur = conn.cursor()'''
 
 # Connect to DB
 conn,cur = uf.connectDB()
@@ -34,17 +33,16 @@ cur.execute('select min(asstime) from wifilog')
 min_time = cur.fetchall()
 min_time = min_time[0][0] - datetime.timedelta(1)
 max_time = datetime.datetime.now()
-useGroupedAll = False
+useGroupedAll = True
 
 
 def main (blds_from,blds_to,dates):
-    print blds_from
     if not useGroupedAll:
         createFiltered(dates)
         createGrouped(dates)
-    # createTrajectories(blds_from,blds_to,dates)
+    createTrajectories(blds_from,blds_to,dates)
     # CM.main(dates, blds_from, blds_to)
-    # barPlot(blds_from,blds_to,dates)
+    barPlot(blds_from,blds_to,dates)
     #dropTable('filtered')
     # Close the database connection
     conn.close()
@@ -88,7 +86,7 @@ def insertRecord(record):
 
     
 def updateBuildingField(record):
-    i_mac,i_bld,i_start,i_end,i_ap = 0,1,2,3,4 # location of columns
+    i_mac,i_start,i_end,i_ap = 0,1,2,3 # location of columns
     cur_bld = uf.apname2id(record[i_ap])
     return (record[i_mac],cur_bld,record[i_start],record[i_end],record[i_ap],record[i_ap])
     
@@ -110,7 +108,7 @@ def createGrouped(dates):
         if count%100 == 0:
             print count
         count += 1
-        cur.execute("select mac,maploc,start_time,end_time,apname from filtered where mac='{}'".format(mac))
+        cur.execute("select mac,start_time,end_time,apname from filtered where mac='{}'".format(mac))
         records = cur.fetchall()
         cur_rec = updateBuildingField(records[0])
         
@@ -184,7 +182,6 @@ def createTrajectories(blds_from,blds_to,dates):
     
     # Create individual trajectories table
     cur.execute(open("trajectories.sql", "r").read().format(tableName,str_dates,str_dates,str_dates,str_blds_from,str_blds_to))
-    print cur.query
     conn.commit()
     
 def list2string(lst):
