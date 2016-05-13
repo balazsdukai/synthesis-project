@@ -44,9 +44,9 @@ def reconnectDB(conn):
 
 def getBuildingName(string):
     """
-    Subsets building name from the 'maploc' field.
+    Subsets building name from the 'maploc' field of a single record.
     :param string: the value of the 'maploc' field of a single record in the database
-    :return: str - the buildingid of the respective building, parsed to be compliant with createBuildingset()
+    :return: str - the buildingid of the respective building, in a format of e.g. "50-TNW-RID" -> "tnw_rid"
     """
     campus = 'System Campus > '
     to_replace = ["-", " ", "(", ")", "&"]
@@ -77,7 +77,7 @@ def parseBuildingId(cur, buildingTable, field):
     :param cur: database cursor object from psycopg2
     :param buildingTable: str - name of the table that contains the building names
     :param field: str - name of the field in the table that contains the building names
-    :return: list - PostgreSQL compliant field names
+    :return: sorted list - PostgreSQL compliant field names, e.g. "50-TNW-RID" -> "tnw_rid"
     """
     # get the buildingnames without the building numbers on the front (e.g. "50-TNW-RID" -> "TNW_RID")
     cur.execute("select " + field + " from " + buildingTable + ";")
