@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "20-Aula To 31-TBM",
-          "val": 482
+          "idx": "btud To world",
+          "val": 3727
         },
         {
           "col": "data",
-          "idx": "31-TBM To 20-Aula",
-          "val": 58
+          "idx": "world To btud",
+          "val": 3528
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "20-Aula To 31-TBM: 482 , 31-TBM To 20-Aula: 58"
+      "title": "btud To world: 3727 , world To btud: 3528"
     }
   ],
   "marks": [

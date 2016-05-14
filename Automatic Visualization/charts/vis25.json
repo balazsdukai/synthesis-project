@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "22-TNW-TN To 34-OCP-3ME",
-          "val": 235
+          "idx": "drebbelweg To world",
+          "val": 1099
         },
         {
           "col": "data",
-          "idx": "34-OCP-3ME To 22-TNW-TN",
-          "val": 166
+          "idx": "world To drebbelweg",
+          "val": 1122
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "22-TNW-TN To 34-OCP-3ME: 235 , 34-OCP-3ME To 22-TNW-TN: 166"
+      "title": "world To drebbelweg: 1122 , drebbelweg To world: 1099"
     }
   ],
   "marks": [

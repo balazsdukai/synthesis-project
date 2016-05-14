@@ -41,6 +41,10 @@ def reconnectDB(conn):
 
     return conn, cur
 
+def building_id2name(bld_id,cur):
+    cur.execute('select name from buildings where id = {}'.format(bld_id))
+    records = cur.fetchall()
+    return records[0][0]
 
 def apname2id(apname):
     #get the building id by getting the 2 characters before the second '-' in apname

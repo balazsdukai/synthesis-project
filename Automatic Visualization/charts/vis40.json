@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "21-BTUD To 22-TNW-TN",
-          "val": 1036
+          "idx": "cultureel_centrum To world",
+          "val": 469
         },
         {
           "col": "data",
-          "idx": "22-TNW-TN To 21-BTUD",
-          "val": 537
+          "idx": "world To cultureel_centrum",
+          "val": 441
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "21-BTUD To 22-TNW-TN: 1036 , 22-TNW-TN To 21-BTUD: 537"
+      "title": "cultureel_centrum To world: 469 , world To cultureel_centrum: 441"
     }
   ],
   "marks": [

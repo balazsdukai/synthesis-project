@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "21-BTUD To 34-OCP-3ME",
-          "val": 234
+          "idx": "aula To world",
+          "val": 1643
         },
         {
           "col": "data",
-          "idx": "34-OCP-3ME To 21-BTUD",
-          "val": 257
+          "idx": "world To aula",
+          "val": 1975
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "34-OCP-3ME To 21-BTUD: 257 , 21-BTUD To 34-OCP-3ME: 234"
+      "title": "world To aula: 1975 , aula To world: 1643"
     }
   ],
   "marks": [

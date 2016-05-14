@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "23-CITG To 36-EWI-LB",
-          "val": 368
+          "idx": "aula To tnw_tn",
+          "val": 905
         },
         {
           "col": "data",
-          "idx": "36-EWI-LB To 23-CITG",
-          "val": 271
+          "idx": "tnw_tn To aula",
+          "val": 622
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "23-CITG To 36-EWI-LB: 368 , 36-EWI-LB To 23-CITG: 271"
+      "title": "aula To tnw_tn: 905 , tnw_tn To aula: 622"
     }
   ],
   "marks": [

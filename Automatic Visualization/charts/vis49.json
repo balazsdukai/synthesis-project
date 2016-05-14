@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "08-BK-City To 22-TNW-TN",
-          "val": 222
+          "idx": "science_center To world",
+          "val": 295
         },
         {
           "col": "data",
-          "idx": "22-TNW-TN To 08-BK-City",
-          "val": 428
+          "idx": "world To science_center",
+          "val": 222
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "22-TNW-TN To 08-BK-City: 428 , 08-BK-City To 22-TNW-TN: 222"
+      "title": "science_center To world: 295 , world To science_center: 222"
     }
   ],
   "marks": [

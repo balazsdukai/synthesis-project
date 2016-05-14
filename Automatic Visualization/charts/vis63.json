@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "08-BK-City To 21-BTUD",
-          "val": 336
+          "idx": "ewi_lb To ocp_3me",
+          "val": 152
         },
         {
           "col": "data",
-          "idx": "21-BTUD To 08-BK-City",
-          "val": 600
+          "idx": "ocp_3me To ewi_lb",
+          "val": 138
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "21-BTUD To 08-BK-City: 600 , 08-BK-City To 21-BTUD: 336"
+      "title": "ewi_lb To ocp_3me: 152 , ocp_3me To ewi_lb: 138"
     }
   ],
   "marks": [

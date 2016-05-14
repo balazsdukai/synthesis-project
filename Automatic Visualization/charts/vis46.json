@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To world",
-          "val": 6371
+          "idx": "bouwcampus To world",
+          "val": 329
         },
         {
           "col": "data",
-          "idx": "world To ewi_lb",
-          "val": 6409
+          "idx": "world To bouwcampus",
+          "val": 339
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "world To ewi_lb: 6409 , ewi_lb To world: 6371"
+      "title": "world To bouwcampus: 339 , bouwcampus To world: 329"
     }
   ],
   "marks": [

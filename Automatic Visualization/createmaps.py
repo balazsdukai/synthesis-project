@@ -8,6 +8,12 @@ import shutil
 import random
 from math import *
 import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
+import utility_functions as uf
+
+# Connect to DB
+conn,cur = uf.connectDB()
 
 def getCount(bld_nr,next_bld_nr,rows):
     for i in range(len(rows)):
@@ -55,23 +61,25 @@ def getCoordinate(startpoint,endpoint,offset):
 def getBuildings(rows):
     buildings={}
     for i in range(len(rows)):
-        lon=rows[i][0]
-        lat=rows[i][1]
-        building_name=rows[i][2]
-        buildings[building_name]=(lat,lon)
+        lon=rows[i][3]
+        lat=rows[i][4]
+        building_id=rows[i][0]
+        buildings[building_id]=(lat,lon)
     return buildings
 
 def getPopup(bld_nr,next_bld_nr,count1,count2,path):
-    data={bld_nr+' To '+next_bld_nr:count1,next_bld_nr+' To '+bld_nr:count2}
+    bld_name = uf.building_id2name(bld_nr,cur)
+    next_bld_name = uf.building_id2name(next_bld_nr,cur)
+    data={bld_name+' To '+next_bld_name:count1,next_bld_name+' To '+bld_name:count2}
     vis = vincent.Pie(data,outer_radius=70,width=50,height=50)
-    vis.legend(title=bld_nr+' To '+next_bld_nr+': '+str(count1)+' , '+next_bld_nr+' To '+bld_nr+': '+str(count2))
+    vis.legend(title=bld_name+' To '+next_bld_name+': '+str(count1)+' , '+next_bld_name+' To '+bld_name+': '+str(count2))
     vis.to_json(path)
 
 def drawBuildings(newBuildingList,buildings,Map):
-    for building_name in buildings:
-        if building_name in newBuildingList:
-            marker=folium.Marker(buildings[building_name],
-                  popup=building_name
+    for building_id in buildings:
+        if building_id in newBuildingList:
+            marker=folium.Marker(buildings[building_id],
+                  popup=uf.building_id2name(building_id,cur)
                  )
             marker.add_to(Map)
 
@@ -146,26 +154,27 @@ def drawLines(dates,rows,buildings,newBuildingList,Map):
             polyline.add_to(Map)
             finished.append(i)
 def createMap(dates,blds_from,blds_to):
-    
     # Connect to database
-    try:
+    '''try:
         conn = psycopg2.connect("dbname='wifi' user='team2' host='wifitracking.bk.tudelft.nl' password='AlsoSprachZ!'")
         print "Opened database successfully"
     except:
         print "I am unable to connect to the database"
+
+    cur= conn.cursor()'''
+    
     # Initialise map view
     map_osm = folium.Map(location=[51.9979838316019, 4.37410721256426],zoom_start=15)
 
     # Get all building locations
-    cur= conn.cursor()
     cur.execute("SELECT * FROM buildings;")
     rows = cur.fetchall()
     buildings=getBuildings(rows)
         
     # Format SQL statement
-    SQL="""select bld_nr,next_bld_nr,count(*)
-        from individual_trajectories
-        group by bld_nr,next_bld_nr
+    SQL="""select from_bld,to_bld,count(*)
+        from trajectories
+        group by from_bld,to_bld
         order by count desc
         """
     cur.execute(SQL)

@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To world",
-          "val": 6371
+          "idx": "tnw_tn To world",
+          "val": 3890
         },
         {
           "col": "data",
-          "idx": "world To ewi_lb",
-          "val": 6409
+          "idx": "world To tnw_tn",
+          "val": 3693
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "world To ewi_lb: 6409 , ewi_lb To world: 6371"
+      "title": "tnw_tn To world: 3890 , world To tnw_tn: 3693"
     }
   ],
   "marks": [

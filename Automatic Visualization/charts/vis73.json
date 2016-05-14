@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "22-TNW-TN To 36-EWI-HB",
-          "val": 433
+          "idx": "ewi_lb To tnw_tn",
+          "val": 78
         },
         {
           "col": "data",
-          "idx": "36-EWI-HB To 22-TNW-TN",
-          "val": 270
+          "idx": "tnw_tn To ewi_lb",
+          "val": 111
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "22-TNW-TN To 36-EWI-HB: 433 , 36-EWI-HB To 22-TNW-TN: 270"
+      "title": "tnw_tn To ewi_lb: 111 , ewi_lb To tnw_tn: 78"
     }
   ],
   "marks": [

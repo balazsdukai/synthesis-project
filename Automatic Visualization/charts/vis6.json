@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "36-EWI-HB To 36-EWI-LB",
-          "val": 639
+          "idx": "ocp_io To world",
+          "val": 6704
         },
         {
           "col": "data",
-          "idx": "36-EWI-LB To 36-EWI-HB",
-          "val": 637
+          "idx": "world To ocp_io",
+          "val": 6505
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "36-EWI-HB To 36-EWI-LB: 639 , 36-EWI-LB To 36-EWI-HB: 637"
+      "title": "ocp_io To world: 6704 , world To ocp_io: 6505"
     }
   ],
   "marks": [

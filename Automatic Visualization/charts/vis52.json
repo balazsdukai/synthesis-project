@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To world",
-          "val": 6371
+          "idx": "citg To ewi_lb",
+          "val": 243
         },
         {
           "col": "data",
-          "idx": "world To ewi_lb",
-          "val": 6409
+          "idx": "ewi_lb To citg",
+          "val": 237
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "world To ewi_lb: 6409 , ewi_lb To world: 6371"
+      "title": "citg To ewi_lb: 243 , ewi_lb To citg: 237"
     }
   ],
   "marks": [

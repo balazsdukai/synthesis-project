@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "20-Aula To 21-BTUD",
-          "val": 12094
+          "idx": "citg To world",
+          "val": 8681
         },
         {
           "col": "data",
-          "idx": "21-BTUD To 20-Aula",
-          "val": 17766
+          "idx": "world To citg",
+          "val": 9067
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "21-BTUD To 20-Aula: 17766 , 20-Aula To 21-BTUD: 12094"
+      "title": "world To citg: 9067 , citg To world: 8681"
     }
   ],
   "marks": [

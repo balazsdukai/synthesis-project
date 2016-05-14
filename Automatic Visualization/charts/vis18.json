@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "23-CITG To 36-EWI-HB",
-          "val": 295
+          "idx": "lr To world",
+          "val": 2525
         },
         {
           "col": "data",
-          "idx": "36-EWI-HB To 23-CITG",
-          "val": 199
+          "idx": "world To lr",
+          "val": 2542
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "23-CITG To 36-EWI-HB: 295 , 36-EWI-HB To 23-CITG: 199"
+      "title": "world To lr: 2542 , lr To world: 2525"
     }
   ],
   "marks": [

@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "22-TNW-TN To 23-CITG",
-          "val": 374
+          "idx": "ogz To world",
+          "val": 2742
         },
         {
           "col": "data",
-          "idx": "23-CITG To 22-TNW-TN",
-          "val": 285
+          "idx": "world To ogz",
+          "val": 2861
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "22-TNW-TN To 23-CITG: 374 , 23-CITG To 22-TNW-TN: 285"
+      "title": "world To ogz: 2861 , ogz To world: 2742"
     }
   ],
   "marks": [

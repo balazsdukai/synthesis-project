@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To world",
-          "val": 6371
+          "idx": "o_s To world",
+          "val": 971
         },
         {
           "col": "data",
-          "idx": "world To ewi_lb",
-          "val": 6409
+          "idx": "world To o_s",
+          "val": 1015
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "world To ewi_lb: 6409 , ewi_lb To world: 6371"
+      "title": "world To o_s: 1015 , o_s To world: 971"
     }
   ],
   "marks": [

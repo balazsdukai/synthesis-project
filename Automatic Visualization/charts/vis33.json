@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To world",
-          "val": 6371
+          "idx": "ocp_3me To ocp_io",
+          "val": 667
         },
         {
           "col": "data",
-          "idx": "world To ewi_lb",
-          "val": 6409
+          "idx": "ocp_io To ocp_3me",
+          "val": 598
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "world To ewi_lb: 6409 , ewi_lb To world: 6371"
+      "title": "ocp_3me To ocp_io: 667 , ocp_io To ocp_3me: 598"
     }
   ],
   "marks": [

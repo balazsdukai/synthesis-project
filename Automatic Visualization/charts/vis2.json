@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "20-Aula To 22-TNW-TN",
-          "val": 1184
+          "idx": "bk_city To world",
+          "val": 7688
         },
         {
           "col": "data",
-          "idx": "22-TNW-TN To 20-Aula",
-          "val": 784
+          "idx": "world To bk_city",
+          "val": 7729
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "20-Aula To 22-TNW-TN: 1184 , 22-TNW-TN To 20-Aula: 784"
+      "title": "world To bk_city: 7729 , bk_city To world: 7688"
     }
   ],
   "marks": [
