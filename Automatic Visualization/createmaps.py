@@ -96,7 +96,6 @@ def drawLines(dates,rows,buildings,newBuildingList,Map):
     thin=2.0
     maxCount=max(rows[0][2]*2,len(dates)*500.0)
     minCount=maxCount*0.01
-    print minCount
     times= (thick-thin)/(maxCount-minCount)
     finished=[]
     # Draw lines :
@@ -107,7 +106,7 @@ def drawLines(dates,rows,buildings,newBuildingList,Map):
             continue
         bld_nr=rows[i][0]
         next_bld_nr=rows[i][1]
-        if(getCount(next_bld_nr,bld_nr,rows)!=None):
+        if getCount(next_bld_nr,bld_nr,rows)!=None and buildings[bld_nr]!=(None,None) and buildings[next_bld_nr]!=(None,None):
             (index,count)=getCount(next_bld_nr,bld_nr,rows)
             total=rows[i][2]+count
             if total<minCount:
@@ -133,7 +132,7 @@ def drawLines(dates,rows,buildings,newBuildingList,Map):
             ,opacity=1)
             polyline.add_to(Map)
             finished.append(index)
-        else:
+        elif getCount(next_bld_nr,bld_nr,rows)==None and buildings[bld_nr]!=(None,None) and buildings[next_bld_nr]!=(None,None):
             if rows[i][2]<minCount:
                 continue
             if bld_nr not in newBuildingList:
@@ -147,12 +146,14 @@ def drawLines(dates,rows,buildings,newBuildingList,Map):
             polyline=folium.PolyLine([
             [buildings[bld_nr][0],buildings[bld_nr][1]],
             [buildings[next_bld_nr][0],buildings[next_bld_nr][1]]],
-            popup=bld_nr+' To '+next_bld_nr+": "+str(rows[i][2]),
+            popup=str(bld_nr)+' To '+str(next_bld_nr)+": "+str(rows[i][2]),
             weight=thickness,
             color='rgb('+str(r)+','+str(g)+','+str(b)+')'
             ,opacity=1)
             polyline.add_to(Map)
             finished.append(i)
+        else:
+            continue
 def createMap(dates,blds_from,blds_to):
     # Connect to database
     '''try:
@@ -170,7 +171,6 @@ def createMap(dates,blds_from,blds_to):
     cur.execute("SELECT * FROM buildings;")
     rows = cur.fetchall()
     buildings=getBuildings(rows)
-        
     # Format SQL statement
     SQL="""select from_bld,to_bld,count(*)
         from trajectories
@@ -179,6 +179,7 @@ def createMap(dates,blds_from,blds_to):
         """
     cur.execute(SQL)
     rows = cur.fetchall()
+    print rows
     # Draw lines and buildings
     newBuildingList=[]
     drawLines(dates,rows,buildings,newBuildingList,map_osm)
