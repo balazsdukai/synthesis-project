@@ -12,10 +12,10 @@ def main():
     conn, cur = uf.connectDB()
 
     buildings = bs.createBuildingsetTable(conn, cur, buildingsTable="buildings", field="buildingid",\
-                                          name="buildingset_v0513", mac=True)
+                                          name="buildingset_v0516", mac=True)
 
     createBs_categorized(conn, cur, sequenceTable='groupedall', id_field='mac', starttime='ts', endtime='te',\
-                         building_field='building', buildingsetTable='buildingset_v0513',\
+                         building_field='building', buildingsetTable='buildingset_v0516',\
                          building_list=buildings, mac=True, limit=None)
 
     # Close the database connection
