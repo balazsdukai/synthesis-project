@@ -89,26 +89,33 @@ def checkFolder(path):
         os.makedirs(path)
     else:
         os.makedirs(path)
+def findNonWorldBuilding(rows):
+    for i in range(len(rows)):
+        if rows[i][0]!=0 and rows[i][1]!=0:
+            return i
+    return 0
 
-def drawLines(dates,rows,buildings,newBuildingList,Map):
+def drawLines(blds_from,blds_to,dates,rows,buildings,newBuildingList,Map):
     # Line style :
     thick=50.0
     thin=2.0
-    maxCount=max(rows[0][2]*2,len(dates)*500.0)
-    minCount=maxCount*0.01
+    idx= findNonWorldBuilding(rows)
+    maxCount=max(rows[idx][2]*2,len(dates)*500.0)
+    minCount=maxCount*0.05
     times= (thick-thin)/(maxCount-minCount)
     finished=[]
     # Draw lines :
     path=os.path.join(os.path.dirname(__file__), 'charts', '')
     checkFolder(path)
     for i in range(len(rows)):
-        if i in finished:
-            continue
         bld_nr=rows[i][0]
         next_bld_nr=rows[i][1]
+        if i in finished or bld_nr not in blds_from or next_bld_nr not in blds_to:
+            continue
         if getCount(next_bld_nr,bld_nr,rows)!=None and buildings[bld_nr]!=(None,None) and buildings[next_bld_nr]!=(None,None):
             (index,count)=getCount(next_bld_nr,bld_nr,rows)
             total=rows[i][2]+count
+            print maxCount,minCount,total
             if total<minCount:
                 continue
             if bld_nr not in newBuildingList:
@@ -182,7 +189,7 @@ def createMap(dates,blds_from,blds_to):
     print rows
     # Draw lines and buildings
     newBuildingList=[]
-    drawLines(dates,rows,buildings,newBuildingList,map_osm)
+    drawLines(blds_from,blds_to,dates,rows,buildings,newBuildingList,map_osm)
     drawBuildings(newBuildingList,buildings,map_osm)
     # Close connection
     cur.close()
@@ -192,8 +199,8 @@ def createMap(dates,blds_from,blds_to):
     os.system('map.html')
 
 def test():
-    bld_from = ["23-CITG","21-BTUD","30-O&S","20-Aula"]
-    bld_to = ["23-CITG","21-BTUD","30-O&S","20-Aula"]
+    bld_from = [23,21,30,20]
+    bld_to = [23,21,30,20]
     start = datetime.date(2016,04,20)
     end = datetime.date(2016,04,26)
     date=[]
