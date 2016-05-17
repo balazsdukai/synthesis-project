@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "aula To o_s",
-          "val": 44
+          "idx": "citg To cultureel_centrum",
+          "val": 24
         },
         {
           "col": "data",
-          "idx": "o_s To aula",
-          "val": 48
+          "idx": "cultureel_centrum To citg",
+          "val": 25
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "o_s To aula: 48 , aula To o_s: 44"
+      "title": "citg To cultureel_centrum: 24 , cultureel_centrum To citg: 25"
     }
   ],
   "marks": [

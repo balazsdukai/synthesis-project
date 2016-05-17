@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "btud To citg",
-          "val": 147
+          "idx": "btud To sportcentrum",
+          "val": 24
         },
         {
           "col": "data",
-          "idx": "citg To btud",
-          "val": 160
+          "idx": "sportcentrum To btud",
+          "val": 13
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "citg To btud: 160 , btud To citg: 147"
+      "title": "btud To sportcentrum: 24 , sportcentrum To btud: 13"
     }
   ],
   "marks": [

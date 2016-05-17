@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "aula To citg",
-          "val": 102
+          "idx": "ewi_lb To sportcentrum",
+          "val": 60
         },
         {
           "col": "data",
-          "idx": "citg To aula",
-          "val": 153
+          "idx": "sportcentrum To ewi_lb",
+          "val": 37
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "citg To aula: 153 , aula To citg: 102"
+      "title": "ewi_lb To sportcentrum: 60 , sportcentrum To ewi_lb: 37"
     }
   ],
   "marks": [
