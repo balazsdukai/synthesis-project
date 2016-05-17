@@ -65,8 +65,6 @@ def getBuildings(rows):
         lat=rows[i][4]
         building_id=rows[i][0]
         buildings[building_id]=(lat,lon)
-        if building_id==62:
-            buildings[61]=(lat,lon)
     return buildings
 
 def getPopup(bld_nr,next_bld_nr,count1,count2,path):
@@ -202,7 +200,7 @@ def createMap(dates,blds_from,blds_to):
 
 def test():
     bld_from = [8,21,20,23,36]
-    bld_to = [37,38]
+    bld_to = [37,38,62]
     start = datetime.date(2016,04,20)
     end = datetime.date(2016,04,26)
     date=[]

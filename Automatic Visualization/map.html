@@ -13,7 +13,7 @@
         
             
         
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
         
         
         
@@ -110,7 +110,7 @@
             
         
             
-            <style> #map_e53a7b1aca194c259ffad85ae7df4f0d {
+            <style> #map_61068537c16b44018eda3b7d03a2c514 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -120,13 +120,65 @@
             </style>
         
         
+            
+            <style> #vega_4d8004d12a8442a38c90590fb938644b {
+                position : relative;
+                width : 450.0px;
+                height: 150.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/1.4.3/vega.min.js"></script>
+        
+        
+        
+            
+            <style> #vega_85fdd43408ad4913867fb1f72df37660 {
+                position : relative;
+                width : 450.0px;
+                height: 150.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+        
+            
+            <style> #vega_082c67ddff84481097d226a5861efe19 {
+                position : relative;
+                width : 450.0px;
+                height: 150.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+        
+            
+            <style> #vega_7dc0a956a88e4c21b6c18a310c5fd988 {
+                position : relative;
+                width : 450.0px;
+                height: 150.0px;
+                left: 0.0%;
+                top: 0.0%;
+            </style>
+            
+        
         
         </head>
         <body>
             
         
             
-            <div class="folium-map" id="map_e53a7b1aca194c259ffad85ae7df4f0d" ></div>
+            <div class="folium-map" id="map_61068537c16b44018eda3b7d03a2c514" ></div>
         
         
         
@@ -140,7 +192,7 @@
             var northEast = L.latLng(90, 180);
             var bounds = L.latLngBounds(southWest, northEast);
 
-            var map_e53a7b1aca194c259ffad85ae7df4f0d = L.map('map_e53a7b1aca194c259ffad85ae7df4f0d', {
+            var map_61068537c16b44018eda3b7d03a2c514 = L.map('map_61068537c16b44018eda3b7d03a2c514', {
                                            center:[51.9979838316,4.37410721256],
                                            zoom: 15,
                                            maxBounds: bounds,
@@ -151,7 +203,7 @@
         
         
             
-            var tile_layer_5e70b0915ee04b36b51e80af2474ff9d = L.tileLayer(
+            var tile_layer_fa6b93b218004c0da53fe6f8dc4c124f = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
                     maxZoom: 18,
@@ -159,8 +211,243 @@
                     attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
                     detectRetina: false
                     }
-                ).addTo(map_e53a7b1aca194c259ffad85ae7df4f0d);
+                ).addTo(map_61068537c16b44018eda3b7d03a2c514);
 
+        
+        
+            
+                var poly_line_741a219367534f0caf9ab1fa628be211 = L.polyline(
+                    [[52.0026454610105, 4.37558001672138], [51.9906586551695, 4.37573274237554]],
+                    {
+                        color: 'rgb(58,155,0)',
+                        weight: 3.69306414908,
+                        opacity: 1,
+                        });
+                map_61068537c16b44018eda3b7d03a2c514.addLayer(poly_line_741a219367534f0caf9ab1fa628be211);
+            
+        
+            function vega_parse(spec, div) {
+            vg.parse.spec(spec, function(chart) { chart({el:div}).update(); });}
+        
+            
+            var popup_4c16714097fc4967b384dd2eae3925b7 = L.popup({maxWidth: '450'});
+
+            
+                var vega_4d8004d12a8442a38c90590fb938644b = $('             <div id="vega_4d8004d12a8442a38c90590fb938644b"></div>             ')[0];
+                popup_4c16714097fc4967b384dd2eae3925b7.setContent(vega_4d8004d12a8442a38c90590fb938644b);
+            
+
+            poly_line_741a219367534f0caf9ab1fa628be211.bindPopup(popup_4c16714097fc4967b384dd2eae3925b7);
+
+            
+                
+            vega_parse({"legends": [{"title": "btud To lr: 301 , lr To btud: 479", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 301, "col": "data", "idx": "btud To lr"}, {"val": 479, "col": "data", "idx": "lr To btud"}], "name": "table"}]},vega_4d8004d12a8442a38c90590fb938644b);
+            
+            
+        
+        
+            
+                var poly_line_a526884c089a48c8bbb978f087a2ac57 = L.polyline(
+                    [[51.9988856445979, 4.37550578727327], [51.9906586551695, 4.37573274237554]],
+                    {
+                        color: 'rgb(2,199,0)',
+                        weight: 3.08095634134,
+                        opacity: 1,
+                        });
+                map_61068537c16b44018eda3b7d03a2c514.addLayer(poly_line_a526884c089a48c8bbb978f087a2ac57);
+            
+        
+            
+            var popup_5cb1c8a8c28a498bbb23050e9db2e4a1 = L.popup({maxWidth: '450'});
+
+            
+                var vega_85fdd43408ad4913867fb1f72df37660 = $('             <div id="vega_85fdd43408ad4913867fb1f72df37660"></div>             ')[0];
+                popup_5cb1c8a8c28a498bbb23050e9db2e4a1.setContent(vega_85fdd43408ad4913867fb1f72df37660);
+            
+
+            poly_line_a526884c089a48c8bbb978f087a2ac57.bindPopup(popup_5cb1c8a8c28a498bbb23050e9db2e4a1);
+
+            
+                
+            vega_parse({"legends": [{"title": "citg To lr: 247 , lr To citg: 251", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 247, "col": "data", "idx": "citg To lr"}, {"val": 251, "col": "data", "idx": "lr To citg"}], "name": "table"}]},vega_85fdd43408ad4913867fb1f72df37660);
+            
+            
+        
+        
+            
+                var poly_line_6e281ee19ae74bf0a7b253407ea8a8b1 = L.polyline(
+                    [[52.0022144047065, 4.37355252109371], [51.9906586551695, 4.37573274237554]],
+                    {
+                        color: 'rgb(30,177,0)',
+                        weight: 3.21553323524,
+                        opacity: 1,
+                        });
+                map_61068537c16b44018eda3b7d03a2c514.addLayer(poly_line_6e281ee19ae74bf0a7b253407ea8a8b1);
+            
+        
+            
+            var popup_c7729e7c40524e8e813031b805c9f47c = L.popup({maxWidth: '450'});
+
+            
+                var vega_082c67ddff84481097d226a5861efe19 = $('             <div id="vega_082c67ddff84481097d226a5861efe19"></div>             ')[0];
+                popup_c7729e7c40524e8e813031b805c9f47c.setContent(vega_082c67ddff84481097d226a5861efe19);
+            
+
+            poly_line_6e281ee19ae74bf0a7b253407ea8a8b1.bindPopup(popup_c7729e7c40524e8e813031b805c9f47c);
+
+            
+                
+            vega_parse({"legends": [{"title": "aula To lr: 247 , lr To aula: 313", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 247, "col": "data", "idx": "aula To lr"}, {"val": 313, "col": "data", "idx": "lr To aula"}], "name": "table"}]},vega_082c67ddff84481097d226a5861efe19);
+            
+            
+        
+        
+            
+                var poly_line_8d480d01b32c4cadb38240773d463dd2 = L.polyline(
+                    [[51.9988525836389, 4.37346394905794], [51.9906586551695, 4.37573274237554]],
+                    {
+                        color: 'rgb(32,175,0)',
+                        weight: 3.01366789439,
+                        opacity: 1,
+                        });
+                map_61068537c16b44018eda3b7d03a2c514.addLayer(poly_line_8d480d01b32c4cadb38240773d463dd2);
+            
+        
+            
+            var popup_a48064af7751476d87ce42313002013f = L.popup({maxWidth: '450'});
+
+            
+                var vega_7dc0a956a88e4c21b6c18a310c5fd988 = $('             <div id="vega_7dc0a956a88e4c21b6c18a310c5fd988"></div>             ')[0];
+                popup_a48064af7751476d87ce42313002013f.setContent(vega_7dc0a956a88e4c21b6c18a310c5fd988);
+            
+
+            poly_line_8d480d01b32c4cadb38240773d463dd2.bindPopup(popup_a48064af7751476d87ce42313002013f);
+
+            
+                
+            vega_parse({"legends": [{"title": "ewi_lb To lr: 204 , lr To ewi_lb: 263", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 204, "col": "data", "idx": "ewi_lb To lr"}, {"val": 263, "col": "data", "idx": "lr To ewi_lb"}], "name": "table"}]},vega_7dc0a956a88e4c21b6c18a310c5fd988);
+            
+            
+        
+        
+            
+
+            var marker_f0408f3212994f6b85990b75fbac09ff = L.marker(
+                [52.0022144047,4.37355252109],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_61068537c16b44018eda3b7d03a2c514);
+            
+        
+            
+            var popup_db2dd6ab93fc477e94fd08ec31d2d0a4 = L.popup({maxWidth: '300'});
+
+            
+                var html_2e01c9d477bc491fa5df92a026f3ffa4 = $('         <div id="html_2e01c9d477bc491fa5df92a026f3ffa4"                 style="width: 100.0%; height: 100.0%;">                 aula</div>                 ')[0];
+                popup_db2dd6ab93fc477e94fd08ec31d2d0a4.setContent(html_2e01c9d477bc491fa5df92a026f3ffa4);
+            
+
+            marker_f0408f3212994f6b85990b75fbac09ff.bindPopup(popup_db2dd6ab93fc477e94fd08ec31d2d0a4);
+
+            
+        
+        
+            
+
+            var marker_3b78a8cdbf744eff94b6a43ed41da602 = L.marker(
+                [52.002645461,4.37558001672],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_61068537c16b44018eda3b7d03a2c514);
+            
+        
+            
+            var popup_401f6c60075244eca66cde32445b96b4 = L.popup({maxWidth: '300'});
+
+            
+                var html_0c3d08cb63df443ab66f78261e18be01 = $('         <div id="html_0c3d08cb63df443ab66f78261e18be01"                 style="width: 100.0%; height: 100.0%;">                 btud</div>                 ')[0];
+                popup_401f6c60075244eca66cde32445b96b4.setContent(html_0c3d08cb63df443ab66f78261e18be01);
+            
+
+            marker_3b78a8cdbf744eff94b6a43ed41da602.bindPopup(popup_401f6c60075244eca66cde32445b96b4);
+
+            
+        
+        
+            
+
+            var marker_2524acf1a72e4405bf435bd9f3fda629 = L.marker(
+                [51.9988856446,4.37550578727],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_61068537c16b44018eda3b7d03a2c514);
+            
+        
+            
+            var popup_d64acf9228d34f8fa2a88de0eabc08da = L.popup({maxWidth: '300'});
+
+            
+                var html_6198d0eb2a6143aa90252209c7823e61 = $('         <div id="html_6198d0eb2a6143aa90252209c7823e61"                 style="width: 100.0%; height: 100.0%;">                 citg</div>                 ')[0];
+                popup_d64acf9228d34f8fa2a88de0eabc08da.setContent(html_6198d0eb2a6143aa90252209c7823e61);
+            
+
+            marker_2524acf1a72e4405bf435bd9f3fda629.bindPopup(popup_d64acf9228d34f8fa2a88de0eabc08da);
+
+            
+        
+        
+            
+
+            var marker_2310eebde19b4e63bb9d6a3e45a71227 = L.marker(
+                [51.9988525836,4.37346394906],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_61068537c16b44018eda3b7d03a2c514);
+            
+        
+            
+            var popup_0cd83c246e2e45058e924f2bf13e85ea = L.popup({maxWidth: '300'});
+
+            
+                var html_20146ee1b69144bcb9aaa06aea604639 = $('         <div id="html_20146ee1b69144bcb9aaa06aea604639"                 style="width: 100.0%; height: 100.0%;">                 ewi_lb</div>                 ')[0];
+                popup_0cd83c246e2e45058e924f2bf13e85ea.setContent(html_20146ee1b69144bcb9aaa06aea604639);
+            
+
+            marker_2310eebde19b4e63bb9d6a3e45a71227.bindPopup(popup_0cd83c246e2e45058e924f2bf13e85ea);
+
+            
+        
+        
+            
+
+            var marker_edb7ee20677644be82a19b3d80238bee = L.marker(
+                [51.9906586552,4.37573274238],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_61068537c16b44018eda3b7d03a2c514);
+            
+        
+            
+            var popup_239e423514ab416584f1ecb5dd33b4e2 = L.popup({maxWidth: '300'});
+
+            
+                var html_8404141a501f49d09ced333b676e9ba2 = $('         <div id="html_8404141a501f49d09ced333b676e9ba2"                 style="width: 100.0%; height: 100.0%;">                 lr</div>                 ')[0];
+                popup_239e423514ab416584f1ecb5dd33b4e2.setContent(html_8404141a501f49d09ced333b676e9ba2);
+            
+
+            marker_edb7ee20677644be82a19b3d80238bee.bindPopup(popup_239e423514ab416584f1ecb5dd33b4e2);
+
+            
         
         
         
