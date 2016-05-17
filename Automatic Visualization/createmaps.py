@@ -175,7 +175,7 @@ def createMap(dates,blds_from,blds_to):
     map_osm = folium.Map(location=[51.9979838316019, 4.37410721256426],zoom_start=15)
 
     # Get all building locations
-    cur.execute("SELECT * FROM buildings;")
+    cur.execute("SELECT * FROM buildings_new;")
     rows = cur.fetchall()
     buildings=getBuildings(rows)
     # Format SQL statement
