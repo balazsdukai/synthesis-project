@@ -65,6 +65,8 @@ def getBuildings(rows):
         lat=rows[i][4]
         building_id=rows[i][0]
         buildings[building_id]=(lat,lon)
+        if building_id==62:
+            buildings[61]=(lat,lon)
     return buildings
 
 def getPopup(bld_nr,next_bld_nr,count1,count2,path):
@@ -93,7 +95,7 @@ def findNonWorldBuilding(rows):
     for i in range(len(rows)):
         if rows[i][0]!=0 and rows[i][1]!=0:
             return i
-    return 0
+    return 
 
 def drawLines(blds_from,blds_to,dates,rows,buildings,newBuildingList,Map):
     # Line style :
