@@ -26,7 +26,7 @@ cur = conn.cursor()'''
 # Connect to DB
 conn,cur = uf.connectDB()
 
-## GLOBAlS ##
+## GLOBALS ##
 START = time.time()
 cur.execute('select min(asstime) from wifilog')
 min_time = cur.fetchall()
