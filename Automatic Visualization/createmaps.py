@@ -93,15 +93,15 @@ def findNonWorldBuilding(rows):
     for i in range(len(rows)):
         if rows[i][0]!=0 and rows[i][1]!=0:
             return i
-    return 0
+    return 
 
 def drawLines(blds_from,blds_to,dates,rows,buildings,newBuildingList,Map):
     # Line style :
-    thick=50.0
+    thick=40.0
     thin=2.0
     idx= findNonWorldBuilding(rows)
     maxCount=max(rows[idx][2]*2,len(dates)*500.0)
-    minCount=maxCount*0.05
+    minCount=maxCount*0.02
     times= (thick-thin)/(maxCount-minCount)
     finished=[]
     # Draw lines :
@@ -175,7 +175,7 @@ def createMap(dates,blds_from,blds_to):
     map_osm = folium.Map(location=[51.9979838316019, 4.37410721256426],zoom_start=15)
 
     # Get all building locations
-    cur.execute("SELECT * FROM buildings;")
+    cur.execute("SELECT * FROM buildings_new;")
     rows = cur.fetchall()
     buildings=getBuildings(rows)
     # Format SQL statement
@@ -199,8 +199,8 @@ def createMap(dates,blds_from,blds_to):
     os.system('map.html')
 
 def test():
-    bld_from = [23,21,30,20]
-    bld_to = [23,21,30,20]
+    bld_from = [8,21,20,23,36]
+    bld_to = [37,38,62]
     start = datetime.date(2016,04,20)
     end = datetime.date(2016,04,26)
     date=[]

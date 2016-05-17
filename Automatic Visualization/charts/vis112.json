@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "aula To o_s",
-          "val": 44
+          "idx": "ewi_lb To lr",
+          "val": 204
         },
         {
           "col": "data",
-          "idx": "o_s To aula",
-          "val": 48
+          "idx": "lr To ewi_lb",
+          "val": 263
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "o_s To aula: 48 , aula To o_s: 44"
+      "title": "ewi_lb To lr: 204 , lr To ewi_lb: 263"
     }
   ],
   "marks": [

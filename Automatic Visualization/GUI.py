@@ -3,7 +3,7 @@ import ttkcalendar
 import tkSimpleDialog
 import datetime
 import ttk
-import Automatic_Visualization2 as AV
+import Automatic_Visualization as AV
 
 
 class CalendarDialog(tkSimpleDialog.Dialog):
@@ -19,10 +19,10 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
     """Dialog box that displays a checkboxes and returns the selected checkboxes"""
     def body(self, master):
         ## Query database
-        AV.cur.execute("SELECT id FROM buildings")
+        AV.cur.execute("SELECT id FROM buildings_new")
         self.buildings = AV.cur.fetchall()
         self.buildinglist = self.buildings[:]
-        AV.cur.execute("SELECT name FROM buildings")
+        AV.cur.execute("SELECT name FROM buildings_new")
         self.bld_names = AV.cur.fetchall()
         
         ## Create Frames

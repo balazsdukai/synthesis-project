@@ -1,10 +1,19 @@
 \documentclass{tudelft-report}
 \usepackage{natbib}
+% Start of 'ignore natbib' hack
+\let\bibhang\relax
+\let\citename\relax
+\let\bibfont\relax
+\let\Citeauthor\relax
+\expandafter\let\csname ver@natbib.sty\endcsname\relax
 \usepackage{changes}
 \usepackage{subcaption}
 \usepackage[export]{adjustbox}
 \usepackage{float}
 \restylefloat{table}
+\usepackage[style=authoryear-ibid,backend=biber]{biblatex}
+\usepackage{csquotes}
+%%\addbibresource{report.bib}
 \begin{document}
 %% Use Roman numerals for the page numbers of the title pages and table of
 %% contents.
@@ -55,8 +64,8 @@
 %% Use Arabic numerals for the page numbers of the chapters.
 \mainmatter
 %%\input{chapter-0}
-%%\input{chapter-1}
-%%\input{chapter-2}
+\input{chapter-1}
+\input{chapter-2}
 \input{chapter-3}
 %%\input{chapter-4}
 %%\input{chapter-5}
@@ -65,7 +74,7 @@
 
 %\input{appendix-a}
 
-\bibliography{report}
+%\bibliography{report}
 
 \end{document}
 

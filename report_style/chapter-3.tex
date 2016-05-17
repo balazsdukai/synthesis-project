@@ -122,6 +122,24 @@ There is a special 'building' called $world$ in the database. It is not an actua
 \item color: color is gradient from red to green. Red line means the movement is not symmetric that much more people move in one direction than the other, while green line means the movement is symmetric.
 \end{enumerate}
 
+Based on this map visualization, users can choose certain dates and certain buildings to generate maps automatically. It makes it easier to find out movement patterns. Since not all buildings are chosen, the map will only display the movements between several buildings, which makes the map more readable:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{pic3}
+\captionsetup{justification=centering}
+\caption{Amount of movements on April 25th}
+\end{figure}
+
+As shown in the map, the lines are in different colors, which shows the symmetry of the movements. If the user is willing to know more about the movement, it is also possible to click on the line to check the amount of the movements for each direction in detail, and there will be a pie chart showing how symmetric the movements are. With the map visualization, it is easy to focus on movements which are special or interesting:
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{pic4}
+\captionsetup{justification=centering}
+\caption{Amount of movements in pie chart}
+\end{figure}
+
 \section{Sequences}
 
 This template will automatically generate a cover page if you issue the \texttt{\textbackslash makecover} command. There are two formats for the cover page: one with a page-filling (`bleeding')

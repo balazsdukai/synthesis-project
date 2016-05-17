@@ -50,6 +50,10 @@ def apname2id(apname):
     #get the building id by getting the 2 characters before the second '-' in apname
     i = apname.find("-",2)
     bld_id = apname[(i-2):(i)]
+    if bld_id == 12 and apname[7] == 1:
+        bld_id = 13
+    if bld_id == 61:
+        bld_id = 62
     return bld_id
 
 def getBuildingName(string):

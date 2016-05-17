@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "aula To citg",
-          "val": 102
+          "idx": "btud To lr",
+          "val": 301
         },
         {
           "col": "data",
-          "idx": "citg To aula",
-          "val": 153
+          "idx": "lr To btud",
+          "val": 479
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "citg To aula: 153 , aula To citg: 102"
+      "title": "btud To lr: 301 , lr To btud: 479"
     }
   ],
   "marks": [
