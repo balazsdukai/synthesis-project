@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "citg To lr",
-          "val": 247
+          "idx": "btud To ewi_lb",
+          "val": 660
         },
         {
           "col": "data",
-          "idx": "lr To citg",
-          "val": 251
+          "idx": "ewi_lb To btud",
+          "val": 1076
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "lr To citg: 251 , citg To lr: 247"
+      "title": "ewi_lb To btud: 1076 , btud To ewi_lb: 660"
     }
   ],
   "marks": [

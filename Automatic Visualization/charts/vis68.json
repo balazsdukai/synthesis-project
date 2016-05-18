@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "citg To lr",
-          "val": 247
+          "idx": "aula To tbm",
+          "val": 628
         },
         {
           "col": "data",
-          "idx": "lr To citg",
-          "val": 251
+          "idx": "tbm To aula",
+          "val": 596
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "lr To citg: 251 , citg To lr: 247"
+      "title": "aula To tbm: 628 , tbm To aula: 596"
     }
   ],
   "marks": [

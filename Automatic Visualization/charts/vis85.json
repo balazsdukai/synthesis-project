@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "citg To lr",
-          "val": 247
+          "idx": "tnw_dct To tnw_tn",
+          "val": 436
         },
         {
           "col": "data",
-          "idx": "lr To citg",
-          "val": 251
+          "idx": "tnw_tn To tnw_dct",
+          "val": 349
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "lr To citg: 251 , citg To lr: 247"
+      "title": "tnw_dct To tnw_tn: 436 , tnw_tn To tnw_dct: 349"
     }
   ],
   "marks": [

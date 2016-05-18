@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "citg To lr",
-          "val": 247
+          "idx": "ocp_3me To tnw_tn",
+          "val": 1075
         },
         {
           "col": "data",
-          "idx": "lr To citg",
-          "val": 251
+          "idx": "tnw_tn To ocp_3me",
+          "val": 1048
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "lr To citg: 251 , citg To lr: 247"
+      "title": "ocp_3me To tnw_tn: 1075 , tnw_tn To ocp_3me: 1048"
     }
   ],
   "marks": [

@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "citg To lr",
-          "val": 247
+          "idx": "btud To lr",
+          "val": 301
         },
         {
           "col": "data",
-          "idx": "lr To citg",
-          "val": 251
+          "idx": "lr To btud",
+          "val": 479
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "lr To citg: 251 , citg To lr: 247"
+      "title": "lr To btud: 479 , btud To lr: 301"
     }
   ],
   "marks": [

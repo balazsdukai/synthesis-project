@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To lr",
-          "val": 204
+          "idx": "ewi_lb To tbm",
+          "val": 529
         },
         {
           "col": "data",
-          "idx": "lr To ewi_lb",
-          "val": 263
+          "idx": "tbm To ewi_lb",
+          "val": 426
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "ewi_lb To lr: 204 , lr To ewi_lb: 263"
+      "title": "ewi_lb To tbm: 529 , tbm To ewi_lb: 426"
     }
   ],
   "marks": [

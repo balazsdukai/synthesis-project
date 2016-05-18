@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "citg To lr",
-          "val": 247
+          "idx": "lr To ocp_3me",
+          "val": 263
         },
         {
           "col": "data",
-          "idx": "lr To citg",
-          "val": 251
+          "idx": "ocp_3me To lr",
+          "val": 206
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "lr To citg: 251 , citg To lr: 247"
+      "title": "lr To ocp_3me: 263 , ocp_3me To lr: 206"
     }
   ],
   "marks": [

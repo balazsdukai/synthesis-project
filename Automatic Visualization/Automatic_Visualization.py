@@ -36,7 +36,6 @@ useGroupedAll = True
 
 
 def main (blds_from,blds_to,dates):
-    print 'hallo'
     if not useGroupedAll:
         createFiltered(dates)
         createGrouped(dates)
@@ -156,6 +155,7 @@ def barPlot(blds_from,blds_to,dates):
     fig, ax = plt.subplots()
     width = 0.9
     bars = ax.bar(hours, movements, width,color = '#00a6d6',edgecolor = 'none')
+    #ax.set_ylim((0,4000))
     ax.set_ylabel('People')
     ax.set_xlabel('Hour of the day')
     ax.set_title('Movement from %s to %s on %s' % (list2string(blds_from),list2string(blds_to),list2string(dates)))

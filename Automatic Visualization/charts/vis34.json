@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "citg To lr",
-          "val": 247
+          "idx": "aula To ocp_io",
+          "val": 1719
         },
         {
           "col": "data",
-          "idx": "lr To citg",
-          "val": 251
+          "idx": "ocp_io To aula",
+          "val": 1130
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "lr To citg: 251 , citg To lr: 247"
+      "title": "aula To ocp_io: 1719 , ocp_io To aula: 1130"
     }
   ],
   "marks": [
