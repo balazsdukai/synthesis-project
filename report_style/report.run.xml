@@ -53,10 +53,9 @@
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>biblatex_.def</file>
-      <file>authoryear-ibid.bbx</file>
       <file>authoryear.bbx</file>
       <file>standard.bbx</file>
-      <file>authoryear-ibid.cbx</file>
+      <file>authoryear.cbx</file>
       <file>biblatex.cfg</file>
       <file>english.lbx</file>
     </requires>
@@ -78,6 +77,9 @@
     </provides>
     <requires type="dynamic">
       <file>report.bcf</file>
+    </requires>
+    <requires type="editable">
+      <file>report.bib</file>
     </requires>
   </external>
 </requests>
