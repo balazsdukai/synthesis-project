@@ -52,7 +52,8 @@ def apname2id(apname):
     bld_id = apname[(i-2):(i)]
     if bld_id == 12 and apname[7] == 1:
         bld_id = 13
-        print bld_id
+    if bld_id == 61:
+        bld_id = 62
     return bld_id
 
 def getBuildingName(string):

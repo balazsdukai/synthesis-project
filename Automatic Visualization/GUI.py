@@ -64,11 +64,7 @@ class checkBoxDialog(tkSimpleDialog.Dialog):
         for j in range(len(self.buildings[16:])):
             if self.varb[j].get() == 1:
                 self.selected_buildings.append(self.buildings[16+j][0])
-                print self.buildings[16+j][0]
-                if self.buildings[16+j][0] == 62:
-                    self.selected_buildings.append(61)
         self.result = self.selected_buildings
-        print self.result
         if self.var.get() == 1:
             self.result = []
             for item in self.buildings:
