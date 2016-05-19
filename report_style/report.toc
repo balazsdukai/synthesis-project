@@ -64,35 +64,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.2}Assosication rules of buildings}{20}{subsection.4.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Entrances and exits}{21}{section.4.6}
+\contentsline {section}{\numberline {4.6}Entrances and exits}{22}{section.4.6}
 \defcounter {refsection}{0}\relax 
-<<<<<<< HEAD
-\contentsline {section}{\numberline {4.7}Entrances and exits}{22}{section.4.7}
-=======
 \contentsline {subsection}{\numberline {4.6.1}First approach:including devices passing by}{22}{subsection.4.6.1}
->>>>>>> 933fc6aa4ccebfe43800fdc5286728df7e0ab88f
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.2}Second approach:excluding devices passing by}{23}{subsection.4.6.2}
 \defcounter {refsection}{0}\relax 
-<<<<<<< HEAD
-\contentsline {subsection}{\numberline {4.7.2}Second approach:excluding devices passing by}{24}{subsection.4.7.2}
-=======
 \contentsline {subsection}{\numberline {4.6.3}Frequency of entrance and exit access points}{25}{subsection.4.6.3}
->>>>>>> 933fc6aa4ccebfe43800fdc5286728df7e0ab88f
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.7}Static and mobile devices}{26}{section.4.7}
 \defcounter {refsection}{0}\relax 
-<<<<<<< HEAD
-\contentsline {section}{\numberline {4.8}Static and mobile devices}{27}{section.4.8}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.9}Preliminary Results}{28}{section.4.9}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.9.1}Movement to the Aula on weekdays}{28}{subsection.4.9.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.9.2}Movement on weekdays vs. weekends}{30}{subsection.4.9.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.9.3}Architecture as an island}{31}{subsection.4.9.3}
-=======
 \contentsline {section}{\numberline {4.8}Preliminary Results}{27}{section.4.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.8.1}Movement to the Aula on weekdays}{27}{subsection.4.8.1}
@@ -102,7 +83,6 @@
 \contentsline {subsection}{\numberline {4.8.3}Architecture as an island}{30}{subsection.4.8.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.8.4}Movement from and to the campus}{33}{subsection.4.8.4}
->>>>>>> 933fc6aa4ccebfe43800fdc5286728df7e0ab88f
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Conclusion}{35}{chapter.5}
 \defcounter {refsection}{0}\relax 

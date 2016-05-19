@@ -303,9 +303,9 @@ From a set S of trajectories, different patterns can be identified using seqeunt
 
 \section{Associated buildings}\label{Associated buildings}
 
-The following section describes how movement patterns were derived on building level, without considering the direction or order of the movement. An association rule mining algorithm \citep{agrawal_mining_1993} was used to identify groups of buildings that frequently visited in combination with each other. Firstly the algorithm is described briefly, then the results are presented.
+The following section describes how movement patterns were derived on building level, without considering the direction or order of the movement. An association rule mining algorithm \parencite{agrawal_mining_1993} was used to identify groups of buildings that frequently visited in combination with each other. Firstly the algorithm is described briefly, then the results are presented.
 \subsection{Association rules mining}
-Association rule mining is a technique to analyse what variables or items are commonly associated with each other in large databases. Probably the one of the main application is to analyse which items are commonly bought together by customers of a supermarket. As an example for this use case is an association rule of an itemset \{bread, butter\}, tells that in 80\% of those transactions including \{bread, butter\}, also \{milk\}  was present. In other words, 80\% of the people who buy bread and butter also buy milk \citep{agrawal_mining_1993}. Compared to sequence mining, association rule mining does not consider the order of items neither within, nor across transactions.
+Association rule mining is a technique to analyse what variables or items are commonly associated with each other in large databases. Probably the one of the main application is to analyse which items are commonly bought together by customers of a supermarket. As an example for this use case is an association rule of an itemset \{bread, butter\}, tells that in 80\% of those transactions including \{bread, butter\}, also \{milk\}  was present. In other words, 80\% of the people who buy bread and butter also buy milk \parencite{agrawal_mining_1993}. Compared to sequence mining, association rule mining does not consider the order of items neither within, nor across transactions.
 
 Thus every rule is composed by two itemsets, the \textit{antecedent} \{bread,butter\} on the left-hand side, and the \textit{consequent} \{milk\} on the right-hand side. The rule is denoted as \{bread, butter\} \verb|=>| \{milk\}.
 
@@ -365,10 +365,10 @@ frequent   & $\textgreater 5$       	& 3
 
 The trajectories of approximately 14,000 devices were used to create the first set of association rules with categorized stay duration. At this stage only the noise was filtered from the data but not the stationary devices, and people carrying two devices were not accounted for. The time range of trajectories spanned from 31.03.2016 to 02.05.2016, approximately one month.
 
-Although there are several measures to evaluate the interestingness of an association rule \cite{zhang_survey_2009}, only \textit{support} and \textit{confidence} were used for testing purposes. 
+Although there are several measures to evaluate the interestingness of an association rule \parencite{zhang_survey_2009}, only \textit{support} and \textit{confidence} were used for testing purposes. 
 
 \textbf{Support}
-“The support for a rule is defined to be the fraction of transaction in the dataset that satisfy the union of items in the consequent and antecedent of the rule.” \cite{agrawal_mining_1993}. In case of the rule \{BK\_City, Aula\} \verb|=>| \{Library\}, the support is the percentage of the total dataset that includes BK\_City, Aula and Library.
+“The support for a rule is defined to be the fraction of transaction in the dataset that satisfy the union of items in the consequent and antecedent of the rule.” \parencite{agrawal_mining_1993}. In case of the rule \{BK\_City, Aula\} \verb|=>| \{Library\}, the support is the percentage of the total dataset that includes BK\_City, Aula and Library.
 
 \textbf{Confidence}
 Confidence measures the strength of the rule, and is considered as a conditional probability. In case of the rule \{BK\_ City, Aula\} \verb|=>| \{Library\}, the confidence is the probability that Library is in the trajectory if both BK\_ City and Aula are in the trajectory (\cite{agrawal_mining_1993}; \cite{anbukkarasy_interesting_2013}).
@@ -401,7 +401,7 @@ The stays in which the device is scanned once are not filtered out. These single
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.32]{entrances_firstapproach}
+\includegraphics[scale=0.25]{entrances_firstapproach}
 \captionsetup{justification=centering}
 \caption{Most frequently used entrance and exit access points in BK-City}
 \label{figure:Entrance1Approachfigure}

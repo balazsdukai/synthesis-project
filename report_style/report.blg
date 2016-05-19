@@ -1,15 +1,15 @@
 [0] Config.pm:340> INFO - This is Biber 2.4
-[0] Config.pm:343> INFO - Logfile is 'report.blg'
-[38] biber-MSWIN32:287> INFO - === 
-[65] Biber.pm:347> INFO - Reading 'report.bcf'
-[149] Biber.pm:738> INFO - Using all citekeys in bib section 0
-[174] Biber.pm:3150> INFO - Processing section 0
-[265] Biber.pm:3307> INFO - Looking for bibtex format file 'report.bib' for section 0
-[270] bibtex.pm:1124> INFO - Decoding LaTeX character macros into UTF-8
-[277] bibtex.pm:985> INFO - Found BibTeX data source 'report.bib'
-[480] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[481] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[483] Biber.pm:3027> INFO - Sorting list 'nyt/global' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[483] Biber.pm:3031> INFO - No sort tailoring available for locale 'en-US'
-[500] bbl.pm:519> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[502] bbl.pm:615> INFO - Output to report.bbl
+[1] Config.pm:343> INFO - Logfile is 'report.blg'
+[43] biber-MSWIN32:287> INFO - === 
+[63] Biber.pm:347> INFO - Reading 'report.bcf'
+[174] Biber.pm:738> INFO - Using all citekeys in bib section 0
+[187] Biber.pm:3150> INFO - Processing section 0
+[252] Biber.pm:3307> INFO - Looking for bibtex format file 'report.bib' for section 0
+[257] bibtex.pm:1124> INFO - Decoding LaTeX character macros into UTF-8
+[263] bibtex.pm:985> INFO - Found BibTeX data source 'report.bib'
+[494] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[495] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[496] Biber.pm:3027> INFO - Sorting list 'nyt/global' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[497] Biber.pm:3031> INFO - No sort tailoring available for locale 'en-US'
+[516] bbl.pm:519> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[519] bbl.pm:615> INFO - Output to report.bbl
