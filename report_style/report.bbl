@@ -144,6 +144,165 @@
       \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.411.6332&rep=rep1&type=pdf
       \endverb
     \endentry
+    \entry{dodge2008towards}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=a5edd8dac81b40dd8d7410246a94c721}{%
+           family={Dodge},
+           family_i={D\bibinitperiod},
+           given={Somayeh},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=7d661c6de4d5e8f49e5cc56b2273f251}{%
+           family={Weibel},
+           family_i={W\bibinitperiod},
+           given={Robert},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=0b1b5162aa701953ec292c522667d27e}{%
+           family={Lautenschütz},
+           family_i={L\bibinitperiod},
+           given={Anna-Katharina},
+           given_i={A\bibinithyphendelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{165c53cfa84752047923bb8a3763212f}
+      \strng{fullhash}{165c53cfa84752047923bb8a3763212f}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information visualization}
+      \field{number}{3-4}
+      \field{title}{Towards a taxonomy of movement patterns}
+      \field{volume}{7}
+      \field{year}{2008}
+      \field{pages}{240\bibrangedash 252}
+      \range{pages}{13}
+    \endentry
+    \entry{Hunter:2007}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=515b7a67462b8750a0711541001538cb}{%
+           family={Hunter},
+           family_i={H\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           given_i={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE COMPUTER SOC}%
+      }
+      \strng{namehash}{515b7a67462b8750a0711541001538cb}
+      \strng{fullhash}{515b7a67462b8750a0711541001538cb}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2007}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Matplotlib is a 2D graphics package used for Python for application development, interactive scripting, and publication-quality image generation across user interfaces and operating systems.}
+      \field{journaltitle}{Computing In Science \& Engineering}
+      \field{number}{3}
+      \field{title}{Matplotlib: A 2D graphics environment}
+      \field{volume}{9}
+      \field{year}{2007}
+      \field{pages}{90\bibrangedash 95}
+      \range{pages}{6}
+    \endentry
+    \entry{mautz2012indoor}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=1a79e2ad776b1467c4976431066ba01e}{%
+           family={Mautz},
+           family_i={M\bibinitperiod},
+           given={Rainer},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Habilitationsschrift ETH Zürich, 2012}%
+      }
+      \strng{namehash}{1a79e2ad776b1467c4976431066ba01e}
+      \strng{fullhash}{1a79e2ad776b1467c4976431066ba01e}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Indoor positioning technologies}
+      \field{type}{phdthesis}
+      \field{year}{2012}
+    \endentry
+    \entry{meneses2012large}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=cd1d49a7b390abf3ab27f6c115b3aa90}{%
+           family={Meneses},
+           family_i={M\bibinitperiod},
+           given={Filipe},
+           given_i={F\bibinitperiod}}}%
+        {{uniquename=0,hash=0ee7a8a9224e1825b385412de48a5ed5}{%
+           family={Moreira},
+           family_i={M\bibinitperiod},
+           given={Alberto},
+           given_i={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{238261b25071f9d97601ff49c0a35740}
+      \strng{fullhash}{238261b25071f9d97601ff49c0a35740}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Indoor Positioning and Indoor Navigation (IPIN), 2012 International Conference on}
+      \field{title}{Large scale movement analysis from WiFi based location data}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 9}
+      \range{pages}{9}
+    \endentry
+    \entry{radaelli2013identifying}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=80bdf77b2567a629ac7e575489da87b5}{%
+           family={Radaelli},
+           family_i={R\bibinitperiod},
+           given={Laura},
+           given_i={L\bibinitperiod}}}%
+        {{uniquename=0,hash=b6bdc1232aa0310ffe80aa0482ef78af}{%
+           family={Sabonis},
+           family_i={S\bibinitperiod},
+           given={Dovydas},
+           given_i={D\bibinitperiod}}}%
+        {{uniquename=0,hash=383a08b28871065968cc1f41ef020023}{%
+           family={Lu},
+           family_i={L\bibinitperiod},
+           given={Hua},
+           given_i={H\bibinitperiod}}}%
+        {{uniquename=0,hash=25e0f09fa11c2ba6a8648b9e88eff012}{%
+           family={Jensen},
+           family_i={J\bibinitperiod},
+           given={Christian\bibnamedelima S},
+           given_i={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{1967b603d01e0e339ae01665e3d0c3c6}
+      \strng{fullhash}{79682fa80f3f2c7faa03c2056a76bf5e}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Mobile Data Management (MDM), 2013 IEEE 14th International Conference on}
+      \field{title}{Identifying Typical Movements among Indoor Objects--Concepts and Empirical Study}
+      \field{volume}{1}
+      \field{year}{2013}
+      \field{pages}{197\bibrangedash 206}
+      \range{pages}{10}
+    \endentry
     \entry{zhang_survey_2009}{inproceedings}{}
       \name{author}{4}{}{%
         {{uniquename=0,hash=de9312a48a904679476d7fa97b659901}{%
@@ -194,6 +353,56 @@
       \verb IEEE Xplore Abstract Record:/home/bdukai/.mozilla/firefox/boaywe9k.default/zotero/storage/XJC34IP9/articleDetails.html:;Zhang et al_2009_A Survey of Interestingness Measures for Association Rules.pdf:/home/bdukai/Library/00_Zotero/IEEE/Zhang et al_2009_A Survey of Interestingness Measures for Association Rules.pdf:application/pdf
       \endverb
       \keyw{association mining,association rules,Conference management,Data engineering,data mining,Engineering management,Financial management,Frequency,interestingness measure,interestingness measures,Itemsets,objective measure,objective measures,Particle measurements,subjective measure,Transaction databases}
+    \endentry
+    \entry{zhao2014discovering}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=4df18f7b3b8294bcd0e7513844913867}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Shao},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=eed156c687a79d721734200afc38d239}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Zhe},
+           given_i={Z\bibinitperiod}}}%
+        {{uniquename=0,hash=b7e49907997b573e6e258ced73234928}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Yifan},
+           given_i={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=2821d801cdb742d9138d3d720a9b67b3}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Runhe},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=83198dc4a7b72bfe40cc485c73e2ffd0}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Shijian},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=d06cec2df61554e3a9035bc311b868b9}{%
+           family={Pan},
+           family_i={P\bibinitperiod},
+           given={Gang},
+           given_i={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b8c7da0dd30b7cde5e071e402717af48}
+      \strng{fullhash}{450b0d50cf5ed7d3a2e373b52546bc83}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelyear}{2014}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Ubiquitous Intelligence and Computing, 2014 IEEE 11th Intl Conf on and IEEE 11th Intl Conf on and Autonomic and Trusted Computing, and IEEE 14th Intl Conf on Scalable Computing and Communications and Its Associated Workshops (UTC-ATC-ScalCom)}
+      \field{title}{Discovering People's Life Patterns from Anonymized WiFi Scanlists}
+      \field{year}{2014}
+      \field{pages}{276\bibrangedash 283}
+      \range{pages}{8}
     \endentry
   \endsortlist
 \endrefsection
