@@ -2050,6 +2050,10 @@
     <bcf:datasource type="file" datatype="bibtex">report.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">zhang_survey_2009</bcf:citekey>
+    <bcf:citekey order="2">agrawal_mining_1993</bcf:citekey>
+    <bcf:citekey order="3">agrawal_mining_1993</bcf:citekey>
+    <bcf:citekey order="4">anbukkarasy_interesting_2013</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global" type="entry" sortscheme="nyt" sortnamekeyscheme="global">
