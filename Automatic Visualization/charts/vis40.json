@@ -6,12 +6,12 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To ocp_3me",
+          "idx": "ewi To ocp_3me",
           "val": 1138
         },
         {
           "col": "data",
-          "idx": "ocp_3me To ewi_lb",
+          "idx": "ocp_3me To ewi",
           "val": 1227
         }
       ]
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "ocp_3me To ewi_lb: 1227 , ewi_lb To ocp_3me: 1138"
+      "title": "ocp_3me To ewi: 1227 , ewi To ocp_3me: 1138"
     }
   ],
   "marks": [

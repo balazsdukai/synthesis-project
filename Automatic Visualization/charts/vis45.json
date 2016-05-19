@@ -6,12 +6,12 @@
       "values": [
         {
           "col": "data",
-          "idx": "btud To ewi_lb",
+          "idx": "btud To ewi",
           "val": 660
         },
         {
           "col": "data",
-          "idx": "ewi_lb To btud",
+          "idx": "ewi To btud",
           "val": 1076
         }
       ]
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "ewi_lb To btud: 1076 , btud To ewi_lb: 660"
+      "title": "ewi To btud: 1076 , btud To ewi: 660"
     }
   ],
   "marks": [

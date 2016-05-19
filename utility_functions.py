@@ -42,7 +42,7 @@ def reconnectDB(conn):
     return conn, cur
 
 def building_id2name(bld_id,cur):
-    cur.execute('select name from buildings where id = {}'.format(bld_id))
+    cur.execute('select name from buildings_new where id = {}'.format(bld_id))
     records = cur.fetchall()
     return records[0][0]
 

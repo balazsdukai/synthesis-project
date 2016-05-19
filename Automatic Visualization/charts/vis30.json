@@ -6,12 +6,12 @@
       "values": [
         {
           "col": "data",
-          "idx": "citg To ewi_lb",
+          "idx": "citg To ewi",
           "val": 2897
         },
         {
           "col": "data",
-          "idx": "ewi_lb To citg",
+          "idx": "ewi To citg",
           "val": 2603
         }
       ]
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "citg To ewi_lb: 2897 , ewi_lb To citg: 2603"
+      "title": "citg To ewi: 2897 , ewi To citg: 2603"
     }
   ],
   "marks": [

@@ -141,20 +141,31 @@ def createGrouped(dates):
 def barPlot(blds_from,blds_to,dates):
     n_days = len(dates)
     movements = []
+    mov_from_to_world = []
     n_hours = 24
     hours = np.arange(n_hours)
     for hour in hours:
         SQL =  "select count(*) \
                 from trajectories \
-                where extract(hour from end_time-(end_time-start_time)/2) = {}".format(str(hour))
+                where from_bld != 0 and to_bld != 0 and extract(hour from end_time-(end_time-start_time)/2) = {}".format(str(hour))
         cur.execute(SQL,str(hour))
-        movement = cur.fetchall()
-        movements.append(float(movement[0][0])/n_days)
-
+        movementb = cur.fetchall()
+        movements.append(float(movementb[0][0])/n_days)
+        SQL = "select count(*) \
+                from trajectories \
+                where (from_bld = 0 or to_bld = 0) and extract(hour from end_time-(end_time-start_time)/2) = {}".format(str(hour))
+        cur.execute(SQL, str(hour))
+        movementw = cur.fetchall()
+        mov_from_to_world.append(float(movementw[0][0])/n_days)
+    #print n_days
+    #print movements
+    #print mov_from_to_world
     # Bar plot
     fig, ax = plt.subplots()
     width = 0.9
-    bars = ax.bar(hours, movements, width,color = '#00a6d6',edgecolor = 'none')
+    bar1 = ax.bar(hours, movements, width,color = '#00a6d6',edgecolor = 'none')
+    bar2 = ax.bar(hours, mov_from_to_world, width,color = '#6ebbd5',edgecolor = 'none', bottom=movements)
+
     #ax.set_ylim((0,4000))
     ax.set_ylabel('People')
     ax.set_xlabel('Hour of the day')

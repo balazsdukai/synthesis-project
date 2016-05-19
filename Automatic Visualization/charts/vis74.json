@@ -6,12 +6,12 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To ocp_io",
+          "idx": "ewi To ocp_io",
           "val": 545
         },
         {
           "col": "data",
-          "idx": "ocp_io To ewi_lb",
+          "idx": "ocp_io To ewi",
           "val": 573
         }
       ]
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "ocp_io To ewi_lb: 573 , ewi_lb To ocp_io: 545"
+      "title": "ocp_io To ewi: 573 , ewi To ocp_io: 545"
     }
   ],
   "marks": [

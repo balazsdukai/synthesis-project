@@ -6,12 +6,12 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To tnw_tn",
+          "idx": "ewi To tnw_tn",
           "val": 855
         },
         {
           "col": "data",
-          "idx": "tnw_tn To ewi_lb",
+          "idx": "tnw_tn To ewi",
           "val": 828
         }
       ]
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "ewi_lb To tnw_tn: 855 , tnw_tn To ewi_lb: 828"
+      "title": "ewi To tnw_tn: 855 , tnw_tn To ewi: 828"
     }
   ],
   "marks": [

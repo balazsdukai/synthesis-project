@@ -6,12 +6,12 @@
       "values": [
         {
           "col": "data",
-          "idx": "bk_city To ewi_lb",
+          "idx": "bk_city To ewi",
           "val": 219
         },
         {
           "col": "data",
-          "idx": "ewi_lb To bk_city",
+          "idx": "ewi To bk_city",
           "val": 286
         }
       ]
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "ewi_lb To bk_city: 286 , bk_city To ewi_lb: 219"
+      "title": "ewi To bk_city: 286 , bk_city To ewi: 219"
     }
   ],
   "marks": [

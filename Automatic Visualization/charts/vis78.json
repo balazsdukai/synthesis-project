@@ -6,12 +6,12 @@
       "values": [
         {
           "col": "data",
-          "idx": "ewi_lb To tbm",
+          "idx": "ewi To tbm",
           "val": 529
         },
         {
           "col": "data",
-          "idx": "tbm To ewi_lb",
+          "idx": "tbm To ewi",
           "val": 426
         }
       ]
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "ewi_lb To tbm: 529 , tbm To ewi_lb: 426"
+      "title": "ewi To tbm: 529 , tbm To ewi: 426"
     }
   ],
   "marks": [
