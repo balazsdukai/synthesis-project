@@ -74,5 +74,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.9.2}Movement on weekdays vs. weekends}{29}{subsection.4.9.2}
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.9.3}Architecture as an island}{30}{subsection.4.9.3}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Conclusion}{35}{chapter.5}
 \contentsfinish 
