@@ -4,17 +4,12 @@ In this chapter the data mining methods used to retrieve movement patterns from 
 
 In the following sections all these steps to derive different movement patterns are described in more detail. \autoref{datadescr} will start with a description of the TU Delft eduroam Wi-Fi log and how this data is retrieved. In \autoref{preprocessing} various pre-processing steps to clean, reduce and enrich the raw data will be discussed. Subsequently \autoref{movement between buildings} addresses the creation and visualization of movement on building level, this includes movement between buildings and movement from and to the campus.  \autoref{trajectories} and \autoref{Associated buildings} cover trajectories and building association respectively. \autoref{entrances and exists} and \autoref{Static and mobile devices} on entrances and static vs mobile are not implemented in the main workflow yet as the work is still in the exploratory phase. Finally section … gives an overview of all the preliminary results.
 
-\section{Data Description}\label{datadescr}
-
-
 \section{Pre-Processing}\label{preprocessing}
-Before movement patterns between buildings can be retrieved, pre-processing of the raw data is required. In this chapter the different pre-processing steps will be described in detail. First section … addresses the initial data filtering. Section … describes the filling of the dataset with a 'world' location, this enables detection of movement from and to the campus..Section … is about filtering of records of people only passing by a building. Finally Section … concerns the grouping of records of the same mac address that are subsequent in time and at the same location.
-\subsection{General filtering}
+Before movement patterns between buildings can be retrieved, pre-processing of the raw data is required. In this chapter the different pre-processing steps will be described in detail. First \autoref{generalfiltering} addresses the initial data filtering. \autoref{filling} describes the filling of the dataset with a 'world' location, this enables detection of movement from and to the campus..\autoref{filtering} is about filtering of records of people only passing by a building. Finally \autoref{grouping} concerns the grouping of records of the same mac address that are subsequent in time and at the same location.
+\subsection{General filtering}\label{generalfiltering}
 Each record in the wifilog represents the scanning of a certain device at a certain time by a certain access point. In order to detect the movement patterns of these devices between buildings it should be known for each access point in which building it is located. The apname field in the wifilog table includes the building id in which building each scanner is located. However for some access points the apname is given in a different format and as a result their location is unknown. These apnames have in common that they don’t contain the '-' character which is present in all the other apnames. As a result the apnames of which the location is not known can simply be filtered out by checking if a '-' is present in the apname. 
 
-
-\subsection{Filling}
-
+\subsection{Filling}\label{filling}
 Because the dataset contains all records of when certain devices are scanned, it also Implicitly stores information on when the device is not located at the campus. These time gaps in which a particular device is not scanned at the campus give information on when the corresponding person is not at the campus. This information is valuable for detecting movement patterns from and to the campus in addition to the movement between buildings at the campus. Considering the fact that many student only visit one faculty each day. It becomes especially clear, that the movement from and to the campus plays an important role in the overall movement pattern of a person. In order to be able to directly derive movement from and to the campus from the dataset, the time gaps present in the data should be stored explicitly. Therefore each time gap larger than an hour is filled with a 'world' record. The word 'world' is used to indicate that the device could be located at any place in the world during the time spans that it is not scanned at the campus. The begin and end time of a world record is defined by the end of the previous record and the start of the next record in time. In case there is no previous or next record the boundaries are defined by the starting time of the whole dataset and the current time. \autoref{figure:filling} visualizes the filling of time gaps for one devices. The black intervals indicate the time during which a device was scanned at the campus, the red intervals indicate the time gaps filled with a world records. Note that the gap at 16:00  is smaller than an hour and therefore is not filled.
 \begin{figure}[H]
 \centering
@@ -24,7 +19,7 @@ Because the dataset contains all records of when certain devices are scanned, it
 \label{figure:filling}
 \end{figure}
 
-\subsection{Grouping}
+\subsection{Grouping}\label{grouping}
 In order to reduce the data and to be able to filter on people only passing by a building without going in, the data needs to be grouped. The goal is to identify movement patterns between different buildings, this means that records of subsequent scans of the same device in the same building can be grouped together into one single record. The mobile of someone who for example studies the whole day at architecture might have 20 records in the database for that day. This can be reduced to one record that states the time the device arrived at Architecture and left again. To determine whether two records are subsequent in time, and therefore should be grouped together, a threshold for the time gap between two records needs to be defined. As explained in section … the eduroam system has 'scanning rounds' at intervals of 5 minutes and several seconds. If a device is not scanned during a scannig round, but was scanned the round before, the end time of the records is set to the time of the previous scan round plus 5 minutes (see record A1 and B1 \autoref{figure:grouping}). As a result the gap will be a bit more than 10 minutes if someone is not scanned for 2 subsequent rounds (\autoref{figure:grouping} A), and a bit more than 15 minutes if someone is not scanned for 3 subsequent rounds (\autoref{figure:grouping} B). It was decided to set the gap threshold or grouping to 15 minutes. The reasoning behind this is that someone who is not scanned for 3 subsequent rounds has likely left the building. For the example this means records A1 and A2 would be grouped together, records B1 and B2 on the other hand are not grouped.
 
 \begin{figure}[H]
@@ -35,7 +30,7 @@ In order to reduce the data and to be able to filter on people only passing by a
 \label{figure:grouping}
 \end{figure}
 
-\subsection{Filtering}
+\subsection{Filtering}\label{filtering}
 
 For the detection of movement patterns between buildings, records of people that only pass by a building without actually visiting it should be excluded. The reason for this is that records of people only passing by a building could result in misinterpretation of the movement patterns. If faculty B is for example located on the route from faculty A to the lunch facility. Then it is likely that people moving from faculty A to the lunch facility are picked up by a scanner located at faculty B. As a result the movement from faculty A to the lunch facility will be visualized via faculty B (see \autoref{figure:passing by} top). Someone that isn’t aware of the 'passing by' problem might conclude that people from faculty B make most use of the lunch facility. In reality however, people from faculty A make more use of the lunch facility. By filtering out the records of people only passing by buildings the correct movement can be visualized (see \autoref{figure:passing by} bottom). It should be noted that filtering out 'passing by' records can only be done after the grouping process. The reason for this is that 5-minute records that would individually be classified as someone passing by might be grouped together. After grouping the combined record is not classified as someone who passes by. Furthermore it should be noted that the filtering of 'passing by' records occurs after filling the data with 'world' records. The reason for this that a passing by event does mean that the device was located on the campus. The world records are meant to represent the time the device is not on the campus.
 
@@ -68,6 +63,14 @@ The bar plot visualizes the movement throughout the day in 24 bars. Each bar rep
 The data resulting from pre-processing contains the states of where a particular device was located during a certain time period. Implicitly this also includes information on the movement of the device. If a device is first located in building A and subsequently in building B it must have moved from building A to B. However, in order to be able to retrieve the movement patterns of devices the movement should be stored explicitly. This means that each record should store the movement of one device from one building to another building or to world. Examples of movement patterns that can be retrieved from this data are: the number of devices moving from building A to B within a given time period, and the peak in movement from building A to all other buildings. 
 \\\\
 To create records for each movement first the preprocessed data is ordered on mac address and start time. By doing this all the subsequent states for every device are listed directly below each other (see \autoref{figure:movementrecs}). As a movement is defined by the change of one state to another, movements records can be created from every two consecutive state records (see \autoref{figure:movementrecs}. However, not every two consecutive states represent a movement. Only when the two states concern the same device and they are at different buildings they represent a movement. This means that movement records with different mac addresses or similar building id’s are filtered out (see \autoref{figure:movementrecs}.\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
 
 \begin{figure}[H]
 \centering
@@ -656,6 +659,19 @@ Their question can be answered when looking at the movement between the faculty 
 \label{lr_map}
 \end{figure} 
 
-\autoref{lr_map} shows the movement from the faculty of Aerospace Engineering to other faculties. The total amount of movement from AE is 4.348 people and the biggest movement is to the Fellowship, with 2.435 people. \\
+\autoref{lr_map} shows the movement from the faculty of Aerospace Engineering to other faculties. The total amount of movement from AE is 4.348 people and the biggest movement is to the Fellowship, with 2.435 people. 
+
 Looking at these figures we can clearly see that the movement from the faculty of architecture is much less than the movement from Civil Engineering and Industrial Design.  However, the faculty of Aerospace Engineering seems to be even more isolated than architecture. 
 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{weekdays.png}
+\captionsetup{justification=centering}
+\caption{Movement from the faculty of Aerospace Engineering}
+\label{newWeekdays}
+\end{figure} 
+
+\subsection{Movement from and to the campus}
+The aggregated movement from the different faculties is shown in \autoref{newWeekdays}. For this bar chart, a distinction is made between movement that is either from or to the campus(in light-blue) and movement between buildings on campus (darker blue). This will result in a more accurate visualization of the data.
+
+However, the movement from or to the campus is derived from finding gaps of more than one hour in the data, because devices going offline for more than one hour could be considered moving away from the campus. But this does also include devices that are for some reason turned off for more than one hour, such as laptops during lunch breaks or lectures. For these graphs to really accurately show the movement from and to the campus, devices should be categorized into dynamic devices, such as mobile phones and tablets, and static devices, such as laptops. That way, only the dynamic devices can be considered and the graph would be more realistic.
