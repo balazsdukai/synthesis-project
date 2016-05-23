@@ -11,6 +11,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utility_functions as uf
+import webbrowser
 
 # Connect to DB
 conn,cur = uf.connectDB()
@@ -194,7 +195,10 @@ def createMap(dates,blds_from,blds_to):
     conn.close()
     # Save the map
     map_osm.save('map.html')
-    os.system('map.html')
+    try:
+        os.system('map.html')
+    except:
+        webbrowser.open('map.html')
 
 def test():
     bld_from = [8,21,20,23,36]

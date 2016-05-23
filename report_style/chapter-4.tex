@@ -1,8 +1,16 @@
 \chapter{Progress}
 \section{Introduction}
-In this chapter the data mining methods used to retrieve movement patterns from the TU Delft eduroam Wi-Fi log data will be described in detail. Figure … gives an overview of the main workflow to derive movement patterns from the Wi-Fi log. First the raw data of the wifilogs are preprocessed to get states at two levels of detail (building- and building-part level). A state is defined as a time interval during which a particular device is located in a certain area. An example of a state on building level is: device A is located at Library from 11:00 to 12:00. An example on building part level is: device A is located at cantina from 11:00 to 12:00. These states are used to retrieve movements at both levels of detail. Movement is always from the location of one state to the location of another state. Furthermore, the building level states are used to retrieve trajectories and associate buildings with each other. The trajectories are defined for each person by an ordered list of buildings that were visited. Similarly a list of buildings is stored for each person for building association, however the order is neglected in this case. Finally, the movements on two levels of details, the trajectories and the associated buildings are all used to derive movement patterns.
+In this chapter the data mining methods used to retrieve movement patterns from the TU Delft eduroam Wi-Fi log data will be described in detail. \autoref{workflow} gives an overview of the main workflow to derive movement patterns from the Wi-Fi log. First the raw data of the wifilogs are preprocessed to get states at two levels of detail (building- and building-part level). A state is defined as a time interval during which a particular device is located in a certain area. An example of a state on building level is: device A is located at Library from 11:00 to 12:00. An example on building part level is: device A is located at cantina from 11:00 to 12:00. These states are used to retrieve movements at both levels of detail. Movement is always from the location of one state to the location of another state. Furthermore, the building level states are used to retrieve trajectories and associate buildings with each other. The trajectories are defined for each person by an ordered list of buildings that were visited. Similarly a list of buildings is stored for each person for building association, however the order is neglected in this case. Finally, the movements on two levels of details, the trajectories and the associated buildings are all used to derive movement patterns.
 
-In the following sections all these steps to derive different movement patterns are described in more detail. \autoref{datadescr} will start with a description of the TU Delft eduroam Wi-Fi log and how this data is retrieved. In \autoref{preprocessing} various pre-processing steps to clean, reduce and enrich the raw data will be discussed. Subsequently \autoref{movement between buildings} addresses the creation and visualization of movement on building level, this includes movement between buildings and movement from and to the campus.  \autoref{trajectories} and \autoref{Associated buildings} cover trajectories and building association respectively. \autoref{entrances and exists} and \autoref{Static and mobile devices} on entrances and static vs mobile are not implemented in the main workflow yet as the work is still in the exploratory phase. Finally section … gives an overview of all the preliminary results.
+In the following sections all these steps to derive different movement patterns are described in more detail. In \autoref{preprocessing} various pre-processing steps to clean, reduce and enrich the raw data will be discussed. Subsequently \autoref{movement between buildings} addresses the creation and visualization of movement on building level, this includes movement between buildings and movement from and to the campus.  \autoref{trajectories} and \autoref{Associated buildings} cover trajectories and building association respectively. \autoref{entrances and exists} and \autoref{Static and mobile devices} on entrances and static vs mobile are not implemented in the main workflow yet as the work is still in the exploratory phase. Finally \autoref{results} gives an overview of all the preliminary results.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{methods.png}
+\captionsetup{justification=centering}
+\caption{Methods}
+\label{workflow}
+\end{figure}
 
 \section{Pre-Processing}\label{preprocessing}
 Before movement patterns between buildings can be retrieved, pre-processing of the raw data is required. In this chapter the different pre-processing steps will be described in detail. First \autoref{generalfiltering} addresses the initial data filtering. \autoref{filling} describes the filling of the dataset with a 'world' location, this enables detection of movement from and to the campus..\autoref{filtering} is about filtering of records of people only passing by a building. Finally \autoref{grouping} concerns the grouping of records of the same mac address that are subsequent in time and at the same location.
@@ -36,11 +44,33 @@ For the detection of movement patterns between buildings, records of people that
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.2]{PassingBy}
+\includegraphics[scale=0.15]{PassingBy}
 \captionsetup{justification=centering}
-\caption{filtering(Passing by)}
+\caption{Passing by}
 \label{figure:passing by}
 \end{figure}
+\subsection{Implementation}
+The filling, grouping and filtering (passing by) steps described above are implemented in an integrated way. The Pseudocode for the implementation is shown in \autoref{kaas}. As can be seen in the code there is communication with the database at several points. The table from which the records are retrieved for each mac address is already processed as described in the general filtering section. Furthermore the format of the table is slightly different compared to the initial wifilog. The session duration is exchanged for an end time column which is derived by adding the session duration to the asstime (start time of a record).
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{pseudocode.png}
+\captionsetup{justification=centering}
+\caption{Pseudocode preprocessing}
+\label{kaas}
+\end{figure}
+
+\autoref{preprocimg} shows an example of the records of one device over a time span of one day during the different pre-processing steps. From the raw data it can be seen that this person spends most of the day in building B. The person is scanned once at building A before he arrives in the morning and after what is likely to be his lunch break. The last two hours the person is scanned in building C. After filling three world records are added, at the beginning of the day, during the lunch break, and at the end of the day. The grouped records show that the subsequent scans in building B and C are grouped together. Finally the scans at building A are removed from the dataset as they are likely to indicate passing by events. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{PreProcessing-01.jpg}
+\captionsetup{justification=centering}
+\caption{Preprocessing}
+\label{preprocimg}
+\end{figure}
+
+
 \subsection{Apname vs maploc}
 The data in the table 'wifilog' contains information about the location of the Access Point (AP) in two columns. The first one is the column 'apname', which is a string with the symbolic name of the AP, for example 'A-08-G-010'. The two numbers in the second part of the string, in this case '08', represent the building number. This building number can be linked to a location in the world. 
 The second column which contains information about location, is the column 'maploc'. This column also contains strings, which look as follows:
@@ -495,7 +525,7 @@ For the exit situation, again the A-08-J-005 access point will be used. This acc
 \label{figure:A-08-J-005Exit}
 \end{figure}
 
-The chart shows three interesting peaks, which is in line with what we expected. The first one, around 12am to 1pm, is due the people that leave the building, most probably for lunch. The second peak, around 6pm to 7pm, is due the people that go home for diner. The last one, around 9pm to 10pm, is due the fact the building closing time of the building.
+The chart shows three interesting peaks, which is in line with what we expected. The first one, around 12am to 1pm, is due to people that leave the building, most probably for lunch. The second peak, around 6pm to 7pm, is due to people that go home for diner. The last one, around 9pm to 10pm, is due to the closing time of the building.
 
 \section{Static and mobile devices}\label{Static and mobile devices}
 
@@ -663,15 +693,139 @@ Their question can be answered when looking at the movement between the faculty 
 
 Looking at these figures we can clearly see that the movement from the faculty of architecture is much less than the movement from Civil Engineering and Industrial Design.  However, the faculty of Aerospace Engineering seems to be even more isolated than architecture. 
 
+\subsection{Movement from and to the campus}
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{weekdays.png}
 \captionsetup{justification=centering}
-\caption{Movement from the faculty of Aerospace Engineering}
+\caption{Movement from and to the campus}
 \label{newWeekdays}
 \end{figure} 
-
-\subsection{Movement from and to the campus}
 The aggregated movement from the different faculties is shown in \autoref{newWeekdays}. For this bar chart, a distinction is made between movement that is either from or to the campus(in light-blue) and movement between buildings on campus (darker blue). This will result in a more accurate visualization of the data.
 
 However, the movement from or to the campus is derived from finding gaps of more than one hour in the data, because devices going offline for more than one hour could be considered moving away from the campus. But this does also include devices that are for some reason turned off for more than one hour, such as laptops during lunch breaks or lectures. For these graphs to really accurately show the movement from and to the campus, devices should be categorized into dynamic devices, such as mobile phones and tablets, and static devices, such as laptops. That way, only the dynamic devices can be considered and the graph would be more realistic.
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\\\\
+\pagebreak
+\section{Future work}
+The following sections describe in detail our plan for the next phase in the Synthesis Project. First, the the updated work packages and sprint targets are described, followed by a Gantt chart. At last the potential risks are estimated and solutions are provided.
+
+\subsection{Updated Project Management Plan}
+\textbf{Work Packages and process}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.15]{WBS_MidTerm.png}
+\captionsetup{justification=centering}
+\caption{Updated Work Breakdown Structure}
+\label{wbs_MT}
+\end{figure} 
+
+\autoref{wbs_MT} displays the completed work packages (green) and the remaining work packages (red).
+
+\textbf{Pre-Processing / Filtering static devices}\\
+Stationary and mobile devices are differentiated in the data and the stationary devices are filtered out.\\
+\textit{Outcome:} Wi-Fi-log dataset that does not contain stationary Wi-Fi devices.
+
+\textbf{Movement on campus level / Use of entrances}\\
+Which BK-City entrances are used when arriving/going to a specific building? How does the use of the entrances of the BK-City change throughout the day, week?\\
+\textit{Outcome:} The answer to the questions above.
+
+\textbf{Movement on campus level / Advanced visualization}\\
+Based on the feedbacks on the previous trajectory visualizations, the methods for visualizing movement patterns and trajectories are finalized.\\
+\textit{Outcome:} Visualization methods that produce clear and easily understandable visualizations for movement patterns in a time range, between locations, display the amount of movement, display the use of entrances.
+
+\textbf{Movement sequence mining / Visualize sequences}\\
+\textit{Outcome:} Visualization of the directed movement patterns between buildings.
+
+\textbf{Movement sequence mining / Visualize associated buildings}\\
+\textit{Outcome:} Visualization of the building groups, that displays which buildings are frequently visited together.
+
+\textbf{Movement on building level / Clustering access points}\\
+Cluster access points in the BK-City to identify hotspots in the building. Our knowledge on the use of the building provides verification for the results. \\
+\textit{Outcome:} Hotspots in the BK-City.
+
+\textbf{Movement on building level / Creating movement records}\\
+Create a dataset for the BK-City that contains the records that represent movement.\\
+\textit{Outcome:} Movement patterns in the BK-City.
+
+\textbf{Movement on building level / Visualization}\\
+\textit{Outcome:} Visualization of the movement patterns in BK-City, based on the previously identified hotspots.
+
+\textbf{Dashboard / Web environment set up}\\
+Set up the web environment for the dashboard.\\
+\textit{Outcome:} The web framework and environment that is used by the dashboard.
+
+\textbf{Dashboard / Campus level visualization}\\
+\textit{Outcome:} Dashboard visualization of the movement between buildings on the campus.
+
+\textbf{Dashboard / Building level visualization}\\
+\textit{Outcome:} Dashboard visualization of the movement in the BK-City.
+
+\textbf{Reporting / Final review}\\
+\textit{Outcome:} Final report and presentation.
+
+\subsection{Sprint targets}
+\textbf{Week 6}
+\begin{itemize}
+\item Wi-Fi-log dataset that does not contain stationary Wi-Fi devices.
+\item Analysis and visualization of the use of BK-City entrances throughout a day, week.
+\item Visualization methods that produce clear and easily understandable visualizations for movement patterns in a time range, between locations, display the amount of movement, display the use of entrances.
+\item Visualization of the directed movement patterns between buildings.
+\item Visualization of the building groups, that displays which buildings are frequently visited together.
+\end{itemize}
+\textbf{Week 7}
+\begin{itemize}
+\item Hotspots in the BK-City.
+\item Movement patterns in the BK-City.
+\end{itemize}
+\textbf{Week 8}
+\begin{itemize}
+\item Dashboard
+\item Final report and presentation.
+\end{itemize}
+
+\subsection{Gantt-chart}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.65]{Gantt_2016-05-18.png}
+\captionsetup{justification=centering}
+\caption{Updated Gantt-chart}
+\label{gantt}
+\end{figure} 
+
+\autoref{gantt} displays the Gantt-chart of our project.
+\pagebreak
+\subsection{Risk assessment}
+We identified the following risks for the project:
+\begin{itemize}
+\item Access point map for the whole campus is not available
+	\begin{itemize}
+	\item \textbf{Solution:} Use only the the access points of BK-City for the analysis
+	\end{itemize}
+\item We are not able to automatically identify access point clusters (hotspots) in BK-City
+	\begin{itemize}
+	\item \textbf{Solution:} Refer to our knowledge on the use of the BK-City to manually identify hotspots
+	\end{itemize}
+\item The visualizations are difficult, unclear to interpret for our client
+	\begin{itemize}
+	\item \textbf{Solution:} Collect feedback on the intermittent visualizations from multiple sides. Keep our client posted on the results from visualization process.
+	\end{itemize}
+\item We are not able to identify stationary and moving devices in the data
+	\begin{itemize}
+	\item {Solution:} Assume a ratio of stationary/moving devices
+	\end{itemize}
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.15]{tech_risk_ass.png}
+\captionsetup{justification=centering}
+\caption{Technical Risk Assessment}
+\label{riskass}
+\end{figure} 
+\autoref{gantt} displays the Gantt-chart of our project.
+\autoref{riskass} displays how we evaluated the severity and possibility of each identified risk.
