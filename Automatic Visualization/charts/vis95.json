@@ -1,0 +1,87 @@
+{
+  "axes": [],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "col": "data",
+          "idx": "ocp_io To tnw_tn",
+          "val": 361
+        },
+        {
+          "col": "data",
+          "idx": "tnw_tn To ocp_io",
+          "val": 289
+        }
+      ]
+    }
+  ],
+  "height": 50,
+  "legends": [
+    {
+      "fill": "color",
+      "offset": 0,
+      "properties": {},
+      "title": "ocp_io To tnw_tn: 361 , tnw_tn To ocp_io: 289"
+    }
+  ],
+  "marks": [
+    {
+      "from": {
+        "data": "table",
+        "transform": [
+          {
+            "type": "pie",
+            "value": "data.val"
+          }
+        ]
+      },
+      "properties": {
+        "enter": {
+          "endAngle": {
+            "field": "endAngle"
+          },
+          "fill": {
+            "field": "data.idx",
+            "scale": "color"
+          },
+          "innerRadius": {
+            "value": 0
+          },
+          "outerRadius": {
+            "value": 70
+          },
+          "startAngle": {
+            "field": "startAngle"
+          },
+          "stroke": {
+            "value": "white"
+          },
+          "x": {
+            "group": "width",
+            "mult": 0.5
+          },
+          "y": {
+            "group": "height",
+            "mult": 0.5
+          }
+        }
+      },
+      "type": "arc"
+    }
+  ],
+  "padding": "auto",
+  "scales": [
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.idx"
+      },
+      "name": "color",
+      "range": "category10",
+      "type": "ordinal"
+    }
+  ],
+  "width": 50
+}
