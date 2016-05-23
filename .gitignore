@@ -8,3 +8,7 @@ getting_acquainted
 documents
 /.project
 Automatic Visualization/Automatic_Visualization.pyc
+/.pydevproject
+__pycache__
+.project
+.idea
