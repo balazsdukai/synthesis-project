@@ -7,3 +7,7 @@ Automatic Visualization/tkSimpleDialog.pyc
 getting_acquainted
 documents
 /.project
+.idea
+__pycache__
+.project
+.pydevproject
