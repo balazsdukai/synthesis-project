@@ -13,7 +13,7 @@
         
             
         
-            <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         
         
         
@@ -110,7 +110,7 @@
             
         
             
-            <style> #map_ef2507424fc9435fb375d0aa7d61361e {
+            <style> #map_3e0215365d704aa483429e0072397a74 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -120,85 +120,13 @@
             </style>
         
         
-            
-            <style> #vega_e256ade801884cc8b7bf10eaf9e122e9 {
-                position : relative;
-                width : 450.0px;
-                height: 150.0px;
-                left: 0.0%;
-                top: 0.0%;
-            </style>
-            
-        
-            
-        
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
-        
-        
-        
-            
-        
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/1.4.3/vega.min.js"></script>
-        
-        
-        
-            
-            <style> #vega_41aa23ee23ac498fb869abbb5980099d {
-                position : relative;
-                width : 450.0px;
-                height: 150.0px;
-                left: 0.0%;
-                top: 0.0%;
-            </style>
-            
-        
-            
-            <style> #vega_7f841c4165864cb6bfb6275da0563b24 {
-                position : relative;
-                width : 450.0px;
-                height: 150.0px;
-                left: 0.0%;
-                top: 0.0%;
-            </style>
-            
-        
-            
-            <style> #vega_6d4e2a83d66f456ab95c3ec38c4a84ef {
-                position : relative;
-                width : 450.0px;
-                height: 150.0px;
-                left: 0.0%;
-                top: 0.0%;
-            </style>
-            
-        
-            
-            <style> #vega_f9c6c27b83d847419160cd6170920995 {
-                position : relative;
-                width : 450.0px;
-                height: 150.0px;
-                left: 0.0%;
-                top: 0.0%;
-            </style>
-            
-        
-            
-            <style> #vega_90a29f8bdf894fe4a3ae8840fa511126 {
-                position : relative;
-                width : 450.0px;
-                height: 150.0px;
-                left: 0.0%;
-                top: 0.0%;
-            </style>
-            
-        
         
         </head>
         <body>
             
         
             
-            <div class="folium-map" id="map_ef2507424fc9435fb375d0aa7d61361e" ></div>
+            <div class="folium-map" id="map_3e0215365d704aa483429e0072397a74" ></div>
         
         
         
@@ -212,7 +140,7 @@
             var northEast = L.latLng(90, 180);
             var bounds = L.latLngBounds(southWest, northEast);
 
-            var map_ef2507424fc9435fb375d0aa7d61361e = L.map('map_ef2507424fc9435fb375d0aa7d61361e', {
+            var map_3e0215365d704aa483429e0072397a74 = L.map('map_3e0215365d704aa483429e0072397a74', {
                                            center:[51.9979838316,4.37410721256],
                                            zoom: 15,
                                            maxBounds: bounds,
@@ -223,7 +151,7 @@
         
         
             
-            var tile_layer_fed1a32292aa45f8b5ae3e33ddc03108 = L.tileLayer(
+            var tile_layer_23554a9b7b9041ccaecb4188084c10e0 = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
                     maxZoom: 18,
@@ -231,273 +159,78 @@
                     attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
                     detectRetina: false
                     }
-                ).addTo(map_ef2507424fc9435fb375d0aa7d61361e);
+                ).addTo(map_3e0215365d704aa483429e0072397a74);
 
         
         
             
-                var poly_line_299ef5fd6a33489cae16eee1a2eff17e = L.polyline(
-                    [[51.9988856445979, 4.37550578727327], [51.9956676910073, 4.37559467104233]],
+                var poly_line_81549bcb6318447bb952c126554b01dd = L.polyline(
+                    [[52.0086132164098, 4.37120211221402], [52.0056562098059, 4.37053698152436]],
                     {
-                        color: 'rgb(76,140,0)',
-                        weight: 5.04818594104,
+                        color: 'rgb(0,126,229)',
+                        weight: 3.39591836735,
                         opacity: 1,
                         });
-                map_ef2507424fc9435fb375d0aa7d61361e.addLayer(poly_line_299ef5fd6a33489cae16eee1a2eff17e);
-            
-        
-            function vega_parse(spec, div) {
-            vg.parse.spec(spec, function(chart) { chart({el:div}).update(); });}
-        
-            
-            var popup_67850b5813284e0fb9db482133c9a5ca = L.popup({maxWidth: '450'});
-
-            
-                var vega_e256ade801884cc8b7bf10eaf9e122e9 = $('             <div id="vega_e256ade801884cc8b7bf10eaf9e122e9"></div>             ')[0];
-                popup_67850b5813284e0fb9db482133c9a5ca.setContent(vega_e256ade801884cc8b7bf10eaf9e122e9);
-            
-
-            poly_line_299ef5fd6a33489cae16eee1a2eff17e.bindPopup(popup_67850b5813284e0fb9db482133c9a5ca);
-
-            
-                
-            vega_parse({"legends": [{"title": "citg To sportcentrum: 920 , sportcentrum To citg: 495", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 920, "col": "data", "idx": "citg To sportcentrum"}, {"val": 495, "col": "data", "idx": "sportcentrum To citg"}], "name": "table"}]},vega_e256ade801884cc8b7bf10eaf9e122e9);
-            
-            
-        
-        
-            
-                var poly_line_6af970671f1340e29e31126eeb6ddd68 = L.polyline(
-                    [[51.9988856445979, 4.37550578727327], [52.0015085932109, 4.36951442415562]],
-                    {
-                        color: 'rgb(1,199,0)',
-                        weight: 5.58888888889,
-                        opacity: 1,
-                        });
-                map_ef2507424fc9435fb375d0aa7d61361e.addLayer(poly_line_6af970671f1340e29e31126eeb6ddd68);
+                map_3e0215365d704aa483429e0072397a74.addLayer(poly_line_81549bcb6318447bb952c126554b01dd);
             
         
             
-            var popup_9a552740d0ce4fe1a784f08298defe67 = L.popup({maxWidth: '450'});
+            var popup_389c1e0c69854c939b17c669a41dabbf = L.popup({maxWidth: '300'});
 
             
-                var vega_41aa23ee23ac498fb869abbb5980099d = $('             <div id="vega_41aa23ee23ac498fb869abbb5980099d"></div>             ')[0];
-                popup_9a552740d0ce4fe1a784f08298defe67.setContent(vega_41aa23ee23ac498fb869abbb5980099d);
+                var html_ce8fb78f506b493599ae3048fe276c91 = $('         <div id="html_ce8fb78f506b493599ae3048fe276c91"                 style="width: 100.0%; height: 100.0%;">                 5 To 8: 18</div>                 ')[0];
+                popup_389c1e0c69854c939b17c669a41dabbf.setContent(html_ce8fb78f506b493599ae3048fe276c91);
             
 
-            poly_line_6af970671f1340e29e31126eeb6ddd68.bindPopup(popup_9a552740d0ce4fe1a784f08298defe67);
+            poly_line_81549bcb6318447bb952c126554b01dd.bindPopup(popup_389c1e0c69854c939b17c669a41dabbf);
 
-            
-                
-            vega_parse({"legends": [{"title": "citg To ocp_io: 838 , ocp_io To citg: 828", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 838, "col": "data", "idx": "citg To ocp_io"}, {"val": 828, "col": "data", "idx": "ocp_io To citg"}], "name": "table"}]},vega_41aa23ee23ac498fb869abbb5980099d);
-            
-            
-        
-        
-            
-                var poly_line_ba56cdc0eac24a2c82dd5ced16bc01ba = L.polyline(
-                    [[52.0015085932109, 4.36951442415562], [52.0056562098059, 4.37053698152436]],
-                    {
-                        color: 'rgb(44,165,0)',
-                        weight: 4.4514739229,
-                        opacity: 1,
-                        });
-                map_ef2507424fc9435fb375d0aa7d61361e.addLayer(poly_line_ba56cdc0eac24a2c82dd5ced16bc01ba);
-            
-        
-            
-            var popup_051f1f0b48a6441a9f41a7f2d6be2830 = L.popup({maxWidth: '450'});
-
-            
-                var vega_7f841c4165864cb6bfb6275da0563b24 = $('             <div id="vega_7f841c4165864cb6bfb6275da0563b24"></div>             ')[0];
-                popup_051f1f0b48a6441a9f41a7f2d6be2830.setContent(vega_7f841c4165864cb6bfb6275da0563b24);
-            
-
-            poly_line_ba56cdc0eac24a2c82dd5ced16bc01ba.bindPopup(popup_051f1f0b48a6441a9f41a7f2d6be2830);
-
-            
-                
-            vega_parse({"legends": [{"title": "ocp_io To bk_city: 669 , bk_city To ocp_io: 469", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 469, "col": "data", "idx": "bk_city To ocp_io"}, {"val": 669, "col": "data", "idx": "ocp_io To bk_city"}], "name": "table"}]},vega_7f841c4165864cb6bfb6275da0563b24);
-            
-            
-        
-        
-            
-                var poly_line_6faf95dcbe9c418e8789b96594f269dd = L.polyline(
-                    [[51.9988856445979, 4.37550578727327], [52.0056562098059, 4.37053698152436]],
-                    {
-                        color: 'rgb(4,197,0)',
-                        weight: 4.4880952381,
-                        opacity: 1,
-                        });
-                map_ef2507424fc9435fb375d0aa7d61361e.addLayer(poly_line_6faf95dcbe9c418e8789b96594f269dd);
-            
-        
-            
-            var popup_0205d8addc2445e4bc11826bd644aadc = L.popup({maxWidth: '450'});
-
-            
-                var vega_6d4e2a83d66f456ab95c3ec38c4a84ef = $('             <div id="vega_6d4e2a83d66f456ab95c3ec38c4a84ef"></div>             ')[0];
-                popup_0205d8addc2445e4bc11826bd644aadc.setContent(vega_6d4e2a83d66f456ab95c3ec38c4a84ef);
-            
-
-            poly_line_6faf95dcbe9c418e8789b96594f269dd.bindPopup(popup_0205d8addc2445e4bc11826bd644aadc);
-
-            
-                
-            vega_parse({"legends": [{"title": "citg To bk_city: 588 , bk_city To citg: 567", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 567, "col": "data", "idx": "bk_city To citg"}, {"val": 588, "col": "data", "idx": "citg To bk_city"}], "name": "table"}]},vega_6d4e2a83d66f456ab95c3ec38c4a84ef);
-            
-            
-        
-        
-            
-                var poly_line_7d72bae372164fb2b0ffb26e406c6edd = L.polyline(
-                    [[52.0015085932109, 4.36951442415562], [51.9956676910073, 4.37559467104233]],
-                    {
-                        color: 'rgb(127,100,0)',
-                        weight: 2.8552154195,
-                        opacity: 1,
-                        });
-                map_ef2507424fc9435fb375d0aa7d61361e.addLayer(poly_line_7d72bae372164fb2b0ffb26e406c6edd);
-            
-        
-            
-            var popup_15b3902dd96141b1af6173cd76738836 = L.popup({maxWidth: '450'});
-
-            
-                var vega_f9c6c27b83d847419160cd6170920995 = $('             <div id="vega_f9c6c27b83d847419160cd6170920995"></div>             ')[0];
-                popup_15b3902dd96141b1af6173cd76738836.setContent(vega_f9c6c27b83d847419160cd6170920995);
-            
-
-            poly_line_7d72bae372164fb2b0ffb26e406c6edd.bindPopup(popup_15b3902dd96141b1af6173cd76738836);
-
-            
-                
-            vega_parse({"legends": [{"title": "ocp_io To sportcentrum: 298 , sportcentrum To ocp_io: 99", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 298, "col": "data", "idx": "ocp_io To sportcentrum"}, {"val": 99, "col": "data", "idx": "sportcentrum To ocp_io"}], "name": "table"}]},vega_f9c6c27b83d847419160cd6170920995);
-            
-            
-        
-        
-            
-                var poly_line_f824a0eaceb4404087986e831fef9694 = L.polyline(
-                    [[52.0056562098059, 4.37053698152436], [51.9956676910073, 4.37559467104233]],
-                    {
-                        color: 'rgb(60,153,0)',
-                        weight: 2.82074829932,
-                        opacity: 1,
-                        });
-                map_ef2507424fc9435fb375d0aa7d61361e.addLayer(poly_line_f824a0eaceb4404087986e831fef9694);
-            
-        
-            
-            var popup_488bf77176954021928e17581338c9eb = L.popup({maxWidth: '450'});
-
-            
-                var vega_90a29f8bdf894fe4a3ae8840fa511126 = $('             <div id="vega_90a29f8bdf894fe4a3ae8840fa511126"></div>             ')[0];
-                popup_488bf77176954021928e17581338c9eb.setContent(vega_90a29f8bdf894fe4a3ae8840fa511126);
-            
-
-            poly_line_f824a0eaceb4404087986e831fef9694.bindPopup(popup_488bf77176954021928e17581338c9eb);
-
-            
-                
-            vega_parse({"legends": [{"title": "bk_city To sportcentrum: 236 , sportcentrum To bk_city: 145", "offset": 0, "properties": {}, "fill": "color"}], "scales": [{"range": "category10", "domain": {"field": "data.idx", "data": "table"}, "type": "ordinal", "name": "color"}], "axes": [], "height": 50, "padding": "auto", "width": 50, "marks": [{"type": "arc", "from": {"data": "table", "transform": [{"type": "pie", "value": "data.val"}]}, "properties": {"enter": {"outerRadius": {"value": 70}, "innerRadius": {"value": 0}, "endAngle": {"field": "endAngle"}, "stroke": {"value": "white"}, "startAngle": {"field": "startAngle"}, "y": {"group": "height", "mult": 0.5}, "x": {"group": "width", "mult": 0.5}, "fill": {"field": "data.idx", "scale": "color"}}}}], "data": [{"values": [{"val": 236, "col": "data", "idx": "bk_city To sportcentrum"}, {"val": 145, "col": "data", "idx": "sportcentrum To bk_city"}], "name": "table"}]},vega_90a29f8bdf894fe4a3ae8840fa511126);
-            
             
         
         
             
 
-            var marker_f81fbd90e45148eeaa5538a7763ff144 = L.marker(
+            var marker_7e89c6ebe30b4561adab762750d0cdba = L.marker(
+                [52.0086132164,4.37120211221],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_3e0215365d704aa483429e0072397a74);
+            
+        
+            
+            var popup_a47dfe9e201e4923ad4f19f872719ed5 = L.popup({maxWidth: '300'});
+
+            
+                var html_135e2defbe2a44dbbbe231faea38ae8f = $('         <div id="html_135e2defbe2a44dbbbe231faea38ae8f"                 style="width: 100.0%; height: 100.0%;">                 tnw_bio</div>                 ')[0];
+                popup_a47dfe9e201e4923ad4f19f872719ed5.setContent(html_135e2defbe2a44dbbbe231faea38ae8f);
+            
+
+            marker_7e89c6ebe30b4561adab762750d0cdba.bindPopup(popup_a47dfe9e201e4923ad4f19f872719ed5);
+
+            
+        
+        
+            
+
+            var marker_8e4f74d85a4c472b998632b809c51be3 = L.marker(
                 [52.0056562098,4.37053698152],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
-                .addTo(map_ef2507424fc9435fb375d0aa7d61361e);
+                .addTo(map_3e0215365d704aa483429e0072397a74);
             
         
             
-            var popup_5291fb50fee040d887e726077b4227bd = L.popup({maxWidth: '300'});
+            var popup_1f8f0ae370f74ba8bcb859a79282c4a4 = L.popup({maxWidth: '300'});
 
             
-                var html_24e9c794b8804cbda5b3f41bc13edc11 = $('         <div id="html_24e9c794b8804cbda5b3f41bc13edc11"                 style="width: 100.0%; height: 100.0%;">                 bk_city</div>                 ')[0];
-                popup_5291fb50fee040d887e726077b4227bd.setContent(html_24e9c794b8804cbda5b3f41bc13edc11);
+                var html_70134186a4b64172bd2b82a0b7248557 = $('         <div id="html_70134186a4b64172bd2b82a0b7248557"                 style="width: 100.0%; height: 100.0%;">                 bk_city</div>                 ')[0];
+                popup_1f8f0ae370f74ba8bcb859a79282c4a4.setContent(html_70134186a4b64172bd2b82a0b7248557);
             
 
-            marker_f81fbd90e45148eeaa5538a7763ff144.bindPopup(popup_5291fb50fee040d887e726077b4227bd);
-
-            
-        
-        
-            
-
-            var marker_368c9386b1b24bb3b8ee5afbf14706d4 = L.marker(
-                [51.9988856446,4.37550578727],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_ef2507424fc9435fb375d0aa7d61361e);
-            
-        
-            
-            var popup_218e5ca8b6f64fb0b4793194f09775cc = L.popup({maxWidth: '300'});
-
-            
-                var html_a98b9884983741759cbdc53cc51aa161 = $('         <div id="html_a98b9884983741759cbdc53cc51aa161"                 style="width: 100.0%; height: 100.0%;">                 citg</div>                 ')[0];
-                popup_218e5ca8b6f64fb0b4793194f09775cc.setContent(html_a98b9884983741759cbdc53cc51aa161);
-            
-
-            marker_368c9386b1b24bb3b8ee5afbf14706d4.bindPopup(popup_218e5ca8b6f64fb0b4793194f09775cc);
-
-            
-        
-        
-            
-
-            var marker_fafb422186f34d44b762a908ee6f242f = L.marker(
-                [52.0015085932,4.36951442416],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_ef2507424fc9435fb375d0aa7d61361e);
-            
-        
-            
-            var popup_29244778a47b4fa0a8c542fe7a2f75b0 = L.popup({maxWidth: '300'});
-
-            
-                var html_eff353007fd24e6396646b64ab9be2d6 = $('         <div id="html_eff353007fd24e6396646b64ab9be2d6"                 style="width: 100.0%; height: 100.0%;">                 ocp_io</div>                 ')[0];
-                popup_29244778a47b4fa0a8c542fe7a2f75b0.setContent(html_eff353007fd24e6396646b64ab9be2d6);
-            
-
-            marker_fafb422186f34d44b762a908ee6f242f.bindPopup(popup_29244778a47b4fa0a8c542fe7a2f75b0);
-
-            
-        
-        
-            
-
-            var marker_1ac70ab9177046aa8511d2ace49a8be3 = L.marker(
-                [51.995667691,4.37559467104],
-                {
-                    icon: new L.Icon.Default()
-                    }
-                )
-                .addTo(map_ef2507424fc9435fb375d0aa7d61361e);
-            
-        
-            
-            var popup_c9359aff1ed047f38eb9ff1e9cf2da1f = L.popup({maxWidth: '300'});
-
-            
-                var html_c110fff9568147b1b0f6f34917014b95 = $('         <div id="html_c110fff9568147b1b0f6f34917014b95"                 style="width: 100.0%; height: 100.0%;">                 sportcentrum</div>                 ')[0];
-                popup_c9359aff1ed047f38eb9ff1e9cf2da1f.setContent(html_c110fff9568147b1b0f6f34917014b95);
-            
-
-            marker_1ac70ab9177046aa8511d2ace49a8be3.bindPopup(popup_c9359aff1ed047f38eb9ff1e9cf2da1f);
+            marker_8e4f74d85a4c472b998632b809c51be3.bindPopup(popup_1f8f0ae370f74ba8bcb859a79282c4a4);
 
             
         

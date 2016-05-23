@@ -3,15 +3,13 @@ import datetime
 import matplotlib.pyplot as plt
 from matplotlib.dates import *
 import numpy as np
-from Tkinter import *
-import createmaps as CM
 import csv
-import folium
 import time
 import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utility_functions as uf
+import createmaps as CM
 
 
 # Create a connection object
@@ -33,7 +31,7 @@ min_time = cur.fetchall()
 min_time = min_time[0][0] - datetime.timedelta(1)
 max_time = datetime.datetime.now()
 useGroupedAll = True
-
+fpath = os.getcwd() + '/sql/'
 
 def main (blds_from,blds_to,dates):
     if not useGroupedAll:
@@ -192,7 +190,7 @@ def createTrajectories(blds_from,blds_to,dates):
     str_blds_to = list2string(blds_to)
     
     # Create individual trajectories table
-    cur.execute(open("trajectories.sql", "r").read().format(tableName,str_dates,str_dates,str_dates,str_blds_from,str_blds_to))
+    cur.execute(open(fpath + "trajectories.sql", "r").read().format(tableName,str_dates,str_dates,str_dates,str_blds_from,str_blds_to))
     conn.commit()
     print 'trajectories created'
     
