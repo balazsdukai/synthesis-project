@@ -11,9 +11,13 @@
 \usepackage[export]{adjustbox}
 \usepackage{float}
 \restylefloat{table}
-\usepackage[style=authoryear-ibid,backend=biber]{biblatex}
-\usepackage{csquotes}
-%%\addbibresource{report.bib}
+\usepackage[style=authoryear,sorting=nyt,backend=biber]{biblatex}\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage[inline]{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\graphicspath{ {figures/} }
+\addbibresource{report.bib}
 \begin{document}
 %% Use Roman numerals for the page numbers of the title pages and table of
 %% contents.
@@ -55,26 +59,27 @@
 \makecover[split]
 
 %% Include an optional title page.
-%%\input{title}
+\input{title}	
 
-%%\input{preface}
+\input{preface}
 
-%%\tableofcontents
+\tableofcontents
 
 %% Use Arabic numerals for the page numbers of the chapters.
 \mainmatter
-%%\input{chapter-0}
+%\input{chapter-0}
 \input{chapter-1}
 \input{chapter-2}
 \input{chapter-3}
-%%\input{chapter-4}
-%%\input{chapter-5}
+\input{chapter-4}
+\input{chapter-5}
+\input{chapter-6}
 %% Use letters for the chapter numbers of the appendices.
-\appendix
+%%\appendix
 
 %\input{appendix-a}
-
-%\bibliography{report}
+\nocite{*}
+\printbibliography
 
 \end{document}
 

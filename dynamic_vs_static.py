@@ -23,7 +23,7 @@ cur.execute("select * \
             count(distinct(apname)) / (extract(hour from sum(sesdur))*60 + extract(minute from sum(sesdur))) as ratio \
             from wifilog \
             group by mac \
-            limit 1000) as sub \
+            limit 10000) as sub \
             where joe > time '08:00:00'")
 data = [x[3] for x in cur.fetchall()]
 print data
@@ -35,7 +35,7 @@ plt.hist(data, bins, rwidth=0.9, facecolor = '#00A6D6', edgecolor = 'None')
 
 plt.xlabel('ratio')
 plt.ylabel('frequency')
-plt.title('histogram')
+plt.title('The relation between distinct access points and the (summed) session duration')
 plt.grid(True)
 
 

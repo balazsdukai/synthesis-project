@@ -11,6 +11,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utility_functions as uf
+import webbrowser
 
 # Connect to DB
 conn,cur = uf.connectDB()
@@ -115,7 +116,6 @@ def drawLines(blds_from,blds_to,dates,rows,buildings,newBuildingList,Map):
         if getCount(next_bld_nr,bld_nr,rows)!=None and buildings[bld_nr]!=(None,None) and buildings[next_bld_nr]!=(None,None):
             (index,count)=getCount(next_bld_nr,bld_nr,rows)
             total=rows[i][2]+count
-            print maxCount,minCount,total
             if total<minCount:
                 continue
             if bld_nr not in newBuildingList:
@@ -186,7 +186,6 @@ def createMap(dates,blds_from,blds_to):
         """
     cur.execute(SQL)
     rows = cur.fetchall()
-    print rows
     # Draw lines and buildings
     newBuildingList=[]
     drawLines(blds_from,blds_to,dates,rows,buildings,newBuildingList,map_osm)
@@ -196,7 +195,10 @@ def createMap(dates,blds_from,blds_to):
     conn.close()
     # Save the map
     map_osm.save('map.html')
-    os.system('map.html')
+    try:
+        os.system('map.html')
+    except:
+        webbrowser.open('map.html')
 
 def test():
     bld_from = [8,21,20,23,36]
