@@ -41,7 +41,7 @@ def main (blds_from,blds_to,dates):
 
     createBuildingStates(dates)
 
-    #createTrajectories(blds_from,blds_to,dates)
+    #createMovements(blds_from,blds_to,dates)
 
     #CM.main(dates, blds_from, blds_to)
     #barPlot(blds_from,blds_to,dates)
@@ -97,7 +97,7 @@ def updateBuildingField(record):
 def insertWorld(cur_rec,next_rec,gap):
     i_mac,i_bld,i_start,i_end,i_aps,i_ape = 0,1,2,3,4,5 # location of columns
     
-    if gap > datetime.timedelta(0,60*50) :
+    if gap > datetime.timedelta(0,60*60) :
         world_rec = (cur_rec[i_mac],0,cur_rec[i_end],next_rec[i_start],'NULL','NULL')
         insertRecord(world_rec)
 
@@ -127,17 +127,17 @@ def createBuildingStates(dates):
             # insert world in the middle
             insertWorld(cur_rec,next_rec,gap)
             # grouping and inserting records
-            if gap < datetime.timedelta(0,17*60) and cur_rec[i_bld] == next_rec[i_bld]:
+            if gap < datetime.timedelta(0,60*60) and cur_rec[i_bld] == next_rec[i_bld]:
                 # group records
                 cur_rec = (cur_rec[i_mac],cur_rec[i_bld],cur_rec[i_start],next_rec[i_end],cur_rec[i_aps],next_rec[i_aps])
             else:
                 # check if current record should be inserted
-                if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
+                if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,6*60):
                     insertRecord(cur_rec)
                 cur_rec = next_rec
         
         # check if last record should be inserted
-        if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,15*60):
+        if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,6*60):
             insertRecord(cur_rec)
 
         # insert world at end
@@ -180,28 +180,14 @@ def barPlot(blds_from,blds_to,dates):
     ax.set_xticks(hours + (width/2))
     ax.set_xticklabels(hours, rotation=45, ha='center')
     plt.show()
-    
-
-def dropTable(name):
-    # Drop filtered table
-    cur.execute("drop table {}".format(name))
-    conn.commit()
-    print 'table {} dropped'.format(name)
 
    
-def createTrajectories(blds_from,blds_to,dates):
-    if useGroupedAll:
-        tableName = 'groupedAll'
-    else:
-        tableName = 'grouped'
-    str_dates = list2string(dates)
-    str_blds_from = list2string(blds_from)
-    str_blds_to = list2string(blds_to)
-    
+def createMovements():
+    print 'start creating movements'
     # Create individual trajectories table
-    cur.execute(open(fpath + "trajectories.sql", "r").read().format(tableName,str_dates,str_dates,str_dates,str_blds_from,str_blds_to))
+    cur.execute(open(fpath + "buildingMovements.sql", "r").read())
     conn.commit()
-    print 'trajectories created'
+    print 'movements created'
     
 def list2string(lst):
     # Convert dates list to single string
