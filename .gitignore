@@ -12,3 +12,4 @@ Automatic Visualization/Automatic_Visualization.pyc
 __pycache__
 .project
 .idea
+/.dbeaver-data-sources.xml
