@@ -54,16 +54,17 @@ def main ():
 
 def createBuildingRawStates():
     # Create filtered table
-    print 'start creating raw states'
+    print 'start creating raw building states'
     cur.execute(open(sqlPath + "buildingRawStates.sql", "r").read())
     conn.commit()
-    print 'raw states created'
+    print 'raw building states created'
 
 def createBuildingStatesEmpty():
     cur.execute(open(sqlPath + "buildingStatesEmpty.sql", "r").read())
     conn.commit()
 
 def getMacs():
+    print 'start retrieving distinct mac adresses'
     cur.execute('select distinct mac from buildingRawStates')
     records = cur.fetchall()
     macs = []
@@ -74,30 +75,25 @@ def getMacs():
     return macs
 
 def insertRecord(record):
-    i_mac,i_bld,i_start,i_end, i_aps, i_ape = 0,1,2,3,4,5
+    i_mac,i_bld,i_start,i_end = 0,1,2,3
     mac = "'{}'".format(record[i_mac])
     t_s = "'{}'::timestamp".format(record[i_start])
     t_e = "'{}'::timestamp".format(record[i_end])
     bld = "'{}'".format(record[i_bld])
-    ap_s = "'{}'".format(record[i_aps])
-    ap_e = "'{}'".format(record[i_ape])
-    #with open('insertGrouped.csv', 'ab') as f:
-        #writer = csv.writer(f)
-        #writer.writerow([mac, bld, t_s, t_e, ap_s, ap_e])
 
-    cur.execute("insert into buildingStates values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
+    cur.execute("insert into buildingStates values ({},{},{},{})".format(mac,bld,t_s,t_e))
     conn.commit()
 
 def updateBuildingField(record):
     i_mac,i_start,i_end,i_ap = 0,1,2,3 # location of columns
-    cur_bld = uf.apname2id(record[i_ap])
-    return (record[i_mac],cur_bld,record[i_start],record[i_end],record[i_ap],record[i_ap])
+    cur_bld = uf.apname2building_id(record[i_ap])
+    return (record[i_mac],cur_bld,record[i_start],record[i_end])
     
 def insertWorld(cur_rec,next_rec,gap):
-    i_mac,i_bld,i_start,i_end,i_aps,i_ape = 0,1,2,3,4,5 # location of columns
+    i_mac,i_bld,i_start,i_end = 0,1,2,3 # location of columns
     
     if gap > datetime.timedelta(0,60*60) :
-        world_rec = (cur_rec[i_mac],0,cur_rec[i_end],next_rec[i_start],'NULL','NULL')
+        world_rec = (cur_rec[i_mac],0,cur_rec[i_end],next_rec[i_start])
         insertRecord(world_rec)
 
 def createBuildingStates():
@@ -107,7 +103,7 @@ def createBuildingStates():
     createBuildingStatesEmpty()
     
     count = 0
-    i_mac,i_bld,i_start,i_end,i_aps,i_ape = 0,1,2,3,4,5 # location of columns
+    i_mac,i_bld,i_start,i_end = 0,1,2,3 # location of columns
     
     for mac in macs:
         if count%100 == 0:
@@ -118,7 +114,7 @@ def createBuildingStates():
         cur_rec = updateBuildingField(records[0])
         
         # insert world at start
-        insertRecord((cur_rec[i_mac],0,min_time,cur_rec[i_start],'NULL','NULL'))
+        insertRecord((cur_rec[i_mac],0,min_time,cur_rec[i_start]))
 
         for next_rec in records[1:-1]:
             next_rec = updateBuildingField(next_rec)
@@ -128,7 +124,7 @@ def createBuildingStates():
             # grouping and inserting records
             if gap < datetime.timedelta(0,60*60) and cur_rec[i_bld] == next_rec[i_bld]:
                 # group records
-                cur_rec = (cur_rec[i_mac],cur_rec[i_bld],cur_rec[i_start],next_rec[i_end],cur_rec[i_aps],next_rec[i_aps])
+                cur_rec = (cur_rec[i_mac],cur_rec[i_bld],cur_rec[i_start],next_rec[i_end])
             else:
                 # check if current record should be inserted
                 if cur_rec[i_end]-cur_rec[i_start] > datetime.timedelta(0,6*60):
@@ -140,7 +136,7 @@ def createBuildingStates():
             insertRecord(cur_rec)
 
         # insert world at end
-        insertRecord((cur_rec[i_mac],0,cur_rec[i_end],max_time,'NULL','NULL'))
+        insertRecord((cur_rec[i_mac],0,cur_rec[i_end],max_time))
         
 def createBuildingMovements():
     print 'start creating movements'

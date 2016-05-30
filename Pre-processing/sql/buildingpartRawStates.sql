@@ -5,7 +5,7 @@ select
 	asstime as start_time,
 	asstime + sesdur as end_time,
 	apname
-into rawStates
+into buildingpartRawStates
 from wifilogSmall
 where maploc LIKE '%BK%'
 order by mac,asstime;

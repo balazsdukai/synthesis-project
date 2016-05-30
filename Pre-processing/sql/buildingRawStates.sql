@@ -6,8 +6,10 @@ select
 	asstime + sesdur as end_time,
 	apname
 into buildingRawStates
-from wifilog
+from wifilogSmall
 where apname LIKE '%-%'
+and not apname LIKE 'A-102%'
+and not apname LIKE 'A-01%'
 order by mac,asstime;
 
 CREATE INDEX building_raw_states_index_mac ON buildingRawStates (mac);

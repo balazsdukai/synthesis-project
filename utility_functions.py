@@ -42,19 +42,29 @@ def reconnectDB(conn):
     return conn, cur
 
 def building_id2name(bld_id,cur):
-    cur.execute('select name from buildings_new where id = {}'.format(bld_id))
+    cur.execute('select name from buildings where id = {}'.format(bld_id))
     records = cur.fetchall()
     return records[0][0]
 
-def apname2id(apname):
+def buildingpart_id2name(buildingpart_id,cur):
+    cur.execute('select name from buildingparts_bk where id = {}'.format(buildingpart_id))
+    records = cur.fetchall()
+    return records[0][0]
+
+def apname2building_id(apname):
     #get the building id by getting the 2 characters before the second '-' in apname
     i = apname.find("-",2)
     bld_id = apname[(i-2):(i)]
-    if bld_id == 12 and apname[7] == 1:
-        bld_id = 13
-    if bld_id == 61:
-        bld_id = 62
+    if bld_id == '12' and apname[7] == '1':
+        bld_id = '13'
+    if bld_id == '61':
+        bld_id = '62'
     return bld_id
+
+def apname2buildingpart_id(apname,cur):
+    cur.execute('select buildingpart_id from building_part_bk where apname = {}'.format(apname))
+    records = cur.fetchall()
+    return records[0][0]
 
 def getBuildingName(string):
     """
