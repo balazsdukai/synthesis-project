@@ -6,7 +6,7 @@ select
 	asstime + sesdur as end_time,
 	apname
 into buildingRawStates
-from wifilogSmall
+from wifilog
 where apname LIKE '%-%'
 order by mac,asstime;
 

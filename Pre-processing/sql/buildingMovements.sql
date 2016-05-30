@@ -1,6 +1,7 @@
 drop table if exists buildingMovements;
 
-select from_bld,to_bld,start_time,end_time into buildingMovements
+select mac,from_bld,to_bld,start_time,end_time,(case when mobilityratio < 0.27 then 'static' else 'mobile' end) as type 
+into buildingMovements
 from (
 	select 
 		mac, 
@@ -12,6 +13,7 @@ from (
 	from buildingStates
 	order by mac,start_time asc
 	) as movements
+natural join mobility
 where from_bld != to_bld 
 and mac = mac_next
 and end_time - start_time < time '01:00'

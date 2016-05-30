@@ -88,8 +88,6 @@ def insertRecord(record):
     cur.execute("insert into buildingStates values ({},{},{},{},{},{})".format(mac,bld,t_s,t_e,ap_s,ap_e))
     conn.commit()
 
-
-    
 def updateBuildingField(record):
     i_mac,i_start,i_end,i_ap = 0,1,2,3 # location of columns
     cur_bld = uf.apname2id(record[i_ap])
@@ -146,7 +144,7 @@ def createBuildingStates():
         
 def createBuildingMovements():
     print 'start creating movements'
-    cur.execute(open(fpath + "buildingMovements.sql", "r").read())
+    cur.execute(open(sqlPath + "buildingMovements.sql", "r").read())
     conn.commit()
     print 'movements created'
 

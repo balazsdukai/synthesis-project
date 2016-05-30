@@ -141,7 +141,7 @@ def createBuildingpartStates():
         
 def createBuildingpartMovements():
     print 'start creating movements'
-    cur.execute(open(fpath + "buildingpartMovements.sql", "r").read())
+    cur.execute(open(sqlPath + "buildingpartMovements.sql", "r").read())
     conn.commit()
     print 'movements created'
 
