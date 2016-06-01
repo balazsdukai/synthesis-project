@@ -144,7 +144,7 @@ def main():
     from sys import argv
     displayUsage()
     
-    #mine('sequences.txt','sequenceSupport2.txt',10)
+    mine('trajectories.txt','allTrajectorySupport.txt',100)
 
     
 
