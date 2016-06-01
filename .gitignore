@@ -13,3 +13,4 @@ __pycache__
 .project
 .idea
 /.dbeaver-data-sources.xml
+/utility_functions_sdss.pyc
