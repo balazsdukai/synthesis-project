@@ -1,0 +1,87 @@
+id;building_part;apname;location
+1;Atelier East;A-08-B-202;2e Verdieping  MSc
+1;Atelier East;A-08-C-201;2e Verdieping  BSc
+1;Atelier East;A-08-B-203;2e Verdieping  BSc
+1;Atelier East;A-08-C-202;2e Verdieping  BSc
+2;Atelier East-mid;A-08-D-204;2e Verdieping  BSc
+2;Atelier East-mid;A-08-D-203;2e Verdieping  BSc
+2;Atelier East-mid;A-08-C-203;2e Verdieping  BSc
+2;Atelier East-mid;A-08-D-206;2e Verdieping  BSc
+2;Atelier East-mid;A-08-D-205;2e Verdieping  BSc
+2;Atelier East-mid;A-08-D-202;2e Verdieping  BSc
+2;Atelier East-mid;A-08-D-201;2e Verdieping  BSc
+2;Atelier East-mid;A-08-C-204;2e Verdieping  BSc
+2;Atelier East-mid;A-08-D-207;2e Verdieping  BSc
+3;Atelier Northwest;A-08-E-201;2e Verdieping  BSc
+3;Atelier Northwest;A-08-F-202;2e Verdieping  MSc
+3;Atelier Northwest;A-08-F-201;2e Verdieping  MSc
+3;Atelier Northwest;A-08-E-204;2e Verdieping  BSc
+4;Atelier Southwest;A-08-G-202;2e Verdieping  MSc
+4;Atelier Southwest;A-08-G-201;2e Verdieping  MSc
+4;Atelier Southwest;A-08-E-202;2e Verdieping  BSc
+4;Atelier Southwest;A-08-G-205;2e Verdieping  BSc
+4;Atelier Southwest;A-08-G-204;2e Verdieping  BSc
+4;Atelier Southwest;A-08-G-203;2e Verdieping  MSc
+5;Berlage halls;A-08-E-002;BG-West.410
+5;Berlage halls;A-08-E-008;BG-West.430
+6;Bouwpub;A-08-K-002;
+6;Bouwpub;A-08-K-001;
+7;Dean and staff;A-08-D-003;Zaal M
+7;Dean and staff;A-08-D-001;Zaal N
+7;Dean and staff;A-08-D-002;BG-Oost.010
+8;East mid;A-08-D-101;in entree Loost
+8;East mid;A-08-D-103;in kamer 1.Oost. 150
+8;East mid;A-08-D-102  ;in ruimte 1.Oost.240 (collegezaal N)
+9;East staff;A-08-B-103  ;in ruimte 1.Oost.700 (midden)
+10;East wing;A-08-C-002;BG-Oost.350
+10;East wing;A-08-C-001;BG-Oost.430
+10;East wing;A-08-B-007;BG-Oost.620
+10;East wing;A-08-B-002;BG-Oost.510
+10;East wing;A-08-B-001;BG-Oost.610
+10;East wing;A-08-B-101  ;in ruimte 1.Oost.560 (midden)
+10;East wing;A-08-B-102;in ruimte 1.Oost.470 (midden)
+10;East wing;A-08-C-101  ;in ruimte 1.Oost.410
+10;East wing;A-08-C-104;in ruimte 1.Oost.330
+11;Espressobar;A-08-B-003;BG-Oost.760
+12;Library;A-08-D-106;in ruimte l.midden.010 (bibliotheek oostkant)
+12;Library;A-08-D-107;in ruimte l.midden.010 (bibliotheek oostkant)
+12;Library;A-08-D-105;in ruimte l.midden.010 (bibliotheek oostkant)
+12;Library;A-08-D-104;in ruimte l.midden.010 (bibliotheek oostkant)
+13;Main entrance;A-08-E-001;BG-Midden.130
+13;Main entrance;A-08-D-004;BG-Oost (Rode entree)
+13;Main entrance;A-08-D-005;BG-Midden.010
+13;Main entrance;A-08-D-010;BG-Midden.080
+14;Modeling hall;A-08-J-006  ;
+14;Modeling hall;A-08-J-001  ;
+14;Modeling hall;A-08-J-002  ;
+14;Modeling hall;A-08-J-003  ;
+14;Modeling hall;A-08-J-004  ;
+14;Modeling hall;A-08-J-005  ;
+14;Modeling hall;A-08-J-007  ;
+15;Orange hall;A-08-B-006;
+15;Orange hall;A-08-C-003;
+15;Orange hall;A-08-C-004;
+15;Orange hall;A-08-B-005;
+16;OTB;A-08-F-002;BG-West.868
+16;OTB;A-08-F-001;BG-West.800
+16;OTB;A-08-E-004;BG-West gang.530
+16;OTB;A-08-E-005;BG-West.510
+16;OTB;A-08-F-003;BG-West.620
+17;Restaurant;A-08-H-004;Restaurant.020
+17;Restaurant;A-08-H-002;Restaurant.100
+17;Restaurant;A-08-H-001;Restaurant.210
+17;Restaurant;A-08-H-003;Restaurant.130
+18;Urbanism;A-08-G-002;BG-West.170
+18;Urbanism;A-08-G-004;BG-West.130
+18;Urbanism;A-08-G-002;BG-West.030
+18;Urbanism;A-08-E-003;BG-West.290
+18;Urbanism;A-08-E-007;BG-West.230
+19;West MSc;A-08-E-102  ;in kamer 1.West.430
+20;West staff;A-08-F-105;in gang I.West voor pantry/copy
+20;West staff;A-08-F-102;in gang voor 1 .West.720
+20;West staff;A-08-F-101;in kamer 1.West.780
+20;West staff;A-08-E-104;in kamer 1.West.540
+20;West staff;A-08-E-101  ;in ruimte 1.West.812 (pantry)
+20;West staff;A-08-F-108;in 1.West.770
+20;West staff;A-08-F-103;in kamer 1.West.600
+21;West wing staff and student;A-08-G-104;in ruimte I.West. 130

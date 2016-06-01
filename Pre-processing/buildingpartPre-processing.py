@@ -10,14 +10,12 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), '..')))
 import utility_functions as uf
 
-
-
-'''try:
-    conn = psycopg2.connect(database="wifi", user="postgres", password="geomatics", host="localhost", port="5432")
+try:
+    conn = psycopg2.connect(database="wifi", user="postgres", password="M1jnwachtw00rd", host="localhost", port="5432")
     print "Opened database successfully"
 except:
     print "I'm unable to connect to the database"
-cur = conn.cursor()'''
+cur = conn.cursor()
 
 
 def getMinTime():
@@ -29,7 +27,7 @@ def getMinTime():
 ## GLOBALS ##
 
 # Connect to DB
-conn,cur = uf.connectDB()
+#conn,cur = uf.connectDB()
 # min and max time
 min_time = getMinTime()
 max_time = datetime.datetime.now()
@@ -39,7 +37,7 @@ sqlPath = os.getcwd() + '/sql/'
 def main ():
 
     # Create raw states
-    createBuildingpartRawStates()
+    #createBuildingpartRawStates()
 
     # Create preprocessed states for buildingpart level
     createBuildingpartStates()
@@ -105,8 +103,8 @@ def createBuildingpartStates():
     i_mac,i_bldpart,i_start,i_end = 0,1,2,3 # location of columns
     
     for mac in macs:
-        #if count%100 == 0:
-        print count
+        if count%100 == 0:
+            print count
         count += 1
         cur.execute("select mac,start_time,end_time,apname from buildingpartRawStates where mac='{}'".format(mac))
         records = cur.fetchall()
