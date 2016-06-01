@@ -1,18 +1,26 @@
-drop table if exists buildingMovements;
+drop table if exists buildingpartMovements;
 
-select from_bld,to_bld,start_time,end_time into buildingMovements
+select mac,from_bldpart,to_bldpart,start_time,end_time,(case when mobilityratio < 0.27 then 'static' else 'mobile' end) as type 
+into buildingpartMovements
 from (
 	select 
 		mac, 
 		LEAD(mac) OVER (ORDER BY mac,ts) mac_next,
-		building as from_bld, 
-		LEAD(building) OVER (ORDER BY mac,ts) to_bld, 
+		buildingpart as from_bldpart, 
+		LEAD(buildingpart) OVER (ORDER BY mac,ts) to_bldpart, 
 		te - (time '00:05') as start_time,
 		LEAD(ts) OVER (ORDER BY mac,ts) end_time
-	from buildingStates
-	order by mac,start_time asc
+	from buildingpartStates
 	) as movements
-where from_bld != to_bld 
+natural join mobility
+where from_bldpart != to_bldpart 
 and mac = mac_next
+and start_time < end_time
 and end_time - start_time < time '01:00'
-order by start_time
+order by start_time;
+
+ALTER TABLE buildingpartMovements ADD PRIMARY KEY (mac,start_time);
+CREATE INDEX buildingpart_movements_index_frombldpart ON buildingpartMovements (from_bldpart);
+CREATE INDEX buildingpart_movements_index_tobldpart ON buildingpartMovements (to_bldpart);
+CREATE INDEX buildingpart_movements_index_starttime ON buildingpartMovements (start_time);
+CREATE INDEX buildingpart_movements_index_endtime ON buildingpartMovements (end_time);

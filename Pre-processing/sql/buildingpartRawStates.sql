@@ -6,8 +6,8 @@ select
 	asstime + sesdur as end_time,
 	apname
 into buildingpartRawStates
-from wifilogSmall
-where maploc LIKE '%BK%'
+from wifilog
+where apname LIKE 'A-08%'
 order by mac,asstime;
 
 CREATE INDEX buildingpart_raw_states_index_mac ON buildingpartRawStates (mac);

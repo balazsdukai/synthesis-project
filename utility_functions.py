@@ -62,7 +62,7 @@ def apname2building_id(apname):
     return bld_id
 
 def apname2buildingpart_id(apname,cur):
-    cur.execute('select buildingpart_id from building_part_bk where apname = {}'.format(apname))
+    cur.execute("select id from buildingparts_bk where apname = '{}'".format(apname))
     records = cur.fetchall()
     return records[0][0]
 
