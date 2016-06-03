@@ -160,6 +160,7 @@ class CalendarFrame(Tkinter.LabelFrame):
             types.append('static')
         if self.mobile.get() == 1:
             types.append('mobile')
+        print dates
         barplot = AV.main(self.bld_from, self.bld_to, dates, types)
 
     def clear(self):

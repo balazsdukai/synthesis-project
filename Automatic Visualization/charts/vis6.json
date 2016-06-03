@@ -6,13 +6,13 @@
       "values": [
         {
           "col": "data",
-          "idx": "Aula To BK City",
-          "val": 192
+          "idx": "BK City To Biochemical Engineering",
+          "val": 52
         },
         {
           "col": "data",
-          "idx": "BK City To Aula",
-          "val": 205
+          "idx": "Biochemical Engineering To BK City",
+          "val": 57
         }
       ]
     }
@@ -23,7 +23,7 @@
       "fill": "color",
       "offset": 0,
       "properties": {},
-      "title": "BK City To Aula: 205 , Aula To BK City: 192"
+      "title": "Biochemical Engineering To BK City: 57 , BK City To Biochemical Engineering: 52"
     }
   ],
   "marks": [

@@ -23,12 +23,45 @@ useGroupedAll = True
 sqlPath = os.getcwd() + '/sql/'
 
 def main (blds_from,blds_to,dates, types):
-    data = filterMovements(blds_from,blds_to,dates, types,False)
-    plot(blds_from,blds_to,dates, types)
-    #CM.main(dates, blds_from, blds_to)
+
+    fromAndToCampus ()
+    
+    # CM.main(dates, blds_from, blds_to)
     # barPlot(blds_from,blds_to,dates, types)
     # Close the database connection   
     conn.close()
+
+def fromAndToCampus ():
+    dates = getDates('week')
+    blds_from = [0]
+    blds_to = [0,3, 5, 8, 12, 12, 19, 20, 21, 22, 23, 26, 30, 30, 31, 32, 34, 35, 36, 36, 37, 38, 43, 45, 46, 50, 60, 62, 62, 64, 66, 99]
+    types = ["mobile"]
+
+    # get data
+    data = filterMovements(blds_from,blds_to,dates,types,False)
+    movements,times = countMovements(blds_from,blds_to,dates, types)
+
+    data = filterMovements(blds_to,blds_from,dates,types,False)
+    movements2,times2 = countMovements(blds_to,blds_from,dates, types)
+
+    # plot data
+    to_campus = plt.plot(times,movements,color='b')
+    from_campus = plt.plot(times2,movements2,color='r')
+    lectureStart = addLectureStart()
+
+    # style graph
+    plt.title('Movement from and to Campus')
+    plt.legend([to_campus,from_campus,lectureStart],['to campus','from campus','start lecture'])
+    plt.legend([line_up, line_down], ['Line Up', 'Line Down'])
+    plt.xlim((60*60*6,24*60*60))
+    plt.ylabel('Devices/hour')
+    plt.xlabel('Time')
+    min45 = 45*60
+    hour = 60*60
+    lectureTimes = [6*hour+min45,8*hour+min45,10*hour+min45,12*hour+min45,13*hour+min45,15*hour+min45,17*hour+min45,19*hour+min45,21*hour+min45,23*hour+min45]
+    plt.xticks( lectureTimes )
+    plt.gca().set_xticklabels(['6:45','8:45','10:45','12:45','13:45','15:45','17:45','19:45','21:45','23:45'])
+    plt.show()
     
 
 def filterMovements(blds_from,blds_to,dates, types,twoDirections):
@@ -38,7 +71,7 @@ def filterMovements(blds_from,blds_to,dates, types,twoDirections):
     cur.execute(open(sqlPath + "buildingMovements.sql", "r").read().format(directions, list2string(dates), list2string(types)))
     conn.commit()
 
-def plot(blds_from,blds_to,dates, types):
+def countMovements(blds_from,blds_to,dates, types):
     n_days = len(dates)
     movements = []
     times = []
@@ -47,7 +80,6 @@ def plot(blds_from,blds_to,dates, types):
     for i in range(0,60*24/5):
         if i%100 == 0:
             print time
-        # Count movements twice, once for between buildings only and once between buildings and world
         SQL =  "select count(*) \
             from buildingmovements_temp \
             where (end_time-(end_time-start_time)/2)::time  > '{}' - interval '10 minutes' \
@@ -61,27 +93,20 @@ def plot(blds_from,blds_to,dates, types):
         times.append(time)
         time = addMins(time,5)
 
-    plt.plot(times,movements,color='k')
-    plt.xlim((60*60*6,24*60*60))
-    plt.ylabel('Devices/hour')
-    plt.xlabel('Time')
-    #plt.xticks( np.arange(60*45,(24*60*60)+1,60*60*2) )
-    min45 = 45*60
-    hour = 60*60
-    lectureTimes = [6*hour+min45,8*hour+min45,10*hour+min45,12*hour+min45,13*hour+min45,15*hour+min45,17*hour+min45,19*hour+min45,21*hour+min45,23*hour+min45]
-    plt.xticks( lectureTimes )
-    plt.gca().set_xticklabels(['6:45','8:45','10:45','12:45','13:45','15:45','17:45','19:45','21:45','23:45'])
-    plt.title('Movement from %s to %s on %s' % (list2string(blds_from),list2string(blds_to),list2string(dates)))
-    addLectureStart()
+    return movements,times
+
+def plotMovement(movements,times,color):
+    plt.plot(times,movements,color=color)
 
 def addLectureStart():
     # add the start of each lecture as a vertical line
-    plt.axvline((60*60*8)+(45*60),color='k',linestyle='--')
+    lectureStart = plt.axvline((60*60*8)+(45*60),color='k',linestyle='--')
     plt.axvline((60*60*10)+(45*60),color='k',linestyle='--')
     plt.axvline((60*60*12)+(45*60),color='k',linestyle='--')
     plt.axvline((60*60*13)+(45*60),color='k',linestyle='--')
     plt.axvline((60*60*15)+(45*60),color='k',linestyle='--')
     plt.axvline((60*60*17)+(45*60),color='k',linestyle='--')
+    return lectureStart
     
 
 def addMins(tm, mins):
@@ -134,6 +159,14 @@ def list2string(lst):
         string = string + ",'" +str(value) +"'" 
     return string
 
+def getDates(requestedDates):
+    if requestedDates == 'week':
+        return [datetime.date(2016, 4, 4), datetime.date(2016, 4, 11), datetime.date(2016, 4, 18), datetime.date(2016, 4, 25), datetime.date(2016, 5, 2), datetime.date(2016, 5, 9), datetime.date(2016, 5, 16), datetime.date(2016, 5, 23), datetime.date(2016, 5, 30), datetime.date(2016, 4, 5), datetime.date(2016, 4, 12), datetime.date(2016, 4, 19), datetime.date(2016, 4, 26), datetime.date(2016, 5, 3), datetime.date(2016, 5, 10), datetime.date(2016, 5, 17), datetime.date(2016, 5, 24), datetime.date(2016, 5, 31), datetime.date(2016, 4, 6), datetime.date(2016, 4, 13), datetime.date(2016, 4, 20), datetime.date(2016, 4, 27), datetime.date(2016, 5, 4), datetime.date(2016, 5, 11), datetime.date(2016, 5, 18), datetime.date(2016, 5, 25), datetime.date(2016, 6, 1), datetime.date(2016, 3, 31), datetime.date(2016, 4, 7), datetime.date(2016, 4, 14), datetime.date(2016, 4, 21), datetime.date(2016, 4, 28), datetime.date(2016, 5, 5), datetime.date(2016, 5, 12), datetime.date(2016, 5, 19), datetime.date(2016, 5, 26), datetime.date(2016, 6, 2), datetime.date(2016, 4, 4), datetime.date(2016, 4, 11), datetime.date(2016, 4, 18), datetime.date(2016, 4, 25), datetime.date(2016, 5, 2), datetime.date(2016, 5, 9), datetime.date(2016, 5, 16), datetime.date(2016, 5, 23), datetime.date(2016, 5, 30), datetime.date(2016, 4, 5), datetime.date(2016, 4, 12), datetime.date(2016, 4, 19), datetime.date(2016, 4, 26), datetime.date(2016, 5, 3), datetime.date(2016, 5, 10), datetime.date(2016, 5, 17), datetime.date(2016, 5, 24), datetime.date(2016, 5, 31), datetime.date(2016, 4, 6), datetime.date(2016, 4, 13), datetime.date(2016, 4, 20), datetime.date(2016, 4, 27), datetime.date(2016, 5, 4), datetime.date(2016, 5, 11), datetime.date(2016, 5, 18), datetime.date(2016, 5, 25), datetime.date(2016, 6, 1), datetime.date(2016, 4, 6), datetime.date(2016, 4, 13), datetime.date(2016, 4, 20), datetime.date(2016, 4, 27), datetime.date(2016, 5, 4), datetime.date(2016, 5, 11), datetime.date(2016, 5, 18), datetime.date(2016, 5, 25), datetime.date(2016, 6, 1), datetime.date(2016, 3, 31), datetime.date(2016, 4, 7), datetime.date(2016, 4, 14), datetime.date(2016, 4, 21), datetime.date(2016, 4, 28), datetime.date(2016, 5, 5), datetime.date(2016, 5, 12), datetime.date(2016, 5, 19), datetime.date(2016, 5, 26), datetime.date(2016, 6, 2), datetime.date(2016, 4, 1), datetime.date(2016, 4, 8), datetime.date(2016, 4, 15), datetime.date(2016, 4, 22), datetime.date(2016, 4, 29), datetime.date(2016, 5, 6), datetime.date(2016, 5, 13), datetime.date(2016, 5, 20), datetime.date(2016, 5, 27)]
+    elif requestedDates == 'weekend':
+        return [datetime.date(2016, 4, 2), datetime.date(2016, 4, 9), datetime.date(2016, 4, 16), datetime.date(2016, 4, 23), datetime.date(2016, 4, 30), datetime.date(2016, 5, 7), datetime.date(2016, 5, 14), datetime.date(2016, 5, 21), datetime.date(2016, 5, 28), datetime.date(2016, 4, 3), datetime.date(2016, 4, 10), datetime.date(2016, 4, 17), datetime.date(2016, 4, 24), datetime.date(2016, 5, 1), datetime.date(2016, 5, 8), datetime.date(2016, 5, 15), datetime.date(2016, 5, 22), datetime.date(2016, 5, 29)]
+    else:
+        print 'dates not found'
+
 def test():
     dates = [datetime.date(2016,04,25),datetime.date(2016,04,26),datetime.date(2016,04,27),datetime.date(2016,04,28)]
     # all buildings: ['50-TNW-RID','64-HSL','66-OGZ','60-LMS','38-Cultureel Centrum','37-Sportcentrum','26-Bouwcampus','23-CITG','22-TNW-TN','VLL-LAB(TNO)','21-BTUD','20-Aula','46-P&E lab','35-Drebbelweg','45-LSL','43-EGM','34-OCP-3ME','32-OCP-IO','30-O&S','30-IKC ISD-FMVG','31-TBM','08-BK-City','03-Science Center','05-TNW-BIO','36-EWI-LB','36-EWI-HB','19-Studuitzendbureau','12-TNW-DCT','12-Kramerslab & Proeffabriek','62-LR','62-Simona']
@@ -143,8 +176,6 @@ def test():
     blds_to = [0,3, 5, 8, 12, 12, 19, 20, 21, 22, 23, 26, 30, 30, 31, 32, 34, 35, 36, 36, 37, 38, 43, 45, 46, 50, 60, 62, 62, 64, 66, 99]
     types = ["mobile"]
     main(blds_from,blds_to,dates, types)
-    #main(blds_to,blds_from,dates, types)
-    plt.show()
 
 
 if __name__ == '__main__':
