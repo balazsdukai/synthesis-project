@@ -22,37 +22,64 @@ max_time = datetime.datetime.now()
 useGroupedAll = True
 sqlPath = os.getcwd() + '/sql/'
 
-def main (blds_from,blds_to,dates, types):
-
-    fromAndToCampus ()
+def main (blds_from,blds_to,dates,types):
+    #weekWeekend()
+    mobileStatic()
+    #fromAndToBuilding(0)
     
     # CM.main(dates, blds_from, blds_to)
     # barPlot(blds_from,blds_to,dates, types)
     # Close the database connection   
     conn.close()
 
-def fromAndToCampus ():
-    dates = getDates('week')
+def mobileStatic():
     blds_from = [0]
-    blds_to = [0,3, 5, 8, 12, 12, 19, 20, 21, 22, 23, 26, 30, 30, 31, 32, 34, 35, 36, 36, 37, 38, 43, 45, 46, 50, 60, 62, 62, 64, 66, 99]
-    types = ["mobile"]
+    blds_to = getAllBlds()
+    dates = getDates('week')
+    
 
     # get data
-    data = filterMovements(blds_from,blds_to,dates,types,False)
+    types = ['mobile']
+    data = filterMovements(blds_from,blds_to,dates,types,True)
     movements,times = countMovements(blds_from,blds_to,dates, types)
 
-    data = filterMovements(blds_to,blds_from,dates,types,False)
+    types = ['static'] 
+    data = filterMovements(blds_to,blds_from,dates,types,True)
     movements2,times2 = countMovements(blds_to,blds_from,dates, types)
 
     # plot data
-    to_campus = plt.plot(times,movements,color='b')
-    from_campus = plt.plot(times2,movements2,color='r')
+    mobile, = plt.plot(times,movements,color='b',label='mobile')
+    static, = plt.plot(times2,movements2,color='r',label='static')
     lectureStart = addLectureStart()
 
-    # style graph
-    plt.title('Movement from and to Campus')
-    plt.legend([to_campus,from_campus,lectureStart],['to campus','from campus','start lecture'])
-    plt.legend([line_up, line_down], ['Line Up', 'Line Down'])
+    plt.title('Mobile vs static movement')
+    plt.legend(handles=[mobile,static,lectureStart])
+    styleGraph()
+
+def weekWeekend():
+    blds_from = getAllBlds()
+    blds_to = getAllBlds()
+    types = ['mobile']
+
+    # get data
+    dates = getDates('week')
+    data = filterMovements(blds_from,blds_to,dates,types,True)
+    movements,times = countMovements(blds_from,blds_to,dates, types)
+
+    dates = getDates('weekend')    
+    data = filterMovements(blds_to,blds_from,dates,types,True)
+    movements2,times2 = countMovements(blds_to,blds_from,dates, types)
+
+    # plot data
+    week, = plt.plot(times,movements,color='b',label='week')
+    weekend, = plt.plot(times2,movements2,color='r',label='weekend')
+    lectureStart = addLectureStart()
+
+    plt.title('Movement during week and weekend')
+    plt.legend(handles=[week,weekend,lectureStart])
+    styleGraph()
+
+def styleGraph():
     plt.xlim((60*60*6,24*60*60))
     plt.ylabel('Devices/hour')
     plt.xlabel('Time')
@@ -62,6 +89,34 @@ def fromAndToCampus ():
     plt.xticks( lectureTimes )
     plt.gca().set_xticklabels(['6:45','8:45','10:45','12:45','13:45','15:45','17:45','19:45','21:45','23:45'])
     plt.show()
+
+def fromAndToBuilding(bld_id):
+    blds_from = [bld_id]
+    blds_to = getAllBlds()
+    dates = getDates('week')
+    types = ['mobile']
+    name = uf.building_id2name(bld_id,cur)
+    if name == 'world':
+        name = 'campus'
+    fromAndToMovement(blds_from,blds_to,dates,types,name)
+
+def fromAndToMovement(blds_from,blds_to,dates,types,name):
+    # get data
+    data = filterMovements(blds_from,blds_to,dates,types,False)
+    movements,times = countMovements(blds_from,blds_to,dates, types)
+
+    data = filterMovements(blds_to,blds_from,dates,types,False)
+    movements2,times2 = countMovements(blds_to,blds_from,dates, types)
+
+    # plot data
+    to_campus, = plt.plot(times,movements,color='b',label='to {}'.format(name))
+    from_campus, = plt.plot(times2,movements2,color='r',label='from {}'.format(name))
+    lectureStart = addLectureStart()
+
+    # style graph
+    plt.title('Movement from and to {}'.format(name))
+    plt.legend(handles=[to_campus,from_campus,lectureStart])
+    styleGraph()
     
 
 def filterMovements(blds_from,blds_to,dates, types,twoDirections):
@@ -95,12 +150,10 @@ def countMovements(blds_from,blds_to,dates, types):
 
     return movements,times
 
-def plotMovement(movements,times,color):
-    plt.plot(times,movements,color=color)
 
 def addLectureStart():
     # add the start of each lecture as a vertical line
-    lectureStart = plt.axvline((60*60*8)+(45*60),color='k',linestyle='--')
+    lectureStart = plt.axvline((60*60*8)+(45*60),color='k',linestyle='--',label='start lecture')
     plt.axvline((60*60*10)+(45*60),color='k',linestyle='--')
     plt.axvline((60*60*12)+(45*60),color='k',linestyle='--')
     plt.axvline((60*60*13)+(45*60),color='k',linestyle='--')
@@ -166,6 +219,15 @@ def getDates(requestedDates):
         return [datetime.date(2016, 4, 2), datetime.date(2016, 4, 9), datetime.date(2016, 4, 16), datetime.date(2016, 4, 23), datetime.date(2016, 4, 30), datetime.date(2016, 5, 7), datetime.date(2016, 5, 14), datetime.date(2016, 5, 21), datetime.date(2016, 5, 28), datetime.date(2016, 4, 3), datetime.date(2016, 4, 10), datetime.date(2016, 4, 17), datetime.date(2016, 4, 24), datetime.date(2016, 5, 1), datetime.date(2016, 5, 8), datetime.date(2016, 5, 15), datetime.date(2016, 5, 22), datetime.date(2016, 5, 29)]
     else:
         print 'dates not found'
+
+def getAllBlds():
+    cur.execute('select distinct id from buildings order by id')
+    records = cur.fetchall()
+    blds = []
+    for record in records:
+        blds.append(record[0])
+    return blds
+        
 
 def test():
     dates = [datetime.date(2016,04,25),datetime.date(2016,04,26),datetime.date(2016,04,27),datetime.date(2016,04,28)]
