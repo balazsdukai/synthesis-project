@@ -8,7 +8,7 @@ FROM public.buildingparts_bk;
 -- drop materialized view visualization.bk_movement;
 
 -- view to store the aggergated movement counts
-CREATE MATERIALIZED VIEW visualization.bk_movement AS
+CREATE TABLE visualization.bk_movement AS
 SELECT 
     startp,
     ep.buildingpart AS endp,
