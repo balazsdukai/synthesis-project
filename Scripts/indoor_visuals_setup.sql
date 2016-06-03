@@ -1,4 +1,4 @@
--- TODO: add foreign keys to the tables
+﻿-- TODO: add foreign keys to the tables
 
 -- select distinct buildingparts
 CREATE MATERIALIZED VIEW visualization.bk_bpart_unq AS 
@@ -52,12 +52,12 @@ FROM (SELECT p.id, b.b_part, p.the_geom
         FROM 
             visualization.bk_paths_vertices_pgr AS p, 
             (SELECT b_part, st_buffer(geom, 1.0) AS geom
-             FROM bk_parts) AS b
+             FROM visualization.bk_parts) AS b
         WHERE st_within(p.the_geom, b.geom)) AS b
 WHERE a.id = b.id;
 
 -- CREATE TABLE TO STORE traffic volume
-CREATE TABLE visualization.bk_traffic(
+CREATE TABLE if NOT EXISTS  visualization.bk_traffic(
     edge_id int4,
     cnt int4 DEFAULT 0);
 

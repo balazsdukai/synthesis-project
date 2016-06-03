@@ -19,7 +19,7 @@ for i in rv:
     query = "select id from visualization.bk_paths_vertices_pgr where b_part = '{}'".format(endp)
     y = plpy.execute(query)
     ep = y[0]['id']
-    query = "SELECT seq, id1 as node, id2 as edge FROM pgr_dijkstra('SELECT gid as id, source::int4, target::int4, cost_len::float8 as cost FROM bk_paths', {}, {}, false, false);".format(sp,ep)
+    query = "SELECT seq, id1 as node, id2 as edge FROM pgr_dijkstra('SELECT gid as id, source::int4, target::int4, cost_len::float8 as cost FROM visualization.bk_paths', {}, {}, false, false);".format(sp,ep)
     s_path = plpy.execute(query)
     for e in s_path:
 		edge_id = e['edge']

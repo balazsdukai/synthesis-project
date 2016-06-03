@@ -1,4 +1,4 @@
-﻿ALTER TABLE public.bk_paths
+﻿ALTER TABLE visualization.bk_paths
     ADD COLUMN source integer,
     ADD COLUMN target integer,
     ADD COLUMN cost_len double precision,
@@ -13,16 +13,25 @@
     ADD COLUMN rule text,
     ADD COLUMN isolated integer;
 
-SELECT pgr_createTopology('bk_paths', 0.5, 'geom', 'gid');
-SELECT pgr_analyzegraph('bk_paths', 0.5, 'geom', 'gid');
+SELECT pgr_createTopology('visualization.bk_paths', 0.5, 'geom', 'gid');
+SELECT pgr_analyzegraph('visualization.bk_paths', 0.5, 'geom', 'gid');
 
 -- assign costs to the edges
-update bk_paths
-set cost_len = 1, rcost_len=1;
+UPDATE visualization.bk_paths as a
+SET cost_len = b.len
+FROM (SELECT gid, st_length(geom) as len
+FROM visualization.bk_paths
+WHERE name != 'staris') b
+WHERE a.gid = b.gid;
 
+UPDATE visualization.bk_paths as a
+SET cost_len = 20
+WHERE name LIKE 'stairs';
+
+-- test query
 SELECT seq, id1 as node, id2 as edge 
 FROM pgr_dijkstra(
-	'SELECT gid as id, source::int4, target::int4, cost_len::float8 as cost FROM bk_paths',
+	'SELECT gid as id, source::int4, target::int4, cost_len::float8 as cost FROM visualization.bk_paths',
 	 15, 		-- start vertex id
 	  3,		-- end vertex id
 	 false,		-- directed graph is used
