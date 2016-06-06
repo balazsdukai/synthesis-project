@@ -96,7 +96,7 @@ class CalendarFrame(Tkinter.LabelFrame):
         top = Tkinter.Frame(self)
         bottom = Tkinter.Frame(self)
         top.pack(side=Tkinter.TOP, anchor='n')
-        bottom.pack(side=Tkinter.BOTTOM, anchor='s')#, fill=Tkinter.BOTH, expand=True)
+        bottom.pack(side=Tkinter.BOTTOM, anchor='s', fill=Tkinter.BOTH, expand=True)
         
         ## Buttons and stuff
         Tkinter.Entry(self, textvariable=self.selected_date).pack(in_ = top, side=Tkinter.TOP, expand=True)
@@ -111,8 +111,10 @@ class CalendarFrame(Tkinter.LabelFrame):
         static = Tkinter.Checkbutton(self, text='Static', variable=self.static)
         mobile = Tkinter.Checkbutton(self, text='Mobile', variable=self.mobile)
         static.pack(in_ = top, side = Tkinter.LEFT, anchor='w')
-        mobile.pack(in_ = top, side = Tkinter.RIGHT, anchor='w')
-        
+        mobile.pack(in_ = top, side = Tkinter.LEFT, anchor='w')
+        self.directions = Tkinter.IntVar()
+        direct = Tkinter.Checkbutton(self, text='Both directions?', variable=self.directions)
+        direct.pack(in_ = top, side = Tkinter.RIGHT, anchor='w')        
         Tkinter.Button(self, text="5.Run visualization", command=self.run).pack(side=Tkinter.TOP, anchor='w')
         Tkinter.Button(self, text="6.Clear dates", command=self.clear).pack(side=Tkinter.TOP, anchor='w')
 
@@ -155,13 +157,17 @@ class CalendarFrame(Tkinter.LabelFrame):
         sep_dates = self.dates
         rec_dates = self.days
         dates = sep_dates + rec_dates
+        both_directions = False
         types = []
         if self.static.get() == 1:
             types.append('static')
         if self.mobile.get() == 1:
             types.append('mobile')
-        print dates
-        barplot = AV.main(self.bld_from, self.bld_to, dates, types)
+            print self.directions.get()
+        if self.directions.get() == 1:
+            both_directions = True
+        print 'AV.main({}, {}, {}, {}, {})'.format(self.bld_from, self.bld_to, dates, types, both_directions)
+        barplot = AV.main(self.bld_from, self.bld_to, dates, types,both_directions)
 
     def clear(self):
         self.dates = []
@@ -170,7 +176,7 @@ class CalendarFrame(Tkinter.LabelFrame):
 
 def main():
     root = Tkinter.Tk()
-    root.geometry("220x265+400+200")
+    root.geometry("280x265+400+200")
     root.wm_title("Date Picker Dialog")
     CalendarFrame(root).pack()
     root.mainloop()

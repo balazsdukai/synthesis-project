@@ -22,8 +22,8 @@ max_time = datetime.datetime.now()
 useGroupedAll = True
 sqlPath = os.getcwd() + '/sql/'
 
-def main (blds_from,blds_to,dates, types):
-    data = filterMovements(blds_from,blds_to,dates, types,False)
+def main (blds_from,blds_to,dates, types, both_directions):
+    data = filterMovements(blds_from,blds_to,dates, types, both_directions)
     plot(blds_from,blds_to,dates, types)
     #CM.main(dates, blds_from, blds_to)
     # barPlot(blds_from,blds_to,dates, types)
@@ -73,6 +73,7 @@ def plot(blds_from,blds_to,dates, types):
     plt.gca().set_xticklabels(['6:45','8:45','10:45','12:45','13:45','15:45','17:45','19:45','21:45','23:45'])
     plt.title('Movement from %s to %s on %s' % (list2string(blds_from),list2string(blds_to),list2string(dates)))
     addLectureStart()
+    plt.show()
 
 def addLectureStart():
     # add the start of each lecture as a vertical line
