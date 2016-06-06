@@ -11,3 +11,7 @@ documents
 __pycache__
 .project
 .pydevproject
+Sequence Patterns/trajectorySupport.txt
+Sequence Patterns/allTrajectorySupport.txt
+Sequence Patterns/trajectories.txt
+Sequence Patterns/trajectSupportRatio.txt

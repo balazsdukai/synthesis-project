@@ -1,5 +1,6 @@
 # All rights reserved.
 # http://datamininginsight.blogspot.com
+# 951399
 
 class Prefixspan:
     def __init__(self, db = []):
@@ -93,7 +94,8 @@ class Prefixspan:
         for i in range(len(itemSups)):
             if itemSups[i] >= self.min_sup:
                 newPattern = pattern + [i]
-                newSup = itemSups[i]
+                tempSup = itemSups[i] / 951399.0
+                newSup = round(tempSup,3)
                 newPdb = list()
                 for (sid, pid) in pdb:
                     for j in range(pid, len(self.sdb[sid])):
@@ -112,11 +114,12 @@ def mine(inputfile, outputfile, support):
     sdb = []
     for line in lines:
         seq = line.split(' ')
-        sdb.append( seq[0:-2] )
+        sequence = map(int,seq[0:-2])
+        sdb.append( sequence )
     span = Prefixspan(sdb)
     span.run(support)
     patterns = span.getPatterns()
-    patterns.sort(key=lambda x: x[1])
+    patterns.sort(key=lambda x: x[1]) 
     f = open(outputfile, 'w')
     for pattern in patterns:
         f.write( str(pattern) + '\n' )
@@ -144,7 +147,7 @@ def main():
     from sys import argv
     displayUsage()
     
-    mine('trajectories.txt','allTrajectorySupport.txt',100)
+    mine('trajectories.txt','trajectSupportRatio.txt',100)
 
     
 
