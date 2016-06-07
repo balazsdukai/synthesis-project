@@ -1,0 +1,5 @@
+[0] Config.pm:340> INFO - This is Biber 2.4
+[0] Config.pm:343> INFO - Logfile is 'report.bib.blg'
+[51] biber-MSWIN32:287> INFO - === 
+[539] Utils.pm:163> ERROR - Cannot find control file 'report.bib.bcf'! - did you pass the "backend=biber" option to BibLaTeX?
+[540] Biber.pm:112> INFO - ERRORS: 1

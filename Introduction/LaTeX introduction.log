@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  7 JUN 2016 09:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.23)  7 JUN 2016 10:08
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**"LaTeX introduction.tex"
-(./LaTeX introduction.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/report.cls
+**"./LaTeX introduction.tex"
+("LaTeX introduction.tex"
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,23 +22,25 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\utf8.def"
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -161,6 +161,10 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -168,6 +172,10 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -186,10 +194,12 @@ File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -207,6 +217,14 @@ File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -217,8 +235,8 @@ File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -241,14 +259,20 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2014/09/25 3.9l The Babel package
+("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.sty"
+Package: babel 2016/01/08 3.9n The Babel package
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-english/english.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX\tex\latex\babel-english\english.ldf"
 Language: english 2012/08/20 v3.3p English support from the babel system
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2014/09/25 3.9l Babel common definitions
+("C:\Program Files (x86)\MiKTeX\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
@@ -256,24 +280,24 @@ File: babel.def 2014/09/25 3.9l Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen104
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen105
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count89
@@ -314,76 +338,72 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/changes/changes.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\changes\changes.sty"
 Package: changes 2015/04/27 v2.0.4 changes package
 
 *** changes package 2015/04/27 v2.0.4 ***
-(/usr/local/texlive/2015/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\xkeyval\xkeyval.sty"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+("C:\Program Files (x86)\MiKTeX\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX\tex\generic\xkeyval\xkvutils.tex"
 \XKV@toks=\toks21
 \XKV@tempa@toks=\toks22
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/keyval.tex))
+("C:\Program Files (x86)\MiKTeX\tex\generic\xkeyval\keyval.tex"))
 \XKV@depth=\count101
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/xifthen/xifthen.sty
-Package: xifthen 2009/04/17 v1.3 Extended ifthen features
+("C:\Program Files (x86)\MiKTeX\tex\latex\xifthen\xifthen.sty"
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/etex-pkg/etex.sty
-Package: etex 2015/03/02 v2.1 eTeX basic definition package (PEB,DPC)
-\et@xins=\count102
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count103
-\calc@Bcount=\count104
+\calc@Acount=\count102
+\calc@Bcount=\count103
 \calc@Adimen=\dimen113
 \calc@Bdimen=\dimen114
 \calc@Askip=\skip46
 \calc@Bskip=\skip47
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count105
+\calc@Ccount=\count104
 \calc@Cskip=\skip48
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\ifmtarg\ifmtarg.sty"
 Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files (x86)\MiKTeX\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count106
+\Gread@gobject=\count105
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
@@ -395,44 +415,44 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/pdfcolmk.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\pdfcolmk.sty"
 Package: pdfcolmk 2008/08/11 v1.2 Color support for pdfTeX via marks (HO)
 Package pdfcolmk Info: The color stack of pdfTeX >= 1.40 is used. Therefore
 (pdfcolmk)             this package is not necessary and not loaded.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/ulem/ulem.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\ulem\ulem.sty"
 \UL@box=\box28
 \UL@hyphenbox=\box29
 \UL@skip=\skip49
 \UL@hook=\toks23
 \UL@height=\dimen115
-\UL@pe=\count107
+\UL@pe=\count106
 \UL@pixel=\dimen116
 \ULC@box=\box30
 Package: ulem 2012/05/18
 \ULdepth=\dimen117
 )
-\c@Changes@AuthorCount=\count108
-\c@Changes@Author=\count109
-\c@Changes@AddCount=\count110
-\c@Changes@DeleteCount=\count111
-\c@Changes@ReplaceCount=\count112
+\c@Changes@AuthorCount=\count107
+\c@Changes@Author=\count108
+\c@Changes@AddCount=\count109
+\c@Changes@DeleteCount=\count110
+\c@Changes@ReplaceCount=\count111
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/truncate/truncate.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\truncate\truncate.sty"
 Package: truncate 2001/08/20  ver 3.6
 \@Trunc@RestHyph=\toks24
 )
 \Changes@Len@summ=\skip50
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+("C:\Program Files (x86)\MiKTeX\tex\latex\caption\subcaption.sty"
+Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+("C:\Program Files (x86)\MiKTeX\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
+("C:\Program Files (x86)\MiKTeX\tex\latex\caption\caption3.sty"
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen118
 \captionmargin@=\dimen119
 \captionwidth=\dimen120
@@ -441,39 +461,39 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen123
 \caption@hangindent=\dimen124
 )
-\c@ContinuedFloat=\count113
+\c@ContinuedFloat=\count112
 )
-\c@subfigure=\count114
-\c@subtable=\count115
+\c@subfigure=\count113
+\c@subtable=\count114
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\adjustbox\adjustbox.sty"
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\adjustbox\adjcalc.sty"
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/trimclip.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\adjustbox\trimclip.sty"
 Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\graphics.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 )
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/collectbox/collectbox.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\collectbox\collectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box31
 )
@@ -483,7 +503,7 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@ury=\dimen130
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+("C:\Program Files (x86)\MiKTeX\tex\latex\adjustbox\tc-pdftex.def"
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen131
@@ -491,20 +511,20 @@ File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 \adjbox@Depth=\dimen133
 \adjbox@Totalheight=\dimen134
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count116
+\c@checkoddpage=\count115
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/varwidth/varwidth.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\ltxmisc\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box32
-\sift@deathcycles=\count117
+\sift@deathcycles=\count116
 \@vwid@loff=\dimen135
 \@vwid@roff=\dimen136
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count118
+\c@float@type=\count117
 \float@exts=\toks25
 \float@box=\box33
 \@float@everytoks=\toks26
@@ -512,27 +532,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 \@float@every@table=\toks27
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2015/04/19 v3.0 programmable bibliographies (PK/JW/AB)
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\biblatex.sty"
+Package: biblatex 2016/03/03 v3.3 programmable bibliographies (PK/JW/AB)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex2.sty
-Package: biblatex2 2015/04/19 v3.0 programmable bibliographies (biber) (PK/JW/A
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\biblatex_.sty"
+Package: biblatex_ 2016/03/03 v3.3 programmable bibliographies (biber) (PK/JW/A
 B)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/05/04 v2.2 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count119
+("C:\Program Files (x86)\MiKTeX\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count118
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -541,55 +561,55 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count120
+\lrq@indent=\count119
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/logreq/logreq.def
+("C:\Program Files (x86)\MiKTeX\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count121
-\c@listtotal=\count122
-\c@listcount=\count123
-\c@liststart=\count124
-\c@liststop=\count125
-\c@citecount=\count126
-\c@citetotal=\count127
-\c@multicitecount=\count128
-\c@multicitetotal=\count129
-\c@instcount=\count130
-\c@maxnames=\count131
-\c@minnames=\count132
-\c@maxitems=\count133
-\c@minitems=\count134
-\c@citecounter=\count135
-\c@savedcitecounter=\count136
-\c@uniquelist=\count137
-\c@uniquename=\count138
-\c@refsection=\count139
-\c@refsegment=\count140
-\c@maxextratitle=\count141
-\c@maxextratitleyear=\count142
-\c@maxextrayear=\count143
-\c@maxextraalpha=\count144
-\c@abbrvpenalty=\count145
-\c@highnamepenalty=\count146
-\c@lownamepenalty=\count147
-\c@maxparens=\count148
-\c@parenlevel=\count149
-\blx@tempcnta=\count150
-\blx@tempcntb=\count151
-\blx@tempcntc=\count152
-\blx@maxsection=\count153
-\blx@maxsegment@0=\count154
-\blx@notetype=\count155
-\blx@parenlevel@text=\count156
-\blx@parenlevel@foot=\count157
-\blx@sectionciteorder@0=\count158
+\c@tabx@nest=\count120
+\c@listtotal=\count121
+\c@listcount=\count122
+\c@liststart=\count123
+\c@liststop=\count124
+\c@citecount=\count125
+\c@citetotal=\count126
+\c@multicitecount=\count127
+\c@multicitetotal=\count128
+\c@instcount=\count129
+\c@maxnames=\count130
+\c@minnames=\count131
+\c@maxitems=\count132
+\c@minitems=\count133
+\c@citecounter=\count134
+\c@savedcitecounter=\count135
+\c@uniquelist=\count136
+\c@uniquename=\count137
+\c@refsection=\count138
+\c@refsegment=\count139
+\c@maxextratitle=\count140
+\c@maxextratitleyear=\count141
+\c@maxextrayear=\count142
+\c@maxextraalpha=\count143
+\c@abbrvpenalty=\count144
+\c@highnamepenalty=\count145
+\c@lownamepenalty=\count146
+\c@maxparens=\count147
+\c@parenlevel=\count148
+\blx@tempcnta=\count149
+\blx@tempcntb=\count150
+\blx@tempcntc=\count151
+\blx@maxsection=\count152
+\blx@maxsegment@0=\count153
+\blx@notetype=\count154
+\blx@parenlevel@text=\count155
+\blx@parenlevel@foot=\count156
+\blx@sectionciteorder@0=\count157
 \labelnumberwidth=\skip51
 \labelalphawidth=\skip52
 \biblabelsep=\skip53
@@ -600,83 +620,83 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip58
 \blx@bcfin=\read1
 \blx@bcfout=\write3
-\c@mincomprange=\count159
-\c@maxcomprange=\count160
-\c@mincompwidth=\count161
+\c@mincomprange=\count158
+\c@maxcomprange=\count159
+\c@mincompwidth=\count160
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/blx-dm.def)
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\blx-dm.def")
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count162
-\c@savedafterword=\count163
-\c@annotator=\count164
-\c@savedannotator=\count165
-\c@author=\count166
-\c@savedauthor=\count167
-\c@bookauthor=\count168
-\c@savedbookauthor=\count169
-\c@commentator=\count170
-\c@savedcommentator=\count171
-\c@editor=\count172
-\c@savededitor=\count173
-\c@editora=\count174
-\c@savededitora=\count175
-\c@editorb=\count176
-\c@savededitorb=\count177
-\c@editorc=\count178
-\c@savededitorc=\count179
-\c@foreword=\count180
-\c@savedforeword=\count181
-\c@holder=\count182
-\c@savedholder=\count183
-\c@introduction=\count184
-\c@savedintroduction=\count185
-\c@namea=\count186
-\c@savednamea=\count187
-\c@nameb=\count188
-\c@savednameb=\count189
-\c@namec=\count190
-\c@savednamec=\count191
-\c@translator=\count192
-\c@savedtranslator=\count193
-\c@shortauthor=\count194
-\c@savedshortauthor=\count195
-\c@shorteditor=\count196
-\c@savedshorteditor=\count197
-\c@labelname=\count198
-\c@savedlabelname=\count199
-\c@institution=\count200
-\c@savedinstitution=\count201
-\c@lista=\count202
-\c@savedlista=\count203
-\c@listb=\count204
-\c@savedlistb=\count205
-\c@listc=\count206
-\c@savedlistc=\count207
-\c@listd=\count208
-\c@savedlistd=\count209
-\c@liste=\count210
-\c@savedliste=\count211
-\c@listf=\count212
-\c@savedlistf=\count213
-\c@location=\count214
-\c@savedlocation=\count215
-\c@organization=\count216
-\c@savedorganization=\count217
-\c@origlocation=\count218
-\c@savedoriglocation=\count219
-\c@origpublisher=\count220
-\c@savedorigpublisher=\count221
-\c@publisher=\count222
-\c@savedpublisher=\count223
-\c@language=\count224
-\c@savedlanguage=\count225
-\c@pageref=\count226
-\c@savedpageref=\count227
+\c@afterword=\count161
+\c@savedafterword=\count162
+\c@annotator=\count163
+\c@savedannotator=\count164
+\c@author=\count165
+\c@savedauthor=\count166
+\c@bookauthor=\count167
+\c@savedbookauthor=\count168
+\c@commentator=\count169
+\c@savedcommentator=\count170
+\c@editor=\count171
+\c@savededitor=\count172
+\c@editora=\count173
+\c@savededitora=\count174
+\c@editorb=\count175
+\c@savededitorb=\count176
+\c@editorc=\count177
+\c@savededitorc=\count178
+\c@foreword=\count179
+\c@savedforeword=\count180
+\c@holder=\count181
+\c@savedholder=\count182
+\c@introduction=\count183
+\c@savedintroduction=\count184
+\c@namea=\count185
+\c@savednamea=\count186
+\c@nameb=\count187
+\c@savednameb=\count188
+\c@namec=\count189
+\c@savednamec=\count190
+\c@translator=\count191
+\c@savedtranslator=\count192
+\c@shortauthor=\count193
+\c@savedshortauthor=\count194
+\c@shorteditor=\count195
+\c@savedshorteditor=\count196
+\c@labelname=\count197
+\c@savedlabelname=\count198
+\c@institution=\count199
+\c@savedinstitution=\count266
+\c@lista=\count267
+\c@savedlista=\count268
+\c@listb=\count269
+\c@savedlistb=\count270
+\c@listc=\count271
+\c@savedlistc=\count272
+\c@listd=\count273
+\c@savedlistd=\count274
+\c@liste=\count275
+\c@savedliste=\count276
+\c@listf=\count277
+\c@savedlistf=\count278
+\c@location=\count279
+\c@savedlocation=\count280
+\c@organization=\count281
+\c@savedorganization=\count282
+\c@origlocation=\count283
+\c@savedoriglocation=\count284
+\c@origpublisher=\count285
+\c@savedorigpublisher=\count286
+\c@publisher=\count287
+\c@savedpublisher=\count288
+\c@language=\count289
+\c@savedlanguage=\count290
+\c@pageref=\count291
+\c@savedpageref=\count292
 \shorthandwidth=\skip59
 \shortjournalwidth=\skip60
 \shortserieswidth=\skip61
@@ -686,41 +706,40 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2015/04/19 v3.0 biblatex compatibility (PK/JW/AB)
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\blx-compat.def"
+File: blx-compat.def 2016/03/03 v3.3 biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
+Package biblatex Info: ... file 'biblatex_.def' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 
-\c@textcitecount=\count228
-\c@textcitetotal=\count229
-\c@textcitemaxnames=\count230
-\c@biburlnumpenalty=\count231
-\c@biburlucpenalty=\count232
-\c@biburllcpenalty=\count233
-Normal \count register pool exhausted, switching to extended pool.
-\c@smartand=\count277
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\biblatex_.def"
+File: biblatex_.def 
+\c@textcitecount=\count293
+\c@textcitetotal=\count294
+\c@textcitemaxnames=\count295
+\c@biburlnumpenalty=\count296
+\c@biburlucpenalty=\count297
+\c@biburllcpenalty=\count298
+\c@smartand=\count299
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-File: authoryear.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\bbx\authoryear.bbx"
+File: authoryear.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2015/04/19 v3.0 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count278
-\c@bbx:relatedtotal=\count279
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\bbx\standard.bbx"
+File: standard.bbx 2016/03/03 v3.3 biblatex bibliography style (PK/JW/AB)
+\c@bbx:relatedcount=\count300
+\c@bbx:relatedtotal=\count301
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
-File: authoryear.cbx 2015/04/19 v3.0 biblatex citation style (PK/JW/AB)
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\cbx\authoryear.cbx"
+File: authoryear.cbx 2016/03/03 v3.3 biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -732,38 +751,38 @@ Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/biblatex.cfg
+("C:\Program Files (x86)\MiKTeX\tex\latex\biblatex\biblatex.cfg"
 File: biblatex.cfg 
 )))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/csquotes/csquotes.sty
-Package: csquotes 2015/04/15 v5.1e context-sensitive quotations (JAW)
-\csq@reset=\count280
-\csq@gtype=\count281
-\csq@glevel=\count282
-\csq@qlevel=\count283
-\csq@maxlvl=\count284
-\csq@tshold=\count285
+("C:\Program Files (x86)\MiKTeX\tex\latex\csquotes\csquotes.sty"
+Package: csquotes 2016/01/31 v5.1g context-sensitive quotations (JAW)
+\csq@reset=\count302
+\csq@gtype=\count303
+\csq@glevel=\count304
+\csq@qlevel=\count305
+\csq@maxlvl=\count306
+\csq@tshold=\count307
 \csq@ltx@everypar=\toks28
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/csquotes/csquotes.def
-File: csquotes.def 2015/04/15 v5.1e csquotes generic definitions (JAW)
+("C:\Program Files (x86)\MiKTeX\tex\latex\csquotes\csquotes.def"
+File: csquotes.def 2016/01/31 v5.1g csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/csquotes/csquotes.cfg
+("C:\Program Files (x86)\MiKTeX\tex\latex\csquotes\csquotes.cfg"
 File: csquotes.cfg 
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+("C:\Program Files (x86)\MiKTeX\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
@@ -789,31 +808,31 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files (x86)\MiKTeX\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen137
-\Hy@linkcounter=\count286
-\Hy@pagecounter=\count287
+\Hy@linkcounter=\count308
+\Hy@pagecounter=\count309
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
+("C:\Program Files (x86)\MiKTeX\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count288
+\Hy@SavedSpaceFactor=\count310
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+("C:\Program Files (x86)\MiKTeX\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -823,10 +842,10 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count289
+\c@Hy@tempcnt=\count311
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen138
-\Fld@menulength=\count290
+\Fld@menulength=\count312
 \Field@Width=\dimen139
 \Fld@charsize=\dimen140
 Package hyperref Info: Hyper figures OFF on input line 6295.
@@ -838,248 +857,80 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count291
-\c@Item=\count292
-\c@Hfootnote=\count293
+\Hy@abspage=\count313
+\c@Item=\count314
+\c@Hfootnote=\count315
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
+("C:\Program Files (x86)\MiKTeX\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count294
-\c@bookmark@seq@number=\count295
+\Fld@listcount=\count316
+\c@bookmark@seq@number=\count317
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip65
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/enumitem/enumitem.sty
+("C:\Program Files (x86)\MiKTeX\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enitkv@toks@=\toks29
 \labelindent=\skip66
 \enit@outerparindent=\dimen141
 \enit@toks=\toks30
 \enit@inbox=\box35
-\enitdp@description=\count296
+\enitdp@description=\count318
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count297
+("C:\Program Files (x86)\MiKTeX\tex\latex\listings\listings.sty"
+\lst@mode=\count319
 \lst@gtempboxa=\box36
 \lst@token=\toks31
-\lst@length=\count298
+\lst@length=\count320
 \lst@currlwidth=\dimen142
-\lst@column=\count299
-\lst@pos=\count300
+\lst@column=\count321
+\lst@pos=\count322
 \lst@lostspace=\dimen143
 \lst@width=\dimen144
-\lst@newlines=\count301
-\lst@lineno=\count302
+\lst@newlines=\count323
+\lst@lineno=\count324
 \lst@maxwidth=\dimen145
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count303
-\lst@skipnumbers=\count304
+("C:\Program Files (x86)\MiKTeX\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count325
+\lst@skipnumbers=\count326
 \lst@framebox=\box37
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2014/09/06 1.5e listings configuration
+("C:\Program Files (x86)\MiKTeX\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen146
-\lightrulewidth=\dimen147
-\cmidrulewidth=\dimen148
-\belowrulesep=\dimen149
-\belowbottomsep=\dimen150
-\aboverulesep=\dimen151
-\abovetopsep=\dimen152
-\cmidrulesep=\dimen153
-\cmidrulekern=\dimen154
-\defaultaddspace=\dimen155
-\@cmidla=\count305
-\@cmidlb=\count306
-\@aboverulesep=\dimen156
-\@belowrulesep=\dimen157
-\@thisruleclass=\count307
-\@lastruleclass=\count308
-\@thisrulewidth=\dimen158
-)
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
-)
-Package csquotes Info: Checking for multilingual support...
-Package csquotes Info: ... found 'babel' package.
-Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'english'.
-
-(./LaTeX introduction.aux)
-\openout1 = `"LaTeX introduction.aux"'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count309
-\scratchdimen=\dimen159
-\scratchbox=\box38
-\nofMPsegments=\count310
-\nofMParguments=\count311
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count312
-\MPscratchDim=\dimen160
-\MPnumerator=\count313
-\makeMPintoPDFobject=\count314
-\everyMPtoPDFconversion=\toks33
-)
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
-Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
-Package caption Info: End \AtBeginDocument code.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-)
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `"LaTeX introduction.bcf"'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file '"LaTeX introduction".bbl' found.
-
-(./LaTeX introduction.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                \IeC {\textbullet }
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
-Package biblatex Info: Reference section=0 on input line 24.
-Package biblatex Info: Reference segment=0 on input line 24.
-\AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring OFF on input line 24.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
-)
-\c@section@level=\count315
-)
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
-
-(./LaTeX introduction.out) (./LaTeX introduction.out)
-\@outlinefile=\write4
-\openout4 = `"LaTeX introduction.out"'.
-
-\c@lstlisting=\count316
- (./chapter-1.tex
-Chapter 1.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
-
-<figures/name_of_pic.png, id=24, 282.05376pt x 99.37125pt>
-File: figures/name_of_pic.png Graphic file (type png)
-
-<use figures/name_of_pic.png>
-Package pdftex.def Info: figures/name_of_pic.png used on input line 29.
-(pdftex.def)             Requested size: 225.6433pt x 79.4971pt.
- [1
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+! LaTeX Error: File `booktabs.sty' not found.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.23 \addbibresource
+                    {report.bib}
+*** (cannot \read from terminal in nonstop modes)
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 39.
-
-) [2 <./figures/name_of_pic.png>]
-\Changes@OutFile=\write5
-\openout5 = `"LaTeX introduction.soc"'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
- [3
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
- (./LaTeX introduction.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
-Package rerunfilecheck Info: File `"LaTeX introduction".out' has not changed.
-(rerunfilecheck)             Checksum: 5947D103264C57576ED34E019D762A9C;281.
-Package logreq Info: Writing requests to '"LaTeX introduction".run.xml'.
-\openout1 = `"LaTeX introduction.run.xml"'.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 16739 strings out of 493089
- 265974 string characters out of 6134842
- 727775 words of memory out of 5000000
- 19949 multiletter control sequences out of 15000+600000
- 7776 words of font info for 31 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 59i,9n,94p,896b,1484s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "LaTeX introduction.pdf" (3 pages, 98403 bytes).
-PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 15135 strings out of 493634
+ 239858 string characters out of 3142937
+ 492255 words of memory out of 3000000
+ 18337 multiletter control sequences out of 15000+200000
+ 3746 words of font info for 15 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 59i,0n,94p,898b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
