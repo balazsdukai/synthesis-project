@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 import numpy as np
+import datetime
+import time
+
 
 # Create a connection object
 try:
@@ -33,7 +36,7 @@ for i in range(24):
         result.insert(i,item)
 
 values = [x[1] for x in result]
-print values
+#print values
 
 
 fig,ax = plt.subplots()
@@ -42,7 +45,7 @@ width = 0.35
 
 n_hours = 24
 hours = np.arange(n_hours)
-print hours
+#print hours
 
 # Bar plot #1
 bars = ax.bar(hours+width, values, width,color = 'red',edgecolor = 'none')
@@ -61,10 +64,10 @@ cur.execute(SQL)
 result1 = cur.fetchall()
 
 for i in range(24):
-    print i
+    #print i
     if i not in [x[0] for x in result1]:
         item = i,0
-        print 'yes'
+        #print 'yes'
         result1.insert(i,item)
 
 values1 = [x[1] for x in result1]
@@ -73,7 +76,8 @@ values1 = [x[1] for x in result1]
 bars1 = ax.bar(hours, values1, width,color = '#00a6d6',edgecolor = 'none')
 
 
-
+time = datetime.time(0,0,0)
+print time
 
 
 
@@ -83,10 +87,15 @@ bars1 = ax.bar(hours, values1, width,color = '#00a6d6',edgecolor = 'none')
 
 ax.set_ylabel('Frequency')
 ax.set_xlabel('Hour of the day')
+#plt.xlabel('Time')
 ax.set_title('Frequency of access point: {}'.format(apname))
-ax.set_xticks(hours + (width/2))
-ax.set_xticklabels(hours, rotation=45, ha='center')
+#ax.set_xticks(hours + (width/2))
+#ax.set_xticklabels(hours, rotation=45, ha='center')
 
+#min45 = 45*60
+#hour = 60*60
+#lectureTimes = [6*hour+min45,8*hour+min45,10*hour+min45,12*hour+min45,13*hour+min45,15*hour+min45,17*hour+min45,19*hour+min45,21*hour+min45,23*hour+min45]
+#plt.xticks( lectureTimes )
 
 plt.show()
 
