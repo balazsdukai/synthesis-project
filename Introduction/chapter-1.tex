@@ -36,15 +36,15 @@ If you want to refer to a picture (or section/chapter/whatever) in the text, thi
 
 \section{Tables}
 Use \url{http://www.tablesgenerator.com} for creating nice looking tables. Use the 'booktabs' style!!!
-\begin{table}[]
+\begin{table}[H]
 \centering
 \caption{My caption}
 \label{my-label}
-\begin{tabular}{lll}
-\hline
-this & is      & a      \\ \hline
+\begin{tabular}{@{}lll@{}}
+\toprule
+this & is      & a      \\ \midrule
 nice & looking & table  \\
-am   & i       & right? \\ \hline
+am   & i       & right? \\ \bottomrule
 \end{tabular}
 \end{table}
 Unfortunately, LaTeX always places tables at the top or bottom of a page, so it will mostly mess up the layout! Use proper referencing in the text to make sure tables are read as they should! \autoref{my-label}.
@@ -54,6 +54,9 @@ It would be nice if everyone could go over the parts they have written in the mi
 Let's cite! The Einstein's journal paper \cite{mautz2012indoor} and the Dirac's 
 book \cite{meneses2012large} are physics related items. 
 
+\section{bold and italics}
+\textbf{this text will be bold!}
+\textit{this text will be in italics}
 
 
 
