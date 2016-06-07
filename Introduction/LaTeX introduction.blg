@@ -1,0 +1,17 @@
+[0] Config.pm:324> INFO - This is Biber 2.1
+[1] Config.pm:327> INFO - Logfile is 'LaTeX introduction.blg'
+[89] biber-darwin:276> INFO - === Tue Jun  7, 2016, 09:20:20
+[89] Biber.pm:333> INFO - Reading 'LaTeX introduction.bcf'
+[283] Biber.pm:645> INFO - Found 3 citekeys in bib section 0
+[305] Biber.pm:2977> INFO - Processing section 0
+[324] Biber.pm:3115> INFO - Looking for bibtex format file 'report.bib' for section 0
+[326] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[328] bibtex.pm:895> INFO - Found BibTeX data source 'report.bib'
+[332] Utils.pm:146> WARN - I didn't find a database entry for '\IeC {\textbullet }' (section 0)
+[364] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[364] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[364] Biber.pm:2854> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[365] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[369] bbl.pm:505> INFO - Writing 'LaTeX introduction.bbl' with encoding 'UTF-8'
+[370] bbl.pm:596> INFO - Output to LaTeX introduction.bbl
+[370] Biber.pm:106> INFO - WARNINGS: 1

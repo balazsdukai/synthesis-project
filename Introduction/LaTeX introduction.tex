@@ -1,0 +1,30 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Matthijs Bon}
+\title{LaTeX Introduction}
+\usepackage{changes}
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage{float}
+\restylefloat{table}
+\usepackage[style=authoryear,sorting=nyt,backend=biber]{biblatex}\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage[inline]{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\graphicspath{ {figures/} }
+
+\usepackage[backend=biber]{biblatex}
+\usepackage{booktabs}
+\addbibresource{report.bib}
+\begin{document}
+
+\input{chapter-1}
+
+\nocite{•}
+\printbibliography
+\end{document}
