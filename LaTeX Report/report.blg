@@ -1,15 +1,15 @@
 [0] Config.pm:324> INFO - This is Biber 2.1
 [0] Config.pm:327> INFO - Logfile is 'report.blg'
-[39] biber-darwin:276> INFO - === Mon Jun  6, 2016, 10:51:20
-[39] Biber.pm:333> INFO - Reading 'report.bcf'
-[127] Biber.pm:642> INFO - Using all citekeys in bib section 0
-[143] Biber.pm:2977> INFO - Processing section 0
-[157] Biber.pm:3115> INFO - Looking for bibtex format file 'report.bib' for section 0
-[159] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
-[162] bibtex.pm:895> INFO - Found BibTeX data source 'report.bib'
-[279] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[279] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[279] Biber.pm:2854> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[279] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
-[295] bbl.pm:505> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[297] bbl.pm:596> INFO - Output to report.bbl
+[53] biber-darwin:276> INFO - === Tue Jun  7, 2016, 14:25:21
+[53] Biber.pm:333> INFO - Reading 'report.bcf'
+[151] Biber.pm:642> INFO - Using all citekeys in bib section 0
+[182] Biber.pm:2977> INFO - Processing section 0
+[207] Biber.pm:3115> INFO - Looking for bibtex format file 'report.bib' for section 0
+[209] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[211] bibtex.pm:895> INFO - Found BibTeX data source 'report.bib'
+[350] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[350] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[350] Biber.pm:2854> INFO - Sorting list 'nyt' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[350] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[366] bbl.pm:505> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[368] bbl.pm:596> INFO - Output to report.bbl

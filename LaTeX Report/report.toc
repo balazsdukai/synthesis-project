@@ -68,7 +68,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.1}First approach:including devices passing by}{22}{subsection.4.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Second approach:excluding devices passing by}{24}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.2}Second approach:excluding devices passing by}{23}{subsection.4.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.3}Frequency of entrance and exit access points}{25}{subsection.4.6.3}
 \defcounter {refsection}{0}\relax 
