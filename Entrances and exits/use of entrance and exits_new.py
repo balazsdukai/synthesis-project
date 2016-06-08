@@ -47,6 +47,7 @@ def startCounts():
         print time
     print type(times)
     print times[0]
+    #print times
     print type(times[0])
     print len(times)
     print ''
@@ -54,6 +55,7 @@ def startCounts():
     print startCounts[0]
     print type(startCounts[0])
     print len(startCounts)
+    #print startCounts
     print 'ja?'
 
 
@@ -74,7 +76,15 @@ def addMins(tm, mins):
     print fulldate
     return fulldate.time()
 
-
+def addLectureStart():
+    # add the start of each lecture as a vertical line
+    lectureStart = plt.axvline((60*60*8)+(45*60),color='k',linestyle='--',label='start lecture')
+    plt.axvline((60*60*10)+(45*60),color='k',linestyle='--')
+    plt.axvline((60*60*12)+(45*60),color='k',linestyle='--')
+    plt.axvline((60*60*13)+(45*60),color='k',linestyle='--')
+    plt.axvline((60*60*15)+(45*60),color='k',linestyle='--')
+    plt.axvline((60*60*17)+(45*60),color='k',linestyle='--')
+    return lectureStart
 
 def styleGraph():
     plt.xlim((60*60*6,24*60*60))
@@ -88,15 +98,6 @@ def styleGraph():
     print 'whatsup'
     plt.show()
 
-def addLectureStart():
-    # add the start of each lecture as a vertical line
-    lectureStart = plt.axvline((60*60*8)+(45*60),color='k',linestyle='--',label='start lecture')
-    plt.axvline((60*60*10)+(45*60),color='k',linestyle='--')
-    plt.axvline((60*60*12)+(45*60),color='k',linestyle='--')
-    plt.axvline((60*60*13)+(45*60),color='k',linestyle='--')
-    plt.axvline((60*60*15)+(45*60),color='k',linestyle='--')
-    plt.axvline((60*60*17)+(45*60),color='k',linestyle='--')
-    return lectureStart
 
 def main():
     print 'start main'
