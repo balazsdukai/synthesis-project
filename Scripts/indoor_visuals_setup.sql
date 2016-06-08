@@ -5,41 +5,8 @@ CREATE MATERIALIZED VIEW visualization.bk_bpart_unq AS
 SELECT DISTINCT id, buildingpart
 FROM public.buildingparts_bk;
 
--- drop materialized view visualization.bk_movement;
-
--- view to store the aggergated movement counts
-CREATE TABLE visualization.bk_movement AS
-SELECT 
-    startp,
-    ep.buildingpart AS endp,
-    cnt
-FROM (
-    SELECT 
-        sp.buildingpart AS startp,
-        a.to_bldpart,
-        a.cnt
-    FROM 
-        (SELECT 
-            from_bldpart,
-            to_bldpart,
-            count(*) AS cnt
-        FROM public.g2_buildingpartmovements
-        WHERE to_bldpart > 0 and from_bldpart > 0
-        GROUP BY from_bldpart, to_bldpart) AS a
-    INNER JOIN visualization.bk_bpart_unq AS sp
-        ON a.from_bldpart = sp.id
-    ) b
-INNER JOIN visualization.bk_bpart_unq AS ep
-    ON b.to_bldpart = ep.id;
-
-CREATE INDEX startp_idx ON visualization.bk_movement (startp);
-CREATE INDEX endp_idx ON visualization.bk_movement (endp);
-CREATE INDEX cnt_idx ON visualization.bk_movement (cnt);
-
--- refresh materialized view with: 
--- REFRESH MATERIALIZED VIEW visualization.bk_movement;
-
-
+-- !!!
+-- see create_bk_movement.sql for creating the required movements table
 
 -- add building part name field to the edge-vertex table
 ALTER TABLE visualization.bk_paths_vertices_pgr 
