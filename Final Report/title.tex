@@ -1,0 +1,69 @@
+\begin{titlepage}
+
+
+\begin{center}
+
+%% Insert the TU Delft logo at the bottom of the page.
+
+%% Print the title in cyan.
+{\makeatletter
+\largetitlestyle\fontsize{64}{94}\selectfont\@title
+%\largetitlestyle\color{tudelft-cyan}\Huge\@title
+\makeatother}
+
+%% Print the optional subtitle in black.
+{\makeatletter
+\ifx\@subtitle\undefined\else
+    \bigskip
+   {\tudsffamily\fontsize{22}{32}\selectfont\@subtitle}    
+    %\titlefont\titleshape\LARGE\@subtitle
+\fi
+\makeatother}
+
+\bigskip
+\bigskip
+
+by
+%door
+
+\bigskip
+\bigskip
+
+%% Print the name of the author.
+{\makeatletter
+%\largetitlefont\Large\bfseries\@author
+\largetitlestyle\fontsize{26}{26}\selectfont\@author
+\makeatother}
+
+\bigskip
+\bigskip
+
+{\fontsize{15}{0.2}\selectfont Synthesis project of Geomatics
+%ter verkrijging van de graad van Master of Science
+
+at the Delft University of Technology,}
+%aan de Technische Universiteit Delft,
+
+\vfill
+
+\begin{tabular}{lll}
+    Project duration: & \multicolumn{2}{l}{April 16, 2016 -- June 17, 2016} \\
+\end{tabular}
+%% Only include the following lines if confidentiality is applicable.
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+%\\[1cm]
+to be presented on Friday May 20, 2016.
+\end{center}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node at (current page.south)[anchor=south,inner sep=0pt]{
+        \includegraphics{cover/logo_black}
+    };
+\end{tikzpicture}
+
+\end{titlepage}
+
