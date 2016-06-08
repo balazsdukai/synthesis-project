@@ -1,13 +1,16 @@
 ﻿-- function to match the traffic count to the path network in BK
 -- table and field names are hardcoded, it requires the data model as it is set up by 'indoor_visuals_setup.sql'
+-- function is bound to the 'visualization' schema
 -- uses pgrouting 2.1.0 pgr_dijkstra() function
 -- Example use:
--- SELECT calculate_traffic();
+-- input: name of the table that contains the movement counts as it is made with 'create_bk_movement.sql'
+-- SELECT calculate_traffic('bk_movement');
 
-CREATE OR REPLACE FUNCTION calculate_traffic()
+CREATE OR REPLACE FUNCTION calculate_traffic(movement_table text, traffic_table text)
     RETURNS text
 AS $$
-rv = plpy.execute("select * from visualization.bk_movement");
+query = "select * from visualization.{}".format(movement_table)
+rv = plpy.execute(query);
 a = "Succes";
 for i in rv:
     startp = i['startp']
@@ -24,8 +27,9 @@ for i in rv:
     for e in s_path:
 		edge_id = e['edge']
 		if edge_id >= 0:
-			query = "update visualization.bk_traffic set cnt = cnt + {} where edge_id = {};".format(cnt, edge_id)
+			query = "update visualization.{} set cnt = cnt + {} where edge_id = {};".format(traffic_table, cnt, edge_id)
 			plpy.execute(query)
 return a
 $$ LANGUAGE plpythonu;
 
+--DROP FUNCTION calculate_traffic(text);
