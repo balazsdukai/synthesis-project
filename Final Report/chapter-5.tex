@@ -38,7 +38,7 @@ This section will describe the main datasource within the Synthesis Project; a P
 	\label{segmentwifilog}
 	\begin{tabular}{@{}lllllllll@{}}
 		\toprule
-		\textbf{username} & \textbf{mac} & \textbf{asstime} & \textbf{}  & \textbf{maploc}                                                     & \textbf{sesdur} & \textbf{snr} & \textbf{ssi} & \textbf{importfile}          \\ \midrule
+		\textbf{username} & \textbf{mac} & \textbf{asstime} & \textbf{apname}  & \textbf{maploc}                                                     & \textbf{sesdur} & \textbf{snr} & \textbf{ssi} & \textbf{importfile}          \\ \midrule
 		j85cCQrGQa..      & l6iOu+xxOq.. & 14-4-2016 12:30  & A-23-0-029 & System Campus \textgreater 23-CITG \textgreater 4e Verdieping       & 1:32:02         & 35           & -57          & 20160414-wifitracking.csv.gz \\
 		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 7:49   & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 5:32:16         & 37           & -56          & 20160414-wifitracking.csv.gz \\
 		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 13:22  & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 0:40:20         & 46           & -50          & 20160414-wifitracking.csv.gz \\
@@ -93,8 +93,8 @@ from (
 
 \begin{table}[H]
 	\centering
-	\includegraphics[scale=1]{timetonextscan.PNG}
- tiofigure:n{The time and time to next scan at a random day}
+	\captionsetup{justification=centering}
+	\caption{The time and time to next scan at a random day}
 	\label{timetonextscan}
 	\begin{tabular}{@{}llll@{}}
 		\toprule
@@ -119,7 +119,7 @@ from (
                                                                        
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
 	\caption{Varying session durations}
@@ -141,8 +141,7 @@ from (
 \end{table}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
-
-\textbf{snr:}
+\textbf{snr:}\\
 The signal to noise (snr) describes a measurement that compares the signal strength to the level of background noise (in dB).\\\\
 \textbf{rssi:} \\
 The received signal strength indicator (rssi) describes the received signal strength (in dB).

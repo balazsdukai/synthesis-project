@@ -12,7 +12,7 @@ A location represents a geographic position where a user stays, i.e. a user is i
 \subsection{Individual trajectory}
 An individual’s trajectory is constructed as a sequence of locations in order of the scan time. Start and end time of a trajectory can be specified with a time interval, e.g. a day or week. If p is a location, then a trajectory can be written as:
 $$p_{1} \rightarrow p_{2} \rightarrow p_{3} \rightarrow …\rightarrow p_{n}$$
-Given a time interval, there is a set of individual trajectories \textit{S} = \{t_{1}, t_{2}, t_{3},...,t_{n}\} where each t_{i} is the trajectory over a time interval of one user. 
+Given a time interval, there is a set of individual trajectories $$\textit{S} = \{t_{1}, t_{2}, t_{3},...,t_{n}\}$$ where each $$t_{i}$$ is the trajectory over a time interval of one user. 
 
 \subsection{Trajectory Pattern}
 From a set \textit{S} of trajectories, different patterns can be identified using sequential pattern mining algorithms. Frequency of a trajectory by all users of the campus can be detected. This can be represented as a trajectory \textit{T} with a support \textit{s}. Support means how many times the same sequence, or sub-sequence, is shared in the set of trajectories. This gives valuable information on the order common buildings are used and what order of buildings occurs the most. Furthermore, the length of common trajectories can be discovered. This allows for identification of movement patterns of a specific length \textit{n}. Also, when location is not considered, but only the length of a trajectory, the mobility pattern of an individual can be described in terms of how many times he/she re-locates. \\\\

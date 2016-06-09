@@ -86,7 +86,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.1}Introduction}{27}{section.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Theory / methods}{27}{section.10.2}
+\contentsline {section}{\numberline {10.2}Problem description}{27}{section.10.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {10.2.1}Location extraction}{27}{subsection.10.2.1}
 \defcounter {refsection}{0}\relax 
