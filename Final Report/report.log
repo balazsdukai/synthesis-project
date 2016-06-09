@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  9 JUN 2016 17:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  9 JUN 2016 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2270,13 +2270,19 @@ LaTeX Warning: Command \textellipsis invalid in math mode on input line 14.
 
 ) (./chapter-11.tex [28]
 Chapter 11.
+<figures/bk_BG_bparts.png, id=652, 502.87875pt x 628.3475pt>
+File: figures/bk_BG_bparts.png Graphic file (type png)
 
-LaTeX Warning: Reference `figure:bk_graph' on page 29 undefined on input line 3
-9.
+<use figures/bk_BG_bparts.png>
+Package pdftex.def Info: figures/bk_BG_bparts.png used on input line 44.
+(pdftex.def)             Requested size: 251.43875pt x 314.17297pt.
 
-[29
+Underfull \vbox (badness 1769) has occurred while \output is active []
 
-]) (./chapter-12.tex [30]
+ [29
+
+])
+(./chapter-12.tex [30 <./figures/bk_BG_bparts.png>]
 Chapter 12.
 ) (./chapter-13.tex [31
 
@@ -2333,16 +2339,20 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 30249 strings out of 493089
- 530230 string characters out of 6134842
- 958738 words of memory out of 5000000
- 32882 multiletter control sequences out of 15000+600000
+ 30255 strings out of 493089
+ 530378 string characters out of 6134842
+ 958865 words of memory out of 5000000
+ 32886 multiletter control sequences out of 15000+600000
  160551 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,74p,1688b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2362,10 +2372,10 @@ ia/putbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/put
 r8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
 
-Output written on report.pdf (47 pages, 3020973 bytes).
+Output written on report.pdf (47 pages, 3076992 bytes).
 PDF statistics:
- 796 PDF objects out of 1000 (max. 8388607)
- 646 compressed objects within 7 object streams
- 168 named destinations out of 1000 (max. 500000)
- 585 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 800 PDF objects out of 1000 (max. 8388607)
+ 649 compressed objects within 7 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 590 words of extra memory for PDF output out of 10000 (max. 10000000)
 
