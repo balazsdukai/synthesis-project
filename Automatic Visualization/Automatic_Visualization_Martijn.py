@@ -25,9 +25,9 @@ sqlPath = os.getcwd() + '/sql/'
 def main (blds_from,blds_to,dates,types):
     #weekWeekend()
     #mobileStatic()
-    #fromAndToBuilding(0)
+    fromAndToBuilding(11)
     #withWithoutWorld()
-    examWhiteNormal()
+    #examWhiteNormal()
     
 
     conn.close()
@@ -41,15 +41,15 @@ def examWhiteNormal():
     # get data
     dates = getDates('normal') 
     data = filterMovements(blds_from,blds_to,dates,types,True)
-    movements,times = countMovements(blds_from,blds_to,dates, types)
+    movements,times = countMovements(dates)
 
     dates = getDates('exam')
     data = filterMovements(blds_to,blds_from,dates,types,True)
-    movements2,times2 = countMovements(blds_to,blds_from,dates, types)
+    movements2,times2 = countMovements(dates)
 
     dates = getDates('white')
     data = filterMovements(blds_to,blds_from,dates,types,True)
-    movements3,times3 = countMovements(blds_to,blds_from,dates, types)
+    movements3,times3 = countMovements(dates)
 
     # plot data
     normal, = plt.plot(times,movements,color='b',label='normal week')
@@ -63,21 +63,22 @@ def examWhiteNormal():
     
 
 def withWithoutWorld():
-    dates = getDates('week')
+    dates = getDates('all')
     #dates = [datetime.date(2016, 4, 11)]
     types = ['mobile','static']
+    spatialLevel = 'buildingpart'
     
 
     # get data
-    blds_from = getAllBlds(True)
-    blds_to = getAllBlds(True)
-    data = filterMovements(blds_from,blds_to,dates,types,True)
-    movements,times = countMovements(blds_from,blds_to,dates, types)
+    blds_from = getAllBldParts(True)
+    blds_to = getAllBldParts(True)
+    data = filterMovements(blds_from,blds_to,dates,types,True,spatialLevel)
+    movements,times = countMovements(dates)
 
-    blds_from = getAllBlds(False)
-    blds_to = getAllBlds(False)
-    data = filterMovements(blds_to,blds_from,dates,types,True)
-    movements2,times2 = countMovements(blds_to,blds_from,dates, types)
+    blds_from = getAllBldParts(False)
+    blds_to = getAllBldParts(False)
+    data = filterMovements(blds_to,blds_from,dates,types,True,spatialLevel)
+    movements2,times2 = countMovements(dates)
 
     # plot data
     withWorld, = plt.plot(times,movements,color='b',label='with world')
@@ -89,78 +90,83 @@ def withWithoutWorld():
     styleGraph()
 
 def mobileStatic():
-    blds_from = getAllBlds(False)
-    blds_to = getAllBlds(False)
-    dates = getDates('week')
-    
+    blds_from = getAllBlds(True)
+    blds_to = getAllBlds(True)
+    dates = getDates('all')
+    spatialLevel = 'building'
 
     # get data
     types = ['mobile']
-    data = filterMovements(blds_from,blds_to,dates,types,True)
-    movements,times = countMovements(blds_from,blds_to,dates, types)
+    data = filterMovements(blds_from,blds_to,dates,types,True,spatialLevel)
+    movements,times = countMovements(dates)
 
     types = ['static'] 
-    data = filterMovements(blds_to,blds_from,dates,types,True)
-    movements2,times2 = countMovements(blds_to,blds_from,dates, types)
+    data = filterMovements(blds_to,blds_from,dates,types,True,spatialLevel)
+    movements2,times2 = countMovements(dates)
 
     # plot data
     mobile, = plt.plot(times,movements,color='b',label='mobile')
     static, = plt.plot(times2,movements2,color='r',label='static')
     lectureTime = addlectureTime()
 
-    plt.title('Mobile vs static movement')
+    #plt.title('Mobile vs static movement')
     plt.legend(handles=[mobile,static,lectureTime])
     styleGraph()
 
 def weekWeekend():
-    blds_from = getAllBlds(True)
-    blds_to = getAllBlds(True)
+    blds_from = getAllBldParts(True)
+    blds_to = getAllBldParts(True)
     types = ['mobile']
+    spatialLevel = 'buildingpart'
 
     # get data
-    dates = getDates('week')
-    data = filterMovements(blds_from,blds_to,dates,types,True)
-    movements,times = countMovements(blds_from,blds_to,dates, types)
+    dates = getDates('normal')
+    data = filterMovements(blds_from,blds_to,dates,types,True,spatialLevel)
+    movements,times = countMovements(dates)
 
     dates = getDates('weekend')    
-    data = filterMovements(blds_to,blds_from,dates,types,True)
-    movements2,times2 = countMovements(blds_to,blds_from,dates, types)
+    data = filterMovements(blds_to,blds_from,dates,types,True,spatialLevel)
+    movements2,times2 = countMovements(dates)
 
     # plot data
     week, = plt.plot(times,movements,color='b',label='week')
     weekend, = plt.plot(times2,movements2,color='r',label='weekend')
     lectureTime = addlectureTime()
 
-    plt.title('Movement during week and weekend')
+    #plt.title('Movement during week and weekend')
     plt.legend(handles=[week,weekend,lectureTime])
     styleGraph()
 
 def fromAndToBuilding(bld_id):
+    spatialLevel = 'buildingpart'
     blds_from = [bld_id]
-    blds_to = getAllBlds(True)
-    dates = getDates('week')
+    blds_to = getAllBldParts(True)
+    dates = getDates('normal')
     types = ['mobile']
-    name = uf.building_id2name(bld_id,cur)
+    #name = uf.building_id2name(bld_id,cur)
+    name = 'Ketelhuis (restaurant)'
     if name == 'world':
         name = 'campus'
-    fromAndToMovement(blds_from,blds_to,dates,types,name)
+    fromAndToMovement(blds_from,blds_to,dates,types,name,spatialLevel)
 
-def fromAndToMovement(blds_from,blds_to,dates,types,name):
+def fromAndToMovement(blds_from,blds_to,dates,types,name,spatialLevel):
     # get data
-    data = filterMovements(blds_from,blds_to,dates,types,False)
-    movements,times = countMovements(blds_from,blds_to,dates, types)
+    data = filterMovements(blds_from,blds_to,dates,types,False,spatialLevel)
+    movements,times = countMovements(dates)
 
-    data = filterMovements(blds_to,blds_from,dates,types,False)
-    movements2,times2 = countMovements(blds_to,blds_from,dates, types)
+    data = filterMovements(blds_to,blds_from,dates,types,False,spatialLevel)
+    movements2,times2 = countMovements(dates)
+
 
     # plot data
-    to_campus, = plt.plot(times,movements,color='b',label='to {}'.format(name))
-    from_campus, = plt.plot(times2,movements2,color='r',label='from {}'.format(name))
+    from_movement, = plt.plot(times,movements,color='r',label='from {}'.format(name))
+    to_movement, = plt.plot(times2,movements2,color='b',label='to {}'.format(name))
     lectureTime = addlectureTime()
 
     # style graph
-    plt.title('Movement from and to {}'.format(name))
-    plt.legend(handles=[to_campus,from_campus,lectureTime])
+    #plt.title('Movement from and to {}'.format(name))
+    #from_movement
+    plt.legend(handles=[to_movement,from_movement,lectureTime])
     styleGraph()
 
 def styleGraph():
@@ -175,15 +181,25 @@ def styleGraph():
     plt.show()
     
 
-def filterMovements(blds_from,blds_to,dates, types,twoDirections):
-    directions = '(from_bld in ({}) and to_bld in ({}))'.format(list2string(blds_from), list2string(blds_to))
-    if twoDirections:
-        directions = directions + 'or' + '(to_bld in ({}) and from_bld in ({}))'.format(list2string(blds_from), list2string(blds_to))
-    cur.execute(open(sqlPath + "buildingMovements.sql", "r").read().format(directions, list2string(dates), list2string(types)))
+def filterMovements(blds_from,blds_to,dates, types,twoDirections=True,spatialLevel='building'):
+    print spatialLevel
+    if spatialLevel == 'building':
+        sqlFile = "buildingMovements.sql"
+        directions = '(from_bld in ({}) and to_bld in ({}))'.format(list2string(blds_from), list2string(blds_to))
+        if twoDirections:
+            directions = directions + 'or' + '(to_bld in ({}) and from_bld in ({}))'.format(list2string(blds_from), list2string(blds_to))
+    elif spatialLevel == 'buildingpart':
+        sqlFile = "buildingpartMovements.sql"
+        directions = '(from_bldpart in ({}) and to_bldpart in ({}))'.format(list2string(blds_from), list2string(blds_to))
+        if twoDirections:
+            directions = directions + 'or' + '(to_bldpart in ({}) and from_bldpart in ({}))'.format(list2string(blds_from), list2string(blds_to))
+    else:
+        print 'no spatial level'
+    cur.execute(open(sqlPath + sqlFile, "r").read().format(directions, list2string(dates), list2string(types)))
     print cur.query
     conn.commit()
 
-def countMovements(blds_from,blds_to,dates, types):
+def countMovements(dates):
     n_days = len(dates)
     movements = []
     times = []
@@ -193,10 +209,11 @@ def countMovements(blds_from,blds_to,dates, types):
         if i%100 == 0:
             print time
         SQL =  "select count(*) \
-            from buildingmovements_temp \
+            from movements_temp \
             where (end_time-(end_time-start_time)/2)::time  > '{}' - interval '10 minutes' \
             and (end_time-(end_time-start_time)/2)::time < '{}' + interval '10 minutes'".format(str(time),str(time))
         cur.execute(SQL)
+        #print cur.query
         movement = cur.fetchall()
         if movement == []:
             movements.append(0.0)
@@ -257,7 +274,8 @@ def getDates(requestedDates):
     elif requestedDates == 'all':
         week = [datetime.date(2016, 4, 1), datetime.date(2016, 4, 4), datetime.date(2016, 4, 5), datetime.date(2016, 4, 6), datetime.date(2016, 4, 7), datetime.date(2016, 4, 8), datetime.date(2016, 4, 11), datetime.date(2016, 4, 12), datetime.date(2016, 4, 13), datetime.date(2016, 4, 14), datetime.date(2016, 4, 15), datetime.date(2016, 4, 18), datetime.date(2016, 4, 19), datetime.date(2016, 4, 20), datetime.date(2016, 4, 21), datetime.date(2016, 4, 22), datetime.date(2016, 4, 25), datetime.date(2016, 4, 26), datetime.date(2016, 4, 27), datetime.date(2016, 4, 28), datetime.date(2016, 4, 29), datetime.date(2016, 5, 2), datetime.date(2016, 5, 3), datetime.date(2016, 5, 4), datetime.date(2016, 5, 5), datetime.date(2016, 5, 6), datetime.date(2016, 5, 9), datetime.date(2016, 5, 10), datetime.date(2016, 5, 11), datetime.date(2016, 5, 12), datetime.date(2016, 5, 13), datetime.date(2016, 5, 16), datetime.date(2016, 5, 17), datetime.date(2016, 5, 18), datetime.date(2016, 5, 19), datetime.date(2016, 5, 20), datetime.date(2016, 5, 23), datetime.date(2016, 5, 24), datetime.date(2016, 5, 25), datetime.date(2016, 5, 26), datetime.date(2016, 5, 27)]
         weekend = [datetime.date(2016, 4, 2), datetime.date(2016, 4, 3), datetime.date(2016, 4, 9), datetime.date(2016, 4, 10), datetime.date(2016, 4, 16), datetime.date(2016, 4, 17), datetime.date(2016, 4, 23), datetime.date(2016, 4, 24), datetime.date(2016, 4, 30), datetime.date(2016, 5, 1), datetime.date(2016, 5, 7), datetime.date(2016, 5, 8), datetime.date(2016, 5, 14), datetime.date(2016, 5, 15), datetime.date(2016, 5, 21), datetime.date(2016, 5, 22)]
-        return week.extend(weekend)
+        week.extend(weekend)
+        return week
     else:
         print 'dates not found'
 
@@ -271,6 +289,16 @@ def getAllBlds(world):
                 blds.append(record[0])
         else:
             blds.append(record[0])
+    return blds
+
+def getAllBldParts(world):
+    cur.execute('select distinct id from buildingparts_bk order by id')
+    records = cur.fetchall()
+    blds = []
+    for record in records:
+        blds.append(record[0])
+    if world:
+        blds.append(0)
     return blds
         
 
