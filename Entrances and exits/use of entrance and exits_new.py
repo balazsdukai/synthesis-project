@@ -45,16 +45,16 @@ def startCounts():
         times.append(time)
         time = addMins(time,5)
         print time
-    print type(times)
-    print times[0]
+    #print type(times)
+    #print times[0]
     #print times
-    print type(times[0])
-    print len(times)
-    print ''
-    print type(startCounts)
-    print startCounts[0]
-    print type(startCounts[0])
-    print len(startCounts)
+    #print type(times[0])
+    #print len(times)
+    #print ''
+    #print type(startCounts)
+    #print startCounts[0]
+    #print type(startCounts[0])
+    #print len(startCounts)
     #print startCounts
     print 'ja?'
 
@@ -71,9 +71,9 @@ def startCounts():
              
 def addMins(tm, mins):
     fulldate = datetime.datetime(100, 1, 1, tm.hour, tm.minute, tm.second)
-    print fulldate
+    #print fulldate
     fulldate = fulldate + datetime.timedelta(minutes=mins)
-    print fulldate
+    #print fulldate
     return fulldate.time()
 
 def addLectureStart():
