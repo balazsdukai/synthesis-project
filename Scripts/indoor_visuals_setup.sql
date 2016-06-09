@@ -43,6 +43,16 @@ INSERT INTO visualization.bk_traf_bouwpub (edge_id, cnt)
 SELECT gid AS edge_id, 0
 FROM visualization.bk_paths;
 
+--canteen
+CREATE TABLE if NOT EXISTS  visualization.bk_traf_canteen(
+    edge_id int4,
+    cnt int4 DEFAULT 0);
+
+-- fill IN the edge-ids
+INSERT INTO visualization.bk_traf_canteen (edge_id, cnt)
+SELECT gid AS edge_id, 0
+FROM visualization.bk_paths;
+
 --mobile
 CREATE TABLE if NOT EXISTS  visualization.bk_traf_mobile(
     edge_id int4,
