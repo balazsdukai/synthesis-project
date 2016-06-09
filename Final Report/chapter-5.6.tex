@@ -1,7 +1,7 @@
 % Beginning of a chapter
 % Use labels for referencing
 \chapter{Context}\label{entrances} 
-\section{Data description \& System of APs}\label{datadescription}
+\section{Data description}\label{datadescription}
 % this is a comment
 % normal text
 This section will describe the main datasource within the Synthesis Project; a PostgreSQL database containing the logs from the Wi-Fi scanners on the TU Delft campus. Each row in the wifilog table provides a data value for each column (\autoref{figure:segmentwifilog}).
@@ -92,29 +92,21 @@ The device is still connected to the same access point at the subsequent moment 
 	\label{sesdur_exampl3e}
 \end{figure}
 Because the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 10 seconds in this case. This is the time interval between the two moments of recording.
-
-
-
+\\
 \textbf{snr:}
 The signal to noise (snr) describes a measurement that compares the signal strength to the level of background noise (in dB).
 \\
 \textbf{rssi:}
 The received signal strength indicator (rssi) describes the received signal strength (in dB).
 
-
-
-
-\section{Hypothesis}\label{hypo}
-Our hypothesis is that finding clear answers to the questions is going to be hard. Firstly, because the existing ap layout is not designed for this purpose and therefore there are not always aps located near an entrance. Secondly, because the logging frequency is just a little more than 5 min. Ideally we would like the device to get scanned first at the very first ap it connects with. But because  of the logging frequency you have to be lucky. You have to connect with the ap near the entrance exactly at the time it logs the connected devices. 
+\section{System of APs}\label{systemofaps}
+This section will describe the current layout of access points (APs) on the TU Delft campus. The exact location of APs in a building is not known, but for the Faculty of Architecture. Therefore the system of APs in the Faculty of Architecure will be described in more detail. 
 \\
-But still we expect to see some results. The ap near the main entrance, assuming this entrance is used by most people, would still...
+The total number of access points, distributed over # buildings. 
+Mostly placed on walls or ceilings. Every access point has a floor location, but this does not mean only people on that floor can connect to that access point. Also rooms with high ceilings, such as the orange hall in bk, can have access point located at first floor level but also serve people 
 
-\section{Results}\label{results}
+
 \subsection{First approach: including passing devices}
-\subsection{Second approach: excluding passing devices}
-\subsection{Use of a specific access point over time}
-\subsection{conclusion}
-\subsection{recommendation}
 
 
 Begin numbered list
@@ -131,18 +123,6 @@ Begin bullet list
 \end{itemize}
 
 
-\section{Include graphics}
-To include graphics in the document, use the following template:
-
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.8]{name_of_pic.png}
-\captionsetup{justification=centering}
-\caption{Write a nice caption}
-\label{figure:labelforpicture}
-\end{figure}
-
-If you want to refer to a picture (or section/chapter/whatever) in the text, this can be done using the 'autoref' function. \autoref{figure:labelforpicture} shows how to include graphics in a document. This also works for sections: \autoref{movementpatterns}.
 
 \section{Tables}
 Use \url{http://www.tablesgenerator.com} for creating nice looking tables. Use the 'booktabs' style!!!
