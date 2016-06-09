@@ -43,24 +43,25 @@
 	5.5. Representativeness  
 	5.6. Data description & System of APs
 6. Movement patterns
-7. Pre-processing 
-8. Spatio-temperal movement patterns  
-	8.1. Introduction  
-	8.2. Theory / methods  
-	8.3. Implementation  
-	8.4. Results
-9. Trajectory patterns  
+7. Methodology
+8. Pre-processing 
+9. Spatio-temperal movement patterns  
 	9.1. Introduction  
 	9.2. Theory / methods  
 	9.3. Implementation  
 	9.4. Results
-10. Indoor spatio-temporal movement patterns  
+10. Trajectory patterns  
 	10.1. Introduction  
 	10.2. Theory / methods  
 	10.3. Implementation  
 	10.4. Results
-11. Conclusion (divided in chapters 7,8,9)
-12. Recommendations
+11. Indoor spatio-temporal movement patterns  
+	11.1. Introduction  
+	11.2. Theory / methods  
+	11.3. Implementation  
+	11.4. Results
+12. Conclusion (divided in chapters 9,10,11)
+13. Recommendations
 	a. Entrances (Xander)
 	b. Association rules (Balazs)
 	c. Distinguishing user groups (people moving in groups) (Simon)
@@ -68,7 +69,7 @@
 	e. AP system (scan time, also outdoors maybe?) (Matthijs)
 	f. Data reasoning (trajectories) (Matthijs evt Simon)
 	g. Visual exploration (what did and didnt work) (Ethan/Matthijs)
-13. Acknowledgements
-14. Appendix
+14. Acknowledgements
+15. Appendix
 
 
