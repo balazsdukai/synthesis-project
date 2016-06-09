@@ -1,22 +1,20 @@
 \chapter{Introduction}\label{Introduction}
 \section{Intro}\label{intro}
 Wireless Local Area Networks (WLAN) are widely used for indoor positioning of mobile devices within this network. The use of the Wi-Fi network to estimate the location of people is an attractive approach, since Wi-Fi access points (AP) are often available in indoor environments. Furthermore, smart phones are becoming essential in daily life, making it convincing to track mobile devices. This provides a platform to track people by using Wi-Fi monitoring technology. Knowledge of people’s locations and related routine activities are important for numerous activities, such as urban planning, emergency rescue and management of buildings.\\\\
-
-
 To understand the human motion behaviour many studies are conducted based on data collection of GPS receivers. The Global Navigation Satellite System (GNSS) is commonly used to track people in large scale environments. However due to poor quality of received signals from satellites in urban or indoor environments, GNSS receivers are not suitable in these environments. Moreover, GNSS receivers are convenient for self-tracking, but for large scale movement analysis, this data should be made available first before others can use it. This led to the development of alternative technologies to track people’s locations, including Bluetooth, Dead Reckoning, Radio frequency identification (RFID), ultra-wideband (UWB) and WLAN (\cite{mautz2012indoor}). WLAN has the advantage of widespread deployment, low cost and with the use of a smartphone as a receiver, the possibility to track a large amount of people.\\\\
-
 In general, there are four different location tracking techniques by using the Wi-Fi network: Propagation modelling, multilateration, Fingerprinting and Cell of Origin (CoO). Many of these methods rely on Received Signal Strength Indicators (RSSI) and/or previous set of calibration measurements. In comparison, CoO is the most straightforward technique and uses the location of the AP, to locate the mobile device. For, the location of the AP a mobile device is connected to, will give an estimation of the mobile devices' location, and thus the person. For this project, APs related to buildings and building-parts are used to track people’s movement.\\\\
-
-At the Technical University of Delft (TU Delft) a large scale Wi-Fi network is deployed across all facilities covering the indoor space of the campus. The network is known as an international roaming service for users in educational environments and called the eduroam network. It allows students and staff members from one university to use the infrastructure throughout the campus for free. This allows for large scale collection of Wi-Fi logs including individual scans of mobile devices.  A continuous collection of re-locations of devices to access points for a long duration will return detailed records of people’s movement. This ubiquitous and individual history location data derived from smartphones will present valuable knowledge on movement on the campus. For this reason, the project is carried out in request of the University’s department of Facility Management and Real Estate (FMRE). 
-
+At the Technical University of Delft (TU Delft) a large scale Wi-Fi network is deployed across all facilities covering the indoor space of the campus. The network is known as an international roaming service for users in educational environments and called the eduroam network. It allows students and staff members from one university to use the infrastructure throughout the campus for free. This allows for large scale collection of Wi-Fi logs including individual scans of mobile devices.  A continuous collection of re-locations of devices to access points for a long duration will return detailed records of people’s movement. This ubiquitous and individual history location data derived from smartphones will present valuable knowledge on movement on the campus. For this reason, the project is carried out in request of the University’s department of Facility Management and Real Estate (FMRE).\\\\
 In this project, Wi-Fi monitoring technology is used to discover movement
-patterns on the campus of TU Delft. Based on the relationship between activities and places, location history can be used to discover significant places, movement patterns and hotspots. FMRE can use this information to answer questions such "what is the relation between buildings", "where do people come from" and "how regular a trajectory occurs". This project will present a method for identification of movement patterns in a large scale indoor environments and between buildings. The method uses concepts of sequential pattern mining. Previous research has been done on sequential pattern mining, such as \cite{zhao2014discovering} to discover people’s life patterns from mobile Wi-Fi scans, \citep{meneses2012large} analysed place connectivity using the eduroam network and \cite{radaelli2013identifying} identifies indoor movement patterns by analysing a sequence of relocations. Individual movement can be identified as a sequence of relocations of a mobile device to different APs. Without any data between two subsequent re-locations, sequential analysis is a convincing way for identifying moving patterns from wifilogs.
-
+patterns on the campus of TU Delft. Based on the relationship between activities and places, location history can be used to discover significant places, movement patterns and hotspots. FMRE can use this information to answer questions such "what is the relation between buildings", "where do people come from" and "how regular a trajectory occurs". This project will present a method for identification of movement patterns in a large scale indoor environments and between buildings. The method uses concepts of sequential pattern mining. Previous research has been done on sequential pattern mining, such as \cite{zhao2014discovering} to discover people’s life patterns from mobile Wi-Fi scans, \citep{meneses2012large} analysed place connectivity using the eduroam network and \cite{radaelli2013identifying} identifies indoor movement patterns by analysing a sequence of relocations. Individual movement can be identified as a sequence of relocations of a mobile device to different APs. Without any data between two subsequent re-locations, sequential analysis is a convincing way for identifying moving patterns from wifilogs.\\\\
 \section{Purpose statement}\label{purpstate}
+The project is initiated by the idea that communication technologies can also be used to collect information about connections and connection attempts to Access Points (APs). This geo-referenced information can potentially be used to: \begin {enumerate*} [label=\itshape\arabic*\upshape),font={\color{red!0!black}\bfseries}] \item estimate the number of devices at a location at a certain time, representing presence of people at that place at that time or for a certain duration; \item track unique ID’s over several APs, reconstructing individual patterns of movement, resulting in
+aggregated flows of people and; \item define regular and irregular (temporal, deviating) activities at specific places.
+\end{enumerate*}
+
 Identifying movement patterns has attracted significant interest in recent years. This report will explain how movement patterns can be identified using large scale Wi-Fi based location data. This report tries to contribute with four proposes.
 \begin {enumerate*} [label=\itshape\arabic*\upshape),font={\color{red!0!black}\bfseries}] \item A method for identifying movement patterns by analysing individual sequences of relocations from a large scale Wi-Fi network; This includes filtering the raw data and automatically create individual trajectories over a time interval as a sequence of relocations; \item Identify spatio-temporal movement patterns of large crowds of people; \item Investigate different visualization methods for showing movement, based on a large scale Wi-Fi network. \item A method for analysing indoor movement using a constructed network graph of the underlying building floorplan.
 \end {enumerate*}
-\\\\
+
 
 The contributions can be described in one research question for this project.
 \begin{itemize}
@@ -28,13 +26,11 @@ In order to answer the research question, there are three applied subquestions:
 \item[$\textendash$] What movement patterns can be identified between buildings on TU Delft campus?
 \item[$\textendash$] What movement patterns can be identified between large indoor regions of the Faculty of Architecture?
 \end{itemize}
-\\\\
 
-The project is initiated by the idea that communication technologies can also be used to collect information
-about connections and connection attempts to Access Points (APs). This geo-referenced information can potentially be used to: \begin {enumerate*} [label=\itshape\arabic*\upshape),font={\color{red!0!black}\bfseries}] \item estimate the number of devices at a location at a certain time, representing presence of people at that place at that time or for a certain duration; \item track unique ID’s over several APs, reconstructing individual patterns of movement, resulting in
-aggregated flows of people and; \item define regular and irregular (temporal, deviating) activities at specific places.
-\end{enumerate*}
-\\\\
+
+
+
+
 
 
 
