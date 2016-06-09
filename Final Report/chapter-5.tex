@@ -30,49 +30,54 @@ This research was different from the research conducted in this Synthesis Projec
 % normal text
 This section will describe the main datasource within the Synthesis Project; a PostgreSQL database containing the logs from the Wi-Fi scanners on the TU Delft campus. Each row in the wifilog table provides a data value for each column (\autoref{segmentwifilog}).
 
+
 \begin{table}[H]
-\centering
-\captionsetup{justification=centering}
-\caption{A segment of the main datasource; the wifilog table}
-\label{segmentwifilog}
-\begin{tabular}{ll}
-\hline
-\textbf{username}        & \textbf{mac}               \\ \hline
-McSLjFD+k7...MlJZBNZf2E= & zNRHLcrwsPYD...Oh+3QvxJQM= \\
-McSLjFD+k7...MlJZBNZf2E= & zNRHLcrwsPYD...Oh+3QvxJQM= \\
-McSLjFD+k7...MlJZBNZf2E= & zNRHLcrwsPYD...Oh+3QvxJQM= \\
-McSLjFD+k7...MlJZBNZf2E= & zNRHLcrwsPYD...Oh+3QvxJQM= \\
-McSLjFD+k7...MlJZBNZf2E= & zNRHLcrwsPYD...Oh+3QvxJQM= \\ \hline
-\end{tabular}
+	\centering
+	\captionsetup{justification=centering}
+	\caption{A segment of the main datasource; the wifilog table}
+	\label{segmentwifilog}
+	\begin{tabular}{@{}lllllllll@{}}
+		\toprule
+		\textbf{username} & \textbf{mac} & \textbf{asstime} & \textbf{}  & \textbf{maploc}                                                     & \textbf{sesdur} & \textbf{snr} & \textbf{ssi} & \textbf{importfile}          \\ \midrule
+		j85cCQrGQa..      & l6iOu+xxOq.. & 14-4-2016 12:30  & A-23-0-029 & System Campus \textgreater 23-CITG \textgreater 4e Verdieping       & 1:32:02         & 35           & -57          & 20160414-wifitracking.csv.gz \\
+		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 7:49   & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 5:32:16         & 37           & -56          & 20160414-wifitracking.csv.gz \\
+		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 13:22  & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 0:40:20         & 46           & -50          & 20160414-wifitracking.csv.gz \\
+		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 14:02  & A-23-0-093 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 1:27:13         & 11           & -86          & 20160414-wifitracking.csv.gz \\
+		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 15:29  & A-23-0-091 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 0:05:08         & 30           & -65          & 20160414-wifitracking.csv.gz \\
+		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 15:34  & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 1:42:32         & 29           & -65          & 20160414-wifitracking.csv.gz \\
+		J0IwA+vpcS..      & HkLY1UMpBV.. & 14-4-2016 11:33  & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 1:27:40         & 33           & -59          & 20160414-wifitracking.csv.gz \\
+		J0IwA+vpcS..      & HkLY1UMpBV.. & 14-4-2016 13:01  & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 1:01:01         & 26           & -68          & 20160414-wifitracking.csv.gz \\
+		J0IwA+vpcS..      & HkLY1UMpBV.. & 14-4-2016 14:02  & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 3:30:19         & 25           & -68          & 20160414-wifitracking.csv.gz \\
+		J0IwA+vpcS..      & HkLY1UMpBV.. & 14-4-2016 17:32  & A-23-0-035 & System Campus \textgreater 23-CITG \textgreater 5e \& 6e Verdieping & 0:40:05         & 27           & -69          & 20160414-wifitracking.csv.gz \\ \bottomrule
+	\end{tabular}
 \end{table}
 
 The data value for each attribute (column) in the wifilog table will be described in more detail. 
-\\
-\textbf{username:}
+\\\\
+\textbf{username:}\\
 The username column provides the username, as a hashed text. Every user has a unique username, but can appear in the data more than once.
-\\
-\textbf{mac:}
+\\\\
+\textbf{mac:}\\
 The mac column provides the media access control adress (MAC address), as a hashed text. The MAC address is a unique identifier assigned to a specific piece of hardware, such as the network adapter located in Wi-Fi devices (mobile phones, tablets, laptops etc.). So, it would be possible that a user can have more than one device connected to the Wi-Fi eduroam network.
-\\
-\textbf{asstime:}
+\\\\
+\textbf{asstime:}\\
 The asstime is the time of which a connected device is recorded by the system.
-\\
-\textbf{apname:}
+\\\\
+\textbf{apname:}\\
 The apname is the name assigned to the access point. Every access point has a unique name. 
-\\
-\textbf{maploc:}
+\\\\
+\textbf{maploc:}\\
 The maploc describes the location of the access point. There could be multiple access points with the same maploc. For instance, there are 31 access points located on the ground floor of the Faculty of Architecture.
-\\
-\textbf{sesdur:}
+\\\\
+\textbf{sesdur:}\\
 The sesdur describes the session duration of which a device is connected to the access point. Because this is not as straightforward as it seems, this will be explained more extensively.
-\\
-wifherwi shows the the frequency of session durations.
-\\
+\\\\
+bladibla figure shows the the frequency of session durations.
+\\\\
 picture
-\\
+\\\\
 The figure shows a large peak at exactly 5 minutes, a peak at approximately 5 minutes and decreasing peaks after a time interval of approximately 5 minutes. It looks like it is recording in a certain time interval in which the device is (still) connected. \\\\
 In order to justify this, the query below is used to see the asstimes (and time to next asstime)
-\\
 \begin{lstlisting}[language=SQL]
 select *, asstime_next-asstime as difference
 from (
@@ -85,45 +90,58 @@ from (
 	order by asstime) as subquery
 \end{lstlisting}
 
-\begin{figure}[H]
+
+\begin{table}[H]
 	\centering
 	\includegraphics[scale=1]{timetonextscan.PNG}
-	\captionsetup{justification=centering}
-	\caption{The time and time to next scan at a random day}
-	\label{figure:timetonextscan}
-\end{figure}
+ tiofigure:n{The time and time to next scan at a random day}
+	\label{timetonextscan}
+	\begin{tabular}{@{}llll@{}}
+		\toprule
+		count & asstime        & asstime\_next  & difference \\ \midrule
+		2578  & 4-4-2016 13:04 & 4-4-2016 13:09 & 0:05:10    \\
+		2435  & 4-4-2016 13:09 & 4-4-2016 13:15 & 0:05:11    \\
+		2486  & 4-4-2016 13:15 & 4-4-2016 13:20 & 0:05:11    \\
+		2530  & 4-4-2016 13:20 & 4-4-2016 13:25 & 0:05:11    \\
+		2471  & 4-4-2016 13:25 & 4-4-2016 13:30 & 0:05:11    \\
+		2444  & 4-4-2016 13:30 & 4-4-2016 13:35 & 0:05:11    \\
+		2524  & 4-4-2016 13:35 & 4-4-2016 13:40 & 0:05:11    \\
+		2588  & 4-4-2016 13:40 & 4-4-2016 13:46 & 0:05:12    \\
+		2690  & 4-4-2016 13:46 & 4-4-2016 13:51 & 0:05:11    \\
+		2560  & 4-4-2016 13:51 & 4-4-2016 13:56 & 0:05:11    \\ \bottomrule
+	\end{tabular}
+\end{table}
 
-\autoref{figure:timetonextscan} shows that the time to the next scan is 5 minutes and several seconds in all cases. Most important is to know that all access points are recording the connected device(s) is at the same time. 
-\\
-The way this time interval of approximately 5 minutes is in the session duration, is explained using the three depicted segments of the wifilog table.
+         
+\autoref{timetonextscan} shows that the time to the next scan is 5 minutes and several seconds in all cases. Most important is to know that all access points are recording the connected device(s) is at the same time. 
+\\\\                                                        
+\autoref{sesdur_example} will be used to explain the way the time interval of approximately 5 minutes is coming back in the session duration.
+                                                                       
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+	\centering
+	\captionsetup{justification=centering}
+	\caption{Varying session durations}
+	\label{sesdur_example}
+	\begin{tabular}{@{}lllllll@{}}
+		\toprule
+		\textbf{id} & \textbf{username} & \textbf{mac} & \textbf{asstime} & \textbf{apname} & \textbf{maploc}                                                                     & \textbf{sesdur} \\ \midrule
+		1           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 10:13   & A-12-0-104      & System Campus \textgreater 12-Kramerslab \& Proeffabriek \textgreater !e Verdieping & 0:05:00         \\
+		2           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 10:18   & A-132-0-064     & System Campus \textgreater 32-OCP-IO \textgreater 1e Verdieping                     & 0:20:27         \\
+		3           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 11:36   & A-132-0-105     & Root Area                                                                           & 0:15:22         \\
+		4           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 11:51   & A-132-0-066     & System Campus \textgreater 32-OCP-IO \textgreater 1e Verdieping                     & 0:20:35         \\
+		5           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:01   & A-132-0-069     & System Campus \textgreater 32-OCP-IO \textgreater 1e Verdieping                     & 0:05:43         \\
+		6           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:06   & A-132-0-133     & System Campus \textgreater 32-OCP-IO \textgreater 4e Verdieping                     & 0:05:18         \\
+		7           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:12   & A-132-0-066     & System Campus \textgreater 32-OCP-IO \textgreater 1e Verdieping                     & 0:05:10         \\
+		8           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:17   & A-132-0-104     & System Campus \textgreater 32-OCP-IO \textgreater 2e Verdieping                     & 0:05:10         \\
+		9           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:22   & A-132-0-067     & System Campus \textgreater 32-OCP-IO \textgreater 1e Verdieping                     & 0:05:10         \\
+		10          & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:27   & A-132-0-066     & System Campus \textgreater 32-OCP-IO \textgreater 1e Verdieping                     & 0:10:21         \\ \bottomrule
+	\end{tabular}
+\end{table}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=1]{sesdur_example1.PNG}
-	\captionsetup{justification=centering}
-	\caption{The device is not connected to any of the access points on the campus at the subsequent moment of recording}
-	\label{sesdur_example1}
-\end{figure}
-The device is not connected in the subsequent moment of recording. The session duration will be exactly 5 minutes.
-\\
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=1]{sesdur_example2.PNG}
-	\captionsetup{justification=centering}
-	\caption{The device is connected to the same access point at the subsequent moment of recording}
-	\label{sesdur_example2}
-\end{figure}
-The device is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 23 seconds. This is the time interval between the first moment the device is recorded and the time the device is not recorded by the access point anymore.
-\\
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=1]{sesdur_example3.PNG}
-	\captionsetup{justification=centering}
-	\caption{The device is connected to another access point at the subsequent moment of recording}
-	\label{sesdur_exampl3e}
-\end{figure}
-Because the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 10 seconds in this case. This is the time interval between the two moments of recording.
-\\
 \textbf{snr:}
 The signal to noise (snr) describes a measurement that compares the signal strength to the level of background noise (in dB).\\\\
 \textbf{rssi:} \\
