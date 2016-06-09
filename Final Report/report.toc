@@ -88,15 +88,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.2}Theory / methods}{27}{section.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.3}Implementation}{27}{section.10.3}
+\contentsline {subsection}{\numberline {10.2.1}Location extraction}{27}{subsection.10.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.4}Results}{27}{section.10.4}
+\contentsline {subsection}{\numberline {10.2.2}Individual trajectory}{28}{subsection.10.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4.1}Location extraction}{27}{subsection.10.4.1}
+\contentsline {subsection}{\numberline {10.2.3}Trajectory Pattern}{28}{subsection.10.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4.2}Individual trajectory}{27}{subsection.10.4.2}
+\contentsline {section}{\numberline {10.3}Implementation}{28}{section.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.4.3}Trajectory Pattern}{28}{subsection.10.4.3}
+\contentsline {section}{\numberline {10.4}Results}{28}{section.10.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {11}Indoor spatio-temporal movement patterns}{29}{chapter.11}
 \defcounter {refsection}{0}\relax 
