@@ -1,0 +1,22 @@
+\chapter{Trajectory patterns}
+\section{Introduction}
+\section{Theory / methods}
+\section{Implementation}
+\section{Results}
+% <-- Please divide into the correct sections! --> %
+
+This GSP attempts to identify people’s movement patterns from anonymized wifilogs. To solve this problem, individual trajectories must be discovered. The data provided by the eduroam network enables a detailed view of people’s movement on campus. The large coverage of the eduroam network allows to track users for a large part of the day when they enter the campus. However, the obeservation space is limited to the extent of the size of the campus, making it not possible to track people outside the eduroam network. A second disadvantage is the spatial resolution of the positioining method. The size of each Wi-Fi cell determines the spatial resolution, as the location of mobile devices is estimated at the origin of a AP. The size of each Wi-Fi cell depends on the distribution of APs. For indoor environments of the TU Delft campus, this is just a few tens of meters wide. This resolution allows tracking movement at a building level by re-locating mobile devices to the closest AP. Data between two re-locations is not available. Therefore, an individual’s trajectory is depicted by connecting the re-locations as a sequence of APs. These individual trajectories are used to identify patterns. 
+
+First, this chapter will describe the extraction of locations of a user. Then the mining of individual trajectories from a anonymized Wi-Fi scanlist is described. Subsequently, the mining of movement patterns in time or space is described. 
+
+\subsection{Location extraction}
+A location represents a geographic position where a user stays. For identifying movement patterns from Wi-Fi monitoring, we are interested in movement between two locations where an individual stays for a longer time period. Such a location, or stay place, can be detected when a user is connected to the same AP for a longer time. To detect  buildings as a location (i.e. contains multiple APs), two consecutive WiFi scans must contain  APs of the same building. With a data collecting interval of 5 minutes, it means that people will be filtered out if their stay duration is less than 10 minutes. Based on this assumption, people with a shorter stay duration are considered passing by.
+
+\subsection{Individual trajectory}
+An individual’s trajectory is constructed as a sequence of locations in order of the scan time. Start and end time of a trajectory can be specified with a time interval, e.g. a day or week. If p is a location, then a trajectory can be written as:
+$$p1 \rightarrow p2 \rightarrow p3 \rightarrow …\rightarrow pn$$
+
+Given a time interval, there is a set of individual trajectories S = \{t1, t2, t3,...,tn\} where each ti is the trajectory over a time interval of one user. 
+
+\subsection{Trajectory Pattern}
+From a set S of trajectories, different patterns can be identified using seqeuntial pattern mining algorithms. Frequency of a trajectory by all users of the campus can be detected. This can be represented as a trajactoy T with a support s. Support means how many times the same sequence, or sub-sequence, is shared in the set of trajectories. This gives valuable information on the order common buildings are used and what order of buildings occurs the most. Furthermore, the lenght of a trajectory can be discovered. This allows for identification of movement patterns of a specific lenght n. Also, when location is not considered, but only the lenght of a trajectory, the mobility pattern of an individual can be discribed in terms of how many times he/she re-locates. 
