@@ -36,13 +36,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.6.1}Data description}{12}{subsection.5.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.6.2}System of APs}{14}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.2}System of APs}{15}{subsection.5.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Movement patterns}{17}{chapter.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Introduction}{17}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Movement Identification}{17}{section.6.2}
+\contentsline {section}{\numberline {6.2}Movement identification}{17}{section.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.2.1}Spatio-temporal movement patterns}{17}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
@@ -146,7 +146,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {13.6}Data reasoning}{43}{section.13.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.7}Visual exploration}{43}{section.13.7}
+\contentsline {section}{\numberline {13.7}Visual exploration}{44}{section.13.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {14}Acknowledgements}{45}{chapter.14}
 \defcounter {refsection}{0}\relax 

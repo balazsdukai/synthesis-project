@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  10 JUN 2016 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  10 JUN 2016 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1992,11 +1992,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--50
 
 ]
 Chapter 2.
-
-Overfull \hbox (176.80815pt too wide) in paragraph at lines 41--51
-[][] 
- []
-
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2111,130 +2106,129 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--25
  []
 
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 33.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 41.
 
-Overfull \hbox (3.11862pt too wide) in paragraph at lines 40--54
+Overfull \hbox (3.11862pt too wide) in paragraph at lines 48--62
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--54
+Underfull \hbox (badness 10000) in paragraph at lines 42--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--54
+Underfull \hbox (badness 10000) in paragraph at lines 42--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--80
+Underfull \hbox (badness 10000) in paragraph at lines 63--88
 
  []
 
-[12] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-Underfull \hbox (badness 10000) in paragraph at lines 113--135
+) [13]
+Underfull \hbox (badness 10000) in paragraph at lines 121--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--135
+Underfull \hbox (badness 10000) in paragraph at lines 121--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--135
+Underfull \hbox (badness 10000) in paragraph at lines 121--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--135
+Underfull \hbox (badness 10000) in paragraph at lines 121--143
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 136--140
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--148
 
  []
 
-<figures/apmap_west.png, id=603, 332.442pt x 222.3507pt>
+[14] <figures/apmap_west.png, id=609, 332.442pt x 222.3507pt>
 File: figures/apmap_west.png Graphic file (type png)
 
 <use figures/apmap_west.png>
-Package pdftex.def Info: figures/apmap_west.png used on input line 147.
+Package pdftex.def Info: figures/apmap_west.png used on input line 155.
 (pdftex.def)             Requested size: 265.95395pt x 177.88078pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--151
+Underfull \hbox (badness 10000) in paragraph at lines 150--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--151
+Underfull \hbox (badness 10000) in paragraph at lines 150--159
 
  []
 
-
-Underfull \vbox (badness 2469) has occurred while \output is active []
-
- [14])
-(./chapter-6.tex [15 <./figures/apmap_west.png>] [16
+) (./chapter-6.tex [15 <./figures/apmap_west.png>] [16
 
 ]
 Chapter 6.
@@ -2496,9 +2490,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--114
 
  []
 
-[42 <./figures/bk_aplocs2.png>]) (./chapter-14.tex [43] [44
+[42 <./figures/bk_aplocs2.png>]
 
-]
+LaTeX Warning: Reference `apsystem' on page 43 undefined on input line 117.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+
+ []
+
+[43]) (./chapter-14.tex [44]
 Chapter 14.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 2--89
@@ -2515,7 +2526,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--89
 
  []
 
-(./appendix-A.tex [45] [46
+(./appendix-A.tex [45
+
+] [46
 
 ]
 Chapter 15.
@@ -2537,7 +2550,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: FA41670BDBB10D1431F14A007A245C72;4884.
+(rerunfilecheck)             Checksum: 20A822B947E4FB5076560399CA0C6B27;4884.
 
 
 LaTeX Warning: There were undefined references.
@@ -2551,13 +2564,13 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 30337 strings out of 493089
- 532229 string characters out of 6134842
- 963943 words of memory out of 5000000
- 32932 multiletter control sequences out of 15000+600000
+ 30338 strings out of 493089
+ 532239 string characters out of 6134842
+ 959943 words of memory out of 5000000
+ 32933 multiletter control sequences out of 15000+600000
  168711 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,74p,2533b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,14n,74p,2533b,3426s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/tex
 live/2015/texmf-dist/fonts/enc/dvips/lato/lato-01.enc}{/usr/local/texlive/2015/
@@ -2574,7 +2587,7 @@ ia/putbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/put
 r8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
 
-Output written on report.pdf (57 pages, 3190183 bytes).
+Output written on report.pdf (57 pages, 3193950 bytes).
 PDF statistics:
  949 PDF objects out of 1000 (max. 8388607)
  766 compressed objects within 8 object streams
