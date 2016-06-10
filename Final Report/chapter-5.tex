@@ -15,23 +15,7 @@ During the project, the group used passive Wi-Fi monitoring to detect users of t
 This research was different from the research conducted in this Synthesis Project, mainly due the larger size of the eduroam network and the ability to track everybody using the Wi-Fi network.
 
 \section{Privacy}
-This project focuses on identifying common movement patterns, ignoring
-the individual, therefore we did not test explicity whether is possible to
-identify individuals or not from the data. However, based on our findings about
-the operation of the \textit{eduroam} Wi-Fi network and about the methods that
-are used to identify movemebt patterns, we can make the following assumptions.
-
-Movement patterns are rather unique, therefore it is possible to match them to
-individuals even if maybe not in every case. However, in order to do so it is
-necessary to have additional data available. This additional data itself is
-often considered private data, e.g. the complete weekly schedule of the person.
-Provided that timetables are openly accessible and the occupation of the
-individual is known, then his movement pattern may be identified in the dataset.
-
-The availablitity of a detailed access point map makes it easier to identify
-individuals by allowing a more detailed movement analysis (e.g. on building part
-level). It reduces the ambiguity that is still present in building level
-movement analysis.
+% Balazs
 
 \section{Data validity and accuracy}
 % Balazs
@@ -39,7 +23,7 @@ movement analysis.
 \section{Representativeness}
 % Xander
 
-\section{Data description and System of APs}\label{datadescriptionandsystemofaps}
+\section{Data description and System of APs}\label{datadescription}
 \subsection{Data description}\label{datadescription}
 This section will describe the main datasource within the Synthesis Project; a PostgreSQL database containing the logs from the Wi-Fi scanners on the TU Delft campus. Each row in the wifilog table provides a data value for each column (\autoref{segmentwifilog}).\\\\
 \begin{table}[H]
@@ -122,7 +106,6 @@ from (
 \end{table}
 \autoref{timetonextscan} shows that the time to the next scan is 5 minutes and several seconds in all cases. Most important is to know that all access points are recording the connected device(s) is at the same time. \\\\                                                       
 \autoref{sesdur_example} will be used to explain the way the time interval of approximately 5 minutes is coming back in the session duration.\\\\
-The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -143,6 +126,7 @@ The first record shows the device is not connected to any of the access points o
 		10          & oHh0Sz..      & WWW0Cd.. & 1-4-2016 14:27   & A-132-0-066     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:10:21         \\ \bottomrule
 	\end{tabular}
 \end{table}
+The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
 \textbf{SNR}\\
 The signal to noise ratio(SNR) describes a measurement that compares the signal strength to the level of background noise (in dB).\\\\
 \textbf{RSSI} \\

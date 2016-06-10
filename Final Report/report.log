@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.23)  10 JUN 2016 11:06
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  10 JUN 2016 11:38
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.23)  10 JUN 2016 11:58
 entering extended mode
 **./report.tex
 (report.tex
@@ -1660,13 +1656,7 @@ LaTeX Warning: Label `my-label' multiply defined.
 LaTeX Warning: Label `my-label' multiply defined.
 
 
-LaTeX Warning: Label `intro' multiply defined.
-
-
-LaTeX Warning: Label `firstapproach_graph' multiply defined.
-
-
-LaTeX Warning: Label `secondapproach_graph' multiply defined.
+LaTeX Warning: Label `datadescription' multiply defined.
 
 )
 \openout1 = `report.aux'.
@@ -1800,420 +1790,12 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `report.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-
-
-Package biblatex Warning: File 'report.bbl' is wrong format version - expected 
-2.6.
-
 Package biblatex Info: ... file 'report.bbl' found.
-(report.bbl
-! Use of \sortlist doesn't match its definition.
-l.21   \sortlist{
-                 nyt}{nyt}
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-! Extra }, or forgotten \endgroup.
-l.21   \sortlist{nyt}
-                     {nyt}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.22 ...ntry{agrawal_mining_1993}{inproceedings}{}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.51     \endentry
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.51     \endentry
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.52 ...\entry{agrawal_fast_1994}{inproceedings}{}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.81     \endentry
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.81     \endentry
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.82 ...y{anbukkarasy_interesting_2013}{article}{}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.112     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.112     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.113     \entry{dodge2008towards}{article}{}
-                                             
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.137     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.137     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.138     \entry{Hunter:2007}{article}{}
-                                        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.161     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.161     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.162     \entry{mautz2012indoor}{thesis}{}
-                                           
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.180     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.180     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.181 ...\entry{meneses2012large}{inproceedings}{}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.202     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.202     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.203 ...radaelli2013identifying}{inproceedings}{}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.227     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.227     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.228     \entry{rhythmofthecampus}{article}{}
-                                              
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.249     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.249     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.250 ...entry{zhang_survey_2009}{inproceedings}{}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.284     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.284     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\entry ...ata@\the \c@refsection @\blx@slist@name 
-                                                  @\abx@field@entrykey }\csu...
-l.285 ...try{zhao2014discovering}{inproceedings}{}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{entry} {\listcsxadd {blx...
-l.310     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...equal \expandafter {\blx@slist@type 
-                                                  }{list} {\blx@bbl@labelfie...
-l.310     \endentry
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\the \c@refsection @\blx@slist@name 
-                                                  
-l.311   \endsortlist
-                    
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-)
-! Extra \endgroup.
-\blx@bblinput ...nit \blx@bblfile@biber \endgroup 
-                                                  
-l.22 \begin{document}
-                     
-Things are pretty mixed up, but I think the worst is over.
-
+ (report.bbl)
 Package biblatex Info: Reference section=0 on input line 22.
 Package biblatex Info: Reference segment=0 on input line 22.
 \c@lstlisting=\count364
-[1{C:/Users/Kang/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-] [2
-
-]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\vskip' on input line 33.
@@ -2268,28 +1850,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 \GPT@outputbox=\box52
 
-<<<<<<< HEAD
 ("C:\Program Files (x86)\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\ti
 kzlibrarycalc.code.tex"
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
-) <cover_article.jpg, id=292, 337.26pt x 168.63pt>
-=======
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
-) <cover_article.jpg, id=308, 337.26pt x 168.63pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+) <cover_article.jpg, id=282, 337.26pt x 168.63pt>
 File: cover_article.jpg Graphic file (type jpg)
 
 <use cover_article.jpg>
 Package pdftex.def Info: cover_article.jpg used on input line 37.
 (pdftex.def)             Requested size: 597.50787pt x 298.76068pt.
 
-<<<<<<< HEAD
-<cover/logo_black.pdf, id=293, 125.46875pt x 77.28876pt>
-=======
-<cover/logo_black.pdf, id=309, 125.46875pt x 77.28876pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<cover/logo_black.pdf, id=283, 125.46875pt x 77.28876pt>
 File: cover/logo_black.pdf Graphic file (type pdf)
 
 <use cover/logo_black.pdf>
@@ -2305,7 +1876,10 @@ LaTeX Font Info:    Font shape `T1/fla/m/sl' in size <30> not available
  [1
 
 
- <./cover_article.jpg> <./cover/logo_black.pdf>] (title.tex [2
+
+
+{C:/Users/Kang/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./cover_arti
+cle.jpg> <./cover/logo_black.pdf>] (title.tex [2
 
 
 ]
@@ -2408,20 +1982,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--50
 
  []
 
-(chapter-2.texpdfTeX warning (ext4): destination with the same identifier (name
-{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Glossary} [1
+(chapter-2.tex [1
 
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {Glossary} [2
+] [2
 
 ]
 Chapter 2.
@@ -2444,21 +2008,6 @@ Chapter 3.
 Chapter 4.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 2.
-
-LaTeX Warning: Citation 'mautz2012indoor' on page 7 undefined on input line 4.
-
-
-LaTeX Warning: Citation 'zhao2014discovering' on page 7 undefined on input line
- 8.
-
-
-LaTeX Warning: Citation 'meneses2012large' on page 7 undefined on input line 8.
-
-
-
-LaTeX Warning: Citation 'radaelli2013identifying' on page 7 undefined on input 
-line 8.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
@@ -2535,10 +2084,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--9
 Underfull \hbox (badness 10000) in paragraph at lines 5--9
 
  []
-
-
-LaTeX Warning: Citation 'rhythmofthecampus' on page 11 undefined on input line 
-13.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--16
@@ -2633,35 +2178,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--74
 [12] ("C:\Program Files (x86)\MiKTeX\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 107--129
+Underfull \hbox (badness 10000) in paragraph at lines 107--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--129
+Underfull \hbox (badness 10000) in paragraph at lines 107--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--129
+Underfull \hbox (badness 10000) in paragraph at lines 107--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--129
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 129--134
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 130--134
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--134
 
  []
 
-<<<<<<< HEAD
-<figures/apmap_west.png, id=560, 332.442pt x 222.3507pt>
-=======
-<figures/apmap_west.png, id=605, 332.442pt x 222.3507pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<figures/apmap_west.png, id=564, 332.442pt x 222.3507pt>
 File: figures/apmap_west.png Graphic file (type png)
 
 <use figures/apmap_west.png>
@@ -2677,7 +2221,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--145
 
  []
 
-<<<<<<< HEAD
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2685,28 +2228,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (chapter-6.tex [15 <./figures/apmap_west.png>] [16
 
 ]
-=======
-) (./chapter-6.tex [14 <./figures/apmap_west.png>]
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
 Chapter 6.
 
 Underfull \vbox (badness 3118) has occurred while \output is active []
 
-<<<<<<< HEAD
  [17])
 (chapter-7.tex [18]
 Chapter 7.
 ) (chapter-8.tex [19
-=======
- [15
 
-])
-(./chapter-7.tex [16]
-Chapter 7.
-) (./chapter-8.tex [17
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
-
-] [18
+] [20
 
 ]
 Chapter 8.
@@ -2715,11 +2246,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
 
  []
 
-<<<<<<< HEAD
-<figures/Filling-01.jpg, id=605, 2032.59375pt x 526.96875pt>
-=======
-<figures/Filling-01.jpg, id=641, 2032.59375pt x 526.96875pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<figures/Filling-01.jpg, id=609, 2032.59375pt x 526.96875pt>
 File: figures/Filling-01.jpg Graphic file (type jpg)
 
 <use figures/Filling-01.jpg>
@@ -2728,47 +2255,29 @@ Package pdftex.def Info: figures/Filling-01.jpg used on input line 11.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<<<<<<< HEAD
  [21]
-<figures/grouping-01.jpg, id=615, 1731.46875pt x 526.96875pt>
-=======
- [19]
-<figures/grouping-01.jpg, id=650, 1731.46875pt x 526.96875pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<figures/grouping-01.jpg, id=618, 1731.46875pt x 526.96875pt>
 File: figures/grouping-01.jpg Graphic file (type jpg)
 
 <use figures/grouping-01.jpg>
 Package pdftex.def Info: figures/grouping-01.jpg used on input line 22.
 (pdftex.def)             Requested size: 346.28761pt x 105.39188pt.
 
-<<<<<<< HEAD
-<figures/PassingBy.png, id=618, 1810.765pt x 750.805pt>
-=======
-<figures/PassingBy.png, id=653, 1810.765pt x 750.805pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<figures/PassingBy.png, id=621, 1810.765pt x 750.805pt>
 File: figures/PassingBy.png Graphic file (type png)
 
 <use figures/PassingBy.png>
 Package pdftex.def Info: figures/PassingBy.png used on input line 34.
 (pdftex.def)             Requested size: 271.60303pt x 112.61589pt.
-<<<<<<< HEAD
  [22 <./figures/Filling-01.jpg> <./figures/grouping-01.jpg>] <figures/pseudocod
-e.png, id=626, 632.3625pt x 380.42125pt>
-=======
- [20 <./figures/Filling-01.jpg> <./figures/grouping-01.jpg>] <figures/pseudocod
-e.png, id=661, 632.3625pt x 380.42125pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+e.png, id=629, 632.3625pt x 380.42125pt>
 File: figures/pseudocode.png Graphic file (type png)
 
 <use figures/pseudocode.png>
 Package pdftex.def Info: figures/pseudocode.png used on input line 44.
 (pdftex.def)             Requested size: 316.18048pt x 190.21014pt.
 
-<<<<<<< HEAD
-<figures/PreProcessing-01.jpg, id=628, 1619.04875pt x 1844.8925pt>
-=======
-<figures/PreProcessing-01.jpg, id=663, 1619.04875pt x 1844.8925pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<figures/PreProcessing-01.jpg, id=631, 1619.04875pt x 1844.8925pt>
 File: figures/PreProcessing-01.jpg Graphic file (type jpg)
 
 <use figures/PreProcessing-01.jpg>
@@ -2777,17 +2286,12 @@ Package pdftex.def Info: figures/PreProcessing-01.jpg used on input line 54.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21 <./figures/PassingBy.png> <./figures/pseudocode.png>]
+ [23 <./figures/PassingBy.png> <./figures/pseudocode.png>]
 
-LaTeX Warning: Reference `maps' on page 22 undefined on input line 70.
+LaTeX Warning: Reference `maps' on page 24 undefined on input line 70.
 
-<<<<<<< HEAD
 [24 <./figures/PreProcessing-01.jpg>]
-<figures/static_vs_dynamic_histogram.png, id=644, 1047.915pt x 585.387pt>
-=======
-[22 <./figures/PreProcessing-01.jpg>]
-<figures/static_vs_dynamic_histogram.png, id=680, 1047.915pt x 585.387pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<figures/static_vs_dynamic_histogram.png, id=648, 1047.915pt x 585.387pt>
 File: figures/static_vs_dynamic_histogram.png Graphic file (type png)
 
 <use figures/static_vs_dynamic_histogram.png>
@@ -2797,19 +2301,12 @@ line 105.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<<<<<<< HEAD
  [25])
 (chapter-9.tex [26 <./figures/static_vs_dynamic_histogram.png>]
 Chapter 9.
 ) (chapter-10.tex [27
-=======
- [23])
-(./chapter-9.tex [24 <./figures/static_vs_dynamic_histogram.png>]
-Chapter 9.
-) (./chapter-10.tex [25
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
 
-] [26
+] [28
 
 ]
 Chapter 10.
@@ -2828,27 +2325,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
-[27]
+[29]
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 14.
-
-
-LaTeX Warning: Citation 'pei2004mining' on page 28 undefined on input line 19.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
 
-<<<<<<< HEAD
 ) (chapter-11.tex [30]
 Chapter 11.
-<figures/bk_BG_bparts.png, id=679, 502.87875pt x 628.3475pt>
-=======
-) (./chapter-11.tex [28]
-Chapter 11.
-<figures/bk_BG_bparts.png, id=715, 502.87875pt x 628.3475pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<figures/bk_BG_bparts.png, id=685, 502.87875pt x 628.3475pt>
 File: figures/bk_BG_bparts.png Graphic file (type png)
 
 <use figures/bk_BG_bparts.png>
@@ -2857,14 +2345,10 @@ Package pdftex.def Info: figures/bk_BG_bparts.png used on input line 44.
 
 Underfull \vbox (badness 1769) has occurred while \output is active []
 
- [29
+ [31
 
 ]
-<<<<<<< HEAD
-<figures/bk_BG_sketch.png, id=691, 1494.58376pt x 1056.94875pt>
-=======
-<figures/bk_BG_sketch.png, id=728, 1494.58376pt x 1056.94875pt>
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+<figures/bk_BG_sketch.png, id=697, 1494.58376pt x 1056.94875pt>
 File: figures/bk_BG_sketch.png Graphic file (type png)
 
 <use figures/bk_BG_sketch.png>
@@ -2875,142 +2359,41 @@ Overfull \hbox (747.53773pt too wide) in paragraph at lines 92--96
  [][] 
  []
 
-[30 <./figures/bk_BG_bparts.png>]
+[32 <./figures/bk_BG_bparts.png>]
 Overfull \vbox (210.52008pt too high) has occurred while \output is active []
 
 
-[31 <./figures/bk_BG_sketch.png>]
+[33 <./figures/bk_BG_sketch.png>]
 Overfull \hbox (4.35123pt too wide) in paragraph at lines 107--116
 \T1/futs/m/n/10 There-fore the topo-log-i-cal re-la-tion-ships were cre-ated wi
 th the Post-GIS ex-ten-sion \T1/futs/m/it/10 pgRout-ing\T1/futs/m/n/10 . Us-ing
  a databased-
  []
 
-<<<<<<< HEAD
 ) (chapter-12.tex [34]
 Chapter 12.
 ) (chapter-13.tex [35
-=======
-) (./chapter-12.tex [32]
-Chapter 12.
-) (./chapter-13.tex [33
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
 
-] [34
+] [36
 
 ]
 Chapter 13.
-<figures/entrances_firstapproach_1.png, id=755, 1087.6635pt x 440.1243pt>
-File: figures/entrances_firstapproach_1.png Graphic file (type png)
 
-<use figures/entrances_firstapproach_1.png>
-Package pdftex.def Info: figures/entrances_firstapproach_1.png used on input li
-ne 15.
-(pdftex.def)             Requested size: 217.52884pt x 88.02328pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--19
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--19
-
- []
-
-<figures/entrances_firstapproach_2.png, id=756, 1091.277pt x 449.5194pt>
-File: figures/entrances_firstapproach_2.png Graphic file (type png)
-
-<use figures/entrances_firstapproach_2.png>
-Package pdftex.def Info: figures/entrances_firstapproach_2.png used on input li
-ne 22.
-(pdftex.def)             Requested size: 218.25153pt x 89.90228pt.
-
-Underfull \vbox (badness 5316) has occurred while \output is active []
-
- [35]
-<figures/bk_aplocs1.png, id=763, 599.4301pt x 847.66183pt>
-File: figures/bk_aplocs1.png Graphic file (type png)
-
-<use figures/bk_aplocs1.png>
-Package pdftex.def Info: figures/bk_aplocs1.png used on input line 30.
-(pdftex.def)             Requested size: 179.83041pt x 254.3005pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--56
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--56
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  []
 
-[36 <./figures/entrances_firstapproach_1.png> <./figures/entrances_firstapproac
-h_2.png> <./figures/bk_aplocs1.png>]
-<figures/entrances_secondapproach_1.png, id=776, 1090.5543pt x 437.9562pt>
-File: figures/entrances_secondapproach_1.png Graphic file (type png)
-
-<use figures/entrances_secondapproach_1.png>
-Package pdftex.def Info: figures/entrances_secondapproach_1.png used on input l
-ine 60.
-(pdftex.def)             Requested size: 218.107pt x 87.58968pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--64
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--64
-
- []
-
-<figures/entrances_secondapproach_2.png, id=777, 1091.277pt x 437.2335pt>
-File: figures/entrances_secondapproach_2.png Graphic file (type png)
-
-<use figures/entrances_secondapproach_2.png>
-Package pdftex.def Info: figures/entrances_secondapproach_2.png used on input l
-ine 67.
-(pdftex.def)             Requested size: 218.25153pt x 87.44514pt.
-
-<figures/bk_aplocs2.png, id=779, 599.4301pt x 847.66183pt>
-File: figures/bk_aplocs2.png Graphic file (type png)
-
-<use figures/bk_aplocs2.png>
-Package pdftex.def Info: figures/bk_aplocs2.png used on input line 75.
-(pdftex.def)             Requested size: 179.83041pt x 254.3005pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37 <./figures/entrances_secondapproach_1.png> <./figures/entrances_secondappr
-oach_2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 80--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--93
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--114
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--114
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--114
-
- []
-
-<<<<<<< HEAD
 ) (chapter-14.tex [37] [38
-=======
-[38 <./figures/bk_aplocs2.png>]) (./chapter-14.tex [39] [40
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
 
 ]
 Chapter 14.
@@ -3029,58 +2412,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--89
 
  []
 
-<<<<<<< HEAD
 (appendix-A.tex [39] [40
 
 ]
 Chapter 15.
-=======
-(./appendix-A.tex [41] [42
-
-]
-Chapter 15.
-) [43] [44
+) [41] [42
 
 ]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 98.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
+ ("C:\Program Files (x86)\MiKTeX\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
 )
-
-LaTeX Warning: Empty bibliography on input line 98.
-
 \Changes@OutFile=\write7
 \openout7 = `report.soc'.
 
-<<<<<<< HEAD
-[41]
-=======
-
-[45]
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
+ [43]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
- (report.aux)
+
+(report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
-Package rerunfilecheck Info: File `report.out' has not changed.
-<<<<<<< HEAD
-(rerunfilecheck)             Checksum: 56949C60F73C614BF7FDD0BC6A602C7E;4461.
-=======
-(rerunfilecheck)             Checksum: BFA9789975B65A77F8BD2B7F9F452847;4862.
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
 
+
+Package rerunfilecheck Warning: File `report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `report.out':
+(rerunfilecheck)             Before: 56949C60F73C614BF7FDD0BC6A602C7E;4461
+(rerunfilecheck)             After:  8F2510059832BCF8A224CAFFEA147B6F;4461.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                report
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
@@ -3088,61 +2454,30 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 30352 strings out of 493634
- 530981 string characters out of 3142937
- 941990 words of memory out of 3000000
- 32905 multiletter control sequences out of 15000+200000
- 161950 words of font info for 114 fonts, out of 3000000 for 9000
+ 30399 strings out of 493634
+ 532270 string characters out of 3142937
+ 942009 words of memory out of 3000000
+ 32932 multiletter control sequences out of 15000+200000
+ 168762 words of font info for 116 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  62i,12n,74p,1690b,1875s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}{C:/Program Fi
-les (x86)/MiKTeX/fonts/enc/dvips/lato/lato-01.enc}{C:/Program Files (x86)/MiKTe
-X/fonts/enc/dvips/roboto/rbto_idpkzy.enc}{C:/Program Files (x86)/MiKTeX/fonts/e
-nc/dvips/lato/lato-02.enc}<C:/Program Files (x86)/MiKTeX/fonts/type1/public/lat
-o/Lato-Bol.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/lato/Lato-Reg.
-pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/lato/Lato-RegIta.pfb><C:/
-Program Files (x86)/MiKTeX/fonts/type1/google/roboto/Roboto-Thin.pfb><C:/Progra
-m Files (x86)/MiKTeX/fonts/type1/google/roboto/Roboto-ThinItalic.pfb><C:/Progra
-m Files (x86)/MiKTeX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Program File
-s (x86)/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (x86)/MiKT
-eX/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/ty
-pe1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/adobe/ut
-opia/putri8a.pfb>
-Output written on report.pdf (51 pages, 3921456 bytes).
+ <C:\Users\Kang\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+ctt1000.pk>{C:/Program Files (x86)/MiKTeX/fonts/enc/dvips/fontname/8r.enc}{C:/P
+rogram Files (x86)/MiKTeX/fonts/enc/dvips/lato/lato-01.enc}{C:/Program Files (x
+86)/MiKTeX/fonts/enc/dvips/roboto/rbto_idpkzy.enc}{C:/Program Files (x86)/MiKTe
+X/fonts/enc/dvips/lato/lato-02.enc}<C:/Program Files (x86)/MiKTeX/fonts/type1/p
+ublic/lato/Lato-Bol.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/lato/
+Lato-Reg.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/lato/Lato-RegIta
+.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/google/roboto/Roboto-Thin.pfb><
+C:/Program Files (x86)/MiKTeX/fonts/type1/google/roboto/Roboto-ThinItalic.pfb><
+C:/Program Files (x86)/MiKTeX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Pro
+gram Files (x86)/MiKTeX/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files (
+x86)/MiKTeX/fonts/type1/adobe/utopia/putbi8a.pfb><C:/Program Files (x86)/MiKTeX
+/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1
+/adobe/utopia/putri8a.pfb>
+Output written on report.pdf (51 pages, 3943560 bytes).
 PDF statistics:
- 815 PDF objects out of 1000 (max. 8388607)
- 166 named destinations out of 1000 (max. 500000)
+ 883 PDF objects out of 1000 (max. 8388607)
+ 181 named destinations out of 1000 (max. 500000)
  620 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
- 30325 strings out of 493089
- 531866 string characters out of 6134842
- 962913 words of memory out of 5000000
- 32926 multiletter control sequences out of 15000+600000
- 168711 words of font info for 116 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 62i,12n,74p,1688b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/tex
-live/2015/texmf-dist/fonts/enc/dvips/lato/lato-01.enc}{/usr/local/texlive/2015/
-texmf-dist/fonts/enc/dvips/roboto/rbto_idpkzy.enc}{/usr/local/texlive/2015/texm
-f-dist/fonts/enc/dvips/lato/lato-02.enc}</usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/lato/Lato-Bol.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/lato/Lato-Reg.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/lato/Lato-RegIta.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/google
-/roboto/Roboto-Thin.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/google/
-roboto/Roboto-ThinItalic.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/fourier/fourier-ms.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/ado
-be/utopia/putb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utop
-ia/putbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/put
-r8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-
-Output written on report.pdf (53 pages, 4404027 bytes).
-PDF statistics:
- 927 PDF objects out of 1000 (max. 8388607)
- 750 compressed objects within 8 object streams
- 196 named destinations out of 1000 (max. 500000)
- 698 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> f754281d056ef0b2f2de27ba953d5b3e716dadf8
 

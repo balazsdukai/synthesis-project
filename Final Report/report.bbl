@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.5 $
+% $ biblatex bbl format version 2.6 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,12 +18,24 @@
 
 
 \refsection{0}
-  \sortlist{nyt}{nyt}
+  \sortlist[entry]{nyt/global}
     \entry{agrawal_mining_1993}{inproceedings}{}
       \name{author}{3}{}{%
-        {{uniquename=0,hash=4b876a40aac16cd3d6b0278b1154b9da}{Agrawal}{A\bibinitperiod}{Rakesh}{R\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=77824e61cd3d1dc7c195caf7c59b3893}{Imieliński}{I\bibinitperiod}{Tomasz}{T\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=64a439d13c6d223424a43f495d60cd29}{Swami}{S\bibinitperiod}{Arun}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4b876a40aac16cd3d6b0278b1154b9da}{%
+           family={Agrawal},
+           family_i={A\bibinitperiod},
+           given={Rakesh},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=77824e61cd3d1dc7c195caf7c59b3893}{%
+           family={Imieliński},
+           family_i={I\bibinitperiod},
+           given={Tomasz},
+           given_i={T\bibinitperiod}}}%
+        {{uniquename=0,hash=64a439d13c6d223424a43f495d60cd29}{%
+           family={Swami},
+           family_i={S\bibinitperiod},
+           given={Arun},
+           given_i={A\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {ACM}%
@@ -51,8 +63,16 @@
     \endentry
     \entry{agrawal_fast_1994}{inproceedings}{}
       \name{author}{2}{}{%
-        {{uniquename=0,hash=4b876a40aac16cd3d6b0278b1154b9da}{Agrawal}{A\bibinitperiod}{Rakesh}{R\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=1fa67215136cecbea67259a51ba99774}{Srikant}{S\bibinitperiod}{Ramakrishnan}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4b876a40aac16cd3d6b0278b1154b9da}{%
+           family={Agrawal},
+           family_i={A\bibinitperiod},
+           given={Rakesh},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=1fa67215136cecbea67259a51ba99774}{%
+           family={Srikant},
+           family_i={S\bibinitperiod},
+           given={Ramakrishnan},
+           given_i={R\bibinitperiod}}}%
       }
       \strng{namehash}{61b9c902adca3727e0b5863834b951a3}
       \strng{fullhash}{61b9c902adca3727e0b5863834b951a3}
@@ -81,8 +101,16 @@
     \endentry
     \entry{anbukkarasy_interesting_2013}{article}{}
       \name{author}{2}{}{%
-        {{uniquename=0,hash=2a35b4e125f6795a6349f6c90d9dec87}{Anbukkarasy}{A\bibinitperiod}{G.}{G\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=67ddf34585a17eb4459e3c3e4f9f6689}{Sairam}{S\bibinitperiod}{N.}{N\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=2a35b4e125f6795a6349f6c90d9dec87}{%
+           family={Anbukkarasy},
+           family_i={A\bibinitperiod},
+           given={G.},
+           given_i={G\bibinitperiod}}}%
+        {{uniquename=0,hash=67ddf34585a17eb4459e3c3e4f9f6689}{%
+           family={Sairam},
+           family_i={S\bibinitperiod},
+           given={N.},
+           given_i={N\bibinitperiod}}}%
       }
       \strng{namehash}{497867ab0dccc5f70a52a9e3cb2edd39}
       \strng{fullhash}{497867ab0dccc5f70a52a9e3cb2edd39}
@@ -112,9 +140,21 @@
     \endentry
     \entry{dodge2008towards}{article}{}
       \name{author}{3}{}{%
-        {{uniquename=0,hash=a5edd8dac81b40dd8d7410246a94c721}{Dodge}{D\bibinitperiod}{Somayeh}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=7d661c6de4d5e8f49e5cc56b2273f251}{Weibel}{W\bibinitperiod}{Robert}{R\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=0b1b5162aa701953ec292c522667d27e}{Lautenschütz}{L\bibinitperiod}{Anna-Katharina}{A\bibinithyphendelim K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a5edd8dac81b40dd8d7410246a94c721}{%
+           family={Dodge},
+           family_i={D\bibinitperiod},
+           given={Somayeh},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=7d661c6de4d5e8f49e5cc56b2273f251}{%
+           family={Weibel},
+           family_i={W\bibinitperiod},
+           given={Robert},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=0b1b5162aa701953ec292c522667d27e}{%
+           family={Lautenschütz},
+           family_i={L\bibinitperiod},
+           given={Anna-Katharina},
+           given_i={A\bibinithyphendelim K\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {SAGE Publications}%
@@ -137,7 +177,11 @@
     \endentry
     \entry{Hunter:2007}{article}{}
       \name{author}{1}{}{%
-        {{uniquename=0,hash=515b7a67462b8750a0711541001538cb}{Hunter}{H\bibinitperiod}{J.\bibnamedelimi D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=515b7a67462b8750a0711541001538cb}{%
+           family={Hunter},
+           family_i={H\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           given_i={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {IEEE COMPUTER SOC}%
@@ -161,7 +205,11 @@
     \endentry
     \entry{mautz2012indoor}{thesis}{}
       \name{author}{1}{}{%
-        {{uniquename=0,hash=1a79e2ad776b1467c4976431066ba01e}{Mautz}{M\bibinitperiod}{Rainer}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=1a79e2ad776b1467c4976431066ba01e}{%
+           family={Mautz},
+           family_i={M\bibinitperiod},
+           given={Rainer},
+           given_i={R\bibinitperiod}}}%
       }
       \list{institution}{1}{%
         {Habilitationsschrift ETH Zürich, 2012}%
@@ -180,8 +228,16 @@
     \endentry
     \entry{meneses2012large}{inproceedings}{}
       \name{author}{2}{}{%
-        {{uniquename=0,hash=cd1d49a7b390abf3ab27f6c115b3aa90}{Meneses}{M\bibinitperiod}{Filipe}{F\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=0ee7a8a9224e1825b385412de48a5ed5}{Moreira}{M\bibinitperiod}{Alberto}{A\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=cd1d49a7b390abf3ab27f6c115b3aa90}{%
+           family={Meneses},
+           family_i={M\bibinitperiod},
+           given={Filipe},
+           given_i={F\bibinitperiod}}}%
+        {{uniquename=0,hash=0ee7a8a9224e1825b385412de48a5ed5}{%
+           family={Moreira},
+           family_i={M\bibinitperiod},
+           given={Alberto},
+           given_i={A\bibinitperiod}}}%
       }
       \list{organization}{1}{%
         {IEEE}%
@@ -200,12 +256,90 @@
       \field{pages}{1\bibrangedash 9}
       \range{pages}{9}
     \endentry
+    \entry{pei2004mining}{article}{}
+      \name{author}{8}{}{%
+        {{uniquename=0,hash=56af930e1f5e2c9a791b71e7b347c0ba}{%
+           family={Pei},
+           family_i={P\bibinitperiod},
+           given={Jian},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=7cacfe272c4d395c979d6aecd2f5ec9c}{%
+           family={Han},
+           family_i={H\bibinitperiod},
+           given={Jiawei},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=2aa42185065db491b81019deccca714a}{%
+           family={Mortazavi-Asl},
+           family_i={M\bibinithyphendelim A\bibinitperiod},
+           given={Behzad},
+           given_i={B\bibinitperiod}}}%
+        {{uniquename=0,hash=7086b1d5e2957cb0df860dad4985b9c9}{%
+           family={Wang},
+           family_i={W\bibinitperiod},
+           given={Jianyong},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=1aaee8f6b7befee4d30b9ce95e670ab1}{%
+           family={Pinto},
+           family_i={P\bibinitperiod},
+           given={Helen},
+           given_i={H\bibinitperiod}}}%
+        {{uniquename=0,hash=8bfa073c1af6508bbadf0074f24c4d64}{%
+           family={Chen},
+           family_i={C\bibinitperiod},
+           given={Qiming},
+           given_i={Q\bibinitperiod}}}%
+        {{uniquename=0,hash=df58e4196ac8acd3bd9941a5277229d1}{%
+           family={Dayal},
+           family_i={D\bibinitperiod},
+           given={Umeshwar},
+           given_i={U\bibinitperiod}}}%
+        {{uniquename=0,hash=ac9c66b911d24dfdbd7755c6b01179ec}{%
+           family={Hsu},
+           family_i={H\bibinitperiod},
+           given={Mei-Chun},
+           given_i={M\bibinithyphendelim C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{0f7210bb6168b72933fbd7a462c750c1}
+      \strng{fullhash}{d6465dacc064422e89e8c3835325ccec}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelyear}{2004}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Knowledge and Data Engineering, IEEE Transactions on}
+      \field{number}{11}
+      \field{title}{Mining sequential patterns by pattern-growth: The prefixspan approach}
+      \field{volume}{16}
+      \field{year}{2004}
+      \field{pages}{1424\bibrangedash 1440}
+      \range{pages}{17}
+    \endentry
     \entry{radaelli2013identifying}{inproceedings}{}
       \name{author}{4}{}{%
-        {{uniquename=0,hash=80bdf77b2567a629ac7e575489da87b5}{Radaelli}{R\bibinitperiod}{Laura}{L\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=b6bdc1232aa0310ffe80aa0482ef78af}{Sabonis}{S\bibinitperiod}{Dovydas}{D\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=383a08b28871065968cc1f41ef020023}{Lu}{L\bibinitperiod}{Hua}{H\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=25e0f09fa11c2ba6a8648b9e88eff012}{Jensen}{J\bibinitperiod}{Christian\bibnamedelima S}{C\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=80bdf77b2567a629ac7e575489da87b5}{%
+           family={Radaelli},
+           family_i={R\bibinitperiod},
+           given={Laura},
+           given_i={L\bibinitperiod}}}%
+        {{uniquename=0,hash=b6bdc1232aa0310ffe80aa0482ef78af}{%
+           family={Sabonis},
+           family_i={S\bibinitperiod},
+           given={Dovydas},
+           given_i={D\bibinitperiod}}}%
+        {{uniquename=0,hash=383a08b28871065968cc1f41ef020023}{%
+           family={Lu},
+           family_i={L\bibinitperiod},
+           given={Hua},
+           given_i={H\bibinitperiod}}}%
+        {{uniquename=0,hash=25e0f09fa11c2ba6a8648b9e88eff012}{%
+           family={Jensen},
+           family_i={J\bibinitperiod},
+           given={Christian\bibnamedelima S},
+           given_i={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
       }
       \list{organization}{1}{%
         {IEEE}%
@@ -227,14 +361,46 @@
     \endentry
     \entry{rhythmofthecampus}{article}{}
       \name{author}{8}{}{%
-        {{uniquename=0,hash=c62ce82d1011133334931389b9fb500f}{Van\bibnamedelimb der\bibnamedelima Ham}{V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim H\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=c9ce94f726455346fb716bf677c00a79}{Kalogianni}{K\bibinitperiod}{E}{E\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=29d76a1ed8ade04f877ff15b71796683}{Lam}{L\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=e9a66ab7523d70a96ece0f7aa11ff8d4}{Sileryte}{S\bibinitperiod}{R}{R\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=b828859093337f367dec073885b8bfaa}{Zhou}{Z\bibinitperiod}{K}{K\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=0f8007723ee42205127d73e9302d4bef}{Van\bibnamedelimb der\bibnamedelima Spek}{V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod}{SC}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=9454b551bcaaf3ac2f73741e342ceb16}{Verbree}{V\bibinitperiod}{E}{E\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=0c3ed9895830b3e00f86b1c34d69af18}{Valks}{V\bibinitperiod}{B}{B\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=c62ce82d1011133334931389b9fb500f}{%
+           family={Van\bibnamedelimb der\bibnamedelima Ham},
+           family_i={V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={M},
+           given_i={M\bibinitperiod}}}%
+        {{uniquename=0,hash=c9ce94f726455346fb716bf677c00a79}{%
+           family={Kalogianni},
+           family_i={K\bibinitperiod},
+           given={E},
+           given_i={E\bibinitperiod}}}%
+        {{uniquename=0,hash=29d76a1ed8ade04f877ff15b71796683}{%
+           family={Lam},
+           family_i={L\bibinitperiod},
+           given={M},
+           given_i={M\bibinitperiod}}}%
+        {{uniquename=0,hash=e9a66ab7523d70a96ece0f7aa11ff8d4}{%
+           family={Sileryte},
+           family_i={S\bibinitperiod},
+           given={R},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=b828859093337f367dec073885b8bfaa}{%
+           family={Zhou},
+           family_i={Z\bibinitperiod},
+           given={K},
+           given_i={K\bibinitperiod}}}%
+        {{uniquename=0,hash=0f8007723ee42205127d73e9302d4bef}{%
+           family={Van\bibnamedelimb der\bibnamedelima Spek},
+           family_i={V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={SC},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=9454b551bcaaf3ac2f73741e342ceb16}{%
+           family={Verbree},
+           family_i={V\bibinitperiod},
+           given={E},
+           given_i={E\bibinitperiod}}}%
+        {{uniquename=0,hash=0c3ed9895830b3e00f86b1c34d69af18}{%
+           family={Valks},
+           family_i={V\bibinitperiod},
+           given={B},
+           given_i={B\bibinitperiod}}}%
       }
       \strng{namehash}{87b257b3d15122d38905034a44e3eb73}
       \strng{fullhash}{8972f345e3fd28ae15bfb832036ebf18}
@@ -249,10 +415,26 @@
     \endentry
     \entry{zhang_survey_2009}{inproceedings}{}
       \name{author}{4}{}{%
-        {{uniquename=0,hash=de9312a48a904679476d7fa97b659901}{Zhang}{Z\bibinitperiod}{Yuejin}{Y\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=a47f6d684bfcfcf397e5bd4101b81682}{Zhang}{Z\bibinitperiod}{Lingling}{L\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=2cec6ab35ad8a702a1625b0596c88502}{Nie}{N\bibinitperiod}{Guangli}{G\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=e688379f76da1851adef5bbe4cbfc25b}{Shi}{S\bibinitperiod}{Yong}{Y\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=de9312a48a904679476d7fa97b659901}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Yuejin},
+           given_i={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=a47f6d684bfcfcf397e5bd4101b81682}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Lingling},
+           given_i={L\bibinitperiod}}}%
+        {{uniquename=0,hash=2cec6ab35ad8a702a1625b0596c88502}{%
+           family={Nie},
+           family_i={N\bibinitperiod},
+           given={Guangli},
+           given_i={G\bibinitperiod}}}%
+        {{uniquename=0,hash=e688379f76da1851adef5bbe4cbfc25b}{%
+           family={Shi},
+           family_i={S\bibinitperiod},
+           given={Yong},
+           given_i={Y\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {IEEE}%
@@ -284,12 +466,36 @@
     \endentry
     \entry{zhao2014discovering}{inproceedings}{}
       \name{author}{6}{}{%
-        {{uniquename=0,hash=4df18f7b3b8294bcd0e7513844913867}{Zhao}{Z\bibinitperiod}{Shao}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=eed156c687a79d721734200afc38d239}{Zhao}{Z\bibinitperiod}{Zhe}{Z\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=b7e49907997b573e6e258ced73234928}{Zhao}{Z\bibinitperiod}{Yifan}{Y\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=2821d801cdb742d9138d3d720a9b67b3}{Huang}{H\bibinitperiod}{Runhe}{R\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=83198dc4a7b72bfe40cc485c73e2ffd0}{Li}{L\bibinitperiod}{Shijian}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=d06cec2df61554e3a9035bc311b868b9}{Pan}{P\bibinitperiod}{Gang}{G\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4df18f7b3b8294bcd0e7513844913867}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Shao},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=eed156c687a79d721734200afc38d239}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Zhe},
+           given_i={Z\bibinitperiod}}}%
+        {{uniquename=0,hash=b7e49907997b573e6e258ced73234928}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Yifan},
+           given_i={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=2821d801cdb742d9138d3d720a9b67b3}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Runhe},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=83198dc4a7b72bfe40cc485c73e2ffd0}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Shijian},
+           given_i={S\bibinitperiod}}}%
+        {{uniquename=0,hash=d06cec2df61554e3a9035bc311b868b9}{%
+           family={Pan},
+           family_i={P\bibinitperiod},
+           given={Gang},
+           given_i={G\bibinitperiod}}}%
       }
       \list{organization}{1}{%
         {IEEE}%
