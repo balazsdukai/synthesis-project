@@ -23,10 +23,10 @@
 \BOOKMARK [2][-]{subsection.6.2.2}{Co-location in space}{section.6.2}% 23
 \BOOKMARK [0][-]{chapter.7}{Methodology}{}% 24
 \BOOKMARK [0][-]{chapter.8}{Preprocessing}{}% 25
-\BOOKMARK [1][-]{section.8.1}{General filtering}{chapter.8}% 26
-\BOOKMARK [1][-]{section.8.2}{Filling}{chapter.8}% 27
-\BOOKMARK [1][-]{section.8.3}{Grouping}{chapter.8}% 28
-\BOOKMARK [1][-]{section.8.4}{Filtering}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.1}{Initial filtering}{chapter.8}% 26
+\BOOKMARK [1][-]{section.8.2}{Grouping of states}{chapter.8}% 27
+\BOOKMARK [1][-]{section.8.3}{Adding world state}{chapter.8}% 28
+\BOOKMARK [1][-]{section.8.4}{Passing by}{chapter.8}% 29
 \BOOKMARK [1][-]{section.8.5}{Implementation}{chapter.8}% 30
 \BOOKMARK [1][-]{section.8.6}{Apname vs maploc}{chapter.8}% 31
 \BOOKMARK [1][-]{section.8.7}{Static and mobile devices}{chapter.8}% 32
