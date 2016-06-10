@@ -106,6 +106,7 @@ from (
 \end{table}
 \autoref{timetonextscan} shows that the time to the next scan is 5 minutes and several seconds in all cases. Most important is to know that all access points are recording the connected device(s) is at the same time. \\\\                                                       
 \autoref{sesdur_example} will be used to explain the way the time interval of approximately 5 minutes is coming back in the session duration.\\\\
+The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -126,7 +127,6 @@ from (
 		10          & oHh0Sz..      & WWW0Cd.. & 1-4-2016 14:27   & A-132-0-066     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:10:21         \\ \bottomrule
 	\end{tabular}
 \end{table}
-The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
 \textbf{SNR}\\
 The signal to noise ratio(SNR) describes a measurement that compares the signal strength to the level of background noise (in dB).\\\\
 \textbf{RSSI} \\
