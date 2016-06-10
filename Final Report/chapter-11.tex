@@ -21,7 +21,7 @@ group the access point into building parts.
     \item Visualize the movement along the indoor network.
 \end{enumerate}
 
-\section{Theory / methods}
+\section{Theory / methods}\label{11methods}
 After identifying movement between different buildings, the next level is to do
 so between different parts inside a building. These parts represent
 functional or spatial divisions inside a building, e.g. departments, community
@@ -65,19 +65,19 @@ between origin and
 destination.
 
 \section{Implementation}
-The identification and visualizatio of indoor movement ins a procedoure that
+The identification and visualization of indoor movement ins a procedure that
 requires various tools and steps. While some steps can be automated, others need
 to be done manually. The detailed description of these steps follows.
 
 \subsection{Delineation of building parts}
 There are two factors that define what is considered a building part, the layout
-of the builidn and the layout of hte access points. The layout of the
-builidng defines the functional divisions, e.g. departements or common areas.
+of the building and the layout of the access points. The layout of the
+building defines the functional divisions, e.g. departments or common areas.
 Additionally, it is necessary to have at least one access point in each of these
 divisions, or preferably more access points equally distributed in the division.
 Considering the signal range of an access point, it is not desirable to have
 access points close to the boarder of two neighbouring divisions, as in that
-case the user could be falsly located in the neighbour division if he is picked
+case the user could be falsely located in the neighbour division if he is picked
 up by the respective access point. The combination of a functional division and
 the access points within define a building part.
 
@@ -92,25 +92,24 @@ defining the building parts.
 \includegraphics[scale=0.2]{bk_BG_sketch.png}
 \captionsetup{justification=centering}
 \caption{Access point map where yellow dots mark the access points, and
-the functional divisions (colored areas) on the ground floor at the Faculty of
+the functional divisions (coloured areas) on the ground floor at the Faculty of
 Architecture.}
 \label{figure:BK_sketch}
 \end{figure}
 
 \subsection{Movement between building parts}
-
-XANDER? or MARTIJN?
-
-described the `movements table here`
+The method how indoor movements are identified is described in REFER TO THE
+CORRECT (SUB)SECTION
 
 \subsection{Indoor route network}
 The route network of the Faculty of Architecture where nodes represent building
 parts and edges represent corridors was drawn manually in \textit{QGIS},
-following the floorplan of the building. However, the resulting \textit{sphagetti network}
-does not contain the toplogical relations that are required to calculate
+following the floor plan of the building. However, the resulting 
+\textit{spaghetti network}
+does not contain the topological relations that are required to calculate
 a shortest route. Therefore the topological relationships were created with the
 PostGIS extension \textit{pgRouting}. Using a databased-based solution for
-storing the data, creating toplogy and calculate shortest routes allowed us to
+storing the data, creating topology and calculate shortest routes allowed us to
 easily match the movements, which were calculated in the database, to the route
 network.
 
@@ -161,16 +160,19 @@ However, three-dimensionality is imitated by using an \textit{exploded view}
 common in architectural visualizations, that shifts overlapping elements (e.g.
 floors) by a certain angle.
 
-In this graphic the \textit{nodes} that represent the building parts are the approximate centroids of the polygonal area of the buildingpart. The nodes were manually adjusted
+In this graphic the \textit{nodes} that represent the building parts are the 
+approximate centroids of the polygonal area of the building part. The nodes were 
+manually adjusted
 to better match the route network.
 
 The route network is represented with
-straigth lines, where the \textit{line width} is proportional to the traffic
+straight lines, where the \textit{line width} is proportional to the traffic
 load of a given edge. However, line widths cannot be compared across graphics, as in order
 to facilitate consistent scale the line width variable is normalized to
 the range of 0.5-5 units, regardless of traffic load. The range of 0.5-5 units
-is choosen to provide a visually appealing and clear graphic. \textit{Colors}
-mark the four separate floors and the staircases (grey) in the building.
+is chosen to provide a visually appealing and clear graphic. \textit{Colours}
+mark the four separate floors and the staircases (grey) in the building
+\autoref{map:bk_total}.
 
 \section{Results}
 Considering the movement from any origin to any destination at the Faculty of
@@ -181,6 +183,25 @@ the peak hours in the morning, before and after lunch \autoref{figure:bk_total}.
 \centering
 \includegraphics[scale=0.8]{buildingpart_all_graph.png}
 \captionsetup{justification=centering}
-\caption{}
+\caption{Total movement at the BK}
 \label{figure:bk_total}
 \end{figure}
+
+Furthermore, if the same data is visualized using the previously described
+method, we can observe the occupation of corridors in the building. The
+advantage of this method that it provides insight into the usage of those
+spaces where data is not directly available. See the limitations of the
+\textit{eduroam} system to track detailed indoor movement in
+\autoref{11methods}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{bk_map_total.png}
+\captionsetup{justification=centering}
+\caption{Occupation of corridors at the BK}
+\label{map:bk_total}
+\end{figure}
+
+Additionally, we analysed movements of mobile and static devices, weekdays and
+weekends, to the Bouwpub and to the Restaurant at the Faculty. These results are
+displayed in \autoref{appendixB}.
