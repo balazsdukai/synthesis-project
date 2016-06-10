@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  10 JUN 2016 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  10 JUN 2016 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2346,27 +2346,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 14.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
- []
-
-
-LaTeX Warning: Citation 'pei2004mining' on page 32 undefined on input line 21.
-
-
-Overfull \hbox (13.98166pt too wide) in paragraph at lines 21--22
-[]\T1/futs/m/n/10 There ex-ists many de-vel-oped se-quen-tial pat-tern min-ing 
-al-go-rithms. For this study Pre-fixS-pan []
  []
 
 ) (./chapter-11.tex [32]
 Chapter 11.
-<figures/bk_BG_bparts.png, id=732, 502.87875pt x 628.3475pt>
+<figures/bk_BG_bparts.png, id=734, 502.87875pt x 628.3475pt>
 File: figures/bk_BG_bparts.png Graphic file (type png)
 
 <use figures/bk_BG_bparts.png>
@@ -2378,29 +2369,20 @@ Underfull \vbox (badness 1769) has occurred while \output is active []
  [33
 
 ]
-<figures/bk_BG_sketch.png, id=744, 1494.58376pt x 1056.94875pt>
+<figures/bk_BG_sketch.png, id=746, 1494.58376pt x 1056.94875pt>
 File: figures/bk_BG_sketch.png Graphic file (type png)
 
 <use figures/bk_BG_sketch.png>
 Package pdftex.def Info: figures/bk_BG_sketch.png used on input line 92.
-(pdftex.def)             Requested size: 1195.66864pt x 845.56015pt.
-
-Overfull \hbox (747.53773pt too wide) in paragraph at lines 92--96
- [][] 
- []
-
-[34 <./figures/bk_BG_bparts.png>]
-Overfull \vbox (210.52008pt too high) has occurred while \output is active []
-
-
-[35 <./figures/bk_BG_sketch.png>]
+(pdftex.def)             Requested size: 298.91145pt x 211.386pt.
+ [34 <./figures/bk_BG_bparts.png>]
 Overfull \hbox (4.35123pt too wide) in paragraph at lines 107--116
 \T1/futs/m/n/10 There-fore the topo-log-i-cal re-la-tion-ships were cre-ated wi
 th the Post-GIS ex-ten-sion \T1/futs/m/it/10 pgRout-ing\T1/futs/m/n/10 . Us-ing
  a databased-
  []
 
-) (./chapter-12.tex [36]
+[35 <./figures/bk_BG_sketch.png>]) (./chapter-12.tex [36]
 Chapter 12.
 ) (./chapter-13.tex [37
 
@@ -2408,7 +2390,7 @@ Chapter 12.
 
 ]
 Chapter 13.
-<figures/entrances_firstapproach_1.png, id=773, 1087.6635pt x 440.1243pt>
+<figures/entrances_firstapproach_1.png, id=775, 1087.6635pt x 440.1243pt>
 File: figures/entrances_firstapproach_1.png Graphic file (type png)
 
 <use figures/entrances_firstapproach_1.png>
@@ -2425,7 +2407,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--19
 
  []
 
-<figures/entrances_firstapproach_2.png, id=774, 1091.277pt x 449.5194pt>
+<figures/entrances_firstapproach_2.png, id=776, 1091.277pt x 449.5194pt>
 File: figures/entrances_firstapproach_2.png Graphic file (type png)
 
 <use figures/entrances_firstapproach_2.png>
@@ -2436,7 +2418,7 @@ ne 22.
 Underfull \vbox (badness 5316) has occurred while \output is active []
 
  [39]
-<figures/bk_aplocs1.png, id=779, 599.4301pt x 847.66183pt>
+<figures/bk_aplocs1.png, id=781, 599.4301pt x 847.66183pt>
 File: figures/bk_aplocs1.png Graphic file (type png)
 
 <use figures/bk_aplocs1.png>
@@ -2454,7 +2436,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--56
 
 [40 <./figures/entrances_firstapproach_1.png> <./figures/entrances_firstapproac
 h_2.png> <./figures/bk_aplocs1.png>]
-<figures/entrances_secondapproach_1.png, id=792, 1090.5543pt x 437.9562pt>
+<figures/entrances_secondapproach_1.png, id=794, 1090.5543pt x 437.9562pt>
 File: figures/entrances_secondapproach_1.png Graphic file (type png)
 
 <use figures/entrances_secondapproach_1.png>
@@ -2471,7 +2453,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--64
 
  []
 
-<figures/entrances_secondapproach_2.png, id=793, 1091.277pt x 437.2335pt>
+<figures/entrances_secondapproach_2.png, id=795, 1091.277pt x 437.2335pt>
 File: figures/entrances_secondapproach_2.png Graphic file (type png)
 
 <use figures/entrances_secondapproach_2.png>
@@ -2479,7 +2461,7 @@ Package pdftex.def Info: figures/entrances_secondapproach_2.png used on input l
 ine 67.
 (pdftex.def)             Requested size: 218.25153pt x 87.44514pt.
 
-<figures/bk_aplocs2.png, id=795, 599.4301pt x 847.66183pt>
+<figures/bk_aplocs2.png, id=797, 599.4301pt x 847.66183pt>
 File: figures/bk_aplocs2.png Graphic file (type png)
 
 <use figures/bk_aplocs2.png>
@@ -2563,21 +2545,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                report
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 30329 strings out of 493089
- 532091 string characters out of 6134842
- 963928 words of memory out of 5000000
- 32926 multiletter control sequences out of 15000+600000
+ 30337 strings out of 493089
+ 532229 string characters out of 6134842
+ 963943 words of memory out of 5000000
+ 32932 multiletter control sequences out of 15000+600000
  168711 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,74p,2533b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2597,10 +2574,10 @@ ia/putbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/put
 r8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
 
-Output written on report.pdf (57 pages, 3185693 bytes).
+Output written on report.pdf (57 pages, 3190183 bytes).
 PDF statistics:
- 945 PDF objects out of 1000 (max. 8388607)
- 762 compressed objects within 8 object streams
- 200 named destinations out of 1000 (max. 500000)
+ 949 PDF objects out of 1000 (max. 8388607)
+ 766 compressed objects within 8 object streams
+ 202 named destinations out of 1000 (max. 500000)
  698 words of extra memory for PDF output out of 10000 (max. 10000000)
 

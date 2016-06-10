@@ -108,11 +108,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3.1}Delineation of building parts}{34}{subsection.11.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3.2}Movement between building parts}{36}{subsection.11.3.2}
+\contentsline {subsection}{\numberline {11.3.2}Movement between building parts}{35}{subsection.11.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3.3}Indoor route network}{36}{subsection.11.3.3}
+\contentsline {subsection}{\numberline {11.3.3}Indoor route network}{35}{subsection.11.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.3.4}Mapping traffic to the route network}{36}{subsection.11.3.4}
+\contentsline {subsection}{\numberline {11.3.4}Mapping traffic to the route network}{35}{subsection.11.3.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {11.3.5}Visualization of the movement}{36}{subsection.11.3.5}
 \defcounter {refsection}{0}\relax 
