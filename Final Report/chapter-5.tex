@@ -12,7 +12,6 @@ The department of Facility Management and Real Estate (FMRE) is the main client 
 % Summary of their summary
 In the fall of 2014, similar research was conducted during another edition of the Geomatics Synthesis Project. The group "Rhythm of the campus" investigated the use of the Library and the Aula of the TU Delft, to gain insight in patterns the use of the facilities of the Library and Aula. This section will give a short summary of their research (\cite{rhythmofthecampus}).\\\\
 During the project, the group used passive Wi-Fi monitoring to detect users of the TU Delft Library and the Aula to gain insight in the occupation, in request of FMRE. They used BlueMark sensors at the Library, Aula and 5 other faculties for a period of one week and collected ground truth data for 2 days. Due to its sheer size, the raw data was difficult to process. The data was filtered from static devices and outliers and the data analysis resulted in identification of the occupation of the Library and the Aula. The end results was a dashboard which visualized the sensor network, data analysis and pattern recognition to help the client in the decision making process.\\\\
-
 This research was different from the research conducted in this Synthesis Project, mainly due the larger size of the eduroam network and the ability to track everybody using the Wi-Fi network.
 
 \section{Privacy}
@@ -24,13 +23,9 @@ This research was different from the research conducted in this Synthesis Projec
 \section{Representativeness}
 % Xander
 
-\section{Data description and System of APs}\label{datadescription}
+\section{Data description and System of APs}\label{datadescriptionandsystemofaps}
 \subsection{Data description}\label{datadescription}
-% this is a comment
-% normal text
-This section will describe the main datasource within the Synthesis Project; a PostgreSQL database containing the logs from the Wi-Fi scanners on the TU Delft campus. Each row in the wifilog table provides a data value for each column (\autoref{segmentwifilog}).
-
-
+This section will describe the main datasource within the Synthesis Project; a PostgreSQL database containing the logs from the Wi-Fi scanners on the TU Delft campus. Each row in the wifilog table provides a data value for each column (\autoref{segmentwifilog}).\\\\
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -39,37 +34,35 @@ This section will describe the main datasource within the Synthesis Project; a P
 	\begin{tabular}{@{}lllllllll@{}}
 		\toprule
 		\textbf{username} & \textbf{mac} & \textbf{asstime} & \textbf{apname}  & \textbf{maploc}                                                     & \textbf{sesdur} & \textbf{snr} & \textbf{ssi}          \\ \midrule
-		j85cCQrGQa..      & l6iOu+xxOq.. & 14-4-2016 12:30  & A-23-0-029 & ..23-CITG \textgreater 4e Verdieping       & 1:32:02         & 35           & -57\\
-		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 7:49   & A-23-0-035 & ..23-CITG \textgreater 5e \& 6e Verdieping & 5:32:16         & 37           & -56\\
-		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 13:22  & A-23-0-035 & ..23-CITG \textgreater 5e \& 6e Verdieping & 0:40:20         & 46           & -50\\
-		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 14:02  & A-23-0-093 & ..23-CITG \textgreater 5e \& 6e Verdieping & 1:27:13         & 11           & -86\\
-		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 15:29  & A-23-0-091 & ..23-CITG \textgreater 5e \& 6e Verdieping & 0:05:08         & 30           & -65\\
-		wrBqMLL+j..       & f2Pw/PMb4/.. & 14-4-2016 15:34  & A-23-0-035 & ..23-CITG \textgreater 5e \& 6e Verdieping & 1:42:32         & 29           & -65\\
-		J0IwA+vpcS..      & HkLY1UMpBV.. & 14-4-2016 11:33  & A-23-0-035 & ..23-CITG \textgreater 5e \& 6e Verdieping & 1:27:40         & 33           & -59\\
-		J0IwA+vpcS..      & HkLY1UMpBV.. & 14-4-2016 13:01  & A-23-0-035 & ..23-CITG \textgreater 5e \& 6e Verdieping & 1:01:01         & 26           & -68\\
-		J0IwA+vpcS..      & HkLY1UMpBV.. & 14-4-2016 14:02  & A-23-0-035 & ..23-CITG \textgreater 5e \& 6e Verdieping & 3:30:19         & 25           & -68\\
-		J0IwA+vpcS..      & HkLY1UMpBV.. & 14-4-2016 17:32  & A-23-0-035 & ..23-CITG \textgreater 5e \& 6e Verdieping & 0:40:05         & 27           & -69\\ \bottomrule
+		j85cCQ..      & l6iOu+.. & 14-4-2016 12:30  & A-23-0-029 & ..CITG \textgreater 4e Verdieping       & 1:32:02         & 35           & -57\\
+		wrBqM..       & f2Pw/P.. & 14-4-2016 7:49   & A-23-0-035 & ..CITG \textgreater 5e \& 6e Verdieping & 5:32:16         & 37           & -56\\
+		wrBqM..       & f2Pw/P.. & 14-4-2016 13:22  & A-23-0-035 & ..CITG \textgreater 5e \& 6e Verdieping & 0:40:20         & 46           & -50\\
+		wrBqM..       & f2Pw/P.. & 14-4-2016 14:02  & A-23-0-093 & ..CITG \textgreater 5e \& 6e Verdieping & 1:27:13         & 11           & -86\\
+		wrBqM..       & f2Pw/P.. & 14-4-2016 15:29  & A-23-0-091 & ..CITG \textgreater 5e \& 6e Verdieping & 0:05:08         & 30           & -65\\
+		wrBqM..       & f2Pw/P.. & 14-4-2016 15:34  & A-23-0-035 & ..CITG \textgreater 5e \& 6e Verdieping & 1:42:32         & 29           & -65\\
+		J0IwA+..      & HkLY1U.. & 14-4-2016 11:33  & A-23-0-035 & ..CITG \textgreater 5e \& 6e Verdieping & 1:27:40         & 33           & -59\\
+		J0IwA+..      & HkLY1U.. & 14-4-2016 13:01  & A-23-0-035 & ..CITG \textgreater 5e \& 6e Verdieping & 1:01:01         & 26           & -68\\
+		J0IwA+..      & HkLY1U.. & 14-4-2016 14:02  & A-23-0-035 & ..CITG \textgreater 5e \& 6e Verdieping & 3:30:19         & 25           & -68\\
+		J0IwA+..      & HkLY1U.. & 14-4-2016 17:32  & A-23-0-035 & ..CITG \textgreater 5e \& 6e Verdieping & 0:40:05         & 27           & -69\\ \bottomrule
 	\end{tabular}
 \end{table}
-
-The data value for each attribute (column) in the wifilog table will be described in more detail. 
-\\\\
-\textbf{username:}\\
+The data value for each attribute (column) in the wifilog table will be described in more detail.\\\\
+\textbf{Username}\\
 The username column provides the username, as a hashed text. Every user has a unique username, but can appear in the data more than once.
 \\\\
-\textbf{mac:}\\
+\textbf{Mac}\\
 The mac column provides the media access control adress (MAC address), as a hashed text. The MAC address is a unique identifier assigned to a specific piece of hardware, such as the network adapter located in Wi-Fi devices (mobile phones, tablets, laptops etc.). So, it would be possible that a user can have more than one device connected to the Wi-Fi eduroam network.
 \\\\
-\textbf{asstime:}\\
+\textbf{Asstime}\\
 The asstime is the time of which a connected device is recorded by the system.
 \\\\
-\textbf{apname:}\\
+\textbf{Apname}\\
 The apname is the name assigned to the access point. Every access point has a unique name. 
 \\\\
-\textbf{maploc:}\\
+\textbf{Maploc}\\
 The maploc describes the location of the access point. There could be multiple access points with the same maploc. For instance, there are 31 access points located on the ground floor of the Faculty of Architecture.
 \\\\
-\textbf{sesdur:}\\
+\textbf{Sesdur}\\
 The sesdur describes the session duration of which a device is connected to the access point. Because this is not as straightforward as it seems, this will be explained more extensively.
 \\\\
 bladibla figure shows the the frequency of session durations.
@@ -77,7 +70,8 @@ bladibla figure shows the the frequency of session durations.
 picture
 \\\\
 The figure shows a large peak at exactly 5 minutes, a peak at approximately 5 minutes and decreasing peaks after a time interval of approximately 5 minutes. It looks like it is recording in a certain time interval in which the device is (still) connected. \\\\
-In order to justify this, the query below is used to see the asstimes (and time to next asstime)
+In order to justify this, the query below is used to see the asstimes (and time to next asstime)\\\\
+\begin{center}
 \begin{lstlisting}[language=SQL]
 select *, asstime_next-asstime as difference
 from (
@@ -89,8 +83,7 @@ from (
 	group by asstime
 	order by asstime) as subquery
 \end{lstlisting}
-
-
+\end{center}
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -111,14 +104,9 @@ from (
 		2560  & 4-4-2016 13:51 & 4-4-2016 13:56 & 0:05:11    \\ \bottomrule
 	\end{tabular}
 \end{table}
-
-         
-\autoref{timetonextscan} shows that the time to the next scan is 5 minutes and several seconds in all cases. Most important is to know that all access points are recording the connected device(s) is at the same time. 
-\\\\                                                        
-\autoref{sesdur_example} will be used to explain the way the time interval of approximately 5 minutes is coming back in the session duration.
-                                                                       
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
+\autoref{timetonextscan} shows that the time to the next scan is 5 minutes and several seconds in all cases. Most important is to know that all access points are recording the connected device(s) is at the same time. \\\\                                                       
+\autoref{sesdur_example} will be used to explain the way the time interval of approximately 5 minutes is coming back in the session duration.\\\\
+The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -127,27 +115,26 @@ from (
 	\begin{tabular}{@{}lllllll@{}}
 		\toprule
 		\textbf{id} & \textbf{username} & \textbf{mac} & \textbf{asstime} & \textbf{apname} & \textbf{maploc}                                                                     & \textbf{sesdur} \\ \midrule
-		1           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 10:13   & A-12-0-104      & ..12-Kramerslab \& Proeffabriek \textgreater !e Verdieping & 0:05:00         \\
-		2           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 10:18   & A-132-0-064     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:20:27         \\
-		3           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 11:36   & A-132-0-105     & Root Area                                                                           & 0:15:22         \\
-		4           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 11:51   & A-132-0-066     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:20:35         \\
-		5           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:01   & A-132-0-069     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:05:43         \\
-		6           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:06   & A-132-0-133     & ..32-OCP-IO \textgreater 4e Verdieping                     & 0:05:18         \\
-		7           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:12   & A-132-0-066     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:05:10         \\
-		8           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:17   & A-132-0-104     & ..32-OCP-IO \textgreater 2e Verdieping                     & 0:05:10         \\
-		9           & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:22   & A-132-0-067     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:05:10         \\
-		10          & oHh0SzXKc0..      & WWW0Cdd++v.. & 1-4-2016 14:27   & A-132-0-066     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:10:21         \\ \bottomrule
+		1           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 10:13   & A-12-0-104      & ..\& Proeffabriek \textgreater !e Verdieping                 & 0:05:00         \\
+		2           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 10:18   & A-132-0-064     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:20:27         \\
+		3           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 11:36   & A-132-0-105     & Root Area                                                                           & 0:15:22         \\
+		4           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 11:51   & A-132-0-066     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:20:35         \\
+		5           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 14:01   & A-132-0-069     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:05:43         \\
+		6           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 14:06   & A-132-0-133     & ..32-OCP-IO \textgreater 4e Verdieping                     & 0:05:18         \\
+		7           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 14:12   & A-132-0-066     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:05:10         \\
+		8           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 14:17   & A-132-0-104     & ..32-OCP-IO \textgreater 2e Verdieping                     & 0:05:10         \\
+		9           & oHh0Sz..      & WWW0Cd.. & 1-4-2016 14:22   & A-132-0-067     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:05:10         \\
+		10          & oHh0Sz..      & WWW0Cd.. & 1-4-2016 14:27   & A-132-0-066     & ..32-OCP-IO \textgreater 1e Verdieping                     & 0:10:21         \\ \bottomrule
 	\end{tabular}
 \end{table}
-The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
-\textbf{snr:}\\
-The signal to noise (snr) describes a measurement that compares the signal strength to the level of background noise (in dB).\\\\
-\textbf{rssi:} \\
-The received signal strength indicator (rssi) describes the received signal strength (in dB).
+\textbf{SNR}\\
+The signal to noise ratio(SNR) describes a measurement that compares the signal strength to the level of background noise (in dB).\\\\
+\textbf{RSSI} \\
+The received signal strength indicator (RSSI) describes the received signal strength (in dB).
 
 \subsection{System of APs}\label{systemofaps}
-This section will describe the current layout of access points (APs) on the TU Delft campus. The location of APs in a building is not known, but for the Faculty of Architecture. Therefore the system of APs in the Faculty of Architecure will be described in more detail. \\\\
-In total there are 1770 access points, distributed over more than 30 buildings on the campus. The access points are mostly placed on walls or ceilings. The data describes that every access point is linked to a certain location. Due the (wide) signal range of the access point, the device can be located at a different floor level than the access point it is connected to. Moreover, there could be access points located at the first floor while serving people at ground floor as well. This is the case in rooms with high ceilings, such as the orange hall in the Faculty of Architecture. \\\\
+This section will describe the current layout of access points (APs) on the TU Delft campus. The location of APs in a building is not known, but for the Faculty of Architecture a paper map was available. Therefore the system of APs in the Faculty of Architecure will be described in more detail. \\\\
+In total there are 1730 access points, distributed over more than 30 buildings on the campus. The access points are mostly placed on walls or ceilings. The data describes that every access point is linked to a certain location. Due to the (wide) signal range of the access point, the device can be located at a different floor level than the access point it is connected to. Moreover, there could be access points located at the first floor while serving people at ground floor as well. This is the case in rooms with high ceilings, such as the orange hall in the Faculty of Architecture. \\\\
 As said, the Faculty of Architecure is the only building of which the location of the access points are known. The floor plans are enriched with the location of the access point (see ). Next to that, a table is provdided with additional information regarding the access points, although this table does not contain all present access points. This table includes the MAC address of the access point. This could be used to look up to what access point the device is connected. 
 \begin{figure}[H]
 	\centering

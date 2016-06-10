@@ -106,27 +106,49 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {11.3}Implementation}{30}{section.11.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.4}Results}{30}{section.11.4}
+\contentsline {subsection}{\numberline {11.3.1}Delineation of building parts}{30}{subsection.11.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Conclusions}{31}{chapter.12}
+\contentsline {subsection}{\numberline {11.3.2}Movement between building parts}{32}{subsection.11.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {13}Recommendations}{33}{chapter.13}
+\contentsline {subsection}{\numberline {11.3.3}Indoor route network}{32}{subsection.11.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.1}Entrances}{33}{section.13.1}
+\contentsline {subsection}{\numberline {11.3.4}Mapping traffic to the route network}{32}{subsection.11.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.2}Association rules}{33}{section.13.2}
+\contentsline {subsection}{\numberline {11.3.5}Visualization of the movement}{32}{subsection.11.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.3}Distinguishing user groups}{33}{section.13.3}
+\contentsline {section}{\numberline {11.4}Results}{32}{section.11.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.4}Occupancy}{33}{section.13.4}
+\contentsline {chapter}{\numberline {12}Conclusions}{33}{chapter.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.5}AP system}{33}{section.13.5}
+\contentsline {chapter}{\numberline {13}Recommendations}{35}{chapter.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.6}Data reasoning}{33}{section.13.6}
+\contentsline {section}{\numberline {13.1}Entrances}{35}{section.13.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.7}Visual exploration}{33}{section.13.7}
+\contentsline {subsection}{\numberline {13.1.1}Introduction}{35}{subsection.13.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {14}Acknowledgements}{35}{chapter.14}
+\contentsline {subsection}{\numberline {13.1.2}Methodology}{35}{subsection.13.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {15}Appendix A}{37}{chapter.15}
+\contentsline {subsection}{\numberline {13.1.3}Hypothesis}{35}{subsection.13.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.1.4}First approach: including passing by events}{35}{subsection.13.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.1.5}Second approach: excluding passing by events}{36}{subsection.13.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {13.1.6}Recommendation}{38}{subsection.13.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.2}Association rules}{39}{section.13.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.3}Distinguishing user groups}{39}{section.13.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.4}Occupancy}{39}{section.13.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.5}AP system}{39}{section.13.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.6}Data reasoning}{39}{section.13.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13.7}Visual exploration}{39}{section.13.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {14}Acknowledgements}{41}{chapter.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {15}Appendix A}{43}{chapter.15}
 \contentsfinish 
