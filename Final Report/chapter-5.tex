@@ -42,7 +42,7 @@ but that also will be only recorded at the next scan round.
 In the GSP a big amount of wifilog data is used. The data represents all people that make (active) use of the wifi eduroam network. These are the students and employees of the TU Delft.  There is just a small amount of people that are within the spatial scope of the project and cannot connect with the wifi eduroam network. The data is acquired by the access points, which all are located in a building on the campus. The people that use a building on the campus, but do not make use of the wifi eduroam network, is very small part. Thus, the main part of actual users is covered by the data used in the GSP. The collection of data is acquired over a continuous time interval of more than 2 months. This time period would be large enough to reflect on all users of the campus to some extend.
 \section{Data description and System of APs}\label{datadescriptionandsystemofaps}
 \subsection{Data description}\label{datadescription}
-This section will describe the main datasource within the Synthesis Project; a PostgreSQL database containing the logs from the Wi-Fi scanners on the TU Delft campus. Each row in the wifilog table provides a data value for each column (\autoref{segmentwifilog}).\\\\
+This section will describe the main datasource used within the Geomatics Synthesis Project; a PostgreSQL database containing the logs from the Wi-Fi access points on the TU Delft campus. The wifilog table has several column, with a data value for each row (\autoref{segmentwifilog}).\\\\
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -68,7 +68,7 @@ The data value for each attribute (column) in the wifilog table will be describe
 The username column provides the username, as a hashed text. Every user has a unique username, but can appear in the data more than once.
 \\\\
 \textbf{Mac}\\
-The mac column provides the media access control adress (MAC address), as a hashed text. The MAC address is a unique identifier assigned to a specific piece of hardware, such as the network adapter located in Wi-Fi devices (mobile phones, tablets, laptops etc.). So, it would be possible that a user can have more than one device connected to the Wi-Fi eduroam network.
+The mac column provides the media access control adress (MAC address), as a hashed text. The MAC address is a unique identifier assigned to a specific piece of hardware, such as the network adapter located in Wi-Fi devices (mobile phones, tablets, laptops etc.). So, it would be possible that a user can have more than one device connected to the Wi-Fi eduroam network at the same time.
 \\\\
 \textbf{Asstime}\\
 The asstime is the time of which a connected device is recorded by the system.
@@ -123,7 +123,7 @@ from (
 \end{table}
 \autoref{timetonextscan} shows that the time to the next scan is 5 minutes and several seconds in all cases. Most important is to know that all access points are recording the connected device(s) is at the same time. \\\\                                                       
 \autoref{sesdur_example} will be used to explain the way the time interval of approximately 5 minutes is coming back in the session duration.\\\\
-The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. In the last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording.\\\\
+The first record shows the device is not connected to any of the access points on the campus in the subsequent moment of recording, resulting in a session duration of exactly 5 minutes. The last record in \autoref{sesdur_example} shows the result of a device that is still connected to the same access point at the subsequent moment of recording. In this case the session duration will be 10 minutes and 21 seconds. This is the time interval between the first moment the device is recorded and the first time the device is not recorded by the same access point anymore. The record with id number 6 describes a situation in which the device is connected to an access point at the moment of recording and connected to another access point at the subsequent moment of recording, the session duration is 5 minutes and 18 seconds in this case. This is the time interval between the two moments of recording. This time interval can vary, but is always approximately 5 minutes.\\\\
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
