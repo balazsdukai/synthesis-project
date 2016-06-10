@@ -23,8 +23,19 @@ Provided that timetables are openly accessible and the occupation of the individ
 The availability of a detailed access point map makes it easier to identify individuals by allowing a more detailed movement analysis (e.g. on buildingpart
 level). It reduces the ambiguity that is still present in building level movement analysis.
 
-\section{Data validity and accuracy}
-% Balazs
+\section{Data accuracy}
+The spatial accuracy of the Wi-Fi log datased is defined by the range of the
+APs. Although we do not have information on the exact range of the differente
+APs, we estimate the range ot be a few tens of meters. Therefore, if a user is
+recorded by a specifis AP, in reality he can be anywhere around the AP in its
+range.
+
+The temporal accuracy of the Wi-Fi log dataset is defined by the five minute
+campus-wide scan interval of the \textit{eduroam} system. It means that all APs
+on the TU Delf campus scan at the same moment in approximately five minute
+intervals. Therefore, it is possible that the user is already at a given AP, but
+he will be first recorded at the next scan round, or the user alread left the AP
+but that also will be only recorded at the next scan round.
 
 \section{Representativeness}
 % Xander
