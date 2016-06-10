@@ -40,7 +40,6 @@ but that also will be only recorded at the next scan round.
 \section{Representativeness}
 % Xander
 In the GSP a big amount of wifilog data is used. The data represents all people that make (active) use of the wifi eduroam network. These are the students and employees of the TU Delft.  There is just a small amount of people that are within the spatial scope of the project and cannot connect with the wifi eduroam network. The data is acquired by the access points, which all are located in a building on the campus. The people that use a building on the campus, but do not make use of the wifi eduroam network, is very small part. Thus, the main part of actual users is covered by the data used in the GSP. The collection of data is acquired over a continuous time interval of more than 2 months. This time period would be large enough to reflect on all users of the campus to some extend.
-
 \section{Data description and System of APs}\label{datadescriptionandsystemofaps}
 \subsection{Data description}\label{datadescription}
 This section will describe the main datasource within the Synthesis Project; a PostgreSQL database containing the logs from the Wi-Fi scanners on the TU Delft campus. Each row in the wifilog table provides a data value for each column (\autoref{segmentwifilog}).\\\\
@@ -78,18 +77,16 @@ The asstime is the time of which a connected device is recorded by the system.
 The apname is the name assigned to the access point. Every access point has a unique name. 
 \\\\
 \textbf{Maploc}\\
-The maploc describes the location of the access point. There could be multiple access points with the same maploc. For instance, there are 31 access points located on the ground floor of the Faculty of Architecture.
-\\\\
-\textbf{Sesdur}\\
-The sesdur describes the session duration of which a device is connected to the access point. Because this is not as straightforward as it seems, this will be explained more extensively.\autoref{frequency_sesdur} shows the frequency of session durations (the peak at exactly 5 minutes is filtered out to make the graph more readable).\\\\
+The maploc describes the location of the access point. There could be multiple access points with the same maploc. For instance, there are 31 access points located on the ground floor of the Faculty of Architecture.\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{sesdur_graph_without5min.png}
+	\includegraphics[scale=0.15]{sesdur_graph_without5min.png}
 	\captionsetup{justification=centering}
 	\caption{The frequency of session durations}
 	\label{frequency_sesdur}
 \end{figure}
-There is a large peak at exactly 5 minutes, a peak at approximately 5 minutes and decreasing peaks after a time interval of approximately 5 minutes. It looks like it is recording in a certain time interval in which the device is (still) connected. \\\\
+\textbf{Sesdur}\\
+The sesdur describes the session duration of which a device is connected to the access point. Because this is not as straightforward as it seems, this will be explained more extensively. \autoref{frequency_sesdur} shows the frequency of session durations (the peak at exactly 5 minutes is filtered out to make the graph more readable). There is a large peak at exactly 5 minutes, a peak at approximately 5 minutes and decreasing peaks after a time interval of approximately 5 minutes. It looks like it is recording in a certain time interval in which the device is (still) connected. \\\\
 In order to justify this, the query below is used to see the asstimes (and time to next asstime)\\\\
 \begin{center}
 \begin{lstlisting}[language=SQL]
@@ -158,7 +155,7 @@ In total there are 1730 access points, distributed over more than 30 buildings o
 As said, the Faculty of Architecure is the only building of which the location of the access points are known. The floor plans are enriched with the location of the access point (see ). Next to that, a table is provdided with additional information regarding the access points, although this table does not contain all present access points. This table includes the MAC address of the access point. This could be used to look up to what access point the device is connected.\\\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{apmap_west.png}
+	\includegraphics[scale=0.6]{apmap_west.png}
 	\captionsetup{justification=centering}
 	\caption{Ground floor plan with the location of the access points}
 	\label{apmap_west}
