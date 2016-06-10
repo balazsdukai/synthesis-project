@@ -28,7 +28,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Privacy}{12}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Data validity and accuracy}{12}{section.5.4}
+\contentsline {section}{\numberline {5.4}Data accuracy}{12}{section.5.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.5}Representativeness}{12}{section.5.5}
 \defcounter {refsection}{0}\relax 
