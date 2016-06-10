@@ -140,17 +140,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {12.2}Association rules}{45}{section.12.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.3}Distinguishing user groups}{45}{section.12.3}
+\contentsline {subsection}{\numberline {12.2.1}Association rules mining}{45}{subsection.12.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.4}Occupancy}{45}{section.12.4}
+\contentsline {subsection}{\numberline {12.2.2}Assosication rules of buildings}{45}{subsection.12.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.5}AP system}{45}{section.12.5}
+\contentsline {subsection}{\numberline {12.2.3}Recommendation}{46}{subsection.12.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.6}Data reasoning}{45}{section.12.6}
+\contentsline {section}{\numberline {12.3}Distinguishing user groups}{46}{section.12.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.7}Visual exploration}{46}{section.12.7}
+\contentsline {section}{\numberline {12.4}Occupancy}{46}{section.12.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {13}Acknowledgements}{47}{chapter.13}
+\contentsline {section}{\numberline {12.5}AP system}{46}{section.12.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {14}Appendix B}{49}{chapter.14}
+\contentsline {section}{\numberline {12.6}Data reasoning}{47}{section.12.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.7}Visual exploration}{47}{section.12.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {13}Acknowledgements}{49}{chapter.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {14}Appendix B}{51}{chapter.14}
 \contentsfinish 

@@ -2242,6 +2242,12 @@
     <bcf:citekey order="4">radaelli2013identifying</bcf:citekey>
     <bcf:citekey order="5">rhythmofthecampus</bcf:citekey>
     <bcf:citekey order="6">pei2004mining</bcf:citekey>
+    <bcf:citekey order="7">agrawal_mining_1993</bcf:citekey>
+    <bcf:citekey order="8">agrawal_mining_1993</bcf:citekey>
+    <bcf:citekey order="9">zhang_survey_2009</bcf:citekey>
+    <bcf:citekey order="10">agrawal_mining_1993</bcf:citekey>
+    <bcf:citekey order="11">agrawal_mining_1993</bcf:citekey>
+    <bcf:citekey order="12">anbukkarasy_interesting_2013</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt" type="entry" sortscheme="nyt">

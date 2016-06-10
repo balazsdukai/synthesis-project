@@ -67,10 +67,13 @@
 \BOOKMARK [2][-]{subsection.12.1.5}{Second approach: excluding passing by events}{section.12.1}% 67
 \BOOKMARK [2][-]{subsection.12.1.6}{Recommendation}{section.12.1}% 68
 \BOOKMARK [1][-]{section.12.2}{Association rules}{chapter.12}% 69
-\BOOKMARK [1][-]{section.12.3}{Distinguishing user groups}{chapter.12}% 70
-\BOOKMARK [1][-]{section.12.4}{Occupancy}{chapter.12}% 71
-\BOOKMARK [1][-]{section.12.5}{AP system}{chapter.12}% 72
-\BOOKMARK [1][-]{section.12.6}{Data reasoning}{chapter.12}% 73
-\BOOKMARK [1][-]{section.12.7}{Visual exploration}{chapter.12}% 74
-\BOOKMARK [0][-]{chapter.13}{Acknowledgements}{}% 75
-\BOOKMARK [0][-]{chapter.14}{Appendix B}{}% 76
+\BOOKMARK [2][-]{subsection.12.2.1}{Association rules mining}{section.12.2}% 70
+\BOOKMARK [2][-]{subsection.12.2.2}{Assosication rules of buildings}{section.12.2}% 71
+\BOOKMARK [2][-]{subsection.12.2.3}{Recommendation}{section.12.2}% 72
+\BOOKMARK [1][-]{section.12.3}{Distinguishing user groups}{chapter.12}% 73
+\BOOKMARK [1][-]{section.12.4}{Occupancy}{chapter.12}% 74
+\BOOKMARK [1][-]{section.12.5}{AP system}{chapter.12}% 75
+\BOOKMARK [1][-]{section.12.6}{Data reasoning}{chapter.12}% 76
+\BOOKMARK [1][-]{section.12.7}{Visual exploration}{chapter.12}% 77
+\BOOKMARK [0][-]{chapter.13}{Acknowledgements}{}% 78
+\BOOKMARK [0][-]{chapter.14}{Appendix B}{}% 79
