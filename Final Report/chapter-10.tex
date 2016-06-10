@@ -1,4 +1,4 @@
-\chapter{Trajectory patterns}
+\chapter{Trajectory patterns}\label{trajectories}
 \section{Introduction}
 This GSP attempts to identify people’s movement patterns from anonymized wifi logs. \autoref{hernoemen} described movement patterns including spatial and temporal aspects of single movements of a crowd of people. Another way of looking at movements, is by tracking individual movement for a longer time interval. A large set of individual trajectories can be used for the identification of typical movements among users of the campus. The method uses concepts from sequential pattern mining. \\\\
 This chapter presents a method for identifying movement patterns using individual trajectories. As described in \autoref{movementpatterns}, if moving individuals share some locations in their trajectory, you can speak of co-location in space. When the order of the shared locations are similar for multiple trajectories, you can speak of typical movement. This concept is explored for the identification of movement patterns, and thus the usage of the campus. This approach can answer different questions than looking at single movements, as is done in \autoref{hernoemen}. For example, ‘how many places the user frequently visits’, ‘at what order the user visits places’, ‘how often a trajectory happens’, ‘how many places contained in a frequent trajectory’.\\\\
@@ -17,8 +17,19 @@ Given a time interval, there is a set of individual trajectories $\textit{S} = \
 \subsection{Trajectory Pattern}
 From a set \textit{S} of trajectories, different patterns can be identified using sequential pattern mining algorithms. Frequency of a trajectory by all users of the campus can be detected. This can be represented as a trajectory \textit{T} with a support \textit{s}. Support means how many times the same sequence, or sub-sequence, is shared in the set of trajectories. This gives valuable information on the order common buildings are used and what order of buildings occurs the most. Using a minimum support threshold, sequential mining returns all movement patterns that satisfy \textit{n} \textgreater 2 and support \textit{T} \textgreater \textit{$S_{min}$}   Furthermore, the length of common trajectories can be discovered. This allows for identification of movement patterns of a specific length \textit{n}. Also, when location is not considered, but only the length of a trajectory, the mobility pattern of an individual can be described in terms of how many times he/she re-locates. \\\\
 For this study, a trajectory pattern is a sequence of states with \textit{n} \textgreater 2 and support \textgreater \textit{$S_{min}$}. We are only considering trajectory patterns with \textit{n} \textgreater 2, because \autoref{hernoemen} already looked at two consecutive states.\\\\
-There exists many developed sequential pattern mining algorithms. For this study PrefixSpan \cite{pei2004mining} is used to identify common shared trajectories or sub-trajectories.  
+There exists many developed sequential pattern mining algorithms. For this study PrefixSpan \cite{pei2004mining} is used to identify common shared trajectories or sub-trajectories. This sequential pattern mining algorithm can find re-occuring sequences or sub-sequences from a set of trajectories. For every common sequence, a support value is computed. 
 \section{Implementation}
+For this analyses the same data is used as for the single movement analysis. As described in \autoref{preprocessing}, from the raw Wi-Fi log states are extracted. More than 2.8 million states are identified from the dataset. This information is stored including a unique mac address, a number representing a building, the start time of the state and the end time of the state. The states are used to construct individual sequences ordered by date and time. The \textit{$T_{split}$} is used to create separate trajectories for different days, for each individual. For this study, a new trajectory is created when there has not been a connection for 5.5 hours, i.e. a state of outside campus ('world') > 5.5 hours. This threshold is suitable for identifying people moving home at the end of the day and coming back the next morning. After splitting the sequences, over 950.000 trajectories are created, with temporal granularity of one day. Every trajectory starts and ends with 'world', i.e. people start and end there trajectory outside the campus. A sample of a constructed trajectory can be seen in \autoref{figure:figtrajectory}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{sampleTraject.png}
+\captionsetup{justification=centering}
+\caption{sample of individual trajectories}
+\label{figure:figtrajectory}
+\end{figure}
+
+  
 \section{Results}
 % <-- Please divide into the correct sections! --> %
 
