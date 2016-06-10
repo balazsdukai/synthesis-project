@@ -68,78 +68,93 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.2}States to movements}{26}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Spatio-temperal movement patterns}{27}{chapter.8}
+\contentsline {chapter}{\numberline {8}Spatio-temporal movement patterns}{27}{chapter.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.1}Introduction}{27}{section.8.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.2}Methods}{27}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Results}{27}{section.8.3}
+\contentsline {section}{\numberline {8.3}Results}{28}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.1}All movement}{27}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.1}All movement}{28}{subsection.8.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.2}Mobile vs static}{27}{subsection.8.3.2}
+\contentsline {subsection}{\numberline {8.3.2}Mobile vs static}{29}{subsection.8.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.3}Week vs weekend}{27}{subsection.8.3.3}
+\contentsline {subsection}{\numberline {8.3.3}Week vs weekend}{31}{subsection.8.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.3.4}From and to}{27}{subsection.8.3.4}
+\contentsline {subsection}{\numberline {8.3.4}From and to}{34}{subsection.8.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Trajectory patterns}{29}{chapter.9}
+\contentsline {chapter}{\numberline {9}Trajectory patterns}{37}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Introduction}{29}{section.9.1}
+\contentsline {section}{\numberline {9.1}Introduction}{37}{section.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}Problem description}{29}{section.9.2}
+\contentsline {section}{\numberline {9.2}Problem description}{37}{section.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2.1}Location extraction}{29}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.1}Location extraction}{37}{subsection.9.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2.2}Individual trajectory}{30}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.2}Individual trajectory}{38}{subsection.9.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2.3}Trajectory Pattern}{30}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.3}Trajectory Pattern}{38}{subsection.9.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.3}Implementation}{30}{section.9.3}
+\contentsline {section}{\numberline {9.3}Implementation}{38}{section.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.4}Results}{31}{section.9.4}
+\contentsline {section}{\numberline {9.4}Results}{39}{section.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Indoor spatio-temporal movement patterns}{33}{chapter.10}
+\contentsline {chapter}{\numberline {10}Indoor spatio-temporal movement patterns}{41}{chapter.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1}Introduction}{33}{section.10.1}
+\contentsline {section}{\numberline {10.1}Introduction}{41}{section.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Theory / methods}{33}{section.10.2}
+\contentsline {section}{\numberline {10.2}Theory / methods}{41}{section.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.3}Implementation}{34}{section.10.3}
+\contentsline {section}{\numberline {10.3}Implementation}{42}{section.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.1}Delineation of building parts}{34}{subsection.10.3.1}
+\contentsline {subsection}{\numberline {10.3.1}Delineation of building parts}{42}{subsection.10.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.2}Movement between building parts}{35}{subsection.10.3.2}
+\contentsline {subsection}{\numberline {10.3.2}Movement between building parts}{43}{subsection.10.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.3}Indoor route network}{35}{subsection.10.3.3}
+\contentsline {subsection}{\numberline {10.3.3}Indoor route network}{43}{subsection.10.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.4}Mapping traffic to the route network}{35}{subsection.10.3.4}
+\contentsline {subsection}{\numberline {10.3.4}Mapping traffic to the route network}{43}{subsection.10.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3.5}Visualization of the movement}{36}{subsection.10.3.5}
+\contentsline {subsection}{\numberline {10.3.5}Visualization of the movement}{44}{subsection.10.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.4}Results}{36}{section.10.4}
+\contentsline {section}{\numberline {10.4}Results}{44}{section.10.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}Conclusions}{39}{chapter.11}
+\contentsline {chapter}{\numberline {11}Conclusions}{47}{chapter.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Recommendations}{41}{chapter.12}
+\contentsline {chapter}{\numberline {12}Recommendations}{49}{chapter.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.1}Entrances}{41}{section.12.1}
+\contentsline {section}{\numberline {12.1}Entrances}{49}{section.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1.1}Introduction}{41}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.1}Introduction}{49}{subsection.12.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1.2}Methodology}{41}{subsection.12.1.2}
+\contentsline {subsection}{\numberline {12.1.2}Methodology}{49}{subsection.12.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1.3}Hypothesis}{41}{subsection.12.1.3}
+\contentsline {subsection}{\numberline {12.1.3}Hypothesis}{49}{subsection.12.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1.4}First approach: including passing by events}{41}{subsection.12.1.4}
+\contentsline {subsection}{\numberline {12.1.4}First approach: including passing by events}{49}{subsection.12.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1.5}Second approach: excluding passing by events}{42}{subsection.12.1.5}
+\contentsline {subsection}{\numberline {12.1.5}Second approach: excluding passing by events}{50}{subsection.12.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {12.1.6}Recommendation}{44}{subsection.12.1.6}
+\contentsline {subsection}{\numberline {12.1.6}Recommendation}{52}{subsection.12.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.2}Association rules}{45}{section.12.2}
+\contentsline {section}{\numberline {12.2}Association rules}{53}{section.12.2}
 \defcounter {refsection}{0}\relax 
+<<<<<<< HEAD
+\contentsline {section}{\numberline {12.3}Distinguishing user groups}{53}{section.12.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.4}Occupancy}{53}{section.12.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.5}AP system}{53}{section.12.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.6}Data reasoning}{53}{section.12.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.7}Visual exploration}{54}{section.12.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {13}Acknowledgements}{55}{chapter.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {14}Appendix B}{57}{chapter.14}
+=======
 \contentsline {subsection}{\numberline {12.2.1}Association rules mining}{45}{subsection.12.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {12.2.2}Assosication rules of buildings}{45}{subsection.12.2.2}
@@ -159,4 +174,5 @@
 \contentsline {chapter}{\numberline {13}Acknowledgements}{49}{chapter.13}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {14}Appendix B}{51}{chapter.14}
+>>>>>>> c12d416c78655bca26d00fe3cd4533e1f5c061e4
 \contentsfinish 
