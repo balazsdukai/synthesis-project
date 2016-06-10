@@ -200,52 +200,6 @@
       \field{pages}{1\bibrangedash 9}
       \range{pages}{9}
     \endentry
-    \entry{ec-46-1995}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=383bdad2165978efb1df2583a0b7e4de}{{Parliament\bibnamedelimb and\bibnamedelimb Council\bibnamedelimb of\bibnamedelimb European\bibnamedelimb Union}}{P\bibinitperiod}{}{}{}{}{}{}}%
-      }
-      \strng{namehash}{383bdad2165978efb1df2583a0b7e4de}
-      \strng{fullhash}{383bdad2165978efb1df2583a0b7e4de}
-      \field{sortinit}{P}
-      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
-      \field{labelyear}{1995}
-      \field{datelabelsource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{\newline\url{http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31995L0046:en:HTML}}
-      \field{title}{Directive ({EC}) 95/46/EC}
-      \field{year}{1995}
-    \endentry
-    \entry{pei2004mining}{article}{}
-      \name{author}{8}{}{%
-        {{uniquename=0,hash=56af930e1f5e2c9a791b71e7b347c0ba}{Pei}{P\bibinitperiod}{Jian}{J\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=7cacfe272c4d395c979d6aecd2f5ec9c}{Han}{H\bibinitperiod}{Jiawei}{J\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=2aa42185065db491b81019deccca714a}{Mortazavi-Asl}{M\bibinithyphendelim A\bibinitperiod}{Behzad}{B\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=7086b1d5e2957cb0df860dad4985b9c9}{Wang}{W\bibinitperiod}{Jianyong}{J\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=1aaee8f6b7befee4d30b9ce95e670ab1}{Pinto}{P\bibinitperiod}{Helen}{H\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=8bfa073c1af6508bbadf0074f24c4d64}{Chen}{C\bibinitperiod}{Qiming}{Q\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=df58e4196ac8acd3bd9941a5277229d1}{Dayal}{D\bibinitperiod}{Umeshwar}{U\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=ac9c66b911d24dfdbd7755c6b01179ec}{Hsu}{H\bibinitperiod}{Mei-Chun}{M\bibinithyphendelim C\bibinitperiod}{}{}{}{}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{0f7210bb6168b72933fbd7a462c750c1}
-      \strng{fullhash}{d6465dacc064422e89e8c3835325ccec}
-      \field{sortinit}{P}
-      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
-      \field{labelyear}{2004}
-      \field{datelabelsource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Knowledge and Data Engineering, IEEE Transactions on}
-      \field{number}{11}
-      \field{title}{Mining sequential patterns by pattern-growth: The prefixspan approach}
-      \field{volume}{16}
-      \field{year}{2004}
-      \field{pages}{1424\bibrangedash 1440}
-      \range{pages}{17}
-    \endentry
     \entry{radaelli2013identifying}{inproceedings}{}
       \name{author}{4}{}{%
         {{uniquename=0,hash=80bdf77b2567a629ac7e575489da87b5}{Radaelli}{R\bibinitperiod}{Laura}{L\bibinitperiod}{}{}{}{}}%
