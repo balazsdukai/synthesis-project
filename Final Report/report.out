@@ -8,7 +8,7 @@
 \BOOKMARK [1][-]{section.4.4}{Top level requirements}{chapter.4}% 8
 \BOOKMARK [1][-]{section.4.5}{Reading guide}{chapter.4}% 9
 \BOOKMARK [0][-]{chapter.5}{Context}{}% 10
-\BOOKMARK [1][-]{section.5.1}{Use case: TU Delft \(working title\)}{chapter.5}% 11
+\BOOKMARK [1][-]{section.5.1}{Use case: TU Delft}{chapter.5}% 11
 \BOOKMARK [1][-]{section.5.2}{Previous research: Rhythm of the campus}{chapter.5}% 12
 \BOOKMARK [1][-]{section.5.3}{Privacy}{chapter.5}% 13
 \BOOKMARK [1][-]{section.5.4}{Data accuracy}{chapter.5}% 14
@@ -31,7 +31,11 @@
 \BOOKMARK [1][-]{section.7.2}{mobility analysis}{chapter.7}% 31
 \BOOKMARK [1][-]{section.7.3}{States to movements}{chapter.7}% 32
 \BOOKMARK [1][-]{section.7.4}{States to trajectories}{chapter.7}% 33
+<<<<<<< HEAD
 \BOOKMARK [0][-]{chapter.8}{Spatio-temporal movement patterns}{}% 34
+=======
+\BOOKMARK [0][-]{chapter.8}{Movements}{}% 34
+>>>>>>> e0535bcadc72ec07371ea74e00ded54fef4a10d8
 \BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 35
 \BOOKMARK [1][-]{section.8.2}{Methods}{chapter.8}% 36
 \BOOKMARK [1][-]{section.8.3}{Results}{chapter.8}% 37
@@ -48,7 +52,11 @@
 \BOOKMARK [2][-]{subsection.9.4.1}{Length of pattern}{section.9.4}% 48
 \BOOKMARK [2][-]{subsection.9.4.2}{trajectory length-4 pattern}{section.9.4}% 49
 \BOOKMARK [2][-]{subsection.9.4.3}{Trajectory filtering}{section.9.4}% 50
+<<<<<<< HEAD
 \BOOKMARK [0][-]{chapter.10}{Indoor spatio-temporal movement patterns}{}% 51
+=======
+\BOOKMARK [0][-]{chapter.10}{Indoor movement}{}% 51
+>>>>>>> e0535bcadc72ec07371ea74e00ded54fef4a10d8
 \BOOKMARK [1][-]{section.10.1}{Introduction}{chapter.10}% 52
 \BOOKMARK [1][-]{section.10.2}{Theory / methods}{chapter.10}% 53
 \BOOKMARK [1][-]{section.10.3}{Implementation}{chapter.10}% 54
@@ -77,4 +85,8 @@
 \BOOKMARK [1][-]{section.12.6}{Data reasoning}{chapter.12}% 77
 \BOOKMARK [1][-]{section.12.7}{Visual exploration}{chapter.12}% 78
 \BOOKMARK [0][-]{chapter.13}{Acknowledgements}{}% 79
+<<<<<<< HEAD
 \BOOKMARK [0][-]{chapter.14}{Appendix B}{}% 80
+=======
+\BOOKMARK [0][-]{chapter.14}{Appendix A}{}% 80
+>>>>>>> e0535bcadc72ec07371ea74e00ded54fef4a10d8
