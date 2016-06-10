@@ -89,7 +89,7 @@ defining the building parts.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.8]{bk_BG_sketch.png}
+\includegraphics[scale=0.2]{bk_BG_sketch.png}
 \captionsetup{justification=centering}
 \caption{Access point map where yellow dots mark the access points, and
 the functional divisions (colored areas) on the ground floor at the Faculty of
@@ -137,7 +137,7 @@ Then the shortest route between each origin-destination pair is calculated and
 the movement counts are added to each edge that is traversed in the network.
 Thus if the shortest route of two distinct movements share edges, the movement
 count is summed up on the common edges, resulting in the traffic load of a given
-edge \autoref{table:moves}.
+edge \autoref{table:traffic}.
 
 \begin{table}[H]
 \centering
@@ -157,9 +157,11 @@ Edge ID & Traffic & Line width \\ \midrule
 The visualization method, as well as the route network, is two-dimensional.
 However, three-dimensionality is imitated by using an \textit{exploded view}
 common in architectural visualizations, that shifts overlapping elements (e.g.
-floors) by a certain angle.\\
+floors) by a certain angle.
+
 In this graphic the \textit{nodes} that represent the building parts are the approximate centroids of the polygonal area of the buildingpart. The nodes were manually adjusted
-to better match the route network.\\
+to better match the route network.
+
 The route network is represented with
 straigth lines, where the \textit{line width} is proportional to the traffic
 load of a given edge. However, line widths cannot be compared across graphics, as in order

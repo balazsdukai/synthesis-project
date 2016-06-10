@@ -15,29 +15,31 @@ During the project, the group used passive Wi-Fi monitoring to detect users of t
 This research was different from the research conducted in this Synthesis Project, mainly due the larger size of the eduroam network and the ability to track everybody using the Wi-Fi network.
 
 \section{Privacy}
-This project focuses on identifying common movement patterns, ignoring
-the individual, therefore we did not test explicity whether is possible to
-identify individuals or not from the data. However, based on our findings about
-the operation of the \textit{eduroam} Wi-Fi network and about the methods that
-are used to identify movemebt patterns, we can make the following assumptions.
+This project focuses on identifying common movement patterns, ignoring the individual, therefore we did not test explicitly whether is possible to identify individuals or not from the data. However, based on our findings about the operation of the \textit{eduroam} Wi-Fi network and about the methods that
+are used to identify movement patterns, we can make the following assumptions.\\\\
+Movement patterns are rather unique, therefore it is possible to match them to individuals even if maybe not in every case. However, in order to do so it is
+necessary to have additional data available. This additional data itself is often considered private data, e.g. the complete weekly schedule of the person.
+Provided that timetables are openly accessible and the occupation of the individual is known, then his movement pattern may be identified in the dataset.\\\\
+The availability of a detailed access point map makes it easier to identify individuals by allowing a more detailed movement analysis (e.g. on buildingpart
+level). It reduces the ambiguity that is still present in building level movement analysis.
 
-Movement patterns are rather unique, therefore it is possible to match them to
-individuals even if maybe not in every case. However, in order to do so it is
-necessary to have additional data available. This additional data itself is
-often considered private data, e.g. the complete weekly schedule of the person.
-Provided that timetables are openly accessible and the occupation of the
-individual is known, then his movement pattern may be identified in the dataset.
+\section{Data accuracy}
+The spatial accuracy of the Wi-Fi log datased is defined by the range of the
+APs. Although we do not have information on the exact range of the differente
+APs, we estimate the range ot be a few tens of meters. Therefore, if a user is
+recorded by a specifis AP, in reality he can be anywhere around the AP in its
+range.
 
-The availablitity of a detailed access point map makes it easier to identify
-individuals by allowing a more detailed movement analysis (e.g. on building part
-level). It reduces the ambiguity that is still present in building level
-movement analysis.
-
-\section{Data validity and accuracy}
-% Balazs
+The temporal accuracy of the Wi-Fi log dataset is defined by the five minute
+campus-wide scan interval of the \textit{eduroam} system. It means that all APs
+on the TU Delf campus scan at the same moment in approximately five minute
+intervals. Therefore, it is possible that the user is already at a given AP, but
+he will be first recorded at the next scan round, or the user alread left the AP
+but that also will be only recorded at the next scan round.
 
 \section{Representativeness}
 % Xander
+In the GSP a big amount of wifilog data is used. The data represents all people that make (active) use of the wifi eduroam network. These are the students and employees of the TU Delft.  There is just a small amount of people that are within the spatial scope of the project and cannot connect with the wifi eduroam network. The data is acquired by the access points, which all are located in a building on the campus. The people that use a building on the campus, but do not make use of the wifi eduroam network, is very small part. Thus, the main part of actual users is covered by the data used in the GSP. The collection of data is acquired over a continuous time interval of more than 2 months. This time period would be large enough to reflect on all users of the campus to some extend.
 
 \section{Data description and System of APs}\label{datadescriptionandsystemofaps}
 \subsection{Data description}\label{datadescription}
@@ -79,13 +81,15 @@ The apname is the name assigned to the access point. Every access point has a un
 The maploc describes the location of the access point. There could be multiple access points with the same maploc. For instance, there are 31 access points located on the ground floor of the Faculty of Architecture.
 \\\\
 \textbf{Sesdur}\\
-The sesdur describes the session duration of which a device is connected to the access point. Because this is not as straightforward as it seems, this will be explained more extensively.
-\\\\
-bladibla figure shows the the frequency of session durations.
-\\\\
-picture
-\\\\
-The figure shows a large peak at exactly 5 minutes, a peak at approximately 5 minutes and decreasing peaks after a time interval of approximately 5 minutes. It looks like it is recording in a certain time interval in which the device is (still) connected. \\\\
+The sesdur describes the session duration of which a device is connected to the access point. Because this is not as straightforward as it seems, this will be explained more extensively.\autoref{frequency_sesdur} shows the frequency of session durations (the peak at exactly 5 minutes is filtered out to make the graph more readable).\\\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{sesdur_graph_without5min.png}
+	\captionsetup{justification=centering}
+	\caption{The frequency of session durations}
+	\label{frequency_sesdur}
+\end{figure}
+There is a large peak at exactly 5 minutes, a peak at approximately 5 minutes and decreasing peaks after a time interval of approximately 5 minutes. It looks like it is recording in a certain time interval in which the device is (still) connected. \\\\
 In order to justify this, the query below is used to see the asstimes (and time to next asstime)\\\\
 \begin{center}
 \begin{lstlisting}[language=SQL]
@@ -151,7 +155,7 @@ The received signal strength indicator (RSSI) describes the received signal stre
 \subsection{System of APs}\label{systemofaps}
 This section will describe the current layout of access points (APs) on the TU Delft campus. The location of APs in a building is not known, but for the Faculty of Architecture a paper map was available. Therefore the system of APs in the Faculty of Architecure will be described in more detail. \\\\
 In total there are 1730 access points, distributed over more than 30 buildings on the campus. The access points are mostly placed on walls or ceilings. The data describes that every access point is linked to a certain location. Due to the (wide) signal range of the access point, the device can be located at a different floor level than the access point it is connected to. Moreover, there could be access points located at the first floor while serving people at ground floor as well. This is the case in rooms with high ceilings, such as the orange hall in the Faculty of Architecture. \\\\
-As said, the Faculty of Architecure is the only building of which the location of the access points are known. The floor plans are enriched with the location of the access point (see ). Next to that, a table is provdided with additional information regarding the access points, although this table does not contain all present access points. This table includes the MAC address of the access point. This could be used to look up to what access point the device is connected. 
+As said, the Faculty of Architecure is the only building of which the location of the access points are known. The floor plans are enriched with the location of the access point (see ). Next to that, a table is provdided with additional information regarding the access points, although this table does not contain all present access points. This table includes the MAC address of the access point. This could be used to look up to what access point the device is connected.\\\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.8]{apmap_west.png}
