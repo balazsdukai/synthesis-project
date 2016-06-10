@@ -9,26 +9,31 @@ In order to find what entrance someone uses to enter or exit a building, we will
 \subsection{Hypothesis}\label{hypo}
 Our hypothesis is that finding clear answers to the question whether it is possible to identify what entrances are most frequently used, is going to be hard. Firstly, because the existing layout of APs is not designed for the purpose of tracking people. For this reason there is not always an AP located near an entrance. Secondly, because the logging frequency of the system is a little more than 5 minutes. Ideally the system records the connected device at the very first AP it connects with. The chance the device is recorded at the moment it is connected with the very first access point is small. However we still expect to see some results. Although the time interval in which the system logs the connected devices is relatively large, an AP located near an entrance would still pop up as one of the most frequently used AP as first connection (assuming people disseminate over the building after entering). 
 \subsection{First approach: including passing by events}
-The first approach makes use of the raw wifilog data, by finding the part in a sequence in which a device is recorded by an AP in a building and is subsequently recorded in another building. The states in which a device is scanned once are not filter out. These single records imply that a device only passed by the building, and thus was not located in the building. 
+The first approach makes use of the raw wifilog data, by finding the part in a sequence in which a device is recorded by an AP in a building and is subsequently recorded in another building. The states in which a device is scanned once are not filter out. These single records imply that a device only passed by the building, and thus was not located in the building. \\\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{entrances_firstapproach.png}
+	\includegraphics[scale=0.2]{entrances_firstapproach_1.png}
 	\captionsetup{justification=centering}
-	\caption{Most frequently recorded APs in a movement from or to the Faculty of Architecture}
+	\caption{Most frequently recorded APs in a movement to the Faculty of Architecture}
+	\label{firstapproach_graph}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.2]{entrances_firstapproach_2.png}
+	\captionsetup{justification=centering}
+	\caption{Most frequently recorded APs in a movement from the Faculty of Architecture}
 	\label{firstapproach_graph}
 \end{figure}
 The floor plans of the Faculty of Architecture, enriched with the location of APs, are used to locate the most frequently used APs on the map (see ??). The result is interesting, since most APs are not located near an entrance but are located at one of the corners of the building. Most of the them are located at the western part of the building. Knowing that lots of people are passing in the street next to this part of the building, we can conclude the result of this analysis is distorted due not filtering out the devices that are recorded when passing by the building.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{bk_aplocs1.png}
+	\includegraphics[scale=0.3]{bk_aplocs1.png}
 	\captionsetup{justification=centering}
 	\caption{The location of the most frequently used APs that are used to record the first and/or last connection of a device in the Faculty of Architecture}
 	\label{firstapproach_map}
 \end{figure}
 \subsection{Second approach: excluding passing by events}
-Table x shows the individual states as a result of the pre-processing (see chapter pre-processing). The records represent the states for each mac, including the first and last recorded AP (ap_start, ap_end). 
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
+Table x shows the individual states as a result of the pre-processing (see chapter pre-processing). The records represent the states for each mac, including the first and last recorded AP (ap\_start, ap\_end). \\\\
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
@@ -49,25 +54,30 @@ Table x shows the individual states as a result of the pre-processing (see chapt
 		000c+YfkIi.. & 20                & 11-4-2016 13:25 & 11-4-2016 13:56 & A-20-0-008         & A-20-0-045       \\ \bottomrule
 	\end{tabular}
 \end{table}
-The table also includes ’world’ (in \autoref{individualstates} represented by NULL) which implies the device is not located on the campus. A simple SQL query is used for plotting the most frequently used first and last recorded APs in a stay (\autoref{secondapproach_graph})
+The table also includes ’world’ (in \autoref{individualstates} represented by NULL) which implies the device is not located on the campus. A simple SQL query is used for plotting the most frequently used first and last recorded APs in a stay (\autoref{secondapproach_graph})\\\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{entrances_secondapproach.png}
+	\includegraphics[scale=0.2]{entrances_secondapproach_1.png}
 	\captionsetup{justification=centering}
-	\caption{Most frequently recorded APs in a movement from or to the Faculty of Architecture}
+	\caption{Most frequently recorded APs in a movement to the Faculty of Architecture}
 	\label{secondapproach_graph}
 \end{figure}
-The most frequently used access point, A-08-J-005, is located high up in the modelling hall and thus not near an entrance (see \autoref{}secondapproach_map}). Although this location is different than expected there might be a reason for it. The access point is placed in an open space in which no objects could seriously block the Wi-Fi signal. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.8]{bk_aplocs2.png}
+	\includegraphics[scale=0.2]{entrances_secondapproach_2.png}
+	\captionsetup{justification=centering}
+	\caption{Most frequently recorded APs in a movement from the Faculty of Architecture}
+	\label{secondapproach_graph}
+\end{figure}
+The most frequently used access point, A-08-J-005, is located high up in the modelling hall and thus not near an entrance (see \autoref{secondapproach_map}). Although this location is different than expected there might be a reason for it. The access point is placed in an open space in which no objects could seriously block the Wi-Fi signal.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{bk_aplocs2.png}
 	\captionsetup{justification=centering}
 	\caption{The location of the most frequently used APs that are used to record the first and/or last connection of a device in the Faculty of Architecture}
 	\label{secondapproach_map}
 \end{figure}
-In order to know with what APs a device connects when entering a building, some experiments are conducted. By looking at the MAC address of the access point the device is connects with, it would be possible to identify the location of that AP. This experiment is conducted for entering the Faculty of Architecture via the East, West and main entrance. \autoref{entrance_experiment_results} shows the results of the experiment.
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
+In order to know with what APs a device connects when entering a building, some experiments are conducted. By looking at the MAC address of the access point the device is connects with, it would be possible to identify the location of that AP. This experiment is conducted for entering the Faculty of Architecture via the East, West and main entrance. \autoref{entrance_experiment_results} shows the results of the experiment.\\\\
 \begin{table}[H]
 	\centering
 	\captionsetup{justification=centering}
