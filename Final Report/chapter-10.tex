@@ -24,7 +24,6 @@ From a set \textit{S} of trajectories, different patterns can be identified usin
 \caption{trajectories of three days, and the trajectory pattern}
 \label{figure:figseqpattern}
 \end{figure}
-
 For this study, a trajectory pattern is a sequence of states with \textit{n} \textgreater 2 and support \textgreater \textit{$S_{min}$}. We are only considering trajectory patterns with \textit{n} \textgreater 2, because \autoref{hernoemen} already looked at two consecutive states.\\\\
 There exists many developed sequential pattern mining algorithms. For this study PrefixSpan \cite{pei2004mining} is used to identify common shared trajectories or sub-trajectories. This sequential pattern mining algorithm can find re-occuring sequences or sub-sequences from a set of trajectories. For every common sequence, a support value is computed. 
 \section{Implementation}
@@ -37,7 +36,6 @@ For this analyses the same data is used as for the single movement analysis. As 
 \caption{sample of individual trajectories}
 \label{figure:figtrajectory}
 \end{figure}
-
 Based on the created trajectories, trajectory patterns with a suppport value are detected by applying the PrefixSpan algorithm. \autoref{figure:prefixspan} shows an example of the detection of patterns with a support value given by the sequential pattern algorithm. Logically, the pattern with the highest support is a length-1 sequence. The longer patterns get, the lower the support will be.  
 
 \begin{figure}[H]
@@ -50,7 +48,9 @@ Based on the created trajectories, trajectory patterns with a suppport value are
 
 
 \section{Results of trajectory pattern identification}
-This section describes the result of the trajectory pattern mining. We used trjactories of mobile devices only, see \autoref{mobility}. From the individual trajectories, the length can be retrieved. This trajectory length is plotted in a histogram, showing how many different places users visit during a day. \autoref{figure:lenhisto} shows that most trajectories consist of three states, i.e. entering the campus, visit one building and leave the campus. The average number of states in a single trajectory is 3.95. 
+This section describes the result of the trajectory pattern mining. We used trjactories of mobile devices only, see \autoref{mobility}. 
+\subsection{Length of pattern}
+From the individual trajectories, the length can be retrieved. This trajectory length is plotted in a histogram, showing how many different places users visit during a day. \autoref{figure:lenhisto} shows that most trajectories consist of three states, i.e. entering the campus, visit one building and leave the campus. The average number of states in a single trajectory is 3.95, this provides information about movement behaviour of users on the campus. 
 
 \begin{figure}[H]
 \centering
@@ -59,7 +59,6 @@ This section describes the result of the trajectory pattern mining. We used trja
 \caption{length of individual trajectories as a sequence of states at buildings}
 \label{figure:lenhisto}
 \end{figure}
-
 In the same way, trajectories at the spatial level of inside a building can be analysed. In \autoref{indoormovement} more on indoor movement is discussed. We analysed the trajectories of individual users inside the Faculty of Architecture. The length of more than 150.000 trajectories is plotted in \autoref{figure:lenhistoindoor}. This figure shows, compared to \autoref{figure:lenhisto}, that people visit more different places indoor, than the number of different buildings, i.e. people are more mobile inside the Faculty of Architecture compared to movement between buildings. The average number of states in a single trajectory inside the Faculty of Architecture is 4.66
 
 \begin{figure}[H]
@@ -69,3 +68,43 @@ In the same way, trajectories at the spatial level of inside a building can be a
 \caption{length of individual trajectories as a sequence of states at indoor building-parts}
 \label{figure:lenhistoindoor}
 \end{figure}
+
+\subsection{trajectory length-4 pattern}
+For the identification of trajectory patterns, we used the trajectories from the building spatial level. To retrieve information about the most common order of at least four distinct locations, we only considered trajectory patterns with a length of four and longer, including 'world'. The three most frequent used order of four distinct locations with support > 1000 is shown in \autoref{figure:len4pattern}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{length-4-pattern.png}
+\captionsetup{justification=centering}
+\caption{trajectory pattern with support > 1000 and four distinct locations}
+\label{figure:len4pattern}
+\end{figure}
+
+These three movement patterns from users of the TU Delft Campus are visualized on the map in \autoref{figure:patternAmap}, \autoref{figure:patternBmap} and \autoref{figure:patternCmap}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{patterna.png}
+\captionsetup{justification=centering}
+\caption{trajectory pattern a, world\rightarrow 3me \rightarrow aula \rightarrow btud}
+\label{figure:patternAmap}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{patternb.png}
+\captionsetup{justification=centering}
+\caption{trajectory pattern a, world\rightarrow tnw \rightarrow aula \rightarrow btud}
+\label{figure:patternBmap}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{patternc.png}
+\captionsetup{justification=centering}
+\caption{trajectory pattern a, world\rightarrow 3me \rightarrow btud \rightarrow aula}
+\label{figure:patternCmap}
+\end{figure}
+
+\subsection{Trajectory filtering}
+Trajactories can serve another purpose. Although a splitting threshold of 5.5 hours was used, we noticed numerous trajectories with a temporal granularity of more than one day. Considering human life patterns, and mobile devices are for this research related to people, trajectories should present human behaviour. This means that people usually come to work in the morning, leave in the evening to go home and sleep during the night. Trajectories that are stretched over more than one day do not illustrate human behaviour, as the mobile devices do not leave the 'working environment' to go home and sleep. Besides a longer time interval of several trajectories, they also show a systematic pattern in there states. Only by creating trajectories and based on knowledge of human movement behaviour, can these trajectories be filtered out. 
