@@ -94,8 +94,135 @@ In order to know with what APs a device connects when entering a building, some 
 The AP a device connects with when entering the building via the West entrance, E-102', can also be found in \autoref{secondapproach_graph}. Though it does not stand out compared to other APs. The MAC addresses of the APs the device connects with when entering the building via the East or Main entrance are not found, meaning the APs are not located on the map or listed in the table of APs. This implies it is not possible to relate the results to the data. 
 \subsection{Recommendation}
 The results and conducted experiments has shown it is not possible to clearly find what, when and how frequent entrances of the Faculty of Architecture are used. The first and most important reason for that, is the time interval of approximately 5 minutes in which the system is recording. A person could be anywhere in the building at the moment of recording. A smaller time interval between the moments of recording would help in finding answers to the questions regarding the use of the entrances. Also, the existing layout of APs in the Faculty of Architecture is currently not designed for any other purpose than allowing a Wi-Fi compliant device to connect with the wireless eduroam network. Locating APs near the entrances of a building might help. Moreover, the fact the Faculty of Architecture has multiple entrances, in combination with the large time interval of recording, is what makes identification of the entrances difficult. 
+
 \section{Association rules} 
-% Balazs
+The following section describes how movement patterns can be derived on building
+level, without considering the direction or order of the movement. An
+association rule mining algorithm \parencite{agrawal_mining_1993} was used to
+identify groups of buildings that frequently visited in combination with each
+other. Firstly the algorithm is described briefly, then the results are
+presented and recommendation is given.
+
+\subsection{Association rules mining}
+Association rule mining is a technique to analyse what variables or items are
+commonly associated with each other in large databases. Probably the one of the
+main application is to analyse which items are commonly bought together by
+customers of a supermarket. As an example for this use case is an association
+rule of an itemset \{bread, butter\}, tells that in 80\% of those transactions
+including \{bread, butter\}, also \{milk\}  was present. In other words, 80\%
+of the people who buy bread and butter also buy milk
+\parencite{agrawal_mining_1993}. Compared to sequence mining, association rule
+mining does not consider the order of items neither within, nor across transactions.
+
+Thus every rule is composed by two itemsets, the \textit{antecedent}
+\{bread,butter\} on the left-hand side, and the \textit{consequent} \{milk\} on
+the right-hand side. The rule is denoted as \{bread, butter\} \verb|=>| \{milk\}.
+
+\subsection{Assosication rules of buildings}
+When a trajectory is simplified into a set of distinct buildings that the person
+visited, association rules for buildings can be derived. In this case the rule
+describes the set of buildings, or buildingset, that are commonly visited in
+combination. For example the rule \{BK\_City, Aula\} \verb|=>| \{Library\}
+tells that a group of people who visited the buildings BK\_City and Aula also
+visited the Library.
+
+As association rule mining does not consider the order of buildings, nor the
+time spent in a building, it is important that these variables are appropriately
+handled and noise is filtered out prior running the algorithm.
+
+In the first version the buildingsets were stored in a table as below, where the
+field \textit{mac} contains the mac-address of a device and each remaining field
+represents a building. Value 1 is given if the device was recorded in a
+building, otherwise no value is given. This binary encoding is rather simplistic
+as it does not consider the amount of time spent in a building and therefore it
+does not allow to differentiate between occasional or regular visits.
+
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{uncategorized buildingset table}
+\label{uncategorized buildingset table}
+\begin{tabular}{lllllll}
+\cline{1-7}
+mac & aula & bk\_city & bouwcampus & btud & ctig & ... \\ \cline{1-7}
+A   & 1 & 1     &           &   & 1 &   \\
+B   &   &       & 1         & 1 &   &   \\
+C   &   & 1     &           &   & 1 &   \\
+D   & 1 &       &           &   &   &   \\
+E   & 1 &       & 1         &   &   &   \\ \cline{1-7}
+\end{tabular}
+\end{table}
+
+Therefore in the second version a distinction between \textit{occasional,
+regular} and \textit{frequent} stays was added to the buildingsets. The division
+between the categories is based on the 40 hour workweek and 1.5 hour lecture
+durations (see \autoref{table:stay duration categories}). 
+
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{Stay duration categories}
+\label{table:stay duration categories}
+\begin{tabular}{lll}
+\cline{1-3}
+Category   & hours/week             & ID \\ \cline{1-3}
+occasional & $\leq 0.5$                 & 1  \\
+regular & $\textgreater 0.5, \leq 5$ & 2  \\
+frequent   & $\textgreater 5$           & 3
+\end{tabular}
+\end{table}
+
+The trajectories of approximately 14,000 devices were used to create the first
+set of association rules with categorized stay duration. At this stage only the
+noise was filtered from the data but not the stationary devices, and people
+carrying two devices were not accounted for. The time range of trajectories
+spanned from 31.03.2016 to 02.05.2016, approximately one month.
+
+Although there are several measures to evaluate the interestingness of an
+association rule \parencite{zhang_survey_2009}, only \textit{support} and
+\textit{confidence} were used for testing purposes.
+
+\textbf{Support}
+“The support for a rule is defined to be the fraction of transaction in the
+dataset that satisfy the union of items in the consequent and antecedent of the
+rule.” \parencite{agrawal_mining_1993}. In case of the rule \{BK\_City, Aula\}
+\verb|=>| \{Library\}, the support is the percentage of the total dataset that
+includes BK\_City, Aula and Library.
+
+\textbf{Confidence}
+Confidence measures the strength of the rule, and is considered as a
+conditional probability. In case of the rule \{BK\_ City, Aula\} \verb|=>|
+\{Library\}, the confidence is the probability that Library is in the
+trajectory if both BK\_ City and Aula are in the trajectory
+(\cite{agrawal_mining_1993}; \cite{anbukkarasy_interesting_2013}).
+
+The most interesting rules are displayed in \autoref{figure:buildingset}:
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.45]{acc_buildingset_v0516}
+\captionsetup{justification=centering}
+\caption{Building set}
+\label{figure:buildingset}
+\end{figure}
+
+In the buildingset of approx. 14,000 devices 2\% was recorded in all of the
+buildings \textit{Drebbelweg, EWI-LB, EWI-HB} (Support = 0.02). There is an
+86\% chance that if a device is recorded in the buildings \textit{Drebbelweg,
+EWI-LB}, then it is also recorded in \textit{EWI-HB} (Confidence = 0.86). And
+they spent on average between half hour to five hours a week in each building
+(drebbelweg=2, ewi\_ lb=2, ewi\_ hb=2).
+
+\subsection{Recommendation}
+Association rule mining is a suitable technique to analize the occupancy of a
+group of buildings, but it is less suitable for analizing movement patterns.
+Therefore it is not handled more intensively in this project. However, this
+technique can potentially answer questions such as,\\
+\textit{Which are the most visited buildings?,\\
+Which buildings are islands?,\\
+If a group of people vist building A, how likely that they will also visit
+building B?,
+All the people who visit building A, what other buildings do they visit as
+well?}.
 
 \section{Distinguishing user groups}
 % Simon
@@ -103,6 +230,7 @@ The results and conducted experiments has shown it is not possible to clearly fi
 
 \section{Occupancy}
 % Matthijs
+% Filtering out static devices, but those can be used for occupancy!!!
 
 \section{AP system}
 % Matthijs
