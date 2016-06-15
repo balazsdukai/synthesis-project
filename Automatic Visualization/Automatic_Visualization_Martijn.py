@@ -25,7 +25,7 @@ sqlPath = os.getcwd() + '/sql/'
 def main (blds_from,blds_to,dates,types):
     #weekWeekend()
     #mobileStatic()
-    fromAndToBuilding(11)
+    fromAndToBuilding(0)
     #withWithoutWorld()
     #examWhiteNormal()
     
@@ -138,15 +138,19 @@ def weekWeekend():
     styleGraph()
 
 def fromAndToBuilding(bld_id):
-    spatialLevel = 'buildingpart'
+    spatialLevel = 'building'
     blds_from = [bld_id]
-    blds_to = getAllBldParts(True)
+    blds_to = getAllBlds(True)
     dates = getDates('normal')
     types = ['mobile']
-    #name = uf.building_id2name(bld_id,cur)
-    name = 'Ketelhuis (restaurant)'
+    if spatialLevel == 'building':
+        name = uf.building_id2name(bld_id,cur)
+    #name = 'Campus'
     if name == 'world':
         name = 'campus'
+        temp = blds_from
+        blds_from = blds_to
+        blds_to = temp
     fromAndToMovement(blds_from,blds_to,dates,types,name,spatialLevel)
 
 def fromAndToMovement(blds_from,blds_to,dates,types,name,spatialLevel):
@@ -159,8 +163,10 @@ def fromAndToMovement(blds_from,blds_to,dates,types,name,spatialLevel):
 
 
     # plot data
+    fig, ax = plt.subplots()
     from_movement, = plt.plot(times,movements,color='r',label='from {}'.format(name))
     to_movement, = plt.plot(times2,movements2,color='b',label='to {}'.format(name))
+    ax.set_axis_bgcolor('#4C3E52')
     lectureTime = addlectureTime()
 
     # style graph
