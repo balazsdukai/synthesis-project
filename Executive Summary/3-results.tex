@@ -27,7 +27,7 @@ Looking at building level, movement patterns between, from and to buildings can 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.2]{ES-mapTotal.png}
+\includegraphics[scale=0.1]{ES-mapTotal.png}
 \captionsetup{justification=centering}
 \caption{top 10 most occuring movements on building level}
 \label{figure:ES-mapTotal}
@@ -53,19 +53,27 @@ The previous figures showed the movement over the entire time span of the resear
 \label{figure:ES-buildingWeekWeekendGraph}
 \end{figure}
 
-Finally the movement can also be queried based on origin and destination instead of or together with time. This enables a more detailed analysis of specific buildings or events. \autoref{}
+Finally the movement can also be queried based on origin and destination instead of or together with time. This enables a more detailed analysis of specific buildings or events. \autoref{figure:ES-buildingFromToAulaGraph} shows the movement from and to the aula during normal weekdays. The aula has a lunch facility explaining the large amount of movement during lunch time. Both the movement to and from the aula is high at the start and the end of the lunch time, possible because the aula is also used for lectures. \autoref{figure:ES-1315to1400} gives insight in where people exactly come from and go to during the interval between 13:15 and 14:00. As expected many people move to the library at this time, probably to continue studying after lunch. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.2]{building_weekWeekend_graph.png}
+\includegraphics[scale=0.2]{building_fromTo_aulaGraph.png}
 \captionsetup{justification=centering}
-\caption{time profile of all outdoor movement of mobile devices for week- and weekend days}
-\label{figure:ES-buildingWeekWeekendGraph}
+\caption{time profile of movement of mobile devices from and to aula during normal weekdays}
+\label{figure:ES-buildingFromToAulaGraph}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.1]{ES-map_1315to1400.png}
+\captionsetup{justification=centering}
+\caption{movement of mobile devices from and to aula between 13:15 and 14:00 during normal weekdays}
+\label{figure:ES-1315to1400}
 \end{figure}
 
 
 \subsection{Indoor movement patterns}\label{ES-indoorMovement}
-Looking at building-part level, movement patterns between, from and to buildings-parts can be detected. \autoref{figure:ES-buildingpartAllGraph} shows the time profiles for all movement on building-part level for the faculty of Architecture. With world this includes the movement from and to the faculty, without world these movements are excluded. During the working day the movement is relatively steady, except for two distinct peaks before and after lunch. Furthermore small peaks can be seen at the start and end of the day when people arrive and leave the building. The faculty of architecture normally closes at 22:00 resulting in a movement peak captured in the graph. 
+Like for building level the building-part level data can be filtered for mobile devices and queried based on time, and origin and destination. \autoref{figure:ES-buildingpartAllGraph} shows the time profiles for all movement on building-part level for the faculty of Architecture. With world this includes the movement from and to the faculty, without world these movements are excluded. During the working day the movement is relatively steady, except for two distinct peaks before and after lunch. Furthermore small peaks can be seen at the start and end of the day when people arrive and leave the building. The faculty of architecture normally closes at 22:00 resulting in a movement peak captured in the graph. 
 
 \begin{figure}[H]
 \centering
@@ -75,6 +83,9 @@ Looking at building-part level, movement patterns between, from and to buildings
 \label{figure:ES-buildingpartAllGraph}
 \end{figure}
 
+\autoref{figure:ES-buildingpartAllMap} shows all the movement within the faculty of architecture on a map. As the movements follow the shortest route on the graph it becomes possible to see which particular corridor or staircase is busiest. Here the movement rates are highest in the eastern part of the ground floor. It is however harder to detect what exactly the most occurring movement is. Different routes make use of the same connectors, resulting in aggregated movement.
+
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{bk_map_total.png}
@@ -83,11 +94,13 @@ Looking at building-part level, movement patterns between, from and to buildings
 \label{figure:ES-buildingpartAllMap}
 \end{figure}
 
+Finally \autoref{figure:ES-bouwpub} and \autoref{figure:ES-canteen} give a more detailed insight in the movement from and to the bouwpub (cafe) and canteen (lunch facility) building-parts. The timeprofile of the canteen shows the expected peaks before and after lunch. Simarly it can be seen that people move towards the bouwpub after lecture time and leave around 20:00 when it closes. 
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.2]{buildingpart_fromTo_bouwpubGraph.png}
 \captionsetup{justification=centering}
-\caption{movement from and to the bouwpub}
+\caption{all movement of mobile devices during weekdays from and to the bouwpub}
 \label{figure:ES-bouwpub}
 \end{figure}
 
@@ -95,6 +108,6 @@ Looking at building-part level, movement patterns between, from and to buildings
 \centering
 \includegraphics[scale=0.2]{buildingpart_fromTo_canteenGraph.png}
 \captionsetup{justification=centering}
-\caption{movement from and to the canteen}
+\caption{all movement of mobile devices during weekdays from and to the canteen}
 \label{figure:ES-canteen}
 \end{figure}
