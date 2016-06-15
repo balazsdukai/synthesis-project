@@ -1,0 +1,162 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Glossary}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Executive Summary}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Introduction}{5}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Intro}{5}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Purpose statement}{6}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Methods}{6}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Top level requirements}{7}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Reading guide}{8}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Context}{9}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Use case: TU Delft}{9}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Previous research: Rhythm of the campus}{9}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Privacy}{10}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Data accuracy}{10}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Representativeness}{10}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Data description and System of APs}{10}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.1}Data description}{10}{subsection.4.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.2}System of APs}{13}{subsection.4.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Movement patterns}{15}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Introduction}{15}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Movement identification}{15}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Spatio-temporal movement patterns}{15}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}Co-location in space}{16}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Methodology}{17}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Preprocessing}{18}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}Initial filtering}{18}{subsection.6.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.2}Grouping of states}{19}{subsection.6.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.3}Adding world state}{20}{subsection.6.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.4}Passing by}{21}{subsection.6.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.5}Implementation}{22}{subsection.6.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}mobility analysis}{23}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}States to movements}{24}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}States to trajectories}{26}{section.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Movements}{27}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Introduction}{27}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}Methods}{27}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Results}{28}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.1}All movement}{28}{subsection.7.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.2}Mobile vs static}{29}{subsection.7.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.3}Week vs weekend}{31}{subsection.7.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.3.4}From and to}{34}{subsection.7.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Trajectory patterns}{37}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Introduction}{37}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Problem description}{37}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.2.1}Trajectory Pattern}{38}{subsection.8.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.3}Implementation}{38}{section.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.4}Results of trajectory pattern identification}{39}{section.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.1}Length of pattern}{39}{subsection.8.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.2}trajectory length-4 pattern}{41}{subsection.8.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.3}Trajectory filtering}{45}{subsection.8.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {9}Indoor movement}{47}{chapter.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.1}Introduction}{47}{section.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.2}Theory / methods}{47}{section.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.3}Implementation}{48}{section.9.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3.1}Delineation of building parts}{48}{subsection.9.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3.2}Movement between building parts}{49}{subsection.9.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3.3}Indoor route network}{49}{subsection.9.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3.4}Mapping traffic to the route network}{49}{subsection.9.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.3.5}Visualization of the movement}{50}{subsection.9.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.4}Results}{50}{section.9.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {10}Conclusions}{53}{chapter.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {11}Recommendations}{55}{chapter.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.1}Entrances}{55}{section.11.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1.1}Introduction}{55}{subsection.11.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1.2}Methodology}{55}{subsection.11.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1.3}Hypothesis}{55}{subsection.11.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1.4}First approach: including passing by events}{55}{subsection.11.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1.5}Second approach: excluding passing by events}{56}{subsection.11.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.1.6}Recommendation}{58}{subsection.11.1.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.2}Association rules}{59}{section.11.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2.1}Association rules mining}{59}{subsection.11.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2.2}Assosication rules of buildings}{59}{subsection.11.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {11.2.3}Recommendation}{60}{subsection.11.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.3}Distinguishing user groups}{60}{section.11.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.4}Occupancy}{60}{section.11.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.5}AP system}{60}{section.11.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.6}Data reasoning}{61}{section.11.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11.7}Visual exploration}{61}{section.11.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {12}Acknowledgements}{63}{chapter.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {13}Appendix A}{65}{chapter.13}
+\contentsfinish 
