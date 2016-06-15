@@ -1,2 +1,100 @@
 \section{Results}\label{3-results}
-% Martijn, Simon
+First \autoref{ES-generalStatistics} will give a brief analysis of the data, including some general statistics. In the remainder of the chapter several movement patterns retrieved from the raw Wi-Fi log will be presented. It should be noted that many different movement patterns can be identified by counting the movement for different time intervals and for different routes. This paper aims at giving an overview of the different patterns that can be extracted. \autoref{ES-outdoorMovement} will present the outdoor building level patterns, and \autoref{ES-indoorMovement} the indoor building-part level patterns.
+
+\subsection{General statistics}\label{ES-generalStatistics}
+Within the dataset 44952 different users are present that together have 86413 devices. Of these devices 24156 are classified as mobile, the remaining devices are either classified as static or had less than 100 sessions in the Wi-Fi log, which was decided to be insufficient for classification. The 100 record threshold is a point of discussion, currently it is based on the reasoning that a person that has less records is likely a visitor that has access to eduroam and not a regular user of the TU Delft campus. \autoref{figure:ES-statistics} shows the amount of data during the different processing steps for both spatial levels. The reduction from session to states is mainly due to the grouping. The reduction from states to movements is mainly because the devices with less than 100 records are filtered out at this point.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{ES-statistics.jpg}
+\captionsetup{justification=centering}
+\caption{amount of data during processing stages}
+\label{figure:ES-statistics}
+\end{figure}
+
+\subsection{Outdoor movement patterns}\label{ES-outdoorMovement}
+Looking at building level, movement patterns between, from and to buildings can be detected. \autoref{figure:ES-buildingAllGraph} shows the time profile of all movements with and without the ‘world’ state. This graph shows that there is much movement around 8.45, 12.45, 13.45, 15.45 and 17.45, corresponding with lecture hours at TU Delft. With ‘world’ (blue line), the morning and evening rush hours around 8.45 and 17.45 are detected, when students and staff travel between campus and, probably, home. Without introducing the ‘world’ state (red line), these two movement peaks are not detected. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{building_all_graph.png}
+\captionsetup{justification=centering}
+\caption{time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from 'world')}
+\label{figure:ES-buildingAllGraph}
+\end{figure}
+
+\autoref{figure:ES-mapTotal} illustrates the ten most occurring movements between buildings, on a map, where buildings are represented as nodes, and edges represent the number of movements. The number of movement, during the observation period, is illustrated with colour and line width.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{ES-mapTotal.png}
+\captionsetup{justification=centering}
+\caption{top 10 most occuring movements on building level}
+\label{figure:ES-mapTotal}
+\end{figure}
+
+In \autoref{figure:ES-buildingMobileSaticGraph} the movements of mobile (blue) and static (red) devices are shown. The time profile of static devices, compared with lecture hours, is less explicit than for mobile devices. This supports the assumption that movement of static devices is less related to movement of people, than mobile devices. Therefore, in this paper we only analyse movement of mobile devices, to provide knowledge about human movement behaviour.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{building_mobileStatic_graph.png}
+\captionsetup{justification=centering}
+\caption{time profile of all outdoor movement for static and mobile devices}
+\label{figure:ES-buildingMobileSaticGraph}
+\end{figure}
+
+The previous figures showed the movement over the entire time span of the research. However, different movement patterns can be identified by querying the data for certain time intervals. \autoref{figure:ES-buildingWeekWeekendGraph} gives the time profiles of the movement of mobile devices during weekdays and weekends for all buildings including world. Usually most building at the TU Delft Campus, except for the library, are closed during the weekend. This is reflected by the amount of movement during the weekend. Moreover, compared to weekdays, the number of movement is constant throughout the day as there are no lectures.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{building_weekWeekend_graph.png}
+\captionsetup{justification=centering}
+\caption{time profile of all outdoor movement of mobile devices for week- and weekend days}
+\label{figure:ES-buildingWeekWeekendGraph}
+\end{figure}
+
+Finally the movement can also be queried based on origin and destination instead of or together with time. This enables a more detailed analysis of specific buildings or events. \autoref{}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{building_weekWeekend_graph.png}
+\captionsetup{justification=centering}
+\caption{time profile of all outdoor movement of mobile devices for week- and weekend days}
+\label{figure:ES-buildingWeekWeekendGraph}
+\end{figure}
+
+
+\subsection{Indoor movement patterns}\label{ES-indoorMovement}
+Looking at building-part level, movement patterns between, from and to buildings-parts can be detected. \autoref{figure:ES-buildingpartAllGraph} shows the time profiles for all movement on building-part level for the faculty of Architecture. With world this includes the movement from and to the faculty, without world these movements are excluded. During the working day the movement is relatively steady, except for two distinct peaks before and after lunch. Furthermore small peaks can be seen at the start and end of the day when people arrive and leave the building. The faculty of architecture normally closes at 22:00 resulting in a movement peak captured in the graph. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{buildingpart_all_graph.png}
+\captionsetup{justification=centering}
+\caption{time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from 'world')}
+\label{figure:ES-buildingpartAllGraph}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{bk_map_total.png}
+\captionsetup{justification=centering}
+\caption{map of all movement within the faculty of Architecture}
+\label{figure:ES-buildingpartAllMap}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{buildingpart_fromTo_bouwpubGraph.png}
+\captionsetup{justification=centering}
+\caption{movement from and to the bouwpub}
+\label{figure:ES-bouwpub}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{buildingpart_fromTo_canteenGraph.png}
+\captionsetup{justification=centering}
+\caption{movement from and to the canteen}
+\label{figure:ES-canteen}
+\end{figure}
