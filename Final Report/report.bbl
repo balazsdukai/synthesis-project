@@ -135,6 +135,21 @@
       \field{pages}{240\bibrangedash 252}
       \range{pages}{13}
     \endentry
+    \entry{heijer2012campus}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=dc98ea2d965b4a35b5978f3d5b007d14}{Heijer\bibnamedelima den}{H\bibinitperiod\bibinitdelim d\bibinitperiod}{Alexandra}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{dc98ea2d965b4a35b5978f3d5b007d14}
+      \strng{fullhash}{dc98ea2d965b4a35b5978f3d5b007d14}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Managing the University Campus: Exploring models for the future and supporting today’s decisions}
+      \field{year}{2012}
+    \endentry
     \entry{Hunter:2007}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=515b7a67462b8750a0711541001538cb}{Hunter}{H\bibinitperiod}{J.\bibnamedelimi D.}{J\bibinitperiod\bibinitdelim D\bibinitperiod}{}{}{}{}}%
@@ -158,6 +173,33 @@
       \field{year}{2007}
       \field{pages}{90\bibrangedash 95}
       \range{pages}{6}
+    \endentry
+    \entry{rhythmofthecampus}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{uniquename=0,hash=c9ce94f726455346fb716bf677c00a79}{Kalogianni}{K\bibinitperiod}{E}{E\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=e9a66ab7523d70a96ece0f7aa11ff8d4}{Sileryte}{S\bibinitperiod}{R}{R\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=29d76a1ed8ade04f877ff15b71796683}{Lam}{L\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=b828859093337f367dec073885b8bfaa}{Zhou}{Z\bibinitperiod}{K}{K\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=a8a438e64088834eac953fe8a0d659ba}{Ham}{H\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=4b9c06e6c6cb0001bbb8d87a9077d5ac}{Spek}{S\bibinitperiod}{SC\bibnamedelima van\bibnamedelima der}{S\bibinitperiod\bibinitdelim v\bibinitperiod\bibinitdelim d\bibinitperiod}{}{}{}{}}%
+        {{uniquename=0,hash=9454b551bcaaf3ac2f73741e342ceb16}{Verbree}{V\bibinitperiod}{E}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {AGILE}%
+      }
+      \strng{namehash}{b1a981a82ad586b2cffc4136ef23ca44}
+      \strng{fullhash}{d80b8938a91345390502728256f4037b}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of The 18th AGILE International Conference on Geographic Information Science}
+      \field{title}{Passive WiFi Monitoring of the Rhythm of the Campus}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
     \endentry
     \entry{mautz2012indoor}{thesis}{}
       \name{author}{1}{}{%
@@ -271,27 +313,23 @@
       \field{pages}{197\bibrangedash 206}
       \range{pages}{10}
     \endentry
-    \entry{rhythmofthecampus}{article}{}
-      \name{author}{8}{}{%
-        {{uniquename=0,hash=c62ce82d1011133334931389b9fb500f}{Van\bibnamedelimb der\bibnamedelima Ham}{V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim H\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=c9ce94f726455346fb716bf677c00a79}{Kalogianni}{K\bibinitperiod}{E}{E\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=29d76a1ed8ade04f877ff15b71796683}{Lam}{L\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=e9a66ab7523d70a96ece0f7aa11ff8d4}{Sileryte}{S\bibinitperiod}{R}{R\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=b828859093337f367dec073885b8bfaa}{Zhou}{Z\bibinitperiod}{K}{K\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=0f8007723ee42205127d73e9302d4bef}{Van\bibnamedelimb der\bibnamedelima Spek}{V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod}{SC}{S\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=9454b551bcaaf3ac2f73741e342ceb16}{Verbree}{V\bibinitperiod}{E}{E\bibinitperiod}{}{}{}{}}%
-        {{uniquename=0,hash=0c3ed9895830b3e00f86b1c34d69af18}{Valks}{V\bibinitperiod}{B}{B\bibinitperiod}{}{}{}{}}%
+    \entry{spek2008tracking}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4b9c06e6c6cb0001bbb8d87a9077d5ac}{Spek}{S\bibinitperiod}{SC\bibnamedelima van\bibnamedelima der}{S\bibinitperiod\bibinitdelim v\bibinitperiod\bibinitdelim d\bibinitperiod}{}{}{}{}}%
       }
-      \strng{namehash}{87b257b3d15122d38905034a44e3eb73}
-      \strng{fullhash}{8972f345e3fd28ae15bfb832036ebf18}
-      \field{sortinit}{V}
-      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
-      \field{labelyear}{2014}
+      \strng{namehash}{4b9c06e6c6cb0001bbb8d87a9077d5ac}
+      \strng{fullhash}{4b9c06e6c6cb0001bbb8d87a9077d5ac}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2008}
       \field{datelabelsource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Rhythm of the campus}
-      \field{year}{2014}
+      \field{journaltitle}{Lecture Notes in Geoinformation and Cartography}
+      \field{title}{Mapping Pedestrian Movement: Using Tracking Technologies in Koblenz}
+      \field{year}{2008}
+      \field{pages}{95\bibrangedash 118}
+      \range{pages}{24}
     \endentry
     \entry{zhang_survey_2009}{inproceedings}{}
       \name{author}{4}{}{%
