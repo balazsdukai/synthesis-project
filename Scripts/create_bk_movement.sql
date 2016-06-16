@@ -201,3 +201,33 @@ INNER JOIN visualization.bk_bpart_unq AS ep
     ON b.to_bldpart = ep.id
 WHERE ep.buildingpart LIKE 'BG_Restaurant'
 );
+
+-- table of mobile movement counts during the BK Beats
+CREATE TABLE visualization.bk_mov_bkbeats AS
+(SELECT 
+    startp,
+    ep.buildingpart AS endp,
+    cnt
+FROM (
+    SELECT 
+        sp.buildingpart AS startp,
+        a.to_bldpart,
+        a.cnt
+    FROM 
+        (SELECT 
+            from_bldpart,
+            to_bldpart,
+            count(*) AS cnt
+        FROM public.g2_buildingpartmovements
+        WHERE to_bldpart > 0
+            AND from_bldpart > 0 
+            AND "type" LIKE 'mobile'
+            AND start_time >= '2016-04-22 20:00:00'
+            AND end_time <= '2016-04-23 07:00:00'
+        GROUP BY from_bldpart, to_bldpart) AS a
+    INNER JOIN visualization.bk_bpart_unq AS sp
+        ON a.from_bldpart = sp.id
+    ) b
+INNER JOIN visualization.bk_bpart_unq AS ep
+    ON b.to_bldpart = ep.id
+);

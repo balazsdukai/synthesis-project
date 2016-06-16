@@ -4,7 +4,7 @@
 -- uses pgrouting 2.1.0 pgr_dijkstra() function
 -- Example use:
 -- input: name of the table that contains the movement counts as it is made with 'create_bk_movement.sql'
--- SELECT calculate_traffic('bk_movement');
+-- SELECT calculate_traffic('bk_mov_bkbeats', 'bk_traf_bkbeats');
 
 CREATE OR REPLACE FUNCTION calculate_traffic(movement_table text, traffic_table text)
     RETURNS text

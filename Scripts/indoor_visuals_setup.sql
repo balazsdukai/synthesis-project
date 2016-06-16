@@ -92,3 +92,13 @@ CREATE TABLE if NOT EXISTS  visualization.bk_traf_weekend(
 INSERT INTO visualization.bk_traf_weekend (edge_id, cnt)
 SELECT gid AS edge_id, 0
 FROM visualization.bk_paths;
+
+--weekends
+CREATE TABLE if NOT EXISTS  visualization.bk_traf_bkbeats(
+    edge_id int4,
+    cnt int4 DEFAULT 0);
+
+-- fill IN the edge-ids
+INSERT INTO visualization.bk_traf_bkbeats (edge_id, cnt)
+SELECT gid AS edge_id, 0
+FROM visualization.bk_paths;
