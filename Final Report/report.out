@@ -1,70 +1,83 @@
 \BOOKMARK [0][-]{chapter.1}{Glossary}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Executive Summary}{}% 2
-\BOOKMARK [0][-]{chapter.3}{Introduction}{}% 3
-\BOOKMARK [1][-]{section.3.1}{Intro}{chapter.3}% 4
-\BOOKMARK [1][-]{section.3.2}{Purpose statement}{chapter.3}% 5
-\BOOKMARK [1][-]{section.3.3}{Methods}{chapter.3}% 6
-\BOOKMARK [1][-]{section.3.4}{Top level requirements}{chapter.3}% 7
-\BOOKMARK [1][-]{section.3.5}{Reading guide}{chapter.3}% 8
-\BOOKMARK [0][-]{chapter.4}{Context}{}% 9
-\BOOKMARK [1][-]{section.4.1}{Use case: TU Delft}{chapter.4}% 10
-\BOOKMARK [1][-]{section.4.2}{Previous research: Rhythm of the campus}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.3}{Privacy}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.4}{Data validation}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.5}{Representativeness}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.6}{Data description and System of APs}{chapter.4}% 15
-\BOOKMARK [2][-]{subsection.4.6.1}{Data description}{section.4.6}% 16
-\BOOKMARK [2][-]{subsection.4.6.2}{System of APs}{section.4.6}% 17
-\BOOKMARK [0][-]{chapter.5}{Movement patterns}{}% 18
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 19
-\BOOKMARK [1][-]{section.5.2}{Movement identification}{chapter.5}% 20
-\BOOKMARK [2][-]{subsection.5.2.1}{Spatio-temporal movement patterns}{section.5.2}% 21
-\BOOKMARK [2][-]{subsection.5.2.2}{Co-location in space}{section.5.2}% 22
-\BOOKMARK [0][-]{chapter.6}{Methodology}{}% 23
-\BOOKMARK [1][-]{section.6.1}{Preprocessing}{chapter.6}% 24
-\BOOKMARK [2][-]{subsection.6.1.1}{Initial filtering}{section.6.1}% 25
-\BOOKMARK [2][-]{subsection.6.1.2}{Grouping of states}{section.6.1}% 26
-\BOOKMARK [2][-]{subsection.6.1.3}{Adding world state}{section.6.1}% 27
-\BOOKMARK [2][-]{subsection.6.1.4}{Passing by}{section.6.1}% 28
-\BOOKMARK [2][-]{subsection.6.1.5}{Implementation}{section.6.1}% 29
-\BOOKMARK [1][-]{section.6.2}{mobility analysis}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.3}{States to movements}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.4}{States to trajectories}{chapter.6}% 32
-\BOOKMARK [0][-]{chapter.7}{Movements}{}% 33
-\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 34
-\BOOKMARK [1][-]{section.7.2}{Methods}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.3}{Results}{chapter.7}% 36
-\BOOKMARK [2][-]{subsection.7.3.1}{All movement}{section.7.3}% 37
-\BOOKMARK [2][-]{subsection.7.3.2}{Mobile vs static}{section.7.3}% 38
-\BOOKMARK [2][-]{subsection.7.3.3}{Week vs weekend}{section.7.3}% 39
-\BOOKMARK [2][-]{subsection.7.3.4}{From and to}{section.7.3}% 40
-\BOOKMARK [0][-]{chapter.8}{Trajectory patterns}{}% 41
-\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 42
-\BOOKMARK [1][-]{section.8.2}{Problem description}{chapter.8}% 43
-\BOOKMARK [2][-]{subsection.8.2.1}{Trajectory Pattern}{section.8.2}% 44
-\BOOKMARK [1][-]{section.8.3}{Implementation}{chapter.8}% 45
-\BOOKMARK [1][-]{section.8.4}{Results of trajectory pattern identification}{chapter.8}% 46
-\BOOKMARK [2][-]{subsection.8.4.1}{Length of pattern}{section.8.4}% 47
-\BOOKMARK [2][-]{subsection.8.4.2}{trajectory length-4 pattern}{section.8.4}% 48
-\BOOKMARK [2][-]{subsection.8.4.3}{Trajectory filtering}{section.8.4}% 49
-\BOOKMARK [0][-]{chapter.9}{Indoor movement}{}% 50
-\BOOKMARK [1][-]{section.9.1}{Introduction}{chapter.9}% 51
-\BOOKMARK [1][-]{section.9.2}{Theory / methods}{chapter.9}% 52
-\BOOKMARK [1][-]{section.9.3}{Implementation}{chapter.9}% 53
-\BOOKMARK [2][-]{subsection.9.3.1}{Delineation of building parts}{section.9.3}% 54
-\BOOKMARK [2][-]{subsection.9.3.2}{Movement between building parts}{section.9.3}% 55
-\BOOKMARK [2][-]{subsection.9.3.3}{Indoor route network}{section.9.3}% 56
-\BOOKMARK [2][-]{subsection.9.3.4}{Mapping traffic to the route network}{section.9.3}% 57
-\BOOKMARK [2][-]{subsection.9.3.5}{Visualization of the movement}{section.9.3}% 58
-\BOOKMARK [1][-]{section.9.4}{Results}{chapter.9}% 59
-\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 60
-\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 61
-\BOOKMARK [1][-]{section.11.1}{Entrances}{chapter.11}% 62
-\BOOKMARK [1][-]{section.11.2}{Association rules}{chapter.11}% 63
-\BOOKMARK [1][-]{section.11.3}{Distinguishing user groups}{chapter.11}% 64
-\BOOKMARK [1][-]{section.11.4}{Occupancy}{chapter.11}% 65
-\BOOKMARK [1][-]{section.11.5}{AP system}{chapter.11}% 66
-\BOOKMARK [1][-]{section.11.6}{Data reasoning}{chapter.11}% 67
-\BOOKMARK [1][-]{section.11.7}{Visual exploration}{chapter.11}% 68
-\BOOKMARK [0][-]{chapter.12}{Acknowledgements}{}% 69
-\BOOKMARK [0][-]{chapter.13}{Appendix A}{}% 70
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.1.1}{Case description}{section.2.1}% 4
+\BOOKMARK [1][-]{section.2.2}{Methodology}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.2.1}{Mobile device extraction}{section.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.2}{Preprocessing raw Wi-Fi log sessions}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.3}{State extraction}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.4}{Movement extraction}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.5}{Movement pattern extraction}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Results}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{General statistics}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.2}{Outdoor movement patterns}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.3}{Indoor movement patterns}{section.2.3}% 14
+\BOOKMARK [1][-]{section.2.4}{Conclusion and Recommendations}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Introduction}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Intro}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Purpose statement}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Methods}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Top level requirements}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{Reading guide}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Context}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Use case: TU Delft}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{Previous research: Rhythm of the campus}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{Privacy}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.4}{Data validation}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.5}{Representativeness}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.6}{Data description and System of APs}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.6.1}{Data description}{section.4.6}% 29
+\BOOKMARK [2][-]{subsection.4.6.2}{System of APs}{section.4.6}% 30
+\BOOKMARK [0][-]{chapter.5}{Movement patterns}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.2}{Movement identification}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.2.1}{Spatio-temporal movement patterns}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.2}{Co-location in space}{section.5.2}% 35
+\BOOKMARK [0][-]{chapter.6}{Methodology}{}% 36
+\BOOKMARK [1][-]{section.6.1}{Preprocessing}{chapter.6}% 37
+\BOOKMARK [2][-]{subsection.6.1.1}{Initial filtering}{section.6.1}% 38
+\BOOKMARK [2][-]{subsection.6.1.2}{Grouping of states}{section.6.1}% 39
+\BOOKMARK [2][-]{subsection.6.1.3}{Adding world state}{section.6.1}% 40
+\BOOKMARK [2][-]{subsection.6.1.4}{Passing by}{section.6.1}% 41
+\BOOKMARK [2][-]{subsection.6.1.5}{Implementation}{section.6.1}% 42
+\BOOKMARK [1][-]{section.6.2}{mobility analysis}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.3}{States to movements}{chapter.6}% 44
+\BOOKMARK [1][-]{section.6.4}{States to trajectories}{chapter.6}% 45
+\BOOKMARK [0][-]{chapter.7}{Movements}{}% 46
+\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 47
+\BOOKMARK [1][-]{section.7.2}{Methods}{chapter.7}% 48
+\BOOKMARK [1][-]{section.7.3}{Results}{chapter.7}% 49
+\BOOKMARK [2][-]{subsection.7.3.1}{All movement}{section.7.3}% 50
+\BOOKMARK [2][-]{subsection.7.3.2}{Mobile vs static}{section.7.3}% 51
+\BOOKMARK [2][-]{subsection.7.3.3}{Week vs weekend}{section.7.3}% 52
+\BOOKMARK [2][-]{subsection.7.3.4}{From and to}{section.7.3}% 53
+\BOOKMARK [0][-]{chapter.8}{Trajectory patterns}{}% 54
+\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 55
+\BOOKMARK [1][-]{section.8.2}{Problem description}{chapter.8}% 56
+\BOOKMARK [2][-]{subsection.8.2.1}{Trajectory Pattern}{section.8.2}% 57
+\BOOKMARK [1][-]{section.8.3}{Implementation}{chapter.8}% 58
+\BOOKMARK [1][-]{section.8.4}{Results of trajectory pattern identification}{chapter.8}% 59
+\BOOKMARK [2][-]{subsection.8.4.1}{Length of pattern}{section.8.4}% 60
+\BOOKMARK [2][-]{subsection.8.4.2}{trajectory length-4 pattern}{section.8.4}% 61
+\BOOKMARK [2][-]{subsection.8.4.3}{Trajectory filtering}{section.8.4}% 62
+\BOOKMARK [0][-]{chapter.9}{Indoor movement}{}% 63
+\BOOKMARK [1][-]{section.9.1}{Introduction}{chapter.9}% 64
+\BOOKMARK [1][-]{section.9.2}{Theory / methods}{chapter.9}% 65
+\BOOKMARK [1][-]{section.9.3}{Implementation}{chapter.9}% 66
+\BOOKMARK [2][-]{subsection.9.3.1}{Delineation of building parts}{section.9.3}% 67
+\BOOKMARK [2][-]{subsection.9.3.2}{Movement between building parts}{section.9.3}% 68
+\BOOKMARK [2][-]{subsection.9.3.3}{Indoor route network}{section.9.3}% 69
+\BOOKMARK [2][-]{subsection.9.3.4}{Mapping traffic to the route network}{section.9.3}% 70
+\BOOKMARK [2][-]{subsection.9.3.5}{Visualization of the movement}{section.9.3}% 71
+\BOOKMARK [1][-]{section.9.4}{Results}{chapter.9}% 72
+\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 73
+\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 74
+\BOOKMARK [1][-]{section.11.1}{Entrances}{chapter.11}% 75
+\BOOKMARK [1][-]{section.11.2}{Association rules}{chapter.11}% 76
+\BOOKMARK [1][-]{section.11.3}{Distinguishing user groups}{chapter.11}% 77
+\BOOKMARK [1][-]{section.11.4}{Occupancy}{chapter.11}% 78
+\BOOKMARK [1][-]{section.11.5}{AP system}{chapter.11}% 79
+\BOOKMARK [1][-]{section.11.6}{Data reasoning}{chapter.11}% 80
+\BOOKMARK [1][-]{section.11.7}{Visual exploration}{chapter.11}% 81
+\BOOKMARK [0][-]{chapter.12}{Acknowledgements}{}% 82
+\BOOKMARK [0][-]{chapter.13}{Appendix A}{}% 83

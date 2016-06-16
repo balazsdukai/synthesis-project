@@ -1,14 +1,14 @@
 \chapter{Recommendations}\label{recommendations}
 \section{Entrances}
-\textbf{Introduction}\label{intro}
+\textbf{Introduction}\label{intro}\\
 % this is a comment
 % normal text
-This section will describe the work that is done to find out what, when and how frequent entrances of the Faculty of Architecture and the built environment are used. This is an interesting and challenging use case at the same time. The Faculty of Architecture is a building having multiple entrances; five to be precise. Knowing what, when and how frequent these entrances are used, will give insight into the use of a building, the spatial context and the relation between these two.
-\textbf{Methodology}\label{method}
-In order to find what entrance someone uses to enter or exit a building, we will look in the part of a sequence in which the device is recorded by an AP in a building and subsequently recorded by an AP in another building. More specific, we will look at what (first or last) AP is used in a movement from one to another building. For this two different approaches can be distinguished. The first approach does not take in account the devices that might get recorded when passing by the building. In  the second approach we will make use of the pre-processed data which excluded the passing by events.
-\textbf{Hypothesis}\label{hypo}
-Our hypothesis is that finding clear answers to the question whether it is possible to identify what entrances are most frequently used, is going to be hard. Firstly, because the existing layout of APs is not designed for the purpose of tracking people. For this reason there is not always an AP located near an entrance. Secondly, because the logging frequency of the system is a little more than 5 minutes. Ideally the system records the connected device at the very first AP it connects with. The chance the device is recorded at the moment it is connected with the very first access point is small. However we still expect to see some results. Although the time interval in which the system logs the connected devices is relatively large, an AP located near an entrance would still pop up as one of the most frequently used AP as first connection (assuming people disseminate over the building after entering). 
-\textbf{First approach: including passing by events}
+This section will describe the work that is done to find out what, when and how frequent entrances of the Faculty of Architecture and the built environment are used. This is an interesting and challenging use case at the same time. The Faculty of Architecture is a building having multiple entrances; five to be precise. Knowing what, when and how frequent these entrances are used, will give insight into the use of a building, the spatial context and the relation between these two.\\\\
+\textbf{Methodology}\label{method}\\
+In order to find what entrance someone uses to enter or exit a building, we will look in the part of a sequence in which the device is recorded by an AP in a building and subsequently recorded by an AP in another building. More specific, we will look at what (first or last) AP is used in a movement from one to another building. For this two different approaches can be distinguished. The first approach does not take in account the devices that might get recorded when passing by the building. In  the second approach we will make use of the pre-processed data which excluded the passing by events.\\\\
+\textbf{Hypothesis}\label{hypo}\\
+Our hypothesis is that finding clear answers to the question whether it is possible to identify what entrances are most frequently used, is going to be hard. Firstly, because the existing layout of APs is not designed for the purpose of tracking people. For this reason there is not always an AP located near an entrance. Secondly, because the logging frequency of the system is a little more than 5 minutes. Ideally the system records the connected device at the very first AP it connects with. The chance the device is recorded at the moment it is connected with the very first access point is small. However we still expect to see some results. Although the time interval in which the system logs the connected devices is relatively large, an AP located near an entrance would still pop up as one of the most frequently used AP as first connection (assuming people disseminate over the building after entering). \\\\
+\textbf{First approach: including passing by events}\\
 The first approach makes use of the raw wifilog data, by finding the part in a sequence in which a device is recorded by an AP in a building and is subsequently recorded in another building. The states in which a device is scanned once are not filter out. These single records imply that a device only passed by the building, and thus was not located in the building. \\\\
 \begin{figure}[H]
 	\centering
@@ -24,7 +24,7 @@ The first approach makes use of the raw wifilog data, by finding the part in a s
 	\caption{Most frequently recorded APs in a movement from the Faculty of Architecture and the built environment}
 	\label{firstapproach_graph_2}
 \end{figure}
-The floor plans of BK, enriched with the location of APs, are used to locate the most frequently used APs on the map (see \autoref{firstapproach_map}). The result is interesting, since most APs are not located near an entrance but are located at one of the corners of the building. Most of the them are located at the western part of the building. Knowing that lots of people are passing in the street next to this part of the building, we can conclude the result of this analysis is distorted due not filtering out the devices that are recorded when passing by the building.
+The floor plans of BK, enriched with the location of APs, are used to locate the most frequently used APs on the map (see \autoref{firstapproach_map}). The result is interesting, since most APs are not located near an entrance but are located at one of the corners of the building. Most of the them are located at the western part of the building. Knowing that lots of people are passing in the street next to this part of the building, we can conclude the result of this analysis is distorted due not filtering out the devices that are recorded when passing by the building.\\\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.3]{bk_aplocs1.png}
@@ -32,7 +32,7 @@ The floor plans of BK, enriched with the location of APs, are used to locate the
 	\caption{The location of the most frequently used APs that are used to record the first and/or last connection of a device in the Faculty of Architecture and the built environment}
 	\label{firstapproach_map}
 \end{figure}
-\textbf{Second approach: excluding passing by events}
+\textbf{Second approach: excluding passing by events}\\
 Table \autoref{individualstates} shows the individual states as a result of the pre-processing (see chapter pre-processing). The records represent the states for each mac, including the first and last recorded AP (ap\_start, ap\_end). \\\\
 \begin{table}[H]
 	\centering
@@ -91,15 +91,15 @@ In order to know with what APs a device connects when entering a building, some 
 		main entrance     & 00-22-90-38-7F-D0    & not found       & not found          \\ \bottomrule
 	\end{tabular}
 \end{table}
-The AP a device connects with when entering the building via the West entrance, E-102', can also be found in \autoref{secondapproach_graph}. Though it does not stand out compared to other APs. The MAC addresses of the APs the device connects with when entering the building via the East or Main entrance are not found, meaning the APs are not located on the map or listed in the table of APs. This implies it is not possible to relate the results to the data. 
-\textbf{Recommendation}
+The AP a device connects with when entering the building via the West entrance, E-102', can also be found in \autoref{secondapproach_graph}. Though it does not stand out compared to other APs. The MAC addresses of the APs the device connects with when entering the building via the East or Main entrance are not found, meaning the APs are not located on the map or listed in the table of APs. This implies it is not possible to relate the results to the data. \\\\
+\textbf{Recommendation}\\
 The results and conducted experiments has shown it is not possible to clearly find what, when and how frequent entrances of the Faculty of Architecture and the built environment are used. The first and most important reason for that, is the time interval of approximately 5 minutes in which the system is recording. A person could be anywhere in the building at the moment of recording. A smaller time interval between the moments of recording would help in finding answers to the questions regarding the use of the entrances. Also, the existing layout of APs in the Faculty of Architecture is currently not designed for any other purpose than allowing a Wi-Fi compliant device to connect with the wireless eduroam network. Locating APs near the entrances of a building might help. Moreover, the fact the Faculty of Architecture has multiple entrances, in combination with the large time interval of recording, is what makes identification of the entrances difficult. 
 
 \section{Association rules} 
 The following section describes how movement patterns can be derived on building level, without considering the direction or order of the movement. An association rule mining algorithm \cite{agrawal_mining_1993} was used to identify groups of buildings that frequently visited in combination with each
 other. Firstly the algorithm is described briefly, then the results are presented and recommendation is given.
-
-\textbf{Association rules mining}
+\\\\
+\textbf{Association rules mining}\\
 Association rule mining is a technique to analyse what variables or items are
 commonly associated with each other in large databases. Probably the one of the
 main application is to analyse which items are commonly bought together by
@@ -113,8 +113,8 @@ mining does not consider the order of items neither within, nor across transacti
 Thus every rule is composed by two item sets, the \textit{antecedent}
 \{bread,butter\} on the left-hand side, and the \textit{consequent} \{milk\} on
 the right-hand side. The rule is denoted as \{bread, butter\} \verb|=>| \{milk\}.
-
-\textbf{Association rules of buildings}
+\\\\
+\textbf{Association rules of buildings}\\
 When a trajectory is simplified into a set of distinct buildings that the person
 visited, association rules for buildings can be derived. In this case the rule
 describes the set of buildings, or building set, that are commonly visited in
@@ -177,15 +177,15 @@ spanned from 31.03.2016 to 02.05.2016, approximately one month.
 Although there are several measures to evaluate the interestingness of an
 association rule \cite{zhang_survey_2009}, only \textit{support} and
 \textit{confidence} were used for testing purposes.
-
-\textbf{Support}
+\\\\
+\textbf{Support}\\
 “The support for a rule is defined to be the fraction of transaction in the
 dataset that satisfy the union of items in the consequent and antecedent of the
 rule.” \cite{agrawal_mining_1993}. In case of the rule \{BK\_City, Aula\}
 \verb|=>| \{Library\}, the support is the percentage of the total dataset that
 includes BK\_City, Aula and Library.
-
-\textbf{Confidence}
+\\\\
+\textbf{Confidence}\\
 Confidence measures the strength of the rule, and is considered as a
 conditional probability. In case of the rule \{BK\_ City, Aula\} \verb|=>|
 \{Library\}, the confidence is the probability that Library is in the
@@ -204,8 +204,8 @@ The most interesting rules are displayed in \autoref{figure:buildingset}:
 In the building set of approx. 14,000 devices 2\% was recorded in all of the buildings \textit{Drebbelweg, EWI-LB, EWI-HB} (Support = 0.02). There is an
 86\% chance that if a device is recorded in the buildings \textit{Drebbelweg, EWI-LB}, then it is also recorded in \textit{EWI-HB} (Confidence = 0.86). And
 they spent on average between half hour to five hours a week in each building (drebbelweg=2, ewi\_ lb=2, ewi\_ hb=2).
-
-\textbf{Recommendation}
+\\\\
+\textbf{Recommendation}\\
 Association rule mining is a suitable technique to analyse the occupancy of a group of buildings, but it is less suitable for analysing movement patterns.
 Therefore it is not handled more intensively in this project. However, this technique can potentially answer questions such as,\\
 \begin{itemize}
@@ -221,7 +221,7 @@ Individual trajectories contain detailed information about the movement patterns
 \section{Occupancy}
 % Matthijs
 % Filtering out static devices, but those can be used for occupancy!!!
-As discussed in \autoref{preprocessing}, all devices can be classified as either static or dynamic device, such as laptops and smart phones. For this project, mostly the dynamic devices are used to find movement patterns, because these devices are most probably carried around the campus with the user and thus gives the best representation of the actual movement. But this assumption leaves out all the devices that can provide other valuable information. The information that a static device is carrying can help finding patterns in occupation of rooms. When an individual in the Library is leaving his or her laptop at a work space, but he is going to the Aula for lunch, the work space is still occupied. This information can be of great value when assessing the use of the Library. \\\\
+As discussed in \autoref{mobility}, all devices can be classified as either static or dynamic device, such as laptops and smart phones. For this project, mostly the dynamic devices are used to find movement patterns, because these devices are most probably carried around the campus with the user and thus gives the best representation of the actual movement. But this assumption leaves out all the devices that can provide other valuable information. The information that a static device is carrying can help finding patterns in occupation of rooms. When an individual in the Library is leaving his or her laptop at a work space, but he is going to the Aula for lunch, the work space is still occupied. This information can be of great value when assessing the use of the Library. \\\\
 For future research, it would be useful to consider both static and dynamic devices and depending on the question that is asked use either one of them. For occupational research, static devices would be used, for identifying movement, dynamic devices would be used.
 
 \section{AP system}
