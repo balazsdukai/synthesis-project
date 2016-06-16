@@ -4,21 +4,19 @@
 \section{Introduction}
 % count the aggregated movement between building and movement between buildings and world over certain time period
 % 2 types of movement visualization : 1) maps; 2) charts
-Movement patterns are defined as how people regularly move on the campus. To answer this question, there are two sub questions to answer: when do people move, from where do they move and where do they move to. These patterns consists of spatial component and temporal component, thus they are called spatio-temporal movement patterns.
-
-Movement pattern is actually a kind of behaviour pattern, which implicitly reveal how people use the campus and furthermore how they think and behave. In this chapter, several patterns related to time and space are going to be discussed on building level. These movement patterns are about how and when  people move between different buildings, and according to these movement patterns, the reason why people move in this way at a certain time can be explored.
-
-In this chapter, \autoref{chapter9methods} will discuss the methodology of exploring the movement patterns, mainly in four ways: all movements, mobile and static devices, week and weekend and from or to a building during a time period. First in \autoref{chapter9Allmovement}, all movements in the database are described regardless of any time or spatial components, then in \autoref{chapter9mobilestatic}, the difference of movements between mobile devices and static devices will be discussed. In \autoref{chapter9weekweekend}, temporal component is taken into consideration, the movement patterns in week days and weekends are going to be described. Finally in \autoref{chapter9fromto}, movements from or to a building in a time period will be explored. 
+Movement patterns are defined as how people regularly move on the campus. To answer this question, there are three sub questions to answer: when do people move, from where do they move and where do they move to. These patterns consists of spatial component and temporal component, thus they are called spatio-temporal movement patterns.
+\\\\
+Movement pattern is actually a kind of behaviour pattern, which implicitly reveal how people use the campus and furthermore how they think and behave. In this chapter, several patterns related to time and space are discussed on building level. These movement patterns are about how and when people move between different buildings and according to these movement patterns, the reason why people move in this way at a certain time can be explored.
+\\\\
+In this chapter, \autoref{chapter9methods} will discuss the methodology of exploring the movement patterns, mainly in four ways: all movements, mobile and static devices, week and weekend and from or to a building during a certain time period. \Cref{chapter9results} will discuss the details of the result in the following order: first in \autoref{chapter9Allmovement}, all movements in the database are described regardless of any time or spatial components, then in \autoref{chapter9mobilestatic}, the difference of movements between mobile devices and static devices will be discussed. In \autoref{chapter9weekweekend}, temporal component is taken into consideration, the movement patterns in week days and weekends are going to be described. Finally in \autoref{chapter9fromto}, movements from or to a building in a certain time period will be explored. 
 
 \section{Methods}\label{chapter9methods}
 % states to movements
 % GUI for visual exploration of the data and movement patterns
 % Final visualization method
-
-A state/stay place is defined as a time interval during which a particular device is located in a certain area, and movement is from the location of one state to the location of another state. In building level, movement is defined as a state between two successive scans in different two buildings.
-In database, one movement record contains the start time of the movement, the end time of the movement, the start building, the end building and whether a device is labelled as mobile device or static device. With time information, it is easy to distinguish week days and weekends, and look for movements only in a certain time interval. And with building information, movement pattern from or to one specific building can be found. With attribute 'type', static devices can be filtered out so that only mobile devices are kept in order to make results more reliable. Besides, the difference between movements of static devices and mobile devices can also be explored.
-
-In order to find movement patterns, a GUI is made for automatic visual exploration of the data and movement patterns. For the following four topics, there are both graphs and maps to describe movement patterns. The graphs show the movement in time from 6:00 to 0:00 and the maps show the amount of movements between buildings. The movements are shown in straight lines between buildings because the space of the campus is not constraint, it is not possible to know how exactly people move from building to another building, so that snapping the movements to the road network might give the readers wrong impression. The line width represents the amount of movements, the thicker the line is, the more movements there are. Besides, the color of the line also stresses the amount of movements, where red represents the most movements.
+A state is defined as a time interval during which a particular device is located in a certain area and movement is always from the location of one state to the location of another state, where two states can not be the same. On building level, movement is defined as a state between two successive scans in different buildings.In a database, one movement record contains the start time of the movement, the end time of the movement, the start building, the end building and whether a device is labelled as mobile device or static device. With time information, it is easy to distinguish week days and weekends, and look for movements only in a certain time interval. With building information, movement patterns from or to one specific building can be found. With the attribute 'type', static devices can be filtered out so that only mobile devices are kept in order to make results more reliable. Additionally, the difference between movements of static devices and mobile devices can also be explored in maps and graphs.
+\\\\
+In order to find movement patterns, a GUI is made for automatic visual exploration of the data and movement patterns. For the following four topics, both graphs and maps are used to describe movement patterns. The graphs show the movement in time from 6:00 to 0:00 and the maps show the amount of movement between buildings. The movements are shown in straight lines between buildings because the outdoor space of the campus is not constrained. This makes it impossible to know how exactly people move from building to building, thus snapping the movements to the road network could give the readers the wrong impression. The line width represents the amount of movements, the thicker the line is, the more movements there are. Besides, the color of the line also stresses the amount of movements, where red represents the most movements.
 
 \section{Results}\label{chapter9results}
 \subsection{All movement}\label{chapter9Allmovement}
@@ -38,15 +36,14 @@ In order to find movement patterns, a GUI is made for automatic visual explorati
 	\caption{Maps of all movements}
 	\label{building_all_map}
 \end{figure}
-All movements of all time from April 1st to May 27th without filtering static devices is shown above in the graph and map. As it is shown in the graph, there are several peaks at 8:45, 12:45, 13:45, 15:45, 17:45, which are the beginning and the end of the lecture. With 'world', it is clear to see the morning rush hour at around 8:45 when students all come to the campus and around 17:45 when they leave the campus. Not only curve line 'with world', but curve line 'without world' also peaks at these time, which better proves that at these time, many people move on the campus.
-The map above shows the top 10 movements on the campus. It is clear that between Aula and library, there are over 50000 movements, which is much more than the others. IO and 3ME, Aula and TNW-TN, EWI-HB and CITG, LR and OGZ, 3ME and Aula, Drebbelweg and EWI-HB, 3ME and TNW-TN, 3ME and CITG, Sportcentrum and Cultureel Centrum are the rest in the top 10. These are building pairs which are more connected and related. People always move between these buildings. So the map actually shows the connectivity of the buildings. It is clear to see that the amount of movements are determined by the locations of the buildings. Normally many movements will happen between two close buildings. Besides, it also depends on the functionality of the buildings. For example, there are many students of EWI having lectures also in CITG, that's why there are many connections between these two buildings.
+All movements from April 1st to May 27th without filtering static devices is shown in the graph (\autoref{building_all_graph}) and map (\autoref{building_all_map}). As shown in the graph, there are several peaks at 8:45, 12:45, 13:45, 15:45, 17:45, which are the beginning and the end of the lecture. With 'world', it is clear to see the morning rush hour at around 8:45 when students all come to the campus and around 17:45 when they leave the campus. Both the curve 'with world' and 'without world' show peaks at which movement increases. The amount of movement with 'world' included is higher, because there are lots of users moving from outside to the campus, more than user that travel only between buildings on the campus. The map in \autoref{building_all_map} shows the top 10 movements between buildings on the campus. It is clear that between Aula and library, there are over 50000 movements, which is much more than the others. The other buildings are building pairs which are more connected and close to each other. People most often travel between these buildings. So the map actually shows the connectivity of the buildings. It is clear to see that the amount of movements are determined by the locations of the buildings. Normally many movements will happen between two buildings near to each other. Moreover, it also depends on the functionality of the buildings. For example, there are many students of EWI having lectures also in CITG, that could explain why there are many connections between these two buildings.
 
 \subsection{Mobile vs static}\label{chapter9mobilestatic}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.3]{building_mobileStatic_graph.png}
 	\captionsetup{justification=centering}
-	\caption{Graph of all movements}
+	\caption{Graph of movement of static and dynamic devices}
 	\label{building_mobileStatic_graph}
 \end{figure}
 
@@ -55,7 +52,7 @@ The map above shows the top 10 movements on the campus. It is clear that between
 	\centering
 	\includegraphics[scale=0.4]{map_mobile.png}
 	\captionsetup{justification=centering}
-	\caption{Map of mobile device}
+	\caption{Map of mobile devices}
 	\label{map_mobile_map}
 \end{figure}
 
@@ -63,11 +60,10 @@ The map above shows the top 10 movements on the campus. It is clear that between
 	\centering
 	\includegraphics[scale=0.4]{map_static.png}
 	\captionsetup{justification=centering}
-	\caption{Map of static}
+	\caption{Map of static devices}
 	\label{map_static_map}
 \end{figure}
-The graph (\autoref{building_mobileStatic_graph}) shows the difference between mobile and static devices. It is obvious that compared with peaks of mobile devices, the peaks of static device are more flat, which indicates that mobile devices are more mobile than static devices. It also implicitly proves the correctness of the classification of mobile device and static device.
-In the two maps, \autoref{map_mobile_map} and \autoref{map_static_map}, mobile devices move between Library and Aula much more than the other buildings and in the map of static device, the difference is not as much.
+The graph (\autoref{building_mobileStatic_graph}) shows the difference between mobile and static devices. It is obvious that compared with peaks of mobile devices, the peaks of static device are more flat, which indicates that mobile devices are more mobile than static devices. It also implicitly proves the correctness of the classification of mobile device and static device. The two maps, \autoref{map_mobile_map} and \autoref{map_static_map}, shows how mobile devices move between Library and Aula much more than static devices. Additionally, there is more movement between the Library and the Aula than between other buildings.
 \subsection{Week vs weekend}\label{chapter9weekweekend}
 \begin{figure}[H]
 	\centering
@@ -76,8 +72,6 @@ In the two maps, \autoref{map_mobile_map} and \autoref{map_static_map}, mobile d
 	\caption{Graph of weekdays and weekends}
 	\label{building_weekWeekend_graph}
 \end{figure}
-
-
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{map_weekdays.png}
@@ -93,16 +87,15 @@ In the two maps, \autoref{map_mobile_map} and \autoref{map_static_map}, mobile d
 	\caption{Map of weekends}
 	\label{weekends_map}
 \end{figure}
-The \autoref{building_weekWeekend_graph} shows the different movement patterns in weekdays and on weekends. It is clear that in weekdays, the movements are more regular, the peaks of movements match the lecture time very well, however on weekends, the movements are much less and also less regular than weekdays. On weekends. the curve line is flat, indicating that people move on the campus more casually.
-The map of weekdays(\autoref{weekdays_map}) is similar to all movements map(\autoref{building_all_map}), but the movement between sportcentrum and cultureel centrum is no longer in the top 10 movements. However in the map of weekends(\autoref{weekends_map}), there are far more movements between aula and library, and sportcentrum and cultureel centrum is top 2. Compare these two maps, it is also clear that more people go to sportcentrum and cultureel centrum on weekends.
-
+The \autoref{building_weekWeekend_graph} shows the different movement patterns in weekdays and on weekends. It is clear that in weekdays, the movements are more regular, the peaks of movements match the lecture time very well. However on weekends the movements is much less and also less regular than weekdays. On weekends. the curve is flat, indicating that the amount of movement is more or less the same throughout the day .
+The map of weekdays (\autoref{weekdays_map}) is similar to \autoref{building_all_map}, but the movement between sportcentrum and cultureel centrum is no longer in the top 10 movements. However in the map of weekends(\autoref{weekends_map}), there are far more movements between Aula and Library, and sportcentrum and cultureel centrum is top 2. Comparing figure \autoref{weekdays_map} and \autoref{weekends_map}, it is clear to see that more people visit the sportcentrum and cultureel centrum during the weekends.
 \subsection{From and to}\label{chapter9fromto}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.3]{building_fromTo_aulaGraph.png}
 	\captionsetup{justification=centering}
 	\caption{Graph of movement from and to aula}
-	\label{building_weekWeekend_graph}
+	\label{fromandtoaula}
 \end{figure}
 
 
@@ -121,6 +114,6 @@ The map of weekdays(\autoref{weekdays_map}) is similar to all movements map(\aut
 	\caption{Map of from or to Aula between 13:15 and 14:00}
 	\label{13151400_map}
 \end{figure}
-The graph shows the movements from and to Aula in time. At 8:45, there are many movements to Aula, the reason might be that there are also lectures in Aula at this time. And many people leave at 10:45 when the lectures end. During lunch time between 12:15 to 14:00, there are almost the same amount of people moving to and from Aula.
-The above two maps respectively show the movements from and to Aula from 12:15 to 13:00 and from 13:15 to 14:00. They show that people from which faculties go to Aula for lunch most.
-Most people go from TNW-TN to Aula, from library to Aula and from 3ME to Aula. Also some people go from CITG, EWI-HB, TNW-DCT, IO, TBM, BK for lunch. In general, more people move to Aula than from Aula between 12:15 and 13:00. From 13:15 to 14:00, more people move from Aula to other buildings especially library. The buildings in \autoref{12151300_map} match the buildings in \autoref{13151400_map}, which to some degree proves that people from these faculties do use Aula as canteen during lunch time.
+The graph in \autoref{fromandtoaula} shows the movements from and to Aula in time. At 8:45, there are many movements to Aula, the reason might be that there are also lectures in Aula at this time. And many people leave at 10:45 when the lectures end. During lunch time between 12:15 to 14:00, there are almost the same amount of people moving to and from Aula.
+The two maps \autoref{12151300_map} and \autoref{13151400_map} respectively show the movements from and to Aula from 12:15 to 13:00 and from 13:15 to 14:00. The figures show which other faculties use the Aula most during lunchtime.
+Most people go from TNW-TN to Aula, from Library to Aula and from 3ME to Aula. In general, more people move to Aula than from Aula between 12:15 and 13:00. From 13:15 to 14:00, more people move from Aula to other buildings, the Library in particular. The buildings in \autoref{12151300_map} match the buildings in \autoref{13151400_map}, which to some degree proves that people from these faculties do use Aula as canteen during lunch time.
