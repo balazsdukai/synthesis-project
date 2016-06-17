@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  17 JUN 2016 00:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.16)  17 JUN 2016 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1885,15 +1885,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
-)
-<cover_article_black.jpg, id=340, 337.26pt x 168.63pt>
-File: cover_article_black.jpg Graphic file (type jpg)
+) <cover_map.png, id=340, 554.7927pt x 294.50024pt>
+File: cover_map.png Graphic file (type png)
 
-<use cover_article_black.jpg>
-Package pdftex.def Info: cover_article_black.jpg used on input line 39.
-(pdftex.def)             Requested size: 597.50787pt x 298.76068pt.
-
-<cover/logo_black.pdf, id=341, 125.46875pt x 77.28876pt>
+<use cover_map.png>
+Package pdftex.def Info: cover_map.png used on input line 39.
+(pdftex.def)             Requested size: 597.50787pt x 317.19722pt.
+ <cover/logo_black.pdf, id=342, 125.46875pt x 77.28876pt>
 File: cover/logo_black.pdf Graphic file (type pdf)
 
 <use cover/logo_black.pdf>
@@ -1912,7 +1910,7 @@ LaTeX Font Info:    Font shape `T1/fla/m/sl' in size <30> not available
 
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./cover
-_article_black.jpg> <./cover/logo_black.pdf>] (./title.tex [2
+_map.png> <./cover/logo_black.pdf>] (./title.tex [2
 
 
 ]
@@ -1939,44 +1937,44 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/t/n' will be
 (Font)              scaled to size 26.0pt on input line 35.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/t/n' will be
 (Font)              scaled to size 12.0pt on input line 35.
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 49
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 50
 .
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 49.
+(Font)              scaled to size 9.19998pt on input line 50.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 49.
+(Font)              scaled to size 6.99199pt on input line 50.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 49.
-LaTeX Font Info:    Try loading font information for U+msa on input line 49.
+(Font)              scaled to size 5.51999pt on input line 50.
+LaTeX Font Info:    Try loading font information for U+msa on input line 50.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 49.
+LaTeX Font Info:    Try loading font information for U+msb on input line 50.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 49.
+(Font)              scaled to size 9.19998pt on input line 50.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 49.
+(Font)              scaled to size 6.99199pt on input line 50.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 49.
+(Font)              scaled to size 5.51999pt on input line 50.
 File: cover/logo_black.pdf Graphic file (type pdf)
 
 <use cover/logo_black.pdf>
-Package pdftex.def Info: cover/logo_black.pdf used on input line 64.
+Package pdftex.def Info: cover/logo_black.pdf used on input line 65.
 (pdftex.def)             Requested size: 125.46843pt x 77.28856pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.68 \end{titlepage}
+l.69 \end{titlepage}
                      [1]) (./preface.texpdfTeX warning (ext4): destination with
  the same identifier (name{page.ii}) has been already used, duplicate ignored
 <to be read again> 
@@ -2098,14 +2096,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--16
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 17.
 ) (./2-methodology.tex
-<figures/ES-workflow.png, id=590, 373.395pt x 1264.725pt>
+<figures/ES-workflow.png, id=592, 373.395pt x 1264.725pt>
 File: figures/ES-workflow.png Graphic file (type png)
 
 <use figures/ES-workflow.png>
 Package pdftex.def Info: figures/ES-workflow.png used on input line 5.
 (pdftex.def)             Requested size: 56.00682pt x 189.70056pt.
  [4]
-<figures/mobility.png, id=599, 422.32782pt x 316.18124pt>
+<figures/mobility.png, id=600, 422.32782pt x 316.18124pt>
 File: figures/mobility.png Graphic file (type png)
 
 <use figures/mobility.png>
@@ -2115,21 +2113,21 @@ Package pdftex.def Info: figures/mobility.png used on input line 22.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5 <./figures/ES-workflow.png>]
-<figures/ES-processingSteps.jpg, id=612, 2969.0925pt x 760.8425pt>
+<figures/ES-processingSteps.jpg, id=613, 2969.0925pt x 760.8425pt>
 File: figures/ES-processingSteps.jpg Graphic file (type jpg)
 
 <use figures/ES-processingSteps.jpg>
 Package pdftex.def Info: figures/ES-processingSteps.jpg used on input line 36.
 (pdftex.def)             Requested size: 445.34467pt x 114.12144pt.
  [6 <./figures/mobility.png (PNG copy)> <./figures/ES-processingSteps.jpg>]
-<figures/bk_BG_bparts.png, id=621, 502.87875pt x 628.3475pt>
+<figures/bk_BG_bparts.png, id=622, 502.87875pt x 628.3475pt>
 File: figures/bk_BG_bparts.png Graphic file (type png)
 
 <use figures/bk_BG_bparts.png>
 Package pdftex.def Info: figures/bk_BG_bparts.png used on input line 50.
 (pdftex.def)             Requested size: 150.86478pt x 188.50569pt.
 ) (./3-results.tex
-<figures/ES-statistics.jpg, id=626, 303.1325pt x 315.1775pt>
+<figures/ES-statistics.jpg, id=627, 303.1325pt x 315.1775pt>
 File: figures/ES-statistics.jpg Graphic file (type jpg)
 
 <use figures/ES-statistics.jpg>
@@ -2139,14 +2137,14 @@ Package pdftex.def Info: figures/ES-statistics.jpg used on input line 9.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./figures/bk_BG_bparts.png>]
-<figures/building_all_graph.png, id=633, 1233.6489pt x 605.6226pt>
+<figures/building_all_graph.png, id=634, 1233.6489pt x 605.6226pt>
 File: figures/building_all_graph.png Graphic file (type png)
 
 <use figures/building_all_graph.png>
 Package pdftex.def Info: figures/building_all_graph.png used on input line 20.
 (pdftex.def)             Requested size: 370.09753pt x 181.68817pt.
 
-<figures/ES-mapTotal.png, id=635, 1866.975pt x 1854.93pt>
+<figures/ES-mapTotal.png, id=636, 1866.975pt x 1854.93pt>
 File: figures/ES-mapTotal.png Graphic file (type png)
 
 <use figures/ES-mapTotal.png>
@@ -2156,7 +2154,7 @@ Package pdftex.def Info: figures/ES-mapTotal.png used on input line 30.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <./figures/ES-statistics.jpg> <./figures/building_all_graph.png>]
-<figures/building_mobileStatic_graph.png, id=644, 1233.6489pt x 605.6226pt>
+<figures/building_mobileStatic_graph.png, id=645, 1233.6489pt x 605.6226pt>
 File: figures/building_mobileStatic_graph.png Graphic file (type png)
 
 <use figures/building_mobileStatic_graph.png>
@@ -2164,7 +2162,7 @@ Package pdftex.def Info: figures/building_mobileStatic_graph.png used on input
 line 40.
 (pdftex.def)             Requested size: 246.7254pt x 121.12238pt.
 
-<figures/building_weekWeekend_graph.png, id=646, 1233.6489pt x 605.6226pt>
+<figures/building_weekWeekend_graph.png, id=647, 1233.6489pt x 605.6226pt>
 File: figures/building_weekWeekend_graph.png Graphic file (type png)
 
 <use figures/building_weekWeekend_graph.png>
@@ -2173,7 +2171,7 @@ ine 50.
 (pdftex.def)             Requested size: 246.7254pt x 121.12238pt.
  [9 <./figures/ES-mapTotal.png> <./figures/building_mobileStatic_graph.png> <./
 figures/building_weekWeekend_graph.png>]
-<figures/building_fromTo_aulaGraph.png, id=658, 1233.6489pt x 605.6226pt>
+<figures/building_fromTo_aulaGraph.png, id=659, 1233.6489pt x 605.6226pt>
 File: figures/building_fromTo_aulaGraph.png Graphic file (type png)
 
 <use figures/building_fromTo_aulaGraph.png>
@@ -2181,7 +2179,7 @@ Package pdftex.def Info: figures/building_fromTo_aulaGraph.png used on input li
 ne 60.
 (pdftex.def)             Requested size: 246.7254pt x 121.12238pt.
 
-<figures/ES-map_1315to1400.png, id=659, 1993.4475pt x 3691.7925pt>
+<figures/ES-map_1315to1400.png, id=660, 1993.4475pt x 3691.7925pt>
 File: figures/ES-map_1315to1400.png Graphic file (type png)
 
 <use figures/ES-map_1315to1400.png>
@@ -2192,7 +2190,7 @@ Underfull \vbox (badness 6758) has occurred while \output is active []
 
  [10 <./figures/building_fromTo_aulaGraph.png> <./figures/ES-map_1315to1400.png
 >]
-<figures/buildingpart_all_graph.png, id=669, 1233.6489pt x 605.6226pt>
+<figures/buildingpart_all_graph.png, id=670, 1233.6489pt x 605.6226pt>
 File: figures/buildingpart_all_graph.png Graphic file (type png)
 
 <use figures/buildingpart_all_graph.png>
@@ -2200,14 +2198,14 @@ Package pdftex.def Info: figures/buildingpart_all_graph.png used on input line
 80.
 (pdftex.def)             Requested size: 246.7254pt x 121.12238pt.
 
-<figures/bk_map_total.png, id=671, 597.432pt x 421.0932pt>
+<figures/bk_map_total.png, id=672, 597.432pt x 421.0932pt>
 File: figures/bk_map_total.png Graphic file (type png)
 
 <use figures/bk_map_total.png>
 Package pdftex.def Info: figures/bk_map_total.png used on input line 91.
 (pdftex.def)             Requested size: 238.96857pt x 168.43428pt.
 
-<figures/buildingpart_fromTo_bouwpubGraph.png, id=674, 1233.6489pt x 605.6226pt
+<figures/buildingpart_fromTo_bouwpubGraph.png, id=675, 1233.6489pt x 605.6226pt
 >
 File: figures/buildingpart_fromTo_bouwpubGraph.png Graphic file (type png)
  <use figures/buildingpart_fromTo_bouwpubGraph.png>
@@ -2218,7 +2216,7 @@ nput line 101.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11 <./figures/buildingpart_all_graph.png> <./figures/bk_map_total.png>]
-<figures/buildingpart_fromTo_canteenGraph.png, id=686, 1233.6489pt x 605.6226pt
+<figures/buildingpart_fromTo_canteenGraph.png, id=687, 1233.6489pt x 605.6226pt
 >
 File: figures/buildingpart_fromTo_canteenGraph.png Graphic file (type png)
  <use figures/buildingpart_fromTo_canteenGraph.png>
@@ -2368,7 +2366,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--57
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-<figures/sesdur_graph_without5min.png, id=755, 1578.89874pt x 973.6375pt>
+<figures/sesdur_graph_without5min.png, id=756, 1578.89874pt x 973.6375pt>
 File: figures/sesdur_graph_without5min.png Graphic file (type png)
 
 <use figures/sesdur_graph_without5min.png>
@@ -2451,7 +2449,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--143
 
  []
 
-<figures/apmap_west.png, id=783, 332.442pt x 222.3507pt>
+<figures/apmap_west.png, id=784, 332.442pt x 222.3507pt>
 File: figures/apmap_west.png Graphic file (type png)
 
 <use figures/apmap_west.png>
@@ -2498,7 +2496,7 @@ ut line 19.
 Underfull \vbox (badness 3895) has occurred while \output is active []
 
  [25]
-<figures/ordered-co-location.png, id=807, 333.6465pt x 356.2911pt>
+<figures/ordered-co-location.png, id=808, 333.6465pt x 356.2911pt>
 File: figures/ordered-co-location.png Graphic file (type png)
 
 <use figures/ordered-co-location.png>
@@ -2517,7 +2515,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--7
 
  []
 
-<figures/methodology_workflow.png, id=820, 1509.64pt x 1078.0275pt>
+<figures/methodology_workflow.png, id=821, 1509.64pt x 1078.0275pt>
 File: figures/methodology_workflow.png Graphic file (type png)
 
 <use figures/methodology_workflow.png>
@@ -2540,7 +2538,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--28
  []
 
 [28 <./figures/methodology_workflow.png>]
-<figures/Preprocessing_Grouping.png, id=843, 534.3162pt x 218.0145pt>
+<figures/Preprocessing_Grouping.png, id=844, 534.3162pt x 218.0145pt>
 File: figures/Preprocessing_Grouping.png Graphic file (type png)
 
 <use figures/Preprocessing_Grouping.png>
@@ -2551,7 +2549,7 @@ Package pdftex.def Info: figures/Preprocessing_Grouping.png used on input line
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [29 <./figures/Preprocessing_Grouping.png>]
-<figures/Preprocessing_World.png, id=853, 776.9025pt x 540.0978pt>
+<figures/Preprocessing_World.png, id=854, 776.9025pt x 540.0978pt>
 File: figures/Preprocessing_World.png Graphic file (type png)
 
 <use figures/Preprocessing_World.png>
@@ -2559,7 +2557,7 @@ Package pdftex.def Info: figures/Preprocessing_World.png used on input line 45.
 
 (pdftex.def)             Requested size: 442.83902pt x 307.85895pt.
  [30 <./figures/Preprocessing_World.png>]
-<figures/Preprocessing_PassingBy.png, id=863, 572.1375pt x 347.6187pt>
+<figures/Preprocessing_PassingBy.png, id=864, 572.1375pt x 347.6187pt>
 File: figures/Preprocessing_PassingBy.png Graphic file (type png)
 
 <use figures/Preprocessing_PassingBy.png>
@@ -2567,7 +2565,7 @@ Package pdftex.def Info: figures/Preprocessing_PassingBy.png used on input line
  56.
 (pdftex.def)             Requested size: 400.49352pt x 243.33142pt.
 
-<figures/pseudocode.png, id=865, 632.3625pt x 380.42125pt>
+<figures/pseudocode.png, id=866, 632.3625pt x 380.42125pt>
 File: figures/pseudocode.png Graphic file (type png)
 
 <use figures/pseudocode.png>
@@ -2577,7 +2575,7 @@ Package pdftex.def Info: figures/pseudocode.png used on input line 67.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31 <./figures/Preprocessing_PassingBy.png>]
-<figures/PreProcessing-01.jpg, id=874, 1619.04875pt x 1844.8925pt>
+<figures/PreProcessing-01.jpg, id=875, 1619.04875pt x 1844.8925pt>
 File: figures/PreProcessing-01.jpg Graphic file (type jpg)
 
 <use figures/PreProcessing-01.jpg>
@@ -2593,21 +2591,21 @@ File: figures/mobility.png Graphic file (type png)
 Package pdftex.def Info: figures/mobility.png used on input line 94.
 (pdftex.def)             Requested size: 295.62746pt x 221.32535pt.
  [33]
-<figures/statesToMovements.png, id=892, 761.4849pt x 336.5373pt>
+<figures/statesToMovements.png, id=893, 761.4849pt x 336.5373pt>
 File: figures/statesToMovements.png Graphic file (type png)
 
 <use figures/statesToMovements.png>
 Package pdftex.def Info: figures/statesToMovements.png used on input line 106.
 (pdftex.def)             Requested size: 418.81798pt x 185.09608pt.
 
-<figures/movement_records.jpg, id=893, 2183.15625pt x 1505.625pt>
+<figures/movement_records.jpg, id=894, 2183.15625pt x 1505.625pt>
 File: figures/movement_records.jpg Graphic file (type jpg)
 
 <use figures/movement_records.jpg>
 Package pdftex.def Info: figures/movement_records.jpg used on input line 114.
 (pdftex.def)             Requested size: 382.05807pt x 263.48833pt.
  [34 <./figures/statesToMovements.png> <./figures/movement_records.jpg>]
-<figures/movement.jpg, id=904, 1731.46875pt x 526.96875pt>
+<figures/movement.jpg, id=905, 1731.46875pt x 526.96875pt>
 File: figures/movement.jpg Graphic file (type jpg)
 
 <use figures/movement.jpg>
@@ -2642,7 +2640,7 @@ File: figures/building_all_graph.png Graphic file (type png)
 Package pdftex.def Info: figures/building_all_graph.png used on input line 26.
 (pdftex.def)             Requested size: 370.09753pt x 181.68817pt.
 
-<figures/map_total.png, id=926, 844.95676pt x 597.432pt>
+<figures/map_total.png, id=927, 844.95676pt x 597.432pt>
 File: figures/map_total.png Graphic file (type png)
 
 <use figures/map_total.png>
@@ -2656,14 +2654,14 @@ Package pdftex.def Info: figures/building_mobileStatic_graph.png used on input
 line 44.
 (pdftex.def)             Requested size: 370.09753pt x 181.68817pt.
 
-<figures/map_mobile.png, id=938, 844.95676pt x 597.432pt>
+<figures/map_mobile.png, id=939, 844.95676pt x 597.432pt>
 File: figures/map_mobile.png Graphic file (type png)
 
 <use figures/map_mobile.png>
 Package pdftex.def Info: figures/map_mobile.png used on input line 53.
 (pdftex.def)             Requested size: 337.97672pt x 238.96857pt.
 
-<figures/map_static.png, id=939, 844.95676pt x 597.432pt>
+<figures/map_static.png, id=940, 844.95676pt x 597.432pt>
 File: figures/map_static.png Graphic file (type png)
 
 <use figures/map_static.png>
@@ -2679,7 +2677,7 @@ Package pdftex.def Info: figures/building_weekWeekend_graph.png used on input l
 ine 70.
 (pdftex.def)             Requested size: 370.09753pt x 181.68817pt.
 
-<figures/map_weekdays.png, id=950, 844.95676pt x 597.432pt>
+<figures/map_weekdays.png, id=951, 844.95676pt x 597.432pt>
 File: figures/map_weekdays.png Graphic file (type png)
 
 <use figures/map_weekdays.png>
@@ -2689,7 +2687,7 @@ Package pdftex.def Info: figures/map_weekdays.png used on input line 77.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40 <./figures/map_static.png>]
-<figures/map_weekends.png, id=958, 844.95676pt x 597.432pt>
+<figures/map_weekends.png, id=959, 844.95676pt x 597.432pt>
 File: figures/map_weekends.png Graphic file (type png)
 
 <use figures/map_weekends.png>
@@ -2702,14 +2700,14 @@ ne 95.
 (pdftex.def)             Requested size: 370.09753pt x 181.68817pt.
 
 [41 <./figures/map_weekdays.png> <./figures/map_weekends.png>]
-<figures/map_1215to1300.png, id=974, 844.95676pt x 597.432pt>
+<figures/map_1215to1300.png, id=975, 844.95676pt x 597.432pt>
 File: figures/map_1215to1300.png Graphic file (type png)
 
 <use figures/map_1215to1300.png>
 Package pdftex.def Info: figures/map_1215to1300.png used on input line 104.
 (pdftex.def)             Requested size: 337.97672pt x 238.96857pt.
 
-<figures/map_1315to1400.png, id=975, 844.95676pt x 597.432pt>
+<figures/map_1315to1400.png, id=976, 844.95676pt x 597.432pt>
 File: figures/map_1315to1400.png Graphic file (type png)
 
 <use figures/map_1315to1400.png>
@@ -2741,7 +2739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
 LaTeX Warning: Command \textellipsis invalid in math mode on input line 12.
 
-[45] <figures/sub-sequence-pattern.png, id=1008, 391.4625pt x 174.8934pt>
+[45] <figures/sub-sequence-pattern.png, id=1009, 391.4625pt x 174.8934pt>
 File: figures/sub-sequence-pattern.png Graphic file (type png)
 
 <use figures/sub-sequence-pattern.png>
@@ -2753,28 +2751,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
-<figures/sampleTraject.png, id=1013, 254.1495pt x 48.6618pt>
+<figures/sampleTraject.png, id=1014, 254.1495pt x 48.6618pt>
 File: figures/sampleTraject.png Graphic file (type png)
 
 <use figures/sampleTraject.png>
 Package pdftex.def Info: figures/sampleTraject.png used on input line 29.
 (pdftex.def)             Requested size: 203.31987pt x 38.92947pt.
  [46 <./figures/sub-sequence-pattern.png> <./figures/sampleTraject.png>]
-<figures/prefixspan.png, id=1025, 260.8947pt x 129.6042pt>
+<figures/prefixspan.png, id=1026, 260.8947pt x 129.6042pt>
 File: figures/prefixspan.png Graphic file (type png)
 
 <use figures/prefixspan.png>
 Package pdftex.def Info: figures/prefixspan.png used on input line 38.
 (pdftex.def)             Requested size: 182.62503pt x 90.7223pt.
 
-<figures/length_histogram.png, id=1028, 589.0005pt x 444.4605pt>
+<figures/length_histogram.png, id=1029, 589.0005pt x 444.4605pt>
 File: figures/length_histogram.png Graphic file (type png)
 
 <use figures/length_histogram.png>
 Package pdftex.def Info: figures/length_histogram.png used on input line 52.
 (pdftex.def)             Requested size: 235.59602pt x 177.78105pt.
 
-<figures/length_histogram_indoor.png, id=1032, 589.0005pt x 444.4605pt>
+<figures/length_histogram_indoor.png, id=1033, 589.0005pt x 444.4605pt>
 File: figures/length_histogram_indoor.png Graphic file (type png)
 
 <use figures/length_histogram_indoor.png>
@@ -2785,14 +2783,14 @@ Package pdftex.def Info: figures/length_histogram_indoor.png used on input line
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47 <./figures/prefixspan.png> <./figures/length_histogram.png>]
-<figures/length-4-pattern.png, id=1043, 377.0085pt x 143.5764pt>
+<figures/length-4-pattern.png, id=1044, 377.0085pt x 143.5764pt>
 File: figures/length-4-pattern.png Graphic file (type png)
 
 <use figures/length-4-pattern.png>
 Package pdftex.def Info: figures/length-4-pattern.png used on input line 72.
 (pdftex.def)             Requested size: 263.90414pt x 100.50278pt.
 
-<figures/patterna.png, id=1047, 597.6729pt x 878.5623pt>
+<figures/patterna.png, id=1048, 597.6729pt x 878.5623pt>
 File: figures/patterna.png Graphic file (type png)
 
 <use figures/patterna.png>
@@ -2810,7 +2808,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48 <./figures/length_histogram_indoor.png> <./figures/length-4-pattern.png>]
-<figures/patternb.png, id=1058, 597.6729pt x 878.5623pt>
+<figures/patternb.png, id=1059, 597.6729pt x 878.5623pt>
 File: figures/patternb.png Graphic file (type png)
 
 <use figures/patternb.png>
@@ -2819,7 +2817,7 @@ Package pdftex.def Info: figures/patternb.png used on input line 90.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49 <./figures/patterna.png>] <figures/patternc.png, id=1064, 597.6729pt x 878
+ [49 <./figures/patterna.png>] <figures/patternc.png, id=1065, 597.6729pt x 878
 .5623pt>
 File: figures/patternc.png Graphic file (type png)
 
@@ -2870,7 +2868,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--51
 
  []
 
-[54] <figures/bk_BG_sketch.png, id=1097, 1494.58376pt x 1056.94875pt>
+[54] <figures/bk_BG_sketch.png, id=1098, 1494.58376pt x 1056.94875pt>
 File: figures/bk_BG_sketch.png Graphic file (type png)
 
 <use figures/bk_BG_sketch.png>
@@ -3267,11 +3265,11 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 32307 strings out of 493089
- 577373 string characters out of 6134842
- 1000782 words of memory out of 5000000
+ 32309 strings out of 493089
+ 577340 string characters out of 6134842
+ 1000784 words of memory out of 5000000
  34749 multiletter control sequences out of 15000+600000
- 181086 words of font info for 136 fonts, out of 8000000 for 9000
+ 181513 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,14n,74p,2536b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -3290,10 +3288,10 @@ ia/putbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/put
 r8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/adobe/utopia/putri8a.pf
 b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
 
-Output written on report.pdf (85 pages, 22345533 bytes).
+Output written on report.pdf (85 pages, 22887027 bytes).
 PDF statistics:
- 1404 PDF objects out of 1440 (max. 8388607)
- 1101 compressed objects within 12 object streams
+ 1403 PDF objects out of 1440 (max. 8388607)
+ 1100 compressed objects within 11 object streams
  297 named destinations out of 1000 (max. 500000)
  977 words of extra memory for PDF output out of 10000 (max. 10000000)
 
