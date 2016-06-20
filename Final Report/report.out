@@ -40,7 +40,11 @@
 \BOOKMARK [2][-]{subsection.6.1.3}{Adding world state}{section.6.1}% 40
 \BOOKMARK [2][-]{subsection.6.1.4}{Passing by}{section.6.1}% 41
 \BOOKMARK [2][-]{subsection.6.1.5}{Implementation}{section.6.1}% 42
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.6.2}{mobility analysis}{chapter.6}% 43
+=======
+\BOOKMARK [1][-]{section.6.2}{Mobility analysis}{chapter.6}% 43
+>>>>>>> a99c820d2106ca72eb726d5a589584a269718627
 \BOOKMARK [1][-]{section.6.3}{States to movements}{chapter.6}% 44
 \BOOKMARK [1][-]{section.6.4}{States to trajectories}{chapter.6}% 45
 \BOOKMARK [0][-]{chapter.7}{Movements}{}% 46
@@ -79,5 +83,10 @@
 \BOOKMARK [1][-]{section.11.5}{AP system}{chapter.11}% 79
 \BOOKMARK [1][-]{section.11.6}{Data reasoning}{chapter.11}% 80
 \BOOKMARK [1][-]{section.11.7}{Visual exploration}{chapter.11}% 81
+<<<<<<< HEAD
 \BOOKMARK [0][-]{chapter.12}{Acknowledgements}{}% 82
 \BOOKMARK [0][-]{chapter.13}{Appendix A}{}% 83
+=======
+\BOOKMARK [0][-]{chapter*.62}{Acknowledgements}{}% 82
+\BOOKMARK [0][-]{appendix*.63}{Appendix A}{}% 83
+>>>>>>> a99c820d2106ca72eb726d5a589584a269718627

@@ -1,7 +1,7 @@
 \chapter{Indoor movement}\label{indoormovement}
 \section{Introduction}
 As described in the firs part of this report, Wi-Fi tracking data can be used to identify movement between buildings. Given that indoor areas are usually better
-covered with Wi-Fi access points than outdoor areas, it is natural to also look at movement inside buildings. The following section describes our method of
+covered with Wi-Fi access points than outdoor areas, it is natural to also look at movement inside buildings. The following section describes the method of
 identifying and visualizing indoor movement in the Faculty of Architecture and the built environment of the TU Delft.\\\\
 The process of indoor movement analysis is conducted along the steps below, thus the section also follows this structure:
 
@@ -9,19 +9,20 @@ The process of indoor movement analysis is conducted along the steps below, thus
     \item Delineate building parts based on the layout of access points and the division of the building (e.g. department, canteen, building wing), and
 group the access point into building parts.
     \item Identify movements in the data between building parts.
-    \item Create a route network that connects the building parts and is constrained on the corridors of the building.
+    \item Create a route network that connects the building parts and is constrained to the corridors of the building.
     \item Assign the movements to the route network.
-    \item Visualize the movement along the indoor network.
+    \item Visualize the amount of movement along the indoor network.
 \end{enumerate}
 
 \section{Theory / methods}\label{11methods}
 After identifying movement between different buildings, the next level is to do so between different parts inside a building. These parts represent
-functional or spatial divisions inside a building, e.g. departments, community areas, building wings and are referred to as \textit{building-part}.\\\\
+functional or spatial divisions inside a building, e.g. departments, community areas, building wings and are referred to as building-part.
+\\\\
 A prerequisite of the method is to know the at least room level location of the access points in the respective building. At the time when the project
-was carried out, the detailed access point locations were availably only for the Faculty of Architecture and the built environment. Thus the focus on this particular building.\\\\
+was carried out, the detailed access point locations were available only for the Faculty of Architecture and the built environment. Thus the focus on this particular building.
+\\\\
 As opposed to outdoor pedestrian movement which is not necessarily constrained on a fixed network, indoor movement is constrained by the layout of the
 respective building. The building parts of the Faculty of Architecture and the built environment can be represented by its underlying graph, having the building parts as nodes and the corridors as edges \autoref{figure:bk_graph}. Then indoor movement is necessarily constrained on this underlying graph.
-
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{bk_BG_bparts.png}
@@ -30,16 +31,16 @@ respective building. The building parts of the Faculty of Architecture and the b
 its underlying graph.}
 \label{figure:bk_graph}
 \end{figure}
-
 The Wi-Fi system of the TU Delft campus has a five minute scan interval, which is too coarse to catch detailed movement indoor. As five minutes is
 sufficient to reach any two locations in the building taking any route. Therefore not the movement trajectory itself is identified from the data, but
 the fact of relocation from origin to destination. Then the path of the movement can also be identified by analysing the layout of the building. For example if a
-person stayed at the Restaurant, then soon after he stayed at the Orange hall, he necessarily had to traverse the corridors in-between these two locations. Our method is based on this assumption.\\\\
+person stayed at the canteen, then soon after he stayed at the orange hall, he necessarily had to traverse the corridors in-between these two locations. Our method is based on this assumption.
+\\\\
 Due to the building layout, in most of the cases there is only one possible direct route between two building parts. However, in case of multiple route
 options, the exact route of a movement is assumed to be the shortest route between origin and destination.
 
 \section{Implementation}
-The identification and visualization of indoor movement ins a procedure that requires various tools and steps. While some steps can be automated, others need to be done manually. The detailed description of these steps follows.
+The identification and visualization of indoor movement in a procedure requires various tools and steps. While some steps can be automated, others need to be done manually. The detailed description of these steps are as follows.
 
 \subsection{Delineation of building parts}
 There are two factors that define what is considered a building part, the layout of the building and the layout of the access points. The layout of the
@@ -60,27 +61,14 @@ In case of the Faculty of Architecture and the built environment \autoref{figure
 \end{figure}
 
 \subsection{Movement between building parts}
-The method how indoor movements are identified is described in REFER TO THE
-CORRECT (SUB)SECTION
+The method how indoor movements are identified is described in \autoref{11methods}.
 
 \subsection{Indoor route network}
-The route network of the Faculty of Architecture where nodes represent building
-parts and edges represent corridors was drawn manually in \textit{QGIS},
-following the floor plan of the building. However, the resulting 
-\textit{spaghetti network}
-does not contain the topological relations that are required to calculate
-a shortest route. Therefore the topological relationships were created with the
-PostGIS extension \textit{pgRouting}. Using a databased-based solution for
-storing the data, creating topology and calculate shortest routes allowed us to
-easily match the movements, which were calculated in the database, to the route
-network.
+The route network of the Faculty of Architecture and the built environment where nodes represent building parts and edges represent corridors was drawn manually in \textit{QGIS}, following the floor plan of the building. However, the resulting \textit{spaghetti network} does not contain the topological relations that are required to calculate a shortest route. Therefore the topological relationships were created with the PostGIS extension \textit{pgRouting}. Using a database-based solution for storing the data, creating topology and calculate shortest routes allowed us to easily match the movements, which were calculated in the database, to the route network.
 
 \subsection{Mapping traffic to the route network}
-In the \textit{movements table} every record represent a single move of a person
-from origin to destination. In order to display these movements, identical moves
-that have the same origin-destination pair are aggregated, resulting in a table
-of unique origin-destination pairs with the amount of related moves
-\autoref{table:moves}.
+In the \textit{movements table} every record represent a single move of a person from origin to destination. In order to display these movements, identical moves that have the same origin-destination pair are aggregated, resulting in a table of unique origin-destination pairs with the amount of related moves
+(\autoref{table:moves}).
 
 \begin{table}[H]
 \centering
@@ -95,11 +83,8 @@ Main entrance & Espressobar & 543   \\ \bottomrule
 \end{tabular}
 \end{table}
 
-Then the shortest route between each origin-destination pair is calculated and
-the movement counts are added to each edge that is traversed in the network.
-Thus if the shortest route of two distinct movements share edges, the movement
-count is summed up on the common edges, resulting in the traffic load of a given
-edge \autoref{table:traffic}.
+Then the shortest route between each origin-destination pair is calculated and the movement counts are added to each edge that is traversed in the network.
+Thus if the shortest route of two distinct movements share edges, the movement count is summed up on the common edges, resulting in the traffic load of a given edge (\autoref{table:traffic}).
 
 \begin{table}[H]
 \centering
@@ -117,29 +102,16 @@ Edge ID & Traffic & Line width \\ \midrule
 % TODO: if we include code in the appendix, reference the function here
 
 \subsection{Visualization of the movement}
-The visualization method, as well as the route network, is two-dimensional.
-However, three-dimensionality is imitated by using an \textit{exploded view}
-common in architectural visualizations, that shifts overlapping elements (e.g.
-floors) by a certain angle.
-
-In this graphic the \textit{nodes} that represent the building parts are the 
-approximate centroids of the polygonal area of the building part. The nodes were 
-manually adjusted
-to better match the route network.
-
-The route network is represented with
-straight lines, where the \textit{line width} is proportional to the traffic
-load of a given edge. However, line widths cannot be compared across graphics, as in order
-to facilitate consistent scale the line width variable is normalized to
-the range of 0.5-5 units, regardless of traffic load. The range of 0.5-5 units
-is chosen to provide a visually appealing and clear graphic. \textit{Colours}
-mark the four separate floors and the staircases (grey) in the building
-\autoref{map:bk_total}.
+The visualization method, as well as the route network, is two-dimensional. However, three-dimensionality is imitated by using an \textit{exploded view}
+common in architectural visualizations, that shifts overlapping elements (e.g.floors) by a certain angle.
+\\\\
+In this graphic the \textit{nodes} that represent the building parts are the approximate centroids of the polygonal area of the building part. The nodes were 
+manually adjusted to better match the route network.
+\\\\
+The route network is represented with straight lines, where the \textit{line width} is proportional to the traffic load of a given edge. However, line widths cannot be compared across graphics, as in order to facilitate consistent scale the line width variable is normalized to the range of 0.5-5 units. The range of 0.5-5 units is chosen to provide a visually appealing and clear graphic. Colours mark the four separate floors and the staircases (grey) in the building (\autoref{map:bk_total}).
 
 \section{Results}
-Considering the movement from any origin to any destination at the Faculty of
-Architecture, throughout the whole measured period, our results clearly indicate
-the peak hours in the morning, before and after lunch \autoref{figure:bk_total}.
+Considering the movement from any origin to any destination at the Faculty of Architecture and the built environment, throughout the whole measured period, our results clearly indicate the peak hours in the morning, before and after lunch \autoref{figure:bk_total}.
 
 \begin{figure}[H]
 \centering
@@ -149,12 +121,8 @@ the peak hours in the morning, before and after lunch \autoref{figure:bk_total}.
 \label{figure:bk_total}
 \end{figure}
 
-Furthermore, if the same data is visualized using the previously described
-method, we can observe the occupation of corridors in the building. The
-advantage of this method that it provides insight into the usage of those
-spaces where data is not directly available. See the limitations of the
-\textit{eduroam} system to track detailed indoor movement in
-\autoref{11methods}.
+Furthermore, if the same data is visualized using the previously described method, we can observe the occupation of corridors in the building. The advantage of this method that it provides insight into the usage of those spaces where data is not directly available. See the limitations of the
+eduroam system to track detailed indoor movement in \autoref{11methods}.
 
 \begin{figure}[H]
 \centering
@@ -164,6 +132,4 @@ spaces where data is not directly available. See the limitations of the
 \label{map:bk_total}
 \end{figure}
 
-Additionally, we analysed movements of mobile and static devices, weekdays and
-weekends, to the Bouwpub and to the Restaurant at the Faculty. These results are
-displayed in \autoref{appendixA}.
+Additionally, we analysed movements of mobile and static devices, weekdays and weekends, to the Bouwpub and to the Restaurant at the Faculty. These results are displayed in Appendix A.

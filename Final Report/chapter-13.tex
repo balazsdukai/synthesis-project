@@ -5,7 +5,11 @@
 % normal text
 This section will describe the work that is done to find out what, when and how frequent entrances of the Faculty of Architecture and the built environment are used. This is an interesting and challenging use case at the same time. The Faculty of Architecture is a building having multiple entrances; five to be precise. Knowing what, when and how frequent these entrances are used, will give insight into the use of a building, the spatial context and the relation between these two.\\\\
 \textbf{Methodology}\label{method}\\
+<<<<<<< HEAD
 In order to find what entrance someone uses to enter or exit a building, we will look in the part of a sequence in which the device is recorded by an AP in a building and subsequently recorded by an AP in another building. More specific, we will look at what (first or last) AP is used in a movement from one to another building. For this two different approaches can be distinguished. The first approach does not take in account the devices that might get recorded when passing by the building. In  the second approach we will make use of the pre-processed data which excluded the passing by events.\\\\
+=======
+In order to find what entrance someone uses to enter or exit a building, we will look in the part of a sequence in which the device is recorded by an AP in a building and subsequently recorded by an AP in another building. More specific, we will look at which AP(first or last) is used in a movement from one to another building. For this two different approaches can be distinguished. The first approach does not take in account the devices that might get recorded when passing by the building. In  the second approach we will make use of the pre-processed data which excluded the passing by events.\\\\
+>>>>>>> a99c820d2106ca72eb726d5a589584a269718627
 \textbf{Hypothesis}\label{hypo}\\
 Our hypothesis is that finding clear answers to the question whether it is possible to identify what entrances are most frequently used, is going to be hard. Firstly, because the existing layout of APs is not designed for the purpose of tracking people. For this reason there is not always an AP located near an entrance. Secondly, because the logging frequency of the system is a little more than 5 minutes. Ideally the system records the connected device at the very first AP it connects with. The chance the device is recorded at the moment it is connected with the very first access point is small. However we still expect to see some results. Although the time interval in which the system logs the connected devices is relatively large, an AP located near an entrance would still pop up as one of the most frequently used AP as first connection (assuming people disseminate over the building after entering). \\\\
 \textbf{First approach: including passing by events}\\
@@ -93,11 +97,19 @@ In order to know with what APs a device connects when entering a building, some 
 \end{table}
 The AP a device connects with when entering the building via the West entrance, E-102', can also be found in \autoref{secondapproach_graph}. Though it does not stand out compared to other APs. The MAC addresses of the APs the device connects with when entering the building via the East or Main entrance are not found, meaning the APs are not located on the map or listed in the table of APs. This implies it is not possible to relate the results to the data. \\\\
 \textbf{Recommendation}\\
+<<<<<<< HEAD
 The results and conducted experiments has shown it is not possible to clearly find what, when and how frequent entrances of the Faculty of Architecture and the built environment are used. The first and most important reason for that, is the time interval of approximately 5 minutes in which the system is recording. A person could be anywhere in the building at the moment of recording. A smaller time interval between the moments of recording would help in finding answers to the questions regarding the use of the entrances. Also, the existing layout of APs in the Faculty of Architecture is currently not designed for any other purpose than allowing a Wi-Fi compliant device to connect with the wireless eduroam network. Locating APs near the entrances of a building might help. Moreover, the fact the Faculty of Architecture has multiple entrances, in combination with the large time interval of recording, is what makes identification of the entrances difficult. 
 
 \section{Association rules} 
 The following section describes how movement patterns can be derived on building level, without considering the direction or order of the movement. An association rule mining algorithm \cite{agrawal_mining_1993} was used to identify groups of buildings that frequently visited in combination with each
 other. Firstly the algorithm is described briefly, then the results are presented and recommendation is given.
+=======
+The results and conducted experiments has shown it is not possible to clearly find what, when and how frequent entrances of the Faculty of Architecture and the built environment are used. The first and most important reason for that, is the time interval of approximately 5 minutes in which the system is recording. A person could be anywhere in the building at the moment of recording. A smaller time interval between the moments of recording would help in finding answers to the questions regarding the use of the entrances. Also, the existing layout of APs in the Faculty of Architecture and the built environment is currently not designed for any other purpose than allowing a Wi-Fi compliant device to connect with the wireless eduroam network. Locating APs near the entrances of a building might help. Moreover, the fact the Faculty of Architecture and the built environment has multiple entrances, in combination with the large time interval of recording, is what makes identification of the entrances difficult. 
+
+\section{Association rules} 
+The following section describes how movement patterns can be derived on building level, without considering the direction or order of the movement. An association rule mining algorithm (\cite{agrawal_mining_1993}) was used to identify groups of buildings that frequently visited in combination with each
+other. Firstly the algorithm is described briefly, then the results are presented and a recommendation is given.
+>>>>>>> a99c820d2106ca72eb726d5a589584a269718627
 \\\\
 \textbf{Association rules mining}\\
 Association rule mining is a technique to analyse what variables or items are
@@ -107,7 +119,7 @@ customers of a supermarket. As an example for this use case is an association
 rule of an item set \{bread, butter\}, tells that in 80\% of those transactions
 including \{bread, butter\}, also \{milk\}  was present. In other words, 80\%
 of the people who buy bread and butter also buy milk
-\cite{agrawal_mining_1993}. Compared to sequence mining, association rule
+(\cite{agrawal_mining_1993}). Compared to sequence mining, association rule
 mining does not consider the order of items neither within, nor across transactions.
 
 Thus every rule is composed by two item sets, the \textit{antecedent}
@@ -175,13 +187,13 @@ carrying two devices were not accounted for. The time range of trajectories
 spanned from 31.03.2016 to 02.05.2016, approximately one month.
 
 Although there are several measures to evaluate the interestingness of an
-association rule \cite{zhang_survey_2009}, only \textit{support} and
+association rule (\cite{zhang_survey_2009}), only \textit{support} and
 \textit{confidence} were used for testing purposes.
 \\\\
 \textbf{Support}\\
 “The support for a rule is defined to be the fraction of transaction in the
 dataset that satisfy the union of items in the consequent and antecedent of the
-rule.” \cite{agrawal_mining_1993}. In case of the rule \{BK\_City, Aula\}
+rule.” (\cite{agrawal_mining_1993}). In case of the rule \{BK\_City, Aula\}
 \verb|=>| \{Library\}, the support is the percentage of the total dataset that
 includes BK\_City, Aula and Library.
 \\\\
@@ -215,20 +227,25 @@ Therefore it is not handled more intensively in this project. However, this tech
 \item \textit{All the people who visit building A, what other buildings do they visit as well?}
 \end{itemize}
 
-\section{Distinguishing user groups}
+\section{Distinguishing user groups}\label{dist_usergroups}
 Individual trajectories contain detailed information about the movement patterns of people. As is discussed in \autoref{trajectories} can trajectories from Wi-Fi scans be used to identify co-location in space. However, this pattern mining approach only considers location and the order of locations. When also time is considered and stored for each state in the trajectory, new patterns can be identified. When multiple trajectories share more than one location at the same time and order, moving groups can be identified. Detecting co-location in space and time is not considered for this research, but will be an interesting topic for further analysis.
 
 \section{Occupancy}
 % Matthijs
 % Filtering out static devices, but those can be used for occupancy!!!
+<<<<<<< HEAD
 As discussed in \autoref{mobility}, all devices can be classified as either static or dynamic device, such as laptops and smart phones. For this project, mostly the dynamic devices are used to find movement patterns, because these devices are most probably carried around the campus with the user and thus gives the best representation of the actual movement. But this assumption leaves out all the devices that can provide other valuable information. The information that a static device is carrying can help finding patterns in occupation of rooms. When an individual in the Library is leaving his or her laptop at a work space, but he is going to the Aula for lunch, the work space is still occupied. This information can be of great value when assessing the use of the Library. \\\\
+=======
+As discussed in \autoref{mobility}, all devices can be classified as either static or dynamic device, such as laptops and smart phones. For this project, mostly the dynamic devices are used to find movement patterns, because these devices are most probably carried around the campus with the user and thus gives the best representation of the actual movement. But this assumption leaves out all the devices that can provide other valuable information. The information that a static device is carrying can help finding patterns in occupation of rooms. For example, when an individual in the Library is leaving his or her laptop at a work space, but he is going to the Aula for lunch, the work space is still occupied. This information can be of great value when assessing the use of the Library. 
+\\\\
+>>>>>>> a99c820d2106ca72eb726d5a589584a269718627
 For future research, it would be useful to consider both static and dynamic devices and depending on the question that is asked use either one of them. For occupational research, static devices would be used, for identifying movement, dynamic devices would be used.
 
 \section{AP system}
 % Matthijs
 % Scan time, also outdoors maybe?
 The set-up of the system that logs the devices connected to access points is directly connected to the accuracy of the processed data. Currently, the APs register every device that is connected to it and the logging system receives all connected devices approximately every five minutes. Additionally, all access points are located indoors, logging every device carried by people using that building. These two aspects of the AP system limit the accuracy of the processed data and thus the movement patterns that can be derived. \\\\
-Because the system logs every connected devices once every five minutes, a device will only be registered if the devices is connected for at least five minutes (not really true). This will result in discrepancies in the processed data. Devices and thus people walking by an AP will probably not be registered, for they are not connected to that AP for at least five minutes. This is unfortunate, because a person can travel a rather long distance in five minutes, e.g. making it hard to track people indoors. If the system would be logging every device all the time, irrespective of the time the device is connected, the tracking data would contain every AP that a device would connect to and thus provide much more accurate tracking data. Understandably, logging every user every second would result in huge amounts of data, which would most definitely result in performance issues.\\\\
+Because the system logs every connected devices once every five minutes, a device will only be registered if the device is connected at the time of logging. This will result in discrepancies in the processed data. Devices and thus people walking by an AP will probably not be registered, for they are most likely not connected to that AP at the time of logging. This is unfortunate, because a person can travel a rather long distance in five minutes, e.g. making it hard to track people indoors. If the system would be logging every device all the time, irrespective of the time the device is connected, the tracking data would contain every AP that a device would connect to and thus provide much more accurate tracking data. Understandably, logging every user every second would result in huge amounts of data, which would most definitely result in performance issues.\\\\
 Secondly, because all scanners are located inside buildings, there is little to no information on people when they move from one building to another. Surely something can be told from the time it takes a device from the last scan in one building, to the first scan in the second building. But for outdoor tracking purposes, this system is limited. From some experiments that were conducted on the TU Delft Campus it can be concluded that a device located outdoors near a building can be detected by APs inside the building, but this depends on the antenna in the devices and the exact location of the device in respect to the AP. If more detailed information about movement outdoors is desired, it would be wise to also include outdoor APs in the system. If adding outdoor APs would become too expensive, another improvement can be made by publishing a map with the locations of every AP. That way, at least the APs near the outer walls can be distinguished from the APs in the center of the building.\\\\
 To improve further research, it is recommended to take the system of APs into account before actually conducting the research. If outdoor movement tracking is desired, outdoor APs are required. And if tracking indoors is one of the goals, the frequency of logging should be set to an interval that is in the order of magnitude of 10 seconds to one minute, taking data size in consideration.
 
@@ -239,13 +256,13 @@ Because the working of the system of APs is known, the dataset can be improved b
 Moreover, the knowledge acquired from previous courses in the Geomatics programme and common knowledge about buildings and the TU Delft campus can be used to validate certain outcomes of the data processing. For example, it would seems very illogical that an individual could travel from Architecture to Aerospace Engineering and then to Industrial Design in five minutes. Such requirements could improve the final outcomes. This kind of reasoning became even more useful when zooming in to spatial level building-part. Using the knowledge of the building layout of Architecture, it could be concluded that moving from one floor to another is impossible without using one of the staircases. Such a conclusion could then be included in the processing, e.g. validating only movement between floors if one of the staircases is used. \\\\
 For future research, it is desirable to use a higher frequency for logging the connected devices. This will ensure that a device is always registered and that its movement can be easily identified. 
 
-\section{Visual exploration}
+\section{Visual exploration}\label{kaas}
 % Ethan/Matthijs
 % What did and didnt work
-In the course of this project, a lot of visualizations have been used to represent movement between buildings. In any data visualization question, it is important to consider the right type of visualization. Types of visualization that have been used in this project include \begin {enumerate*} [label=\itshape\arabic*\upshape),font={\color{red!0!black}\bfseries}] \item Static maps; \item dynamic maps and \item interactive maps. \end {enumerate*}
-
-In static visualization, movements between buildings are aggregated. The map shows the amount of movements between buildings. All buildings are points and movements are straight lines between these points. Line width is used to represent the amount of movements. The thicker the line is, the more movements there are. However, in this visualization, all lines have same color and since the basemap is openstreetmap, these lines are not highlighted. All the possible movements between these buildings are shown on the map, which makes the map chaotic. The users cannot get what the map wants to emphasize. Besides, the static map disregards the temporal component which is also important for analyzing movement patterns. Considering movement is dynamic, so a dynamic visualization is adopted in the next stage.
-
+In the course of this project, a lot of visualizations have been used to represent movement between buildings. In any data visualization question, it is important to consider the right type of visualization. The types of visualization that have been used in this project include \begin {enumerate*} [label=\itshape\arabic*\upshape),font={\color{red!0!black}\bfseries}] \item Static maps; \item dynamic maps and \item interactive maps. \end {enumerate*}
+\\\\
+In static visualization, all movement between buildings are aggregated. The map shows the amount of movements between buildings. All buildings are represented as points and movements as straight lines between these points. Line width is used to represent the amount of movements. The thicker the line is, the more movements there are. However, in this visualization, all lines have same color and since the basemap is openstreetmap, these lines are not highlighted. All the possible movements between these buildings are shown on the map, which makes the map chaotic. The users cannot comprehend what the map wants to emphasize. Besides, the static map disregards the temporal component which is also important for analyzing movement patterns. Considering movement is dynamic, so a dynamic visualization is adopted in the next stage.
+\\\\
 Instead of aggregating movements, dynamic visualization focuses on individual movement that each line represents one movement (one movement record in database). Each line has two timestamps, the start time and the end time of the movement. All the lines overlap and the lines will be darker if there are more movements. The line will appear and disappear according to the start time and end time, so the dynamic visualization shows how movements change in time during one day. However the animation runs fast and with many lines popping up at the same time, the users can only get an overview when the campus is the busiest, but dynamic visualization is not suitable to find movement patterns, because it doesn't provide detailed information.
-
+\\\\
 In order to find movement patterns. An automatic visualization including GUI is developed. Users can choose dates and buildings, a graph and a map will be generated automatically. The graph and the map together combine static visualization and automatic visualization. The graph shows the change of movements in time and the map shows the aggregated movements so that the users are able to know at which time there are the most movements with the graph and between which buildings are there the most movements according to the map. The line width still represents the amount of movements and the color of the lines is gradient from red to green. Green line means the movement is symmetric that there are similar amount of movements for both directions and red line means the movement is not symmetric. The basemap of automatic visualization is openstreetmap and the color of the lines doesn't make a strong contrast, which makes the map not readable enough.

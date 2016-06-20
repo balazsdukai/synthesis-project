@@ -1,5 +1,5 @@
 \section{Results}\label{3-results}
-First \autoref{ES-generalStatistics} will give a brief analysis of the data, including some general statistics. In the remainder of the chapter several movement patterns retrieved from the raw Wi-Fi log will be presented. It should be noted that many different movement patterns can be identified by counting the movement for different time intervals and for different routes. This paper aims at giving an overview of the different patterns that can be extracted. \autoref{ES-outdoorMovement} will present the outdoor building level patterns, and \autoref{ES-indoorMovement} the indoor building-part level patterns.
+First \autoref{ES-generalStatistics} will give a brief analysis of the data, including some general statistics. In the remainder of the chapter several movement patterns retrieved from the raw Wi-Fi log will be presented. It should be noted that many different movement patterns can be identified by counting the movement for different time intervals and for different routes. This paper aims at giving an overview of the different patterns that can be extracted. \Cref{ES-outdoorMovement} will present the outdoor building level patterns, and \autoref{ES-indoorMovement} the indoor building-part level patterns.
 
 \subsection{General statistics}\label{ES-generalStatistics}
 Within the dataset 44.952 different users are present that together have 86.413 devices. Of these devices 24.156 are classified as mobile, the remaining devices are either classified as static or had less than 100 sessions in the Wi-Fi log, which was decided to be insufficient for classification. The 100 record threshold is a point of discussion, currently it is based on the reasoning that a person that has less records, is likely to be a visitor with access to eduroam, and not a regular user of the TU Delft campus. \autoref{figure:ES-statistics} shows the amount of data during the different processing steps for both spatial levels. The reduction from session to states is mainly due to the grouping. The reduction from states to movements is mainly because the devices with less than 100 records are filtered out at this point.
@@ -8,7 +8,7 @@ Within the dataset 44.952 different users are present that together have 86.413 
 \centering
 \includegraphics[scale=0.5]{ES-statistics.jpg}
 \captionsetup{justification=centering}
-\caption{amount of data during processing stages}
+\caption{Amount of data during processing stages}
 \label{figure:ES-statistics}
 \end{figure}
 
@@ -17,9 +17,9 @@ Looking at building level, movement patterns between, from and to buildings can 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.2]{building_all_graph.png}
+\includegraphics[scale=0.3]{building_all_graph.png}
 \captionsetup{justification=centering}
-\caption{time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from 'world')}
+\caption{Time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from 'world')}
 \label{figure:ES-buildingAllGraph}
 \end{figure}
 
@@ -29,7 +29,7 @@ Looking at building level, movement patterns between, from and to buildings can 
 \centering
 \includegraphics[scale=0.1]{ES-mapTotal.png}
 \captionsetup{justification=centering}
-\caption{top 10 most occuring movements on building level}
+\caption{Top 10 most occuring movements on building level}
 \label{figure:ES-mapTotal}
 \end{figure}
 
@@ -39,7 +39,7 @@ In \autoref{figure:ES-buildingMobileSaticGraph} the movements of mobile (blue) a
 \centering
 \includegraphics[scale=0.2]{building_mobileStatic_graph.png}
 \captionsetup{justification=centering}
-\caption{time profile of all outdoor movement for static and mobile devices}
+\caption{Time profile of all outdoor movement for static and mobile devices}
 \label{figure:ES-buildingMobileSaticGraph}
 \end{figure}
 
@@ -49,7 +49,7 @@ The previous figures showed the movement over the entire time span of the resear
 \centering
 \includegraphics[scale=0.2]{building_weekWeekend_graph.png}
 \captionsetup{justification=centering}
-\caption{time profile of all outdoor movement of mobile devices for week- and weekend days}
+\caption{Time profile of all outdoor movement of mobile devices for week- and weekend days}
 \label{figure:ES-buildingWeekWeekendGraph}
 \end{figure}
 
@@ -59,7 +59,7 @@ Finally, the movement can also be queried based on origin and destination instea
 \centering
 \includegraphics[scale=0.2]{building_fromTo_aulaGraph.png}
 \captionsetup{justification=centering}
-\caption{time profile of movement of mobile devices from and to aula during normal weekdays}
+\caption{Time profile of movement of mobile devices from and to aula during normal weekdays}
 \label{figure:ES-buildingFromToAulaGraph}
 \end{figure}
 
@@ -67,7 +67,7 @@ Finally, the movement can also be queried based on origin and destination instea
 \centering
 \includegraphics[scale=0.1]{ES-map_1315to1400.png}
 \captionsetup{justification=centering}
-\caption{movement of mobile devices from and to aula between 13:15 and 14:00 during normal weekdays}
+\caption{Movement of mobile devices from and to aula between 13:15 and 14:00 during normal weekdays}
 \label{figure:ES-1315to1400}
 \end{figure}
 
@@ -79,18 +79,18 @@ Like for building level, the building-part level data can be filtered for mobile
 \centering
 \includegraphics[scale=0.2]{buildingpart_all_graph.png}
 \captionsetup{justification=centering}
-\caption{time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from 'world')}
+\caption{Time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from 'world')}
 \label{figure:ES-buildingpartAllGraph}
 \end{figure}
 
-\autoref{figure:ES-buildingpartAllMap} shows all the movement within the Faculty of Architecture and the Built Environment on a map. As the movements follow the shortest route on the graph, it becomes possible to see which particular corridor or staircase is busiest. Here the movement rates are highest in the eastern part of the ground floor. This shows occupation of space by movement intstead of the flow between two states.
+\autoref{figure:ES-buildingpartAllMap} shows all the movement within the Faculty of Architecture and the Built Environment on a map. As the movements follow the shortest route on the graph, it becomes possible to see which particular corridor or staircase is busiest. Here the movement rates are highest in the eastern part of the ground floor. This shows occupation of space by movement instead of the flow between two states.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{bk_map_total.png}
 \captionsetup{justification=centering}
-\caption{map of all movement within the faculty of Architecture}
+\caption{Map of all movement within the faculty of Architecture}
 \label{figure:ES-buildingpartAllMap}
 \end{figure}
 
@@ -100,7 +100,7 @@ Finally, \autoref{figure:ES-bouwpub} and \autoref{figure:ES-canteen} give a more
 \centering
 \includegraphics[scale=0.2]{buildingpart_fromTo_bouwpubGraph.png}
 \captionsetup{justification=centering}
-\caption{all movement of mobile devices during weekdays from and to the bouwpub}
+\caption{All movement of mobile devices during weekdays from and to the bouwpub}
 \label{figure:ES-bouwpub}
 \end{figure}
 
@@ -108,6 +108,6 @@ Finally, \autoref{figure:ES-bouwpub} and \autoref{figure:ES-canteen} give a more
 \centering
 \includegraphics[scale=0.2]{buildingpart_fromTo_canteenGraph.png}
 \captionsetup{justification=centering}
-\caption{all movement of mobile devices during weekdays from and to the canteen}
+\caption{All movement of mobile devices during weekdays from and to the canteen}
 \label{figure:ES-canteen}
 \end{figure}
