@@ -1,13 +1,3 @@
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/SynthesisProjectX.iml
-.idea/workspace.xml
-Automatic Visualization/tkSimpleDialog.pyc
-getting_acquainted
-documents
-/.project
-Automatic Visualization/Automatic_Visualization.pyc
-.idea
-.pydevproject
-__pycache__
+_site
+.sass-cache
+.jekyll-metadata
