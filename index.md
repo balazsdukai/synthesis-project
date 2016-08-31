@@ -129,39 +129,3 @@ Built Environment, we also had information about the exact physical
 position of each AP. This geo-referenced information is used to analyse
 movement at building-part level.
 
-
-{% bibtex %}
-
-@article{spek2008tracking,
-  title={Mapping Pedestrian Movement: Using Tracking Technologies in Koblenz},
-  author={Spek, SC van der},
-  journal={Lecture Notes in Geoinformation and Cartography},
-  pages={95--118},
-  year={2008}
-}
-
-@article{heijer2012campus,
-  title={Managing the University Campus: Exploring models for the future and supporting today’s decisions},
-  author={Heijer den, Alexandra},
-  year={2012}
-}
-
-@inproceedings{spek2015rhythm,
-  title={Passive WiFi Monitoring of the Rhythm of the Campus},
-  author={Kalogianni, E and Sileryte, R and Lam, M and Zhou, K and Ham, M and Spek, SC van der and Verbree, E},
-  booktitle={Proceedings of The 18th AGILE International Conference on Geographic Information Science},
-  pages={1--4},
-  year={2015},
-  organization={AGILE}
-}
-
-@inproceedings{meneses2012large,
-  title={Large scale movement analysis from WiFi based location data},
-  author={Meneses, Filipe and Moreira, Alberto},
-  booktitle={Indoor Positioning and Indoor Navigation (IPIN), 2012 International Conference on},
-  pages={1--9},
-  year={2012},
-  organization={IEEE}
-}
-
-{% endbibtex %}
