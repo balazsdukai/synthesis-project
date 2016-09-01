@@ -24,13 +24,13 @@ facilities for education and research by students and academic staff.
 Managing the campus of a university has become a complex and challenging
 task, including the involvement of many stakeholders. Campus managers
 are in need for evidence-based information to support their decision
-making (@heijer2012campus). This includes better location data to detect
+making {% cite heijer2012campus %}. This includes better location data to detect
 activities, occupancy and usage of the infrastructure.
 
 To understand the human motion behaviour many studies are conducted
 based on data collection of GPS receivers. The Global Navigation
 Satellite System (GNSS) is commonly used to track people in large scale
-environments. @spek2008tracking studied the movement of pedestrians in
+environments. {% cite spek2008tracking %} studied the movement of pedestrians in
 city centres, where potential participants were asked to carry a GPS
 receiver. However, the distribution of GPS devices to participants
 limits the possibilities to collect location data at a large scale.
@@ -62,10 +62,10 @@ records of people’s movement. This ubiquitous and individual
 georeferenced data derived from smart phones will present valuable
 knowledge about the movement on the campus. Several work has been made
 for studying human mobility patterns in a University’s campus.
-@meneses2012large used the eduroam network to study connectivity between
+{% cite meneses2012large %} used the eduroam network to study connectivity between
 two places, by computing the number of movements between two places
 within a given observation time period. Previous work has also been made
-at TU Delft @rhythmofthecampus, where several Wi-Fi monitors were placed
+at TU Delft {% cite rhythmofthecampus %}, where several Wi-Fi monitors were placed
 to detect occupation and movement between different faculties.
 
 In this paper, we attempt to identify people’s movement patterns from
@@ -128,4 +128,8 @@ locate APs at building level. For the Faculty of Architecture and the
 Built Environment, we also had information about the exact physical
 position of each AP. This geo-referenced information is used to analyse
 movement at building-part level.
+
+# References
+
+{% bibliography --cited %}
 
