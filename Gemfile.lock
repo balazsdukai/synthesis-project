@@ -8,22 +8,11 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
-    bibtex-ruby (4.4.2)
-      latex-decode (~> 0.0)
-    citeproc (1.0.4)
-      namae (~> 0.8)
-    citeproc-ruby (1.1.4)
-      citeproc (>= 1.0.4, < 2.0)
-      csl (~> 1.4)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
     colorator (1.1.0)
-    csl (1.4.4)
-      namae (~> 0.7)
-    csl-styles (1.0.1.7)
-      csl (~> 1.0)
     ethon (0.9.0)
       ffi (>= 1.3.0)
     execjs (2.7.0)
@@ -90,11 +79,6 @@ GEM
       jekyll (>= 2.0)
     jekyll-sass-converter (1.3.0)
       sass (~> 3.2)
-    jekyll-scholar (5.8.2)
-      bibtex-ruby (~> 4.0, >= 4.0.13)
-      citeproc-ruby (~> 1.0)
-      csl-styles (~> 1.0)
-      jekyll (~> 3.0)
     jekyll-seo-tag (2.0.0)
       jekyll (~> 3.1)
     jekyll-sitemap (0.10.0)
@@ -107,8 +91,6 @@ GEM
       jekyll (>= 3.0)
     json (1.8.3)
     kramdown (1.11.1)
-    latex-decode (0.2.2)
-      unicode (~> 0.4)
     liquid (3.0.6)
     listen (3.0.6)
       rb-fsevent (>= 0.9.3)
@@ -118,7 +100,6 @@ GEM
     minima (1.0.1)
     minitest (5.9.0)
     multipart-post (2.0.0)
-    namae (0.11.0)
     net-dns (0.8.0)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -144,14 +125,12 @@ GEM
       ethon (>= 0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    unicode (0.4.4.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   github-pages
-  jekyll-scholar
   minima
 
 BUNDLED WITH

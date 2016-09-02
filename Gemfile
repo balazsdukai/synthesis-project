@@ -19,4 +19,4 @@ gem "minima"
 gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
-gem "jekyll-scholar"
+#gem 'jekyll-scholar'
