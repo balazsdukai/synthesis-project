@@ -13,47 +13,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: A2B
-email:
+title: Your awesome title
+email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  A2B is a MSc Geomatics Synthesis Project ran in 2016 at the
-  Delft University of Technology. Its focus lies on identifying movement patterns from large scale Wi-Fi-based location data.
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://balazsdukai.github.io/synthesis-project/" # the base hostname & protocol for your site
-twitter_username:
-github_username:
+url: "http://example.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
 
 # Build settings
 markdown: kramdown
 theme: minima
-
-# Load plugins
-#gems: ['jekyll/scholar']
-
-#scholar:
-#  style: elsevier-with-titles-alphabetical
-#  locale: en
-
-#  sort_by: none
-#  order: ascending
-
-#  group_by: none
-#  group_order: ascending
-
-#  source: ./_bibliography
-#  bibliography: report.bib
-#  bibliography_template: "{{reference}}"
-
-#  replace_strings: true
-#  join_strings:    true
-
-#  use_raw_bibtex_entry: false
-#  bibtex_filters:
-#  - superscript
-#  - latex
-
-#  details_dir:    bibliography
-#  details_layout: bibtex.html
-#  details_link:   Details
-
-#  query: "@*"
