@@ -1,5 +1,5 @@
 *Pro tip: for formatting help you can always check out this README document because it is using the same Markdown syntax as the webpage,
-or go to [](http://kramdown.gettalong.org/quickref.html)*
+or go to http://kramdown.gettalong.org/quickref.html*
 
 **Directory structure:**
 
@@ -60,7 +60,9 @@ bla bla
 bla bla
 ```
 
-if you leave `[]` empty, the hyperlink itself will be printed
+you can also just paste the hyperlink itself then it will be printed as 
+
+http://kramdown.gettalong.org/quickref.html
 
 
 ### Add link to a sub-page
