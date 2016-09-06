@@ -4,14 +4,11 @@ title: 1_Introduction
 permalink: /1_introduction/
 ---
 
-# Contents
+## Contents
 {:.no_toc}
 
 * Contents
 {:toc}
-
-# Introduction
-
 
 Location is a key element of many processes and activities, and the
 understanding of human movement behaviour is becoming increasingly
@@ -134,4 +131,4 @@ movement at building-part level.
 [^3]:Meneses, Filipe and Alberto Moreira (2012). “Large scale movement analysis from WiFi based location data”. In: Indoor Positioning and Indoor Navigation (IPIN), 2012 International Conference on. IEEE, pp. 1–9.
 [^4]:Kalogianni, E et al. (2015). “Passive WiFi Monitoring of the Rhythm of the Campus”. In: Proceedings of The 18th AGILE International Conference on Geographic Information Science. AGILE, pp. 1–4.
 
-# References
+## References

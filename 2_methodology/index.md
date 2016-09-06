@@ -4,13 +4,11 @@ title: 2_Methodology
 permalink: /2_methodology/
 ---
 
-# Contents
+## Contents
 {:.no_toc}
 
 * Contents
 {:toc}
-
-# Methodology
 
 In this section the data mining methods used to retrieve movement
 patterns from the Wi-Fi log at two different spatial levels will be

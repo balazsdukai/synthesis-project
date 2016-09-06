@@ -4,13 +4,11 @@ title: 3_Results
 permalink: /3_results/
 ---
 
-# Contents
+## Contents
 {:.no_toc}
 
 * Contents
 {:toc}
-
-# Results
 
 First will give a brief analysis of the data, including some general
 statistics. In the remainder of the chapter several movement patterns

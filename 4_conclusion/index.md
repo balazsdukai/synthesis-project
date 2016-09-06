@@ -4,8 +4,6 @@ title: 4_Conclusion and Recommendations
 permalink: /4_conclusion/
 ---
 
-# Conclusion and Recommendations
-
 To understand human motion behaviour for better decision making, many
 studies have been conducted based on location data collection. Wi-Fi
 tracking technology is increasingly used due its cost effectiveness and
