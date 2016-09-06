@@ -19,7 +19,7 @@ spatial levels for which movement patterns will be derived are
 level concern the movement from, to and between the buildings on the
 campus. The movement patterns on building-part level concern the
 movement from, to and between building-parts of the faculty of
-Architecture and the Built Environment. First subsection [Mobile device extraction](#Mobile-device-extraction) will describe the
+Architecture and the Built Environment. First subsection [Mobile device extraction](#mobile-device-extraction) will describe the
 extraction of mobile devices. The reason that mobile devices are
 extracted is that the records of mobile devices (e.g. smart phones) are
 more complete and representative for the actual movement of the
