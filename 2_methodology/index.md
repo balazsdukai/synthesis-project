@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Methodology
+title: 2_Methodology
 permalink: /2_methodology/
 ---
 
