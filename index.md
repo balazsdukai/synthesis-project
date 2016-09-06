@@ -1,89 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
 
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+# Contents
+{:.no_toc}
 
-  <title>Your awesome title</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu...">
+* Contents
+{:toc}
 
-  <link rel="stylesheet" href="/synthesis-project/css/main.css">
-  <link rel="canonical" href="http://balazsdukai.github.io/synthesis-project//synthesis-project/">
-  <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://balazsdukai.github.io/synthesis-project//synthesis-project/feed.xml">
-</head>
+# Introduction
 
 
-  <body>
-
-    <header class="site-header" role="banner">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="/synthesis-project/">Your awesome title</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
-        
-          
-        
-          
-        
-          
-          <a class="page-link" href="/synthesis-project/about/">About</a>
-          
-        
-          
-        
-          
-        
-      </div>
-    </nav>
-
-  </div>
-
-</header>
-
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <h1 class="no_toc" id="contents">Contents</h1>
-
-<ul id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>    <ul>
-      <li><a href="#case-description" id="markdown-toc-case-description">Case description</a></li>
-    </ul>
-  </li>
-  <li><a href="#methodology" id="markdown-toc-methodology">Methodology</a>    <ul>
-      <li><a href="#mobile-device-extraction" id="markdown-toc-mobile-device-extraction">Mobile device extraction</a></li>
-      <li><a href="#preprocessing-raw-wi-fi-log-sessions" id="markdown-toc-preprocessing-raw-wi-fi-log-sessions">Preprocessing raw Wi-Fi log sessions</a></li>
-      <li><a href="#state-extraction" id="markdown-toc-state-extraction">State extraction</a></li>
-      <li><a href="#movement-extraction" id="markdown-toc-movement-extraction">Movement extraction</a></li>
-      <li><a href="#movement-pattern-extraction" id="markdown-toc-movement-pattern-extraction">Movement pattern extraction</a></li>
-    </ul>
-  </li>
-  <li><a href="#results" id="markdown-toc-results">Results</a>    <ul>
-      <li><a href="#general-statistics" id="markdown-toc-general-statistics">General statistics</a></li>
-      <li><a href="#outdoor-movement-patterns" id="markdown-toc-outdoor-movement-patterns">Outdoor movement patterns</a></li>
-      <li><a href="#indoor-movement-patterns" id="markdown-toc-indoor-movement-patterns">Indoor movement patterns</a></li>
-    </ul>
-  </li>
-  <li><a href="#conclusion-and-recommendations" id="markdown-toc-conclusion-and-recommendations">Conclusion and Recommendations</a></li>
-  <li><a href="#references" id="markdown-toc-references">References</a></li>
-</ul>
-
-<h1 id="introduction">Introduction</h1>
-
-<p>Location is a key element of many processes and activities, and the
+Location is a key element of many processes and activities, and the
 understanding of human movement behaviour is becoming increasingly
 important. Knowledge of people’s locations and related mobility patterns
 are important for numerous activities, such as urban planning, transport
@@ -94,13 +22,13 @@ facilities for education and research by students and academic staff.
 Managing the campus of a university has become a complex and challenging
 task, including the involvement of many stakeholders. Campus managers
 are in need for evidence-based information to support their decision
-making<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. This includes better location data to detect
-activities, occupancy and usage of the infrastructure.</p>
+making[^1]. This includes better location data to detect
+activities, occupancy and usage of the infrastructure.
 
-<p>To understand the human motion behaviour many studies are conducted
+To understand the human motion behaviour many studies are conducted
 based on data collection of GPS receivers. The Global Navigation
 Satellite System (GNSS) is commonly used to track people in large scale
-environments. Speck (2008)<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> studied the movement of pedestrians in
+environments. Speck (2008)[^2] studied the movement of pedestrians in
 city centres, where potential participants were asked to carry a GPS
 receiver. However, the distribution of GPS devices to participants
 limits the possibilities to collect location data at a large scale.
@@ -108,18 +36,18 @@ Furthermore, due to poor quality of received signals from satellites in
 indoor environments, GPS receivers are not suitable in these conditions.
 Technological developments in the acquisition of location data by smart
 phones and the use of Wi-Fi networks, enables new opportunities to track
-users.</p>
+users.
 
-<p>Wireless Local Area Networks (WLAN) are widely used for indoor
+Wireless Local Area Networks (WLAN) are widely used for indoor
 positioning of mobile devices within this network. The use of the Wi-Fi
 network to estimate the location of people is an attractive approach,
 since Wi-Fi access points (AP) are often available in indoor
 environments. Furthermore, smart phones are becoming essential in daily
 life, making it convincing to track mobile devices. This provides a
 platform to track people by using WLAN as a sensor network, and study
-the mobility of users inside buildings or groups of buildings.</p>
+the mobility of users inside buildings or groups of buildings.
 
-<p>At Delft University of Technology (TU Delft) a large scale Wi-Fi network
+At Delft University of Technology (TU Delft) a large scale Wi-Fi network
 is deployed across all facilities covering the indoor space of the
 campus. The network is known as an international roaming service for
 users in educational environments and is called the eduroam network. It
@@ -132,13 +60,13 @@ records of people’s movement. This ubiquitous and individual
 georeferenced data derived from smart phones will present valuable
 knowledge about the movement on the campus. Several work has been made
 for studying human mobility patterns in a University’s campus.
-Menses and Moreira (2012)<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup> used the eduroam network to study connectivity between
+Menses and Moreira (2012)[^3] used the eduroam network to study connectivity between
 two places, by computing the number of movements between two places
 within a given observation time period. Previous work has also been made
-at TU Delft<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup>, where several Wi-Fi monitors were placed
-to detect occupation and movement between different faculties.</p>
+at TU Delft[^4], where several Wi-Fi monitors were placed
+to detect occupation and movement between different faculties.
 
-<p>In this paper, we attempt to identify people’s movement patterns from
+In this paper, we attempt to identify people’s movement patterns from
 the eduroam network of TU Delft. Other than previous studies, this
 research-driven project analysed data from more than 30.000 users, and
 tries to detect movement patterns between buildings, and between large
@@ -150,9 +78,9 @@ Firstly, individual states are extracted from the Wi-Fi logs, where
 users stay for a longer time period. Secondly, movements are detected
 between a sequence of states. Thirdly, movement patterns can be
 identified by counting the amount of movement from, to or between
-certain locations at different time intervals.</p>
+certain locations at different time intervals.
 
-<p>The aim of this paper is not to improve a Wi-Fi based positioning
+The aim of this paper is not to improve a Wi-Fi based positioning
 technique, but to use the location data to conduct a mobility analysis
 producing knowledge about the University’s campus. Based on the three
 steps mentioned above, the aim of this project is to provide a method to
@@ -165,14 +93,14 @@ with a method to automatically mine people’s movement patterns at two
 spatial levels. First, movement at building level is analysed.
 Subsequently, indoor movement at building-part level is studied, by
 constructing a network graph of the underlying building floorplan. The
-structure of this paper is as follows. Section <em>Case description</em>, describes the case study of TU
+structure of this paper is as follows. Section *Case description*, describes the case study of TU
 Delft, the tracking technique and the acquired data that is used in the
-study. In section <em>Methodology</em> we present our methodology. Section <em>Results</em> discusses the obtained results.
-Finally, in section <em>Conclusion and Recommendations</em>, we present our concluding remarks and recommendations.</p>
+study. In section *Methodology* we present our methodology. Section *Results* discusses the obtained results.
+Finally, in section *Conclusion and Recommendations*, we present our concluding remarks and recommendations.
 
-<h2 id="case-description">Case description</h2>
+## Case description
 
-<p>The project’s main area of interest is the campus of Delft University of
+The project’s main area of interest is the campus of Delft University of
 Technology (TU Delft), used by more than 30.000 students and staff
 members. The eduroam network of the TU Delft campus consists of 1730
 access points, distributed over more than 30 buildings, covering all
@@ -185,9 +113,9 @@ the connection is logged. When the connected device moves from one AP to
 another, a new log is done. The location of the AP a mobile device is
 connected to, will give an estimation of the mobile devices’ location,
 and thus the person. This allows the tracking of devices in space and
-time by relating buildings and building-parts to an aggregation of APs.</p>
+time by relating buildings and building-parts to an aggregation of APs.
 
-<p>The data is collected for every single AP over a period of almost two
+The data is collected for every single AP over a period of almost two
 months. The logs are stored in a database on a virtual server at regular
 intervals of 5 minutes. In order to ensure privacy, MAC addresses and
 NetIDs (i.e. usernames) are hashed. Every log is stored with a start
@@ -197,11 +125,16 @@ contains the ID of the building it is located in. We can use this ID to
 locate APs at building level. For the Faculty of Architecture and the
 Built Environment, we also had information about the exact physical
 position of each AP. This geo-referenced information is used to analyse
-movement at building-part level.</p>
+movement at building-part level.
 
-<h1 id="methodology">Methodology</h1>
+[^1]:Heijer den, Alexandra (2012). “Managing the University Campus: Exploring models for the future and supporting today’s decisions”.
+[^2]:Spek, SC van der (2008). “Mapping Pedestrian Movement: Using Tracking Technologies in Koblenz”. In: Lecture Notes in Geoinformation and Cartography, pp. 95–118.
+[^3]:Meneses, Filipe and Alberto Moreira (2012). “Large scale movement analysis from WiFi based location data”. In: Indoor Positioning and Indoor Navigation (IPIN), 2012 International Conference on. IEEE, pp. 1–9.
+[^4]:Kalogianni, E et al. (2015). “Passive WiFi Monitoring of the Rhythm of the Campus”. In: Proceedings of The 18th AGILE International Conference on Geographic Information Science. AGILE, pp. 1–4.
 
-<p>In this section the data mining methods used to retrieve movement
+# Methodology
+
+In this section the data mining methods used to retrieve movement
 patterns from the Wi-Fi log at two different spatial levels will be
 described. Figure 1 gives an overview of the main workflow, starting with the TU
 Delft eduroam Wi-Fi log and ending with movement patterns. The two
@@ -210,32 +143,34 @@ spatial levels for which movement patterns will be derived are
 level concern the movement from, to and between the buildings on the
 campus. The movement patterns on building-part level concern the
 movement from, to and between building-parts of the faculty of
-Architecture and the Built Environment. First subsection <em>Mobile device extraction</em> will describe the
+Architecture and the Built Environment. First subsection *Mobile device extraction* will describe the
 extraction of mobile devices. The reason that mobile devices are
 extracted is that the records of mobile devices (e.g. smart phones) are
 more complete and representative for the actual movement of the
-corresponding person then records of static devices (e.g. laptops). Subsection <em>Preprocessing raw Wi-Fi log sessions</em> will
+corresponding person then records of static devices (e.g. laptops). Subsection *Preprocessing raw Wi-Fi log sessions* will
 describe how the raw data of the Wi-Fi log is preprocessed to retrieve
 clean sessions for both building and building-part level. A session is
 defined as time interval during which a device is connected to one
-access point (AP). In subsection <em>State extraction</em> it will be explained how states are created by
+access point (AP). In subsection *State extraction* it will be explained how states are created by
 grouping subsequent sessions that share the same location. A state is
 defined as a time interval during which a device is located in a certain
 building or building-part. A key part in the process of state extraction
 is the creation of a ’world’ state which allows the detection of
-movement from and to campus. Subsection <em>Movement extraction</em> addresses how the resulting states are used
+movement from and to campus. Subsection *Movement extraction* addresses how the resulting states are used
 to retrieve movements at both spatial levels. A movement is defined by
 the change from one state to the next subsequent state, where the
-different states must be at a different locations. Finally subsecton <em>Movement pattern extraction</em> describes how
-the movements are used to derive and visualize movement patterns.</p>
+different states must be at a different locations. Finally subsecton *Movement pattern extraction* describes how
+the movements are used to derive and visualize movement patterns.
 
-<p style="text-align: center;"><img src="ES-workflow.png" alt="ES-workflow" /></p>
+![ES-workflow](ES-workflow.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Figure 1: Workflow</em></p>
+*Figure 1: Workflow*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<h2 id="mobile-device-extraction">Mobile device extraction</h2>
+## Mobile device extraction
 
-<p>The Wi-Fi log contains data of different device types, as any device
+The Wi-Fi log contains data of different device types, as any device
 that makes a connection to eduroam will be stored in the log. A
 distinction can be made between mobile and static devices. Mobile
 devices, such as smart phones, are usually switched on during the entire
@@ -251,25 +186,29 @@ knowledge that mobile device are more likely to have very short sessions
 in the log as they continuously connect to new APs when a person moves
 around. As a result the mobility of a device can be defined by the ratio
 between the amount of short, 5 minute, sessions in the Wi-Fi log and the
-total amount of sessions in the Wi-Fi log.</p>
+total amount of sessions in the Wi-Fi log.
 
-<script type="math/tex; mode=display">\begin{align*}
+$$
+\begin{align*}
 Mobility\ ratio = \frac{number\ of\ short\ sessions}{total\ number\ of\ sessions}
-\end{align*}</script>
+\end{align*}
+$$
 
-<p>Figure 2 shows a histogram of the mobility ratio of all devices. The two
+Figure 2 shows a histogram of the mobility ratio of all devices. The two
 distinctive peaks corresponding to the static and mobile devices can
 clearly be identified. The mobility ration of all devices is stored in a
 separate table, enabling filtering out of static devices at any point
-during the process.</p>
+during the process.
 
-<p style="text-align: center;"><img src="mobility.png" alt="" /></p>
+![](mobility.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Figure 2: Histogram of mobility ratio of all devices in the Wi-Fi log.</em></p>
+*Figure 2: Histogram of mobility ratio of all devices in the Wi-Fi log.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<h2 id="preprocessing-raw-wi-fi-log-sessions">Preprocessing raw Wi-Fi log sessions</h2>
+## Preprocessing raw Wi-Fi log sessions
 
-<p>For each session in the Wi-Fi log the name of the access point is
+For each session in the Wi-Fi log the name of the access point is
 stored. By linking this name to a location the data becomes valuable for
 detecting movement patterns. For some APs however the location is
 unknown, these are filtered out. The other records are related to a
@@ -282,11 +221,11 @@ Environment the floor plan with the locations of the different APs is
 available. Building-parts ( see ) are defined based on the layout of the
 APs. Each building-part contains several APs and the relation between
 them is stored in the database. In this way the AP name can directly be
-linked to a location.</p>
+linked to a location.
 
-<h2 id="state-extraction">State extraction</h2>
+## State extraction
 
-<p>To create states, subsequent sessions at the same location are grouped
+To create states, subsequent sessions at the same location are grouped
 together. As the location is known for each session on both building and
 building-part level, states can be created for both spatial levels.
 illustrates how sessions are grouped to create states. For grouping, a
@@ -301,15 +240,17 @@ campus, ’world’ states are added to the data during a time period where
 the person has not been recorded for more than one hour (see ). Finally,
 states are present in the data that do not represent real visits, but
 only people passing by a building. These short states are filtered out
-(see Fig. 3).</p>
+(see Fig. 3).
 
-<p style="text-align: center;"><img src="ES-processingSteps.jpg" alt="" /></p>
+![](ES-processingSteps.jpg)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Figure 3: Processing steps; from raw data to movements.</em></p>
+*Figure 3: Processing steps; from raw data to movements.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<h2 id="movement-extraction">Movement extraction</h2>
+## Movement extraction
 
-<p>The extracted states contain implicit information on the movement of the
+The extracted states contain implicit information on the movement of the
 device. If a device is first located at location A and subsequently at
 location B it must have moved from location A to B. However, in order to
 be able to retrieve movement patterns, the movement should be stored
@@ -318,11 +259,11 @@ the locations of both states. The timing of the movement is derived by
 taking the end time of each state minus 5 minutes and the start time of
 the subsequent state (see Fig. 3). The reason for the 5 minute subtraction, is
 that the last moment a device is actually recorded is 5 minutes before
-the end time of a state.</p>
+the end time of a state.
 
-<h2 id="movement-pattern-extraction">Movement pattern extraction</h2>
+## Movement pattern extraction
 
-<p>The final step is to extract movement patterns from the created
+The final step is to extract movement patterns from the created
 movements. These patterns can be derived by counting the amount of
 movement from, to or between certain buildings and building-parts for
 different time intervals. To determine if a movement should be counted
@@ -336,26 +277,28 @@ of Architecture and the Built Environment. For building level, no graph
 is created as the movement in outdoor space is less constrained,
 especially considering the spacious character of the TU Delft campus. To
 determine the route taken from one building-part to another the shortest
-path is taken using the Dijkstra algorithm.</p>
+path is taken using the Dijkstra algorithm.
 
-<p style="text-align: center;"><img src="bk_BG_bparts.png" alt="" /></p>
+![](bk_BG_bparts.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Figure 4: Building parts on the ground floor of the Faculty of Architecture and the built environment and its underlying graph.</em></p>
+*Figure 4: Building parts on the ground floor of the Faculty of Architecture and the built environment and its underlying graph.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<h1 id="results">Results</h1>
+# Results
 
-<p>First will give a brief analysis of the data, including some general
+First will give a brief analysis of the data, including some general
 statistics. In the remainder of the chapter several movement patterns
 retrieved from the raw Wi-Fi log will be presented. It should be noted
 that many different movement patterns can be identified by counting the
 movement for different time intervals and for different routes. This
 paper aims at giving an overview of the different patterns that can be
 extracted. will present the outdoor building level patterns, and the
-indoor building-part level patterns.</p>
+indoor building-part level patterns.
 
-<h2 id="general-statistics">General statistics</h2>
+## General statistics
 
-<p>Within the dataset 44.952 different users are present that together have
+Within the dataset 44.952 different users are present that together have
 86.413 devices. Of these devices 24.156 are classified as mobile, the
 remaining devices are either classified as static or had less than 100
 sessions in the Wi-Fi log, which was decided to be insufficient for
@@ -366,48 +309,56 @@ regular user of the TU Delft campus. shows the amount of data during the
 different processing steps for both spatial levels. The reduction from
 session to states is mainly due to the grouping. The reduction from
 states to movements is mainly because the devices with less than 100
-records are filtered out at this point.</p>
+records are filtered out at this point.
 
-<p style="text-align: center;"><img src="ES-statistics.jpg" alt="" /></p>
+![](ES-statistics.jpg)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Amount of data during processing stages</em></p>
+*Amount of data during processing stages*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<h2 id="outdoor-movement-patterns">Outdoor movement patterns</h2>
+## Outdoor movement patterns
 
-<p>Looking at building level, movement patterns between, from and to
+Looking at building level, movement patterns between, from and to
 buildings can be detected. shows the time profile of all movements with
 and without the ‘world’ state. This graph shows that there is much
 movement around 8.45, 12.45, 13.45, 15.45 and 17.45, corresponding with
 lecture hours at TU Delft. With ‘world’ (blue line), the morning and
 evening rush hours around 8.45 and 17.45 are detected, when students and
 staff travel between campus and, probably, home. Without introducing the
-‘world’ state (red line), these two movement peaks are not detected.</p>
+‘world’ state (red line), these two movement peaks are not detected.
 
-<p style="text-align: center;"><img src="building_all_graph.png" alt="" /></p>
+![](building_all_graph.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from ’world’.)</em></p>
+*Time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from ’world’.)*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<p>illustrates the ten most occurring movements between buildings, on a
+illustrates the ten most occurring movements between buildings, on a
 map, where buildings are represented as nodes, and edges represent the
 number of movements. The number of movement, during the observation
-period, is illustrated with colour and line width.</p>
+period, is illustrated with colour and line width.
 
-<p style="text-align: center;"><img src="ES-mapTotal.png" alt="Top 10 most occuring movements on building level" /></p>
+![Top 10 most occuring movements on building level](ES-mapTotal.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Top 10 most occuring movements on building level.</em></p>
+*Top 10 most occuring movements on building level.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<p>In the movements of mobile (blue) and static (red) devices are shown.
+In the movements of mobile (blue) and static (red) devices are shown.
 The time profile of static devices, compared with lecture hours, is less
 explicit than for mobile devices. This supports the assumption that
 movement of static devices is less related to movement of people, than
 mobile devices. Therefore, in this paper we only analyse movement of
-mobile devices, to provide knowledge about human movement behaviour.</p>
+mobile devices, to provide knowledge about human movement behaviour.
 
-<p style="text-align: center;"><img src="building_mobileStatic_graph.png" alt="Time profile of all outdoor movement for static and mobile devices." /></p>
+![Time profile of all outdoor movement for static and mobile devices.](building_mobileStatic_graph.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Time profile of all outdoor movement for static and mobile devices.</em></p>
+*Time profile of all outdoor movement for static and mobile devices.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<p>The previous figures showed the movement over the entire time span of
+The previous figures showed the movement over the entire time span of
 the research. However, different movement patterns can be identified by
 querying the data for certain time intervals. gives the time profiles of
 the movement of mobile devices during weekdays and weekends for all
@@ -415,13 +366,15 @@ buildings including ’world’. Usually, most building at the TU Delft
 Campus, except for the library, are closed during the weekend. This is
 reflected by the amount of movement during the weekend. Moreover,
 compared to weekdays, the number of movement is constant throughout the
-day, as there are no lectures.</p>
+day, as there are no lectures.
 
-<p style="text-align: center;"><img src="building_weekWeekend_graph.png" alt="Time profile of all outdoor movement of mobile devices for week- and weekend days" /></p>
+![Time profile of all outdoor movement of mobile devices for week- and weekend days](building_weekWeekend_graph.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Time profile of all outdoor movement of mobile devices for week- and weekend days.</em></p>
+*Time profile of all outdoor movement of mobile devices for week- and weekend days.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<p>Finally, the movement can also be queried based on origin and
+Finally, the movement can also be queried based on origin and
 destination instead of or together with time. This enables a more
 detailed analysis of specific buildings or events. shows the movement
 from and to the Aula during normal weekdays. The Aula has a lunch
@@ -430,19 +383,23 @@ Both the movement to and from the Aula is high at the start and the end
 of the lunch time, because other facilities are located in the Aula as
 well. gives insight in where people exactly come from and go to, during
 the interval between 13:15 and 14:00. As expected, many people move to
-the library at this time, probably to continue studying after lunch.</p>
+the library at this time, probably to continue studying after lunch.
 
-<p style="text-align: center;"><img src="building_fromTo_aulaGraph.png" alt="Time profile of movement of mobile devices from and to aula during normal weekdays" /></p>
+![Time profile of movement of mobile devices from and to aula during normal weekdays](building_fromTo_aulaGraph.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Time profile of movement of mobile devices from and to aula during normal weekdays.</em></p>
+*Time profile of movement of mobile devices from and to aula during normal weekdays.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<p style="text-align: center;"><img src="ES-map_1315to1400.png" alt="Movement of mobile devices from and to aula between 13:15 and 14:00 during normal weekdays" /></p>
+![Movement of mobile devices from and to aula between 13:15 and 14:00 during normal weekdays](ES-map_1315to1400.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Movement of mobile devices from and to aula between 13:15 and 14:00 during normal weekdays.</em></p>
+*Movement of mobile devices from and to aula between 13:15 and 14:00 during normal weekdays.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<h2 id="indoor-movement-patterns">Indoor movement patterns</h2>
+## Indoor movement patterns
 
-<p>Like for building level, the building-part level data can be filtered
+Like for building level, the building-part level data can be filtered
 for mobile devices and queried based on time, and origin and
 destination. shows the time profiles for all movement on building-part
 level for the Faculty of Architecture and the Built Environment. With
@@ -452,40 +409,49 @@ movement is relatively steady, except for two distinct peaks before and
 after lunch. Furthermore, small peaks can be seen at the start and end
 of the day when people arrive and leave the building. The Faculty of
 Architecture and the Built Environment normally closes at 22:00,
-resulting in a movement peak captured in the graph.</p>
+resulting in a movement peak captured in the graph.
 
-<p style="text-align: center;"><img src="buildingpart_all_graph.png" alt="Time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from ’world’)" /></p>
+![Time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from ’world’)](buildingpart_all_graph.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from ’world’).</em></p>
+*Time profile of indoor movement without world (only between building-parts) and with world (including movement from and to building part from ’world’).*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<p>shows all the movement within the Faculty of Architecture and the Built
+shows all the movement within the Faculty of Architecture and the Built
 Environment on a map. As the movements follow the shortest route on the
 graph, it becomes possible to see which particular corridor or staircase
 is busiest. Here the movement rates are highest in the eastern part of
 the ground floor. This shows occupation of space by movement instead of
-the flow between two states.</p>
+the flow between two states.
 
-<p style="text-align: center;"><img src="bk_map_total.png" alt="Map of all movement within the faculty of Architecture" /></p>
+![Map of all movement within the faculty of Architecture](bk_map_total.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>Map of all movement within the faculty of Architecture.</em></p>
+*Map of all movement within the faculty of Architecture.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<p>Finally, and give a more detailed insight in the movement from and to
+Finally, and give a more detailed insight in the movement from and to
 the Bouwpub (café) and canteen (lunch facility) building-parts. The time
 profile of the canteen shows the expected peaks before and after lunch.
 Simarly it can be seen that people move towards the bouwpub after
-lecture time and leave around 20:00 when it closes.</p>
+lecture time and leave around 20:00 when it closes.
 
-<p style="text-align: center;"><img src="buildingpart_fromTo_bouwpubGraph.png" alt="All movement of mobile devices during weekdays from and to the bouwpub" /></p>
+![All movement of mobile devices during weekdays from and to the bouwpub](buildingpart_fromTo_bouwpubGraph.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>All movement of mobile devices during weekdays from and to the bouwpub.</em></p>
+*All movement of mobile devices during weekdays from and to the bouwpub.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<p style="text-align: center;"><img src="buildingpart_fromTo_canteenGraph.png" alt="All movement of mobile devices during weekdays from and to the canteen" /></p>
+![All movement of mobile devices during weekdays from and to the canteen](buildingpart_fromTo_canteenGraph.png)
+{: style="text-align: center;"}
 
-<p style="color:gray; font-size: 80%; text-align: center;"><em>All movement of mobile devices during weekdays from and to the canteen.</em></p>
+*All movement of mobile devices during weekdays from and to the canteen.*
+{: style="color:gray; font-size: 80%; text-align: center;"}
 
-<h1 id="conclusion-and-recommendations">Conclusion and Recommendations</h1>
+Conclusion and Recommendations
+==============================
 
-<p>To understand human motion behaviour for better decision making, many
+To understand human motion behaviour for better decision making, many
 studies have been conducted based on location data collection. Wi-Fi
 tracking technology is increasingly used due its cost effectiveness and
 ability to track people at a large scale. For this study, we used the
@@ -496,9 +462,9 @@ Finally, by counting the number of movement for an observation period,
 movement patterns can be identified. This paper tried to illustrate to
 what extend movement patterns in and between buildings can be identified
 from anonymised Wi-Fi logs. We successfully identified movement patterns
-at two spatial levels.</p>
+at two spatial levels.
 
-<p>At building level, the rhythm of the campus is illustrated by time
+At building level, the rhythm of the campus is illustrated by time
 profiles showing the amount of movement for different observation
 periods. We found that movement at the campus was related to the lecture
 hours. Flow and direction of aggregated movement can be visualized on a
@@ -506,15 +472,15 @@ map as edges. At building-part level, similar movement patterns can be
 identified. An indoor network graph was created of the underlying
 building floorplan. This successfully illustrates the occupied space for
 movement. However, the range of APs can extent between building-parts
-and floors and limits the accuracy of the analysis.</p>
+and floors and limits the accuracy of the analysis.
 
-<p>It is possible to identify movement patterns in and between buildings
+It is possible to identify movement patterns in and between buildings
 using the eduroam network. The presented method automatically mines
 movement patterns of large crowds from a dataset with anonymised Wi-Fi
 logs. However, we also encountered limitations from which several
-recommendations can be provided for future implementations.</p>
+recommendations can be provided for future implementations.
 
-<p>The movement trajectory between two building-part states is computed
+The movement trajectory between two building-part states is computed
 with a shortest path algorithm, using the constructed network graph.
 Better models need to be implemented for a more accurate path
 estimation. No data from APs on the way between two states is used to
@@ -535,77 +501,9 @@ usage of the infrastructure. With several strategically placed APs
 outdoor and logging with a higher frequency, this can be considered.
 Detailed information about the usage of the infrastructure on the campus
 can provide valuable knowledge, such as the identification of hotspots
-at specific time periods.</p>
+at specific time periods.
 
-<p><em>Text written by Simon Griffioen and Martijn Vermeer</em></p>
+*Text written by Simon Griffioen and Martijn Vermeer*
 
-<h1 id="references">References</h1>
+# References
 
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>Heijer den, Alexandra (2012). “Managing the University Campus: Exploring models for the future and supporting today’s decisions”. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:2">
-      <p>Spek, SC van der (2008). “Mapping Pedestrian Movement: Using Tracking Technologies in Koblenz”. In: Lecture Notes in Geoinformation and Cartography, pp. 95–118. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:3">
-      <p>Meneses, Filipe and Alberto Moreira (2012). “Large scale movement analysis from WiFi based location data”. In: Indoor Positioning and Indoor Navigation (IPIN), 2012 International Conference on. IEEE, pp. 1–9. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
-    </li>
-    <li id="fn:4">
-      <p>Kalogianni, E et al. (2015). “Passive WiFi Monitoring of the Rhythm of the Campus”. In: Proceedings of The 18th AGILE International Conference on Geographic Information Science. AGILE, pp. 1–4. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-
-      </div>
-    </main>
-
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Your awesome title</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>Your awesome title</li>
-          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          
-          <li>
-            <a href="https://github.com/jekyll"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
-</span><span class="username">jekyll</span></a>
-
-          </li>
-          
-
-          
-          <li>
-            <a href="https://twitter.com/jekyllrb"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
-</span><span class="username">jekyllrb</span></a>
-
-          </li>
-          
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer>
-
-
-  </body>
-
-</html>
