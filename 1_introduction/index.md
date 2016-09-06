@@ -92,10 +92,10 @@ with a method to automatically mine people’s movement patterns at two
 spatial levels. First, movement at building level is analysed.
 Subsequently, indoor movement at building-part level is studied, by
 constructing a network graph of the underlying building floorplan. The
-structure of this paper is as follows. Section *Case description*, describes the case study of TU
+structure of this paper is as follows. Section [Case description](#case-description), describes the case study of TU
 Delft, the tracking technique and the acquired data that is used in the
-study. In section *Methodology* we present our methodology. Section *Results* discusses the obtained results.
-Finally, in section *Conclusion and Recommendations*, we present our concluding remarks and recommendations.
+study. In section [Methodology](#methodology) we present our methodology. Section [Results](#results) discusses the obtained results.
+Finally, in section [Conclusion and Recommendations](#conclusion-and-recommendations), we present our concluding remarks and recommendations.
 
 ## Case description
 
