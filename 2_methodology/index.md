@@ -23,7 +23,7 @@ Architecture and the Built Environment. First subsection [Mobile device extracti
 extraction of mobile devices. The reason that mobile devices are
 extracted is that the records of mobile devices (e.g. smart phones) are
 more complete and representative for the actual movement of the
-corresponding person then records of static devices (e.g. laptops). Subsection *Preprocessing raw Wi-Fi log sessions* will
+corresponding person then records of static devices (e.g. laptops). Subsection [Preprocessing raw Wi-Fi log sessions](#preprocessing-raw-wi-fi-log-sessions) will
 describe how the raw data of the Wi-Fi log is preprocessed to retrieve
 clean sessions for both building and building-part level. A session is
 defined as time interval during which a device is connected to one
