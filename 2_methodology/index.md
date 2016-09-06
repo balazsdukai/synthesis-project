@@ -27,15 +27,15 @@ corresponding person then records of static devices (e.g. laptops). Subsection [
 describe how the raw data of the Wi-Fi log is preprocessed to retrieve
 clean sessions for both building and building-part level. A session is
 defined as time interval during which a device is connected to one
-access point (AP). In subsection [State extraction](state-extraction) it will be explained how states are created by
+access point (AP). In subsection [State extraction](#state-extraction) it will be explained how states are created by
 grouping subsequent sessions that share the same location. A state is
 defined as a time interval during which a device is located in a certain
 building or building-part. A key part in the process of state extraction
 is the creation of a ’world’ state which allows the detection of
-movement from and to campus. Subsection [Movement extraction](movement-extraction) addresses how the resulting states are used
+movement from and to campus. Subsection [Movement extraction](#movement-extraction) addresses how the resulting states are used
 to retrieve movements at both spatial levels. A movement is defined by
 the change from one state to the next subsequent state, where the
-different states must be at a different locations. Finally subsecton [Movement pattern extraction](movement-pattern-extraction) describes how
+different states must be at a different locations. Finally subsecton [Movement pattern extraction](#movement-pattern-extraction) describes how
 the movements are used to derive and visualize movement patterns.
 
 ![ES-workflow](ES-workflow.png)
