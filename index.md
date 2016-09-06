@@ -5,7 +5,7 @@ layout: page
 ![logo](a-to-b_logo.png)
 
 *“To understand human motion behaviour for better decision making”*
-{: style="color:gray; font-weight:bold; font-size: 150%; text-align: center;"}
+{: style="color:gray; font-weight:bold; font-size:150%; text-align:center;"}
 
 During the fourth quarter of the first year of the MSc Programme Geomatics for the Built Environment at the Delft University of Technology, the [Geomatics Synthesis Project (GSP)](http://www.tudelft.nl/en/study/master-of-science/master-programmes/geomatics/programme/synthesis-project/) takes place. In this project students apply all their knowledge they have acquired during the courses while working in groups of five or six. In the prcess they gain experience in project management, data processing, data analysis, application and presentation.
 

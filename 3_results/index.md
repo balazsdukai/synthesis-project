@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Results
-permalink: /results/
+permalink: /3_results/
 ---
 
 # Contents

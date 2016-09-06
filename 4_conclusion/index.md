@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Conclusion and Recommendations
-permalink: /conclusion/
+permalink: /4_conclusion/
 ---
 
 # Conclusion and Recommendations

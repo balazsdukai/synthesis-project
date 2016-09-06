@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Introduction
-permalink: /introduction/
+permalink: /1_introduction/
 ---
 
 # Contents
