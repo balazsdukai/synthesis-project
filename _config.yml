@@ -21,7 +21,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: /synthesis-project # the subpath of your site, e.g. /blog
 url: http://balazsdukai.github.io/synthesis-project/ # the base hostname & protocol for your site
 twitter_username:
-github_username: balazsdukai.github.io/synthesis-project
+github_username:
 
 # Build settings
 markdown: kramdown

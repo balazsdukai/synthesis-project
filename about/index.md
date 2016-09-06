@@ -11,19 +11,22 @@ management, data processing, data analysis, application and presentation.
 
 In 2016 the overreaching topic of the GSP was *Monitoring flows and occupation patterns with Wi-Fi*. In the scope of this topic, the project team *A2B* focused on *Identifying movement patterns from large scale Wi-Fi-based location data*.
 
-Team members of *A2B* were 
-+ Mattijs Bon, 
-+ Xander den Duijn, 
-+ Balázs Dukai, 
-+ Simon Griffioen, 
-+ Yuxuan Kang, 
-+ Martijn Vermeer 
-+ under the supervision of Edward Verbree.
+Team members of *A2B* were:
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
++ Mattijs Bon,
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
++ Xander den Duijn,
+
++ Balázs Dukai,
+
++ Simon Griffioen,
+
++ Yuxuan Kang,
+
++ Martijn Vermeer
+
+Supervisior: 
+
++ Edward Verbree
+
+

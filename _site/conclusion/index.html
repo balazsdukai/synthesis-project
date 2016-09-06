@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Welcome to Jekyll!</title>
-  <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different wa...">
+  <title>Conclusion and Recommendations</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu...">
 
   <link rel="stylesheet" href="/synthesis-project/css/main.css">
-  <link rel="canonical" href="http://balazsdukai.github.io/synthesis-project//synthesis-project/jekyll/update/2016/09/05/welcome-to-jekyll.html">
+  <link rel="canonical" href="http://balazsdukai.github.io/synthesis-project//synthesis-project/conclusion/">
   <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://balazsdukai.github.io/synthesis-project//synthesis-project/feed.xml">
 </head>
 
@@ -39,7 +39,23 @@
           
         
           
+          <a class="page-link" href="/synthesis-project/introduction/">Introduction</a>
+          
+        
+          
+          <a class="page-link" href="/synthesis-project/results/">Results</a>
+          
+        
+          
+          <a class="page-link" href="/synthesis-project/conclusion/">Conclusion and Recommendations</a>
+          
+        
+          
           <a class="page-link" href="/synthesis-project/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/synthesis-project/methodology/">Methodology</a>
           
         
           
@@ -56,27 +72,66 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
-    <p class="post-meta"><time datetime="2016-09-05T21:51:11+02:00" itemprop="datePublished">Sep 5, 2016</time></p>
+    <h1 class="post-title">Conclusion and Recommendations</h1>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
-    <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+  <div class="post-content">
+    <h1 id="conclusion-and-recommendations">Conclusion and Recommendations</h1>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>To understand human motion behaviour for better decision making, many
+studies have been conducted based on location data collection. Wi-Fi
+tracking technology is increasingly used due its cost effectiveness and
+ability to track people at a large scale. For this study, we used the
+eduroam network of the TU Delft Campus to identify movement patterns.
+Firstly, states are extracted from the raw Wi-Fi logs. Subsequently, the
+event of going from one state to another can be detected as movement.
+Finally, by counting the number of movement for an observation period,
+movement patterns can be identified. This paper tried to illustrate to
+what extend movement patterns in and between buildings can be identified
+from anonymised Wi-Fi logs. We successfully identified movement patterns
+at two spatial levels.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>At building level, the rhythm of the campus is illustrated by time
+profiles showing the amount of movement for different observation
+periods. We found that movement at the campus was related to the lecture
+hours. Flow and direction of aggregated movement can be visualized on a
+map as edges. At building-part level, similar movement patterns can be
+identified. An indoor network graph was created of the underlying
+building floorplan. This successfully illustrates the occupied space for
+movement. However, the range of APs can extent between building-parts
+and floors and limits the accuracy of the analysis.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>It is possible to identify movement patterns in and between buildings
+using the eduroam network. The presented method automatically mines
+movement patterns of large crowds from a dataset with anonymised Wi-Fi
+logs. However, we also encountered limitations from which several
+recommendations can be provided for future implementations.</p>
 
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>The movement trajectory between two building-part states is computed
+with a shortest path algorithm, using the constructed network graph.
+Better models need to be implemented for a more accurate path
+estimation. No data from APs on the way between two states is used to
+estimate the path, because the system stores logs at a 5-minute
+interval. With a shorter log interval, this can be considered. The
+Faculty of Architecture and the Built Environment has a building lay-out
+with separate building wings and only three floor levels. It is
+important to mention that this building lay-out makes it easier to
+distinguish between building parts. Considering the range of APs,
+different methods need to be investigated for buildings with more floor
+levels. This also means that for the identification of movement at room
+level, other techniques, e.g. including Received Signal Strength (RSS),
+need to be implemented. In this paper, the road network is not used to
+estimate a detailed path of outdoor movement between building states.
+Due to the spacious character of the TU Delft campus and limited
+constrained space for pedestrians, it is challenging to analyse the
+usage of the infrastructure. With several strategically placed APs
+outdoor and logging with a higher frequency, this can be considered.
+Detailed information about the usage of the infrastructure on the campus
+can provide valuable knowledge, such as the identification of hotspots
+at specific time periods.</p>
 
 
   </div>
