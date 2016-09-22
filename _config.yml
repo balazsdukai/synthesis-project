@@ -18,7 +18,7 @@ email:
 description: > # this means to ignore newlines until "baseurl:"
   AtoB is a MSc Geomatics Synthesis Project ran in 2016 at the
   Delft University of Technology. Its focus lies on identifying movement patterns from large scale Wi-Fi-based location data.
-baseurl: /synthesis-project # the subpath of your site, e.g. /blog
+baseurl: http://balazsdukai.github.io/synthesis-project # the subpath of your site, e.g. /blog
 url: http://balazsdukai.github.io/synthesis-project/ # the base hostname & protocol for your site
 twitter_username:
 github_username: 
