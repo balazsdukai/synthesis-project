@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 1_Introduction
+title: Introduction
 permalink: /1_introduction/
 order: 1
 ---

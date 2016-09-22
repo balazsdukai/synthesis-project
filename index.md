@@ -11,6 +11,8 @@ During the fourth quarter of the first year of the MSc Programme Geomatics for t
 
 In 2016 the overreaching topic of the GSP was *Monitoring flows and occupation patterns with Wi-Fi*. In the scope of this topic, the project team *AtoB* focused on *Identifying movement patterns from large scale Wi-Fi-based location data*.
 
+The data processing scripts that were written during the project can be found in the various branches project's [GitHub repository](https://github.com/balazsdukai/synthesis-project/tree/master)
+
 Team members of *AtoB* were:
 
 + Mattijs Bon,

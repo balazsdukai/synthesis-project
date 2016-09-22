@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2_Methodology
+title: Methodology
 permalink: /2_methodology/
 order: 2
 ---

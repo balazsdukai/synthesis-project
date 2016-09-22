@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 4_Conclusion and Recommendations
+title: Conclusion and Recommendations
 permalink: /4_conclusion/
 order: 4
 ---

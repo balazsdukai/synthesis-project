@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3_Results
+title: Results
 permalink: /3_results/
 order: 3
 ---
