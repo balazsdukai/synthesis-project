@@ -2,6 +2,7 @@
 layout: page
 title: 2_Methodology
 permalink: /2_methodology/
+order: 2
 ---
 
 ## Contents

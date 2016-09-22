@@ -26,3 +26,8 @@ github_username:
 # Build settings
 markdown: kramdown
 theme: minima
+
+{% assign sorted_pages = site.pages | sort:"order" %}
+{% for node in sorted_pages %}
+  <li><a href="{{node.url}}">{{node.title}}</a></li>
+{% endfor %}
