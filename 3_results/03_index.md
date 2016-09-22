@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Results
-permalink: /3_results/
-order: 3
 ---
 
 ## Contents

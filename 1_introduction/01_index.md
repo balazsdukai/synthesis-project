@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Introduction
-permalink: /1_introduction/
-order: 1
 ---
 
 ## Contents

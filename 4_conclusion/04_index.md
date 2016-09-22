@@ -1,8 +1,6 @@
 ---
 layout: page
 title: Conclusion and Recommendations
-permalink: /4_conclusion/
-order: 4
 ---
 
 To understand human motion behaviour for better decision making, many
