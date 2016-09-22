@@ -28,15 +28,15 @@ corresponding person then records of static devices (e.g. laptops). Subsection [
 describe how the raw data of the Wi-Fi log is preprocessed to retrieve
 clean sessions for both building and building-part level. A session is
 defined as time interval during which a device is connected to one
-access point (AP). In subsection *State extraction* it will be explained how states are created by
+access point (AP). In subsection [State extraction](#state-extraction) it will be explained how states are created by
 grouping subsequent sessions that share the same location. A state is
 defined as a time interval during which a device is located in a certain
 building or building-part. A key part in the process of state extraction
 is the creation of a ’world’ state which allows the detection of
-movement from and to campus. Subsection *Movement extraction* addresses how the resulting states are used
+movement from and to campus. Subsection [Movement extraction](#movement-extraction) addresses how the resulting states are used
 to retrieve movements at both spatial levels. A movement is defined by
 the change from one state to the next subsequent state, where the
-different states must be at a different locations. Finally subsecton *Movement pattern extraction* describes how
+different states must be at a different locations. Finally subsecton [Movement pattern extraction](#movement-pattern-extraction) describes how
 the movements are used to derive and visualize movement patterns.
 
 ![ES-workflow](ES-workflow.png)
@@ -95,7 +95,7 @@ the AP name. These IDs are linked to the corresponding building polygons
 of a topographical map. The location of each building is the center
 point of these polygons. For the Faculty of Architecture and the Built
 Environment the floor plan with the locations of the different APs is
-available. Building-parts ( see ) are defined based on the layout of the
+available. Building-parts (see Fig. 4) are defined based on the layout of the
 APs. Each building-part contains several APs and the relation between
 them is stored in the database. In this way the AP name can directly be
 linked to a location.
@@ -114,7 +114,7 @@ outside for a short period of disconnection. If a person is not recorded
 for more than an hour it is more likely that the person has left the
 campus. To be able to retrieve this movement away from and back to the
 campus, ’world’ states are added to the data during a time period where
-the person has not been recorded for more than one hour (see ). Finally,
+the person has not been recorded for more than one hour (see Fig. 3). Finally,
 states are present in the data that do not represent real visits, but
 only people passing by a building. These short states are filtered out
 (see Fig. 3).
